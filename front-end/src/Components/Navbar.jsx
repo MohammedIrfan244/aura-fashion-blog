@@ -54,13 +54,13 @@ function Navbar() {
       </div>
       {navListVisible && (
         <ul className="flex gap-5 text-sm font-semibold">
-          <li className="cursor-pointer animate-slideUp hover:shadow-sm" style={{animationDuration:'600ms'}}>HOME</li>
-          <li className="cursor-pointer animate-slideUp hover:shadow-sm" style={{animationDuration:'800ms'}}>BOUTIQUE</li>
-          <li className="cursor-pointer animate-slideUp hover:shadow-sm" style={{animationDuration:'1000ms'}}>STYLES</li>
+          <li className="cursor-pointer animate-slideY hover:shadow-sm transition-all" style={{animationDuration:'600ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>HOME</li>
+          <li className="cursor-pointer animate-slideY hover:shadow-sm transition-all" style={{animationDuration:'700ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>BOUTIQUE</li>
+          <li className="cursor-pointer animate-slideY hover:shadow-sm transition-all" style={{animationDuration:'800ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>STYLES</li>
         </ul>
       )}
       {navListVisible && (
-  <div className="relative flex items-end gap-5 text-lg animate-slideLeft">
+  <div className="relative flex items-end gap-5 text-lg animate-slideX" style={{animationDuration:'600ms',"--tw-translate-x":"15px","--tw-translate-x-70":"0px"}}>
     <div
       className={`overflow-hidden transition-all relative flex duration-500 ease-out ${
         searchVisible ? "w-52" : "w-0"
