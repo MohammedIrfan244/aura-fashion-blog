@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Londrina+Sketch&family=Sixtyfour+Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 
 
@@ -31,3 +33,4 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
   }
+  

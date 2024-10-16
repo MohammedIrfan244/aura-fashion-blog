@@ -1,9 +1,14 @@
+import Hero from "../Components/Hero"
 
 
 function Home() {
   return (
-    <div className="h-[200vh]">Home</div>
-  )
+    <div className="overflow-x-hidden max-w-full">
+      <Hero />
+      lorem*1000
+    </div>
+  );
 }
+
 
 export default Home

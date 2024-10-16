@@ -30,14 +30,13 @@ function Navbar() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setNavListVisible(true);
-    }, 500);
+    }, 400);
     return () => clearTimeout(timer);
   }, []);
 
-  // Focus input when searchVisible becomes true
   useEffect(() => {
     if (searchVisible) {
-      inputRef.current.focus(); // Ensure input is focused after it's rendered
+      inputRef.current.focus();
     }
   }, [searchVisible]);
 
@@ -45,7 +44,7 @@ function Navbar() {
     <div
       className={`${
         scrollVisible
-          ? "animate-bouncing px-5 backdrop-blur-md bg-lavendarBlush bg-opacity-40 fixed w-screen shadow-sm flex justify-between items-end pb-3"
+          ? "animate-bouncing px-5 backdrop-blur-md z-50 bg-lavendarBlush bg-opacity-40 fixed w-screen shadow-sm flex justify-between items-end pb-3"
           : "hidden"
       } transition-all`}
     >
@@ -54,16 +53,16 @@ function Navbar() {
         <PiTrademarkRegisteredBold />
       </div>
       {navListVisible && (
-        <ul className="flex justify-between w-60 animate-slideUp">
-          <li className="hover:font-medium cursor-pointer">HOME</li>
-          <li className="hover:font-medium cursor-pointer">BOUTIQUE</li>
-          <li className="hover:font-medium cursor-pointer">STYLES</li>
+        <ul className="flex gap-5 text-sm font-semibold">
+          <li className="cursor-pointer animate-slideUp hover:shadow-sm" style={{animationDuration:'600ms'}}>HOME</li>
+          <li className="cursor-pointer animate-slideUp hover:shadow-sm" style={{animationDuration:'800ms'}}>BOUTIQUE</li>
+          <li className="cursor-pointer animate-slideUp hover:shadow-sm" style={{animationDuration:'1000ms'}}>STYLES</li>
         </ul>
       )}
       {navListVisible && (
   <div className="relative flex items-end gap-5 text-lg animate-slideLeft">
     <div
-      className={`overflow-hidden transition-all duration-500 ease-out ${
+      className={`overflow-hidden transition-all relative flex duration-500 ease-out ${
         searchVisible ? "w-52" : "w-0"
       }`}
     >
@@ -71,7 +70,7 @@ function Navbar() {
         ref={inputRef}
         type="text"
         placeholder="Search here ..."
-        className="w-full placeholder:text-gray-600 placeholder:text-xs focus:outline-none border-b-[1px] border-richBlack ps-2"
+        className="w-full placeholder:text-gray-600 placeholder:text-xs text-xs pt-[2px] focus:outline-none rounded-3xl ps-2"
       />
     </div>
     <LuSearch
