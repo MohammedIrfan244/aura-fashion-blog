@@ -53,7 +53,7 @@ function Navbar() {
         <PiTrademarkRegisteredBold className="text-electricBlue"/>
       </div>
       {navListVisible && (
-        <ul className="flex gap-2 sm:gap-20 text-sm font-semibold">
+        <ul className="sm:flex gap-2 sm:gap-20 text-sm font-semibold hidden">
           <li className="cursor-pointer animate-slideY hover:text-electricBlue transition-all" style={{animationDuration:'600ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>HOME</li>
           <li className="cursor-pointer animate-slideY hover:text-electricBlue transition-all" style={{animationDuration:'700ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>BOUTIQUE</li>
           <li className="cursor-pointer animate-slideY hover:text-electricBlue transition-all" style={{animationDuration:'800ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>STYLES</li>
@@ -63,14 +63,14 @@ function Navbar() {
   <div className="relative flex items-end gap-2 sm:gap-7 text-lg animate-slideX" style={{animationDuration:'600ms',"--tw-translate-x":"15px","--tw-translate-x-70":"0px"}}>
     <div
       className={`overflow-hidden transition-all relative flex duration-500 ease-out ${
-        searchVisible ? "w-52" : "w-0"
+        searchVisible ? "w-40" : "w-0"
       }`}
     >
       <input
         ref={inputRef}
         type="text"
         placeholder="Search here ..."
-        className="w-full placeholder:text-gray-600 placeholder:text-xs text-xs pt-[2px] focus:outline-none rounded-3xl ps-2"
+        className="w-full placeholder:text-xs text-xs bg-transparent border-2 border-electricBlue pt-[3px] focus:outline-none rounded-3xl ps-3"
       />
     </div>
     <LuSearch

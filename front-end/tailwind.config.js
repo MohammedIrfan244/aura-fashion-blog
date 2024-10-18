@@ -13,7 +13,7 @@ export default {
       colors: {
         electricBlue: '#00BFAE',
         snowWhite: '#F5F5F5',
-        richBlack: '#1C1C1E ',
+        richBlack: '#0B0B0D',
       },
       keyframes: {
         bounce: {

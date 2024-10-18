@@ -39,7 +39,7 @@ function Hero() {
       </div>
       <div className="w-full sm:w-1/2 h-screen relative">
       <img className="object-cover w-full h-full" src="https://img.freepik.com/free-photo/abstract-portrait-with-light-effects_23-2151118176.jpg?t=st=1729092629~exp=1729096229~hmac=c6abe23876e7f599811d420891b6e17c91eb0aa5d0754a7b23702b0e38a1c684&w=740" alt="cover image" />
-      <div className="absolute bottom-28 left-10 border-2 hover:border-electricBlue hover:text-electricBlue border-snowWhite px-3">
+      <div className="absolute bottom-12 backdrop-blur-md left-10 border-2 hover:border-electricBlue hover:text-electricBlue border-snowWhite px-3">
         <p className="font-agdasima text-3xl">AURA</p>
         <p className="font-beban">Get ready with us</p>
       </div>
