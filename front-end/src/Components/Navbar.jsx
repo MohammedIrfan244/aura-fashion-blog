@@ -84,6 +84,16 @@ function Navbar() {
           >
             STYLES
           </li>
+          <li
+            className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
+            style={{
+              animationDuration: "900ms",
+              "--tw-translate-y": "15px",
+              "--tw-translate-y-70": "0px",
+            }}
+          >
+            TUTORIALS
+          </li>
         </ul>
       )}
       {navListVisible && (
