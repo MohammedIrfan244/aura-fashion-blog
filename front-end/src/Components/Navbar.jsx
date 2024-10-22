@@ -50,38 +50,71 @@ function Navbar() {
     >
       <div className="flex cursor-pointer">
         <h1 className="text-3xl font-semibold font-agdasima">AURA</h1>
-        <PiTrademarkRegisteredBold className="text-electricBlue"/>
+        <PiTrademarkRegisteredBold className="text-electricBlue" />
       </div>
       {navListVisible && (
         <ul className="sm:flex gap-2 sm:gap-20 text-sm font-semibold hidden">
-          <li className="cursor-pointer animate-slideY hover:text-electricBlue transition-all" style={{animationDuration:'600ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>HOME</li>
-          <li className="cursor-pointer animate-slideY hover:text-electricBlue transition-all" style={{animationDuration:'700ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>BOUTIQUE</li>
-          <li className="cursor-pointer animate-slideY hover:text-electricBlue transition-all" style={{animationDuration:'800ms',"--tw-translate-y":"15px","--tw-translate-y-70":"0px"}}>STYLES</li>
+          <li
+            className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
+            style={{
+              animationDuration: "600ms",
+              "--tw-translate-y": "15px",
+              "--tw-translate-y-70": "0px",
+            }}
+          >
+            HOME
+          </li>
+          <li
+            className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
+            style={{
+              animationDuration: "700ms",
+              "--tw-translate-y": "15px",
+              "--tw-translate-y-70": "0px",
+            }}
+          >
+            BOUTIQUE
+          </li>
+          <li
+            className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
+            style={{
+              animationDuration: "800ms",
+              "--tw-translate-y": "15px",
+              "--tw-translate-y-70": "0px",
+            }}
+          >
+            STYLES
+          </li>
         </ul>
       )}
       {navListVisible && (
-  <div className="relative flex items-end gap-2 sm:gap-7 text-lg animate-slideX" style={{animationDuration:'600ms',"--tw-translate-x":"15px","--tw-translate-x-70":"0px"}}>
-    <div
-      className={`overflow-hidden transition-all relative flex duration-500 ease-out ${
-        searchVisible ? "w-40" : "w-0"
-      }`}
-    >
-      <input
-        ref={inputRef}
-        type="text"
-        placeholder="Search here ..."
-        className="w-full placeholder:text-xs text-xs bg-transparent border-2 border-electricBlue pt-[3px] focus:outline-none rounded-3xl ps-3"
-      />
-    </div>
-    <LuSearch
-      onClick={() => setSearchVisible(!searchVisible)}
-      className="hover:scale-110 cursor-pointer hover:text-electricBlue"
-    />
-    <LuContact className="hover:scale-110 cursor-pointer hover:text-electricBlue" />
-    <LuUser className="hover:scale-110 cursor-pointer hover:text-electricBlue" />
-  </div>
-)}
-
+        <div
+          className="relative flex items-end gap-2 sm:gap-7 text-lg animate-slideX"
+          style={{
+            animationDuration: "600ms",
+            "--tw-translate-x": "15px",
+            "--tw-translate-x-70": "0px",
+          }}
+        >
+          <div
+            className={`overflow-hidden transition-all relative flex duration-500 ease-out ${
+              searchVisible ? "w-40" : "w-0"
+            }`}
+          >
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Search here ..."
+              className="w-full placeholder:text-xs text-xs bg-transparent border-2 border-electricBlue pt-[3px] focus:outline-none rounded-3xl ps-3"
+            />
+          </div>
+          <LuSearch
+            onClick={() => setSearchVisible(!searchVisible)}
+            className="hover:scale-110 cursor-pointer hover:text-electricBlue"
+          />
+          <LuContact className="hover:scale-110 cursor-pointer hover:text-electricBlue" />
+          <LuUser className="hover:scale-110 cursor-pointer hover:text-electricBlue" />
+        </div>
+      )}
     </div>
   );
 }
