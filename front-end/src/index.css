@@ -34,4 +34,9 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #0B0B0D #0B0B0D;
   }
+ 
+  .swiper-slide-active {
+    transform: scale(2); 
+    z-index: 10; 
+  }
   
