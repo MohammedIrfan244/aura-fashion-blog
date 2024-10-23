@@ -53,7 +53,7 @@ function Navbar() {
         <PiTrademarkRegisteredBold className="text-electricBlue" />
       </div>
       {navListVisible && (
-        <ul className="sm:flex gap-2 sm:gap-20 text-sm font-semibold hidden">
+        <ul className="sm:flex gap-2 sm:gap-20 text-sm font-medium hidden">
           <li
             className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
             style={{
@@ -83,16 +83,6 @@ function Navbar() {
             }}
           >
             STYLES
-          </li>
-          <li
-            className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
-            style={{
-              animationDuration: "900ms",
-              "--tw-translate-y": "15px",
-              "--tw-translate-y-70": "0px",
-            }}
-          >
-            TUTORIALS
           </li>
         </ul>
       )}
