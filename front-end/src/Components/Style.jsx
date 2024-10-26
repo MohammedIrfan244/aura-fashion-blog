@@ -47,7 +47,7 @@ function Style() {
   ];
 
   return (
-    <div className="mt-20 items-center flex justify-center">
+    <div className="mt-20">
       <Swiper
         slidesPerView={4}
         spaceBetween={20}
@@ -74,7 +74,7 @@ function Style() {
       >
         {styles.map((style, index) => (
           <SwiperSlide key={index}>
-            <StyleCards image={style.image} message={style.message}/>
+            <StyleCards image={style.image} message={style.message} index={index}/>
           </SwiperSlide>
         ))}
       </Swiper>

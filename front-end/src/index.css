@@ -14,29 +14,11 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #0B0B0D;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #0B0B0D;
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #0B0B0D;
+  display: none;
   }
   
   * {
-    scrollbar-width: thin;
-    scrollbar-color: #0B0B0D #0B0B0D;
+    scrollbar-width: none;
   }
  
-  .swiper-slide-active {
-    transform: scale(2); 
-    z-index: 10; 
-  }
   
