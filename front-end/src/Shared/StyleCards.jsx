@@ -10,7 +10,7 @@ function StyleCards({ image, message }) {
   return (
     <div
       ref={ref}
-      className={`h-[400px] w-80 overflow-hidden relative hover:text-electricBlue transition-all hover:border-electricBlue hover:border-b-2 ease-in-out duration-75 ${
+      className={`h-[400px] w-80 overflow-hidden card_hover relative hover:text-electricBlue cursor-pointer transition-all ease-in-out duration-75 ${
         inView ? "animate-slideY opacity-100" : "opacity-0"}`}
       style={{
         animationDuration: `500ms`,

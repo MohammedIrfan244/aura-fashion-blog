@@ -6,42 +6,42 @@ function Boutique() {
   const boutique = [
     {
       image:
-        "https://preview.redd.it/nkq3ww7opnp51.jpg?width=640&crop=smart&auto=webp&s=1bbdd79cdf370a81be8b904efcc28a55582a6186",
+        "https://i.pinimg.com/564x/bd/ec/ce/bdeccedb65043b577e8eeb886b1f230b.jpg",
       name: "Fenty Beauty",
     },
     {
       image:
-        "https://i.pinimg.com/736x/97/1a/db/971adb4199aa3565a124806c72eca97e.jpg",
+        "https://i.pinimg.com/736x/a8/47/01/a84701b1405cac56dcccf743e5070975.jpg",
       name: "Gucci",
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKpbDuD0udNzWWJ8EwqXaAzPmvnxTskWv1xQ&s",
+        "https://i.pinimg.com/564x/6c/47/d7/6c47d73e1f71a1a40b0f4468770de3ea.jpg",
       name: "Maybelline",
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvzSsZvpBMJCsR2pGFxD-pRiiIVOWesgz4w&s",
-      name: "Urban Decay",
+        "https://i.pinimg.com/564x/9d/74/28/9d7428c68c353a4754df7c69a823e3d7.jpg",
+      name: "Loreal",
     },
     {
       image:
-        "https://i.pinimg.com/736x/1c/ed/c2/1cedc25580c92ceb0ef59254dee9cf5f.jpg",
+        "https://i.pinimg.com/564x/36/f7/2e/36f72eaaaf2e89f7a192d9ae89962126.jpg",
       name: "Huda Beauty",
     },
     {
       image:
-        "https://kreafolk.com/cdn/shop/articles/dior-logo-design-history-and-evolution-kreafolk_637ca925-15a9-4a0f-8b46-ee73ee0236eb.jpg?v=1717725054&width=1024",
+        "https://i.pinimg.com/564x/2c/9c/9e/2c9c9eb1a0c46cc49071ad7c2a41d0b4.jpg",
       name: "Dior Beauty",
     },
     {
       image:
-        "https://i.pinimg.com/originals/6e/ed/2f/6eed2fbc746c4f0d4166fa1e06931402.jpg",
+        "https://i.pinimg.com/564x/5e/38/03/5e3803becc34c6202a3eb527e25b565d.jpg",
       name: "Prada",
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3b5QIG_ER-v_DAmij6UyUTx08VAG5bSSvhg&s",
+        "https://i.pinimg.com/736x/e3/a4/ae/e3a4ae26b6e81ec271ca2e7c6134f65a.jpg",
       name: "Victoria's Secret",
     },
   ];
