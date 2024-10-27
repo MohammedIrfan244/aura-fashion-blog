@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LuContact, LuSearch, LuUser } from "react-icons/lu";
 import { PiTrademarkRegisteredBold } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
@@ -8,6 +9,7 @@ function Navbar() {
   const [lastScroll, setLastScroll] = useState(0);
   const [searchVisible, setSearchVisible] = useState(false);
   const inputRef = useRef();
+  const navigate=useNavigate()
 
   const handleScroll = () => {
     const currentScroll = window.scrollY;
@@ -55,6 +57,7 @@ function Navbar() {
       {navListVisible && (
         <ul className="sm:flex gap-2 sm:gap-20 text-sm font-medium hidden">
           <li
+          onClick={()=>navigate('/')}
             className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
             style={{
               animationDuration: "600ms",
@@ -65,6 +68,7 @@ function Navbar() {
             HOME
           </li>
           <li
+          onClick={()=>navigate('/boutiques')}
             className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
             style={{
               animationDuration: "700ms",

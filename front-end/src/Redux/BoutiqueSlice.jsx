@@ -13,7 +13,7 @@ export const fetchBoutiques=createAsyncThunk("boutiques/fetchBoutiques",async(ur
 })
 
 const boutiqueSlice=createSlice({
-    name:"boutique",
+    name:"boutiques",
     initialState:INITIAL_STATE,
     reducers:{},
     extraReducers:(builder)=>{

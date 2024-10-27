@@ -1,108 +1,329 @@
 {
-    "users":[],
-    "styles":[
+  "users": [],
+  "styles": [
+    {
+      "name": "Everyday Makeup",
+      "image": "https://img.freepik.com/free-photo/portrait-confident-young-woman-smiling_23-2148452696.jpg?t=st=1729592606~exp=1729596206~hmac=317ab9e3b310f7e84377e872a7a1639cdf59521441c40e8131558f6b77d34f65&w=360"
+    },
+    {
+      "name": "Glam Makeup Palette",
+      "image": "https://img.freepik.com/free-photo/vintage-beautiful-girl-with-cigarette_144627-7956.jpg?t=st=1729684278~exp=1729687878~hmac=01e69d5ed48d519b6b8b2f99d0793c82d47d386bb54e70e8877cc43f5564934e&w=360"
+    },
+    {
+      "name": "Skincare Essential",
+      "image": "https://img.freepik.com/free-photo/different-foundation-arrangement_23-2148978148.jpg?t=st=1729663474~exp=1729667074~hmac=b613b1802928141459a74e3f0101fba1b6db04e9a8d490ee74e703787b78c1f3&w=360"
+    },
+    {
+      "name": "Haircare Essentials",
+      "image": "https://img.freepik.com/premium-photo/set-black-luxury-cosmetic-product-spray-oil-tube-cream-bottle-dispenser-lotion-shampoo-gel-showe_1358627-22656.jpg?w=360"
+    },
+    {
+      "name": "Nailcare Boutique",
+      "image": "https://img.freepik.com/premium-photo/close-up-persons-hand-with-black-nails-black-lace-design_1035785-12667.jpg?w=360"
+    },
+    {
+      "name": "On Seasonal Trends",
+      "image": "https://img.freepik.com/free-photo/medium-shot-cool-woman-posing_23-2149267439.jpg?t=st=1729664030~exp=1729667630~hmac=f85e167f38237fa0c98d1eebae0be7915f4f22036442953b9c667d7750434976&w=360"
+    },
+    {
+      "name": "Fashion Accessories",
+      "image": "https://img.freepik.com/premium-photo/flat-lay-top-view-bag-with-accessories-footwear-black_113876-1687.jpg?w=360"
+    },
+    {
+      "name": "Athleisure Collective",
+      "image": "https://img.freepik.com/premium-photo/portrait-young-woman-sitting-chair_1048944-5169204.jpg?w=360"
+    },
+    {
+      "image": "https://img.freepik.com/premium-photo/redhaired-gothic-girl-black-dress-gloomy-background-studio_81340-30613.jpg?w=360",
+      "name": "Gothic Wardrobe"
+    }
+  ],
+  "buotiques": [
+    {
+      "id": "1",
+      "banner": "https://www.edgars.co.za/cdn/shop/files/07_FB_Gloss_Bomb_EDGARS_Brand_Page_Banner_Desktop_1700_w_x480_h_d187962c-0e49-48a7-938c-4541191cdeae.png?v=1725615104&width=1920",
+      "image": "https://i.pinimg.com/564x/bd/ec/ce/bdeccedb65043b577e8eeb886b1f230b.jpg",
+      "name": "Fenty Beauty",
+      "collections": [
         {
-            "name": "Everyday Makeup",
-            "image":
-            "https://img.freepik.com/free-photo/portrait-confident-young-woman-smiling_23-2148452696.jpg?t=st=1729592606~exp=1729596206~hmac=317ab9e3b310f7e84377e872a7a1639cdf59521441c40e8131558f6b77d34f65&w=360"
+          "collectionName": "Pro Filt'r Soft Matte Longwear Foundation",
+          "collectionImage": "https://i.pinimg.com/564x/48/cd/d3/48cdd3f716df344a4ac66ec6e464eb77.jpg",
+          "collectionPrice": "36",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "name": "Glam Makeup Palette",
-            "image":
-            "https://img.freepik.com/free-photo/vintage-beautiful-girl-with-cigarette_144627-7956.jpg?t=st=1729684278~exp=1729687878~hmac=01e69d5ed48d519b6b8b2f99d0793c82d47d386bb54e70e8877cc43f5564934e&w=360"
+          "collectionName": "Killawatt Freestyle Highlighter",
+          "collectionImage": "https://i.pinimg.com/564x/6b/9d/c0/6b9dc095d315b3dfc65ef251bbc0051b.jpg",
+          "collectionPrice": "38",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "name": "Skincare Essential",
-            "image":
-            "https://img.freepik.com/free-photo/different-foundation-arrangement_23-2148978148.jpg?t=st=1729663474~exp=1729667074~hmac=b613b1802928141459a74e3f0101fba1b6db04e9a8d490ee74e703787b78c1f3&w=360"
+          "collectionName": "Portable Touchup Brush 130",
+          "collectionImage": "https://i.pinimg.com/564x/ff/b4/27/ffb4273c09f7c22540ee316f2ac71489.jpg",
+          "collectionPrice": "24",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "name": "Haircare Essentials",
-            "image":
-            "https://img.freepik.com/premium-photo/set-black-luxury-cosmetic-product-spray-oil-tube-cream-bottle-dispenser-lotion-shampoo-gel-showe_1358627-22656.jpg?w=360"
+          "collectionName": "Gloss Bomb Universal Lip Luminizer",
+          "collectionImage": "https://i.pinimg.com/736x/eb/7d/34/eb7d342b006a9aa354a6a1a3a6445391.jpg",
+          "collectionPrice": "20",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "name": "Nailcare Boutique",
-            "image":
-            "https://img.freepik.com/premium-photo/close-up-persons-hand-with-black-nails-black-lace-design_1035785-12667.jpg?w=360"
+          "collectionName": "Match Stix Matte Contour Skinstick",
+          "collectionImage": "https://i.pinimg.com/564x/eb/4e/62/eb4e62d00d83bcd637638c94599a9245.jpg",
+          "collectionPrice": "25",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "name": "On Seasonal Trends",
-            "image":
-            "https://img.freepik.com/free-photo/medium-shot-cool-woman-posing_23-2149267439.jpg?t=st=1729664030~exp=1729667630~hmac=f85e167f38237fa0c98d1eebae0be7915f4f22036442953b9c667d7750434976&w=360"
+          "collectionName": "Eaze Drop Blurring Skin Tint",
+          "collectionImage": "https://i.pinimg.com/564x/fd/28/1c/fd281cab0104cc4e489121356d1e4970.jpg",
+          "collectionPrice": "30",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "name": "Fashion Accessories",
-            "image":
-            "https://img.freepik.com/premium-photo/flat-lay-top-view-bag-with-accessories-footwear-black_113876-1687.jpg?w=360"
+          "collectionName": "Icon Velvet Liquid Lipstick",
+          "collectionImage": "https://i.pinimg.com/564x/e6/07/74/e607744dbbeaa78995df47f0bb909d06.jpg",
+          "collectionPrice": "20",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "name": "Athleisure Collective",
-            "image":
-            "https://img.freepik.com/premium-photo/portrait-young-woman-sitting-chair_1048944-5169204.jpg?w=360"
+          "collectionName": "Hella Thicc Volumizing Mascara",
+          "collectionImage": "https://i.pinimg.com/564x/39/51/0e/39510ef9ef843c7b9f072d0160a85444.jpg",
+          "collectionPrice": "24",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "image":
-              "https://img.freepik.com/premium-photo/redhaired-gothic-girl-black-dress-gloomy-background-studio_81340-30613.jpg?w=360",
-            "name": "Gothic Wardrobe"
-          }
-      ],
-    "buotique":[
-        {
-            "id":"1",
-          "image":
-            "https://i.pinimg.com/564x/bd/ec/ce/bdeccedb65043b577e8eeb886b1f230b.jpg",
-          "name": "Fenty Beauty",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
+          "collectionName": "Fat Water Niacinamide Pore-Refining Toner Serum",
+          "collectionImage": "https://i.pinimg.com/564x/97/42/54/974254227f12eea6e6fce1e3bb55bf8c.jpg",
+          "collectionPrice": "28",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "id":"2",
-          "image":
-            "https://i.pinimg.com/736x/a8/47/01/a84701b1405cac56dcccf743e5070975.jpg",
-          "name": "Gucci",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
+          "collectionName": "Flypencil Longwear Pencil Eyeliner",
+          "collectionImage": "https://i.pinimg.com/564x/1e/e3/a3/1ee3a31dab3adc319252a1d6c7e5a120.jpg",
+          "collectionPrice": "22",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "id":"3",
-          "image":
-            "https://i.pinimg.com/564x/6c/47/d7/6c47d73e1f71a1a40b0f4468770de3ea.jpg",
-          "name": "Maybelline",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
+          "collectionName": "Snap Shadows Mix & Match Eyeshadow Palette",
+          "collectionImage": "https://i.pinimg.com/564x/8f/99/19/8f99197e69f5aa3745a914484c9003ab.jpg",
+          "collectionPrice": "25",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "id":"4",
-          "image":
-            "https://i.pinimg.com/564x/9d/74/28/9d7428c68c353a4754df7c69a823e3d7.jpg",
-          "name": "Loreal",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
+          "collectionName": "Invisimatte Blotting Paper",
+          "collectionImage": "https://i.pinimg.com/564x/b5/b9/b4/b5b9b4b65dcd1cdc43b85c73a3965712.jpg",
+          "collectionPrice": "16",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "id":"5",
-          "image":
-            "https://i.pinimg.com/564x/36/f7/2e/36f72eaaaf2e89f7a192d9ae89962126.jpg",
-          "name": "Huda Beauty",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
+            "collectionName": "Butta Drop Whipped Oil Body Cream",
+            "collectionImage": "https://i.pinimg.com/736x/05/dc/d1/05dcd1ed4aa20baf1f0897d031873dff.jpg",
+            "collectionPrice": "30",
+            "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "id":"6",
-          "image":
-            "https://i.pinimg.com/564x/2c/9c/9e/2c9c9eb1a0c46cc49071ad7c2a41d0b4.jpg",
-          "name": "Dior Beauty",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
+          "collectionName": "Hydra Vizor Invisible Moisturizer Broad Spectrum SPF 30",
+          "collectionImage": "https://i.pinimg.com/564x/58/a9/f0/58a9f0aeee2591e40e8edcf681e9f3ea.jpg",
+          "collectionPrice": "35",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-            "id":"7",
-          "image":
-            "https://i.pinimg.com/564x/5e/38/03/5e3803becc34c6202a3eb527e25b565d.jpg",
-          "name": "Prada",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
-        },
-        {
-            "id":"8",
-          "image":
-            "https://i.pinimg.com/736x/e3/a4/ae/e3a4ae26b6e81ec271ca2e7c6134f65a.jpg",
-          "name": "Victoria's Secret",
-          "collection":[{"collectionName":"name","collectionImage":"image"}]
+          "collectionName": "Cookies N Clean Whipped Clay Pore Detox Face Mask",
+          "collectionImage": "https://i.pinimg.com/564x/72/b7/81/72b7816708da5a96c1b19043ae84da25.jpg",
+          "collectionPrice": "30",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         }
       ]
+    },
+    {
+      "id": "2",
+      "banner": "https://images.squarespace-cdn.com/content/v1/5ada10c6710699da7e536301/1533810240561-W8N4GF8Q6VMGVMP66RWR/Gucci+Header.jpg?format=2500w",
+      "image": "https://i.pinimg.com/736x/a8/47/01/a84701b1405cac56dcccf743e5070975.jpg",
+      "name": "Gucci",
+      "collections": [
+        {
+          "collectionName": "Gucci Fluide De Beauté Fini Naturel Foundation",
+          "collectionImage": "https://i.pinimg.com/564x/95/91/77/9591776c2c38416d193f51ef7e0474c3.jpg",
+          "collectionPrice": "63",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Satin Matte Foundation",
+          "collectionImage": "https://i.pinimg.com/564x/1a/bb/ee/1abbee1c81d7a73ce530cc51da96e45c.jpg",
+          "collectionPrice": "63",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Concealer",
+          "collectionImage": "https://i.pinimg.com/564x/da/04/f4/da04f4f2096510b9b0d91ef286b6f42e.jpg",
+          "collectionPrice": "41",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Bronzer",
+          "collectionImage": "https://i.pinimg.com/564x/af/fc/97/affc979c9bc53e83b059f65f7f9afd32.jpg",
+          "collectionPrice": "49",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Blush",
+          "collectionImage": "https://i.pinimg.com/736x/82/e5/52/82e55276b89eec8f88bc807b88a0241f.jpg",
+          "collectionPrice": "49",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Eye Shadow Palette",
+          "collectionImage": "https://i.pinimg.com/736x/18/25/b7/1825b706c63ab4c44bbacfdc2d591bec.jpg",
+          "collectionPrice": "62",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Eyeliner",
+          "collectionImage": "https://i.pinimg.com/736x/5a/cf/51/5acf51537c56e25d620a79d5dea47a5f.jpg",
+          "collectionPrice": "36",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Lipstick",
+          "collectionImage": "https://i.pinimg.com/736x/33/c5/52/33c552dacf135efdf863e5c266aa90a4.jpg",
+          "collectionPrice": "42",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Liquid Lipstick",
+          "collectionImage": "https://i.pinimg.com/564x/23/90/e0/2390e05aabfcf71649d4e58ab7cdd650.jpg",
+          "collectionPrice": "42",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Mascara L'Obscur",
+          "collectionImage": "https://i.pinimg.com/564x/29/d0/8d/29d08d697c5de3260358903262285914.jpg",
+          "collectionPrice": "38",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci GG Marmont Matelassé Leather Shoulder Bag",
+          "collectionImage": "https://i.pinimg.com/564x/19/b7/59/19b75921f977f0fbb9d9330b7b855450.jpg",
+          "collectionPrice": "2,200",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Ace Leather Sneakers",
+          "collectionImage": "https://i.pinimg.com/564x/8b/98/1e/8b981ea415ee8a5fec7caef57d2c1e48.jpg",
+          "collectionPrice": "790",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Belt Bag with Interlocking G",
+          "collectionImage": "https://i.pinimg.com/564x/58/ef/4a/58ef4a221e7c30dc1ff61296db7e9777.jpg",
+          "collectionPrice": "1,200",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Dionysus GG Super Mini Bag",
+          "collectionImage": "https://i.pinimg.com/736x/cb/c2/80/cbc2809868068cd649d9a3e8981cfc9d.jpg",
+          "collectionPrice": "980",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Gardenia Silk Scarf",
+          "collectionImage": "https://i.pinimg.com/564x/8e/5a/8b/8e5a8bd9efa54f1dcf52e00889708c30.jpg",
+          "collectionPrice": "350",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Horsebit Loafer",
+          "collectionImage": "https://i.pinimg.com/564x/b2/9c/0f/b29c0f851b2ef7c0684cf2ce69723296.jpg",
+          "collectionPrice": "1,050",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "banner": "image",
+      "image": "https://i.pinimg.com/564x/6c/47/d7/6c47d73e1f71a1a40b0f4468770de3ea.jpg",
+      "name": "Maybelline",
+      "collections": [
+        {
+          "collectionName": "name",
+          "collectionImage": "image",
+          "collectionPrice": "1234",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "banner": "image",
+      "image": "https://i.pinimg.com/564x/9d/74/28/9d7428c68c353a4754df7c69a823e3d7.jpg",
+      "name": "Loreal",
+      "collections": [
+        {
+          "collectionName": "name",
+          "collectionImage": "image",
+          "collectionPrice": "1234",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "banner": "image",
+      "image": "https://i.pinimg.com/564x/36/f7/2e/36f72eaaaf2e89f7a192d9ae89962126.jpg",
+      "name": "Huda Beauty",
+      "collections": [
+        {
+          "collectionName": "name",
+          "collectionImage": "image",
+          "collectionPrice": "1234",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "banner": "image",
+      "image": "https://i.pinimg.com/564x/2c/9c/9e/2c9c9eb1a0c46cc49071ad7c2a41d0b4.jpg",
+      "name": "Dior Beauty",
+      "collections": [
+        {
+          "collectionName": "name",
+          "collectionImage": "image",
+          "collectionPrice": "1234",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "banner": "image",
+      "image": "https://i.pinimg.com/564x/5e/38/03/5e3803becc34c6202a3eb527e25b565d.jpg",
+      "name": "Prada",
+      "collections": [
+        {
+          "collectionName": "name",
+          "collectionImage": "image",
+          "collectionPrice": "1234",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "banner": "image",
+      "image": "https://i.pinimg.com/736x/e3/a4/ae/e3a4ae26b6e81ec271ca2e7c6134f65a.jpg",
+      "name": "Victoria's Secret",
+      "collections": [
+        {
+          "collectionName": "name",
+          "collectionImage": "image",
+          "collectionPrice": "1234",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        }
+      ]
+    }
+  ]
 }
