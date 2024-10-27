@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
 // eslint-disable-next-line react/prop-types
-function StyleCards({ image, message }) {
+function StyleCards({ image, name }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -21,7 +21,7 @@ function StyleCards({ image, message }) {
       <img src={image} alt="image" className="absolute -top-10" />
       <p className="font-agdasima absolute top-1 left-2 text-xl text-electricBlue">A</p>
       <p className="text-5xl absolute bottom-2 left-1 font-extralight">
-        {message}
+        {name}
       </p>
     </div>
   );

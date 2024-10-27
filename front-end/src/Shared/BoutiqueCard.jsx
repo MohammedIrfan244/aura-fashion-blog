@@ -11,7 +11,7 @@ function BoutiqueCard({image,name,index}) {
     <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.5}>
     <div ref={ref} className={`h-[400px] w-80 overflow-hidden relative hover:text-electricBlue cursor-pointer flex items-center card_hover bg-[#000002] hover:scale-[1.01] transition-all ease-out ${
         inView ? "animate-slideY opacity-100" : "opacity-0"}`}  style={{
-        animationDuration: `${(index+1)*500}ms`,
+        animationDuration: `${(index+1)*200}ms`,
         "--tw-translate-y": "0px",
         "--tw-translate-y-70": "0px",
       }}>

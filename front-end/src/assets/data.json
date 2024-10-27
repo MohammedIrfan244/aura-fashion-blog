@@ -1,0 +1,108 @@
+{
+    "users":[],
+    "styles":[
+        {
+            "name": "Everyday Makeup",
+            "image":
+            "https://img.freepik.com/free-photo/portrait-confident-young-woman-smiling_23-2148452696.jpg?t=st=1729592606~exp=1729596206~hmac=317ab9e3b310f7e84377e872a7a1639cdf59521441c40e8131558f6b77d34f65&w=360"
+        },
+        {
+            "name": "Glam Makeup Palette",
+            "image":
+            "https://img.freepik.com/free-photo/vintage-beautiful-girl-with-cigarette_144627-7956.jpg?t=st=1729684278~exp=1729687878~hmac=01e69d5ed48d519b6b8b2f99d0793c82d47d386bb54e70e8877cc43f5564934e&w=360"
+        },
+        {
+            "name": "Skincare Essential",
+            "image":
+            "https://img.freepik.com/free-photo/different-foundation-arrangement_23-2148978148.jpg?t=st=1729663474~exp=1729667074~hmac=b613b1802928141459a74e3f0101fba1b6db04e9a8d490ee74e703787b78c1f3&w=360"
+        },
+        {
+            "name": "Haircare Essentials",
+            "image":
+            "https://img.freepik.com/premium-photo/set-black-luxury-cosmetic-product-spray-oil-tube-cream-bottle-dispenser-lotion-shampoo-gel-showe_1358627-22656.jpg?w=360"
+        },
+        {
+            "name": "Nailcare Boutique",
+            "image":
+            "https://img.freepik.com/premium-photo/close-up-persons-hand-with-black-nails-black-lace-design_1035785-12667.jpg?w=360"
+        },
+        {
+            "name": "On Seasonal Trends",
+            "image":
+            "https://img.freepik.com/free-photo/medium-shot-cool-woman-posing_23-2149267439.jpg?t=st=1729664030~exp=1729667630~hmac=f85e167f38237fa0c98d1eebae0be7915f4f22036442953b9c667d7750434976&w=360"
+        },
+        {
+            "name": "Fashion Accessories",
+            "image":
+            "https://img.freepik.com/premium-photo/flat-lay-top-view-bag-with-accessories-footwear-black_113876-1687.jpg?w=360"
+        },
+        {
+            "name": "Athleisure Collective",
+            "image":
+            "https://img.freepik.com/premium-photo/portrait-young-woman-sitting-chair_1048944-5169204.jpg?w=360"
+        },
+        {
+            "image":
+              "https://img.freepik.com/premium-photo/redhaired-gothic-girl-black-dress-gloomy-background-studio_81340-30613.jpg?w=360",
+            "name": "Gothic Wardrobe"
+          }
+      ],
+    "buotique":[
+        {
+            "id":"1",
+          "image":
+            "https://i.pinimg.com/564x/bd/ec/ce/bdeccedb65043b577e8eeb886b1f230b.jpg",
+          "name": "Fenty Beauty",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        },
+        {
+            "id":"2",
+          "image":
+            "https://i.pinimg.com/736x/a8/47/01/a84701b1405cac56dcccf743e5070975.jpg",
+          "name": "Gucci",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        },
+        {
+            "id":"3",
+          "image":
+            "https://i.pinimg.com/564x/6c/47/d7/6c47d73e1f71a1a40b0f4468770de3ea.jpg",
+          "name": "Maybelline",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        },
+        {
+            "id":"4",
+          "image":
+            "https://i.pinimg.com/564x/9d/74/28/9d7428c68c353a4754df7c69a823e3d7.jpg",
+          "name": "Loreal",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        },
+        {
+            "id":"5",
+          "image":
+            "https://i.pinimg.com/564x/36/f7/2e/36f72eaaaf2e89f7a192d9ae89962126.jpg",
+          "name": "Huda Beauty",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        },
+        {
+            "id":"6",
+          "image":
+            "https://i.pinimg.com/564x/2c/9c/9e/2c9c9eb1a0c46cc49071ad7c2a41d0b4.jpg",
+          "name": "Dior Beauty",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        },
+        {
+            "id":"7",
+          "image":
+            "https://i.pinimg.com/564x/5e/38/03/5e3803becc34c6202a3eb527e25b565d.jpg",
+          "name": "Prada",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        },
+        {
+            "id":"8",
+          "image":
+            "https://i.pinimg.com/736x/e3/a4/ae/e3a4ae26b6e81ec271ca2e7c6134f65a.jpg",
+          "name": "Victoria's Secret",
+          "collection":[{"collectionName":"name","collectionImage":"image"}]
+        }
+      ]
+}

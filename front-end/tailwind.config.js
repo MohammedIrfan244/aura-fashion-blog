@@ -46,7 +46,12 @@ export default {
           '0%':{width:"0"},
           '70%':{width:"var(--tw-width-70)"},
           '100%':{width:"var(--tw-width-100)"}
-        }
+        },
+        rotate:{
+          '0%':{width:"0"},
+          '70%':{width:"var(--tw-width-70)"},
+          '100%':{width:"var(--tw-width-100)"}
+        },
       },
       animation: {
         bouncing: 'bounce 0.6s ease-out forwards',
