@@ -25,10 +25,10 @@ function BoutiquePage() {
   return (
     <div className="pt-16 relative">
       <div className="h-20 overflow-hidden flex items-center">
-        <p className="absolute top-22 left-16  font-agdasima">{currentBoutique?.name}</p>
-      <BiSolidChevronLeftCircle className="absolute top-26 left-3 text-xl text-electricBlue" onClick={handleDec}/>
+        <p className="absolute top-22 left-16  font-agdasima text-electricBlue">{currentBoutique?.name}</p>
+      <BiSolidChevronLeftCircle className="absolute top-26 left-3 text-xl text-electricBlue cursor-pointer" onClick={handleDec}/>
         <img src={currentBoutique?.banner} alt="banner" className="w-full" />
-        <BiSolidChevronRightCircle className="absolute top-26 right-3 text-xl text-electricBlue" onClick={handleInc}/>
+        <BiSolidChevronRightCircle className="absolute top-26 right-3 text-xl text-electricBlue cursor-pointer" onClick={handleInc}/>
       </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center gap-y-5 mt-20">
         {currentBoutique?.collections?.map((item, index) =><BoutiqueCollectionCard key={index} boutique={item} click={()=>setSelectedItem(item)}/>)}

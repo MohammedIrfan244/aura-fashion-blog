@@ -49,223 +49,585 @@
           "collectionName": "Pro Filt'r Soft Matte Longwear Foundation",
           "collectionImage": "https://i.pinimg.com/564x/48/cd/d3/48cdd3f716df344a4ac66ec6e464eb77.jpg",
           "collectionPrice": "36",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/pro-filtr-soft-matte-longwear-foundation-420?variant=35178864508973"
         },
         {
           "collectionName": "Killawatt Freestyle Highlighter",
           "collectionImage": "https://i.pinimg.com/564x/6b/9d/c0/6b9dc095d315b3dfc65ef251bbc0051b.jpg",
           "collectionPrice": "38",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/killawatt-freestyle-highlighter-lightning-dustfire-crystal?variant=35110478938157"
         },
         {
-          "collectionName": "Portable Touchup Brush 130",
+          "collectionName": "Portable Touchup Brush 150",
           "collectionImage": "https://i.pinimg.com/564x/ff/b4/27/ffb4273c09f7c22540ee316f2ac71489.jpg",
           "collectionPrice": "24",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/portable-contour-concealer-brush-150"
         },
         {
           "collectionName": "Gloss Bomb Universal Lip Luminizer",
           "collectionImage": "https://i.pinimg.com/736x/eb/7d/34/eb7d342b006a9aa354a6a1a3a6445391.jpg",
           "collectionPrice": "20",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/gloss-bomb-universal-lip-luminizer-fenty-glow"
         },
         {
           "collectionName": "Match Stix Matte Contour Skinstick",
           "collectionImage": "https://i.pinimg.com/564x/eb/4e/62/eb4e62d00d83bcd637638c94599a9245.jpg",
           "collectionPrice": "25",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/match-stix-contour-skinstick-amber?variant=41471068799021"
         },
         {
           "collectionName": "Eaze Drop Blurring Skin Tint",
           "collectionImage": "https://i.pinimg.com/564x/fd/28/1c/fd281cab0104cc4e489121356d1e4970.jpg",
           "collectionPrice": "30",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/eaze-drop-blurring-skin-tint-20?variant=39355630845997"
         },
         {
           "collectionName": "Icon Velvet Liquid Lipstick",
           "collectionImage": "https://i.pinimg.com/564x/e6/07/74/e607744dbbeaa78995df47f0bb909d06.jpg",
           "collectionPrice": "20",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/fenty-icon-velvet-liquid-lipstick-the-mvp?variant=41396089192493"
         },
         {
           "collectionName": "Hella Thicc Volumizing Mascara",
           "collectionImage": "https://i.pinimg.com/564x/39/51/0e/39510ef9ef843c7b9f072d0160a85444.jpg",
           "collectionPrice": "24",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/hella-thicc-volumizing-mascara-cuz-im-black?variant=41531397472301"
         },
         {
           "collectionName": "Fat Water Niacinamide Pore-Refining Toner Serum",
           "collectionImage": "https://i.pinimg.com/564x/97/42/54/974254227f12eea6e6fce1e3bb55bf8c.jpg",
           "collectionPrice": "28",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/fat-water-niacinamide-pore-refining-toner-serum-with-barbados-cherry?variant=39329802518573"
         },
         {
           "collectionName": "Flypencil Longwear Pencil Eyeliner",
           "collectionImage": "https://i.pinimg.com/564x/1e/e3/a3/1ee3a31dab3adc319252a1d6c7e5a120.jpg",
           "collectionPrice": "22",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/flypencil-longwear-pencil-eyeliner-cuz-im-black?variant=35110460522541"
         },
         {
           "collectionName": "Snap Shadows Mix & Match Eyeshadow Palette",
           "collectionImage": "https://i.pinimg.com/564x/8f/99/19/8f99197e69f5aa3745a914484c9003ab.jpg",
           "collectionPrice": "25",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/snap-shadows-mix-match-eyeshadow-palette-true-neutrals?variant=35110462455853"
         },
         {
           "collectionName": "Invisimatte Blotting Paper",
           "collectionImage": "https://i.pinimg.com/564x/b5/b9/b4/b5b9b4b65dcd1cdc43b85c73a3965712.jpg",
           "collectionPrice": "16",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/invisimatte-blotting-paper-refill?variant=35110480085037"
         },
         {
-            "collectionName": "Butta Drop Whipped Oil Body Cream",
-            "collectionImage": "https://i.pinimg.com/736x/05/dc/d1/05dcd1ed4aa20baf1f0897d031873dff.jpg",
-            "collectionPrice": "30",
-            "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionName": "Butta Drop Whipped Oil Body Cream",
+          "collectionImage": "https://i.pinimg.com/736x/05/dc/d1/05dcd1ed4aa20baf1f0897d031873dff.jpg",
+          "collectionPrice": "30",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/butta-drop-whipped-oil-body-cream-with-tropical-oils-shea-butter-fenty-fresh?variant=41669436702765"
         },
         {
           "collectionName": "Hydra Vizor Invisible Moisturizer Broad Spectrum SPF 30",
           "collectionImage": "https://i.pinimg.com/564x/58/a9/f0/58a9f0aeee2591e40e8edcf681e9f3ea.jpg",
           "collectionPrice": "35",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/hydra-vizor-invisible-moisturizer-broad-spectrum-spf-30-sunscreen-with-niacinamide-kalahari-melon-us?variant=35110454722605"
         },
         {
           "collectionName": "Cookies N Clean Whipped Clay Pore Detox Face Mask",
           "collectionImage": "https://i.pinimg.com/564x/72/b7/81/72b7816708da5a96c1b19043ae84da25.jpg",
           "collectionPrice": "30",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/cookies-n-clean-whipped-clay-pore-detox-face-mask-with-salicylic-acid-charcoal?variant=40240683024429"
+        },
+        {
+          "collectionName": "Pro Filt'r Instant Retouch Primer",
+          "collectionImage": "https://i.pinimg.com/564x/67/b2/85/67b285fab027c11a29e86385a800c51c.jpg",
+          "collectionPrice": "32",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/pro-filtr-instant-retouch-primer-soft-matte"
+        },
+        {
+          "collectionName": "Stunna Lip Paint Longwear Fluid Lip Color",
+          "collectionImage": "https://i.pinimg.com/564x/fd/4c/68/fd4c68b83e43d737d862df169baa526c.jpg",
+          "collectionPrice": "26",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/stunna-lip-paint-longwear-fluid-lip-color-uncensored?variant=35110479790125"
+        },
+        {
+          "collectionName": "Sun Stalk'r Instant Warmth Bronzer",
+          "collectionImage": "https://i.pinimg.com/564x/62/71/ac/6271ac1afdffa046edb9dfc344418b41.jpg",
+          "collectionPrice": "30",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/sun-stalkr-instant-warmth-bronzer-caramel-cutie?variant=35110467305517"
+        },
+        {
+          "collectionName": "Fenty Glow Cheeks Out Freestyle Cream Blush",
+          "collectionImage": "https://i.pinimg.com/564x/0b/8d/42/0b8d42d160e3b66d93469e68dd7eb958.jpg",
+          "collectionPrice": "20",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/cheeks-out-freestyle-cream-blush-petal-poppin"
+        },
+        {
+          "collectionName": "Pro Filt'r Instant Retouch Setting Powder",
+          "collectionImage": "https://i.pinimg.com/564x/cd/7f/04/cd7f046c41ea3463ce78a9a1df59e2da.jpg",
+          "collectionPrice": "32",
+          "collectionReview": [ { "comment": "excellent for setting makeup", "commentrId": "" }],
+          "collectionLink": "https://fentybeauty.com/en-in/products/pro-filtr-instant-retouch-setting-powder-banana?variant=35110468845613"
         }
       ]
     },
     {
       "id": "2",
       "banner": "https://images.squarespace-cdn.com/content/v1/5ada10c6710699da7e536301/1533810240561-W8N4GF8Q6VMGVMP66RWR/Gucci+Header.jpg?format=2500w",
-      "image": "https://i.pinimg.com/736x/a8/47/01/a84701b1405cac56dcccf743e5070975.jpg",
+      "image": "https://i.pinimg.com/564x/31/73/4c/31734c756a61f933efae10ee51612686.jpg",
       "name": "Gucci",
       "collections": [
         {
           "collectionName": "Gucci Fluide De Beauté Fini Naturel Foundation",
           "collectionImage": "https://i.pinimg.com/564x/95/91/77/9591776c2c38416d193f51ef7e0474c3.jpg",
           "collectionPrice": "63",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/face/580c-online-exclusive-eternite-de-beaute-spf-foundation-p-7201689PFUS9580",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Satin Matte Foundation",
           "collectionImage": "https://i.pinimg.com/564x/1a/bb/ee/1abbee1c81d7a73ce530cc51da96e45c.jpg",
           "collectionPrice": "63",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/face/580c-online-exclusive-eternite-de-beaute-spf-foundation-p-7201689PFUS9580",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Concealer",
           "collectionImage": "https://i.pinimg.com/564x/da/04/f4/da04f4f2096510b9b0d91ef286b6f42e.jpg",
           "collectionPrice": "41",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/face/58c-concentre-de-beaute-concealer-p-7553249PRD99058",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Bronzer",
           "collectionImage": "https://i.pinimg.com/564x/af/fc/97/affc979c9bc53e83b059f65f7f9afd32.jpg",
           "collectionPrice": "49",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/face/02-poudre-de-beaute-eclat-soleil-powder-p-6249759PBR20002",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Blush",
           "collectionImage": "https://i.pinimg.com/736x/82/e5/52/82e55276b89eec8f88bc807b88a0241f.jpg",
           "collectionPrice": "49",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/gift-ideas//11-limited-edition-gucci-blush-de-beaute-p-8052289PRD99011",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Eye Shadow Palette",
           "collectionImage": "https://i.pinimg.com/736x/18/25/b7/1825b706c63ab4c44bbacfdc2d591bec.jpg",
           "collectionPrice": "62",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/eyes/multi-use-palette-de-beaute-quatuor-wild-bouquet-p-7200299PRD99003",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Eyeliner",
           "collectionImage": "https://i.pinimg.com/736x/5a/cf/51/5acf51537c56e25d620a79d5dea47a5f.jpg",
           "collectionPrice": "36",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/eyes/01-noir-stylo-contour-des-yeux-eyeliner-p-6634539KPL19001",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-          "collectionName": "Gucci Lipstick",
+          "collectionName": "25* Goldie Red, Rouge à Lèvres Mat Lipstick",
           "collectionImage": "https://i.pinimg.com/736x/33/c5/52/33c552dacf135efdf863e5c266aa90a4.jpg",
           "collectionPrice": "42",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/lips/25-goldie-red-rouge-a-levres-mat-lipstick-p-6112349PL129250",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-          "collectionName": "Gucci Liquid Lipstick",
+          "collectionName": "Rouge à Lèvres Liquide Mat Lipstick",
           "collectionImage": "https://i.pinimg.com/564x/23/90/e0/2390e05aabfcf71649d4e58ab7cdd650.jpg",
           "collectionPrice": "42",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/lips/223-isabel-rosewood-rouge-a-levres-liquide-mat-lipstick-p-6917909PRD99223",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Mascara L'Obscur",
           "collectionImage": "https://i.pinimg.com/564x/29/d0/8d/29d08d697c5de3260358903262285914.jpg",
           "collectionPrice": "38",
+          "collectionLink": "https://www.gucci.com/us/en/pr/beauty/make-up/eyes/mascara-lobscur-black-p-6146709PMA41000",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci GG Marmont Matelassé Leather Shoulder Bag",
           "collectionImage": "https://i.pinimg.com/564x/19/b7/59/19b75921f977f0fbb9d9330b7b855450.jpg",
           "collectionPrice": "2,200",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/handbags/crossbody-bags-for-women/gg-matelasse-small-shoulder-bag-p-735049UM8HG1046",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Ace Leather Sneakers",
           "collectionImage": "https://i.pinimg.com/564x/8b/98/1e/8b981ea415ee8a5fec7caef57d2c1e48.jpg",
           "collectionPrice": "790",
+          "collectionLink": "https://www.gucci.com/us/en/st/newsearchpage?searchString=Ace%20Leather%20Sneakers&sortBy=relev&search-cat=header-search",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Belt Bag with Interlocking G",
           "collectionImage": "https://i.pinimg.com/564x/58/ef/4a/58ef4a221e7c30dc1ff61296db7e9777.jpg",
           "collectionPrice": "1,200",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/handbags/backpacks-belt-bags-for-women/small-belt-bag-with-interlocking-g-p-68293392THG8563s",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Dionysus GG Super Mini Bag",
           "collectionImage": "https://i.pinimg.com/736x/cb/c2/80/cbc2809868068cd649d9a3e8981cfc9d.jpg",
           "collectionPrice": "980",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/handbags/crossbody-bags-for-women/dionysus-gg-super-mini-bag-p-476432KHNRN8642",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
           "collectionName": "Gucci Gardenia Silk Scarf",
           "collectionImage": "https://i.pinimg.com/564x/8e/5a/8b/8e5a8bd9efa54f1dcf52e00889708c30.jpg",
           "collectionPrice": "350",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/accessories-for-women/silks-and-scarves-for-women/neck-bows-for-women/gucci-flora-print-silk-neck-bow-p-7920573G0019888",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         },
         {
-          "collectionName": "Gucci Horsebit Loafer",
-          "collectionImage": "https://i.pinimg.com/564x/b2/9c/0f/b29c0f851b2ef7c0684cf2ce69723296.jpg",
+          "collectionName": "Horsebit platform loafer slingback",
+          "collectionImage": "https://i.pinimg.com/564x/8e/a2/28/8ea228f311ab0eb2b2712cf1de255474.jpg",
           "collectionPrice": "1,050",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/shoes-for-women/pumps-for-women/platforms-for-women/womens-horsebit-platform-loafer-slingback-p-805308AADCW1000",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Ophidia GG Small Camera Bag",
+          "collectionImage": "https://i.pinimg.com/564x/bf/00/b8/bf00b8cdf61a865e130ce8857352580a.jpg",
+          "collectionPrice": "1,350",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/handbags/crossbody-bags-for-women/ophidia-small-shoulder-bag-p-499621K05NN4076",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci GG Marmont Belt",
+          "collectionImage": "https://i.pinimg.com/564x/65/25/9a/65259a38ec79b00e5ceb0ab3684c8006.jpg",
+          "collectionPrice": "450",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/accessories-for-women/belts-for-women/gg-marmont-belt-p-4005930YA0P1000",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Rhyton Sneaker",
+          "collectionImage": "https://i.pinimg.com/564x/8d/32/ab/8d32aba979f8c755d13eda95962febf4.jpg",
+          "collectionPrice": "980",
+          "collectionLink": "https://www.gucci.com/us/en/pr/men/shoes-for-men/sneakers-for-men/mens-rhyton-sneaker-with-gucci-logo-p-500877DRW009522",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Gucci Dionysus Mini Bag",
+          "collectionImage": "https://i.pinimg.com/564x/b4/8c/07/b48c076777964a85640b10a85019eb3f.jpg",
+          "collectionPrice": "2,400",
+          "collectionLink": "https://www.gucci.com/us/en/pr/women/handbags/mini-bags-for-women/dionysus-super-mini-bag-p-7953680AAA86207",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         }
       ]
     },
     {
       "id": "3",
-      "banner": "image",
+      "banner": "https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/americas/us/new-beauty-products-new-makeup/title-banner/maybelline-new-banner-1980x375.jpg?rev=fe515d525439440aa2152d346f9dcbf2&cx=0.28&cy=0.54&cw=1320&ch=250&hash=6970D3D8852F8974328D51DD497985EF",
       "image": "https://i.pinimg.com/564x/6c/47/d7/6c47d73e1f71a1a40b0f4468770de3ea.jpg",
       "name": "Maybelline",
       "collections": [
         {
-          "collectionName": "name",
+          "collectionName": "Fit Me Matte + Poreless Foundation",
+          "collectionImage": "https://i.pinimg.com/564x/3e/40/4f/3e404fca7d4587f27539f57a8f2a2aa8.jpg",
+          "collectionPrice": "10.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/foundation/fit-me-matte-poreless-foundation"
+        },
+        {
+          "collectionName": "Instant Age Rewind Eraser Dark Circle Treatment Concealer",
+          "collectionImage": "https://i.pinimg.com/736x/ba/6a/ad/ba6aad7491d5e91682ad4639890c5b43.jpg",
+          "collectionPrice": "10.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/concealer/instant-age-rewind-eraser"
+        },
+        {
+          "collectionName": "Lash Sensational Sky High Mascara",
+          "collectionImage": "https://i.pinimg.com/564x/98/5f/33/985f33bb4987b6d1db6c8bb6d1e94ab0.jpg",
+          "collectionPrice": "12.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/mascara/lash-sensational-sky-high-mascara"
+        },
+        {
+          "collectionName": "SuperStay Matte Ink Liquid Lipstick",
+          "collectionImage": "https://i.pinimg.com/564x/a1/7e/09/a17e09cfbe36b2c3a234ce051a658278.jpg",
+          "collectionPrice": "10.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/lip-makeup/lipstick/superstay-matte-ink-liquid-lipstick"
+        },
+        {
+          "collectionName": "Fit Me Loose Finishing Powder",
+          "collectionImage": "https://i.pinimg.com/736x/6f/a2/6c/6fa26cdd89627cc722a631352ad86df6.jpg",
+          "collectionPrice": "10.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/powder/fit-me-loose-finishing-powder"
+        },
+        {
+          "collectionName": "Eyestudio Master Precise All Day Liquid Eyeliner",
+          "collectionImage": "https://i.pinimg.com/564x/72/05/1d/72051dbb0e8b0783cdb3e74c3e954bd2.jpg",
+          "collectionPrice": "8.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/eyeliner/eyestudio-master-precise-all-day-liquid-eyeliner"
+        },
+        {
+          "collectionName": "Lifter Gloss with Hyaluronic Acid",
+          "collectionImage": "https://i.pinimg.com/736x/28/d4/65/28d46536771789c3ba6cf5ff22e933e1.jpg",
+          "collectionPrice": "10.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/lip-makeup/lip-gloss/lifter-gloss"
+        },
+        {
+          "collectionName": "Super Stay Full Coverage Foundation",
+          "collectionImage": "https://i.pinimg.com/564x/48/bb/7f/48bb7fe917cbe58eb35d6ef87ef8d347.jpg",
+          "collectionPrice": "13.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/foundation/super-stay-full-coverage-foundation"
+        },
+        {
+          "collectionName": "Color Sensational Shaping Lip Liner",
+          "collectionImage": "https://i.pinimg.com/564x/d5/5e/98/d55e98f096c316b9a4efca05ebaf146d.jpg",
+          "collectionPrice": "8.49",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/lip-makeup/lip-liner/color-sensational-shaping-lip-liner"
+        },
+        {
+          "collectionName": "Express Brow Ultra Slim Pencil",
+          "collectionImage": "https://i.pinimg.com/564x/fe/23/c7/fe23c7a39ab6be2069242023cf9406b2.jpg",
+          "collectionPrice": "9.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/eyebrow/express-brow-ultra-slim-pencil"
+        },
+        {
+          "collectionName": "Dream Fresh BB Cream 8-In-1 Skin Perfector",
+          "collectionImage": "https://i.pinimg.com/736x/1a/a7/dc/1aa7dc7eeb0eed39808db1657ce32afb.jpg",
+          "collectionPrice": "9.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/bb-cream/dream-fresh-bb-cream"
+        },
+        {
+          "collectionName": "Tattoo Studio Sharpenable Gel Pencil Eyeliner",
+          "collectionImage": "https://i.pinimg.com/736x/36/23/41/362341952d8828516e8d053acf9fb01b.jpg",
+          "collectionPrice": "9.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/eyeliner/tattoo-studio-sharpenable-gel-pencil-eyeliner"
+        },
+        {
+          "collectionName": "SuperStay Ink Crayon Lipstick",
+          "collectionImage": "https://i.pinimg.com/736x/4b/fd/a1/4bfda107904366b7a0420d185885807c.jpg",
+          "collectionPrice": "10.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/lip-makeup/lipstick/superstay-ink-crayon"
+        },
+        {
+          "collectionName": "FaceStudio Master Prime Blur + Pore Minimize Primer",
+          "collectionImage": "https://i.pinimg.com/564x/9f/89/79/9f8979b5fea714cb13fb2702d8b5d781.jpg",
+          "collectionPrice": "11.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/primer/facestudio-master-prime-primer-makeup"
+        },
+        {
+          "collectionName": "Volum' Express The Falsies Mascara",
+          "collectionImage": "https://i.pinimg.com/564x/a3/19/62/a31962ffb4b0c5fb1b5c4c1e1b862656.jpg",
+          "collectionPrice": "9.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/mascara/volum-express-the-falsies-mascara"
+        },
+        {
+          "collectionName": "Color Tattoo Longwear Multi-Use Eyeshadow Stix",
+          "collectionImage": "https://i.pinimg.com/564x/a7/14/2d/a7142dd40f1f5024abebcad1cb7fd46b.jpg",
+          "collectionPrice": "9.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/eyeshadow/color-tattoo-eyeshadow-stix"
+        },
+        {
+          "collectionName": "Master Chrome Highlighter",
           "collectionImage": "image",
-          "collectionPrice": "1234",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionPrice": "9.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/highlighter/master-chrome-highlighter"
+        },
+        {
+          "collectionName": "Fit Me Blush",
+          "collectionImage": "image",
+          "collectionPrice": "5.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/face-makeup/blush/fit-me-blush"
+        },
+        {
+          "collectionName": "Tattoo Brow 36HR Pomade",
+          "collectionImage": "image",
+          "collectionPrice": "12.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/eyebrow/tattoo-brow-36hr-pomade"
+        },
+        {
+          "collectionName": "Eye Studio Gel Eyeliner",
+          "collectionImage": "image",
+          "collectionPrice": "7.99",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }],
+          "collectionLink": "https://www.maybelline.com/eye-makeup/eyeliner/eye-studio-gel-eyeliner"
         }
       ]
     },
     {
       "id": "4",
-      "banner": "image",
-      "image": "https://i.pinimg.com/564x/9d/74/28/9d7428c68c353a4754df7c69a823e3d7.jpg",
-      "name": "Loreal",
+      "banner": "https://cashback.me/img/victorias-secret-store-banner.jpg",
+      "image": "https://i.pinimg.com/736x/14/14/c1/1414c12cbcceddfef7886e3dd72b9d81.jpg",
+      "name": "Victoria's Secret",
       "collections": [
         {
-          "collectionName": "name",
-          "collectionImage": "image",
-          "collectionPrice": "1234",
-          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+          "collectionName": "Very Sexy Eau de Parfum",
+          "collectionImage": "image_url",
+          "collectionPrice": "$60",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/verysexy",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Bombshell Eau de Parfum",
+          "collectionImage": "image_url",
+          "collectionPrice": "$60",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/bombshell",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Bare Eau de Parfum",
+          "collectionImage": "image_url",
+          "collectionPrice": "$60",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/bare",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Heavenly Eau de Parfum",
+          "collectionImage": "image_url",
+          "collectionPrice": "$60",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/heavenly",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Coconut Passion Fragrance Mist",
+          "collectionImage": "image_url",
+          "collectionPrice": "$18",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/coconutpassion",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Pure Seduction Fragrance Mist",
+          "collectionImage": "image_url",
+          "collectionPrice": "$18",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/pureseduction",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Amber Romance Fragrance Mist",
+          "collectionImage": "image_url",
+          "collectionPrice": "$18",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/amberromance",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Velvet Petals Fragrance Mist",
+          "collectionImage": "image_url",
+          "collectionPrice": "$18",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/velvetpetals",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Love Eau de Parfum",
+          "collectionImage": "image_url",
+          "collectionPrice": "$60",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/love",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Victory Secret Sport Bra",
+          "collectionImage": "image_url",
+          "collectionPrice": "$30",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/sportbra",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Pink Campus Jogger",
+          "collectionImage": "image_url",
+          "collectionPrice": "$40",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/campusjogger",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Essential Leggings",
+          "collectionImage": "image_url",
+          "collectionPrice": "$40",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/leggings",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Everyday T-Shirt Bra",
+          "collectionImage": "image_url",
+          "collectionPrice": "$30",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/tshirtbra",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Dream Angels Demi Bra",
+          "collectionImage": "image_url",
+          "collectionPrice": "$50",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/demi",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Lace Thong Panty",
+          "collectionImage": "image_url",
+          "collectionPrice": "$15",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/thongpanty",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Tease Eau de Parfum",
+          "collectionImage": "image_url",
+          "collectionPrice": "$60",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/tease",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "High-Waisted Bikini Bottom",
+          "collectionImage": "image_url",
+          "collectionPrice": "$25",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/highwaistedbikini",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Ribbed One-Piece Swimsuit",
+          "collectionImage": "image_url",
+          "collectionPrice": "$65",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/ribbedonepiece",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Luxe Lace Bralette",
+          "collectionImage": "image_url",
+          "collectionPrice": "$45",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/luxelacebralette",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
+        },
+        {
+          "collectionName": "Chic Silk Pajama Set",
+          "collectionImage": "image_url",
+          "collectionPrice": "$80",
+          "collectionLink": "https://www.victoriassecret.com/shopnow/silkpajamas",
+          "collectionReview": [{ "comment": "Nice product", "commentId": "" }]
         }
       ]
     },
@@ -276,10 +638,148 @@
       "name": "Huda Beauty",
       "collections": [
         {
-          "collectionName": "name",
+          "collectionName": "Huda Beauty #FauxFilter Luminous Matte Foundation",
           "collectionImage": "image",
-          "collectionPrice": "1234",
+          "collectionPrice": "40",
+          "collectionLink": "https://hudabeauty.com/products/fauxfilter-luminous-matte-foundation",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Easy Bake Loose Powder",
+          "collectionImage": "image",
+          "collectionPrice": "34",
+          "collectionLink": "https://hudabeauty.com/products/easy-bake-loose-baking-setting-powder",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Overachiever Concealer",
+          "collectionImage": "image",
+          "collectionPrice": "30",
+          "collectionLink": "https://hudabeauty.com/products/the-overachiever-high-coverage-concealer",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Power Bullet Matte Lipstick",
+          "collectionImage": "image",
+          "collectionPrice": "25",
+          "collectionLink": "https://hudabeauty.com/products/power-bullet-matte-lipstick",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Nude Obsessions Eyeshadow Palette",
+          "collectionImage": "image",
+          "collectionPrice": "29",
+          "collectionLink": "https://hudabeauty.com/products/nude-obsessions-eyeshadow-palette",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Mercury Retrograde Eyeshadow Palette",
+          "collectionImage": "image",
+          "collectionPrice": "67",
+          "collectionLink": "https://hudabeauty.com/products/mercury-retrograde-eyeshadow-palette",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Legit Lashes Double-Ended Mascara",
+          "collectionImage": "image",
+          "collectionPrice": "27",
+          "collectionLink": "https://hudabeauty.com/products/legit-lashes-double-ended-volumizing-lengthening-mascara",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Water Jelly Hydrating Primer",
+          "collectionImage": "image",
+          "collectionPrice": "33",
+          "collectionLink": "https://hudabeauty.com/products/water-jelly-hydrating-primer",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Glowish Soft Radiance Bronzing Powder",
+          "collectionImage": "image",
+          "collectionPrice": "31",
+          "collectionLink": "https://hudabeauty.com/products/glowish-soft-radiance-bronzing-powder",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Glowish MultiDew Skin Tint",
+          "collectionImage": "image",
+          "collectionPrice": "37",
+          "collectionLink": "https://hudabeauty.com/products/glowish-multidew-skin-tint",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Kayali Vanilla 28",
+          "collectionImage": "image",
+          "collectionPrice": "85",
+          "collectionLink": "https://hudabeauty.com/products/kayali-vanilla-28",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Lip Contour 2.0",
+          "collectionImage": "image",
+          "collectionPrice": "19",
+          "collectionLink": "https://hudabeauty.com/products/lip-contour-2-0",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Silk Balm Hydra-Plumping Lip Balm",
+          "collectionImage": "image",
+          "collectionPrice": "21",
+          "collectionLink": "https://hudabeauty.com/products/silk-balm-hydra-plumping-lip-balm",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Matte & Metal Melted Shadows",
+          "collectionImage": "image",
+          "collectionPrice": "25",
+          "collectionLink": "https://hudabeauty.com/products/matte-metal-melted-shadow",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Tantour Contour & Bronzer Cream",
+          "collectionImage": "image",
+          "collectionPrice": "30",
+          "collectionLink": "https://hudabeauty.com/products/tantour-contour-bronzer-cream",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Life Liner Quick ‘N Easy Precision Liquid Liner",
+          "collectionImage": "image",
+          "collectionPrice": "19",
+          "collectionLink": "https://hudabeauty.com/products/life-liner-quick-n-easy-precision-liquid-liner",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Faux Filter Skin Finish Foundation Stick",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://hudabeauty.com/products/faux-filter-skin-finish-foundation-stick",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty 3D Highlighter Palette",
+          "collectionImage": "image",
+          "collectionPrice": "45",
+          "collectionLink": "https://hudabeauty.com/products/3d-highlighter-palette",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Huda Beauty Empowered Eyeshadow Palette",
+          "collectionImage": "image",
+          "collectionPrice": "67",
+          "collectionLink": "https://hudabeauty.com/products/empowered-eyeshadow-palette",
+          "collectionReview": [
+            { "comment": "amazing pigmentation", "commentrId": "" }
+          ]
+        },
+        {
+          "collectionName": "Huda Beauty Wishful Honey Balm Jelly Moisturizer",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://hudabeauty.com/products/honey-balm-jelly-moisturizer",
+          "collectionReview": [
+            { "comment": "very hydrating", "commentrId": "" }
+          ]
         }
       ]
     },
@@ -290,13 +790,152 @@
       "name": "Dior Beauty",
       "collections": [
         {
-          "collectionName": "name",
+          "collectionName": "Dior Forever Skin Glow Foundation",
           "collectionImage": "image",
-          "collectionPrice": "1234",
+          "collectionPrice": "54",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0996017-dior-forever-skin-glow-24h-wear-radiant-foundation-spf-35",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Addict Lip Glow",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-C017600027-dior-addict-lip-glow-color-awakening-lip-balm",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Backstage Face & Body Foundation",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0000005-dior-backstage-face-body-foundation-waterproof-and-sweat-resistant-foundation",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Rouge Dior Lipstick",
+          "collectionImage": "image",
+          "collectionPrice": "42",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0065160-rouge-dior-floral-lip-care-long-wear-lipstick",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Forever Couture Luminizer",
+          "collectionImage": "image",
+          "collectionPrice": "48",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0695700-dior-forever-couture-luminizer-highlighter-powder-instant-radiance",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Diorshow Iconic Overcurl Mascara",
+          "collectionImage": "image",
+          "collectionPrice": "29",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0996192-diorshow-iconic-overcurl-mascara-curling-and-volumizing",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Prestige La Micro-Huile de Rose",
+          "collectionImage": "image",
+          "collectionPrice": "210",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0766220-dior-prestige-la-micro-huile-de-rose-advanced-serum-ultimate-rejuvenating-effect",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Capture Totale Super Potent Serum",
+          "collectionImage": "image",
+          "collectionPrice": "89",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0684160-capture-totale-super-potent-serum-age-defying-intense-serum",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Sauvage Eau de Toilette",
+          "collectionImage": "image",
+          "collectionPrice": "95",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-F060633009-dior-sauvage-eau-de-toilette",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior J'adore Eau de Parfum",
+          "collectionImage": "image",
+          "collectionPrice": "115",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-F066227009-j-adore-eau-de-parfum",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Capture Totale Dreamskin Care & Perfect",
+          "collectionImage": "image",
+          "collectionPrice": "85",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0996400-capture-totale-dreamskin-care-perfect-perfect-skin-creator",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Lip Glow Oil",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-C017600096-dior-lip-glow-oil",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Miss Dior Blooming Bouquet",
+          "collectionImage": "image",
+          "collectionPrice": "82",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-F006317009-miss-dior-blooming-bouquet-eau-de-toilette",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Addict Lip Maximizer",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-C098600130-dior-addict-lip-maximizer",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Backstage Glow Face Palette",
+          "collectionImage": "image",
+          "collectionPrice": "45",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0000007-dior-backstage-glow-face-palette",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Forever Skin Correct Concealer",
+          "collectionImage": "image",
+          "collectionPrice": "36",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0996250-dior-forever-skin-correct-concealer",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Diorific Lipstick",
+          "collectionImage": "image",
+          "collectionPrice": "42",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0065170-diorific-lipstick",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Forever Liquid Matte Lipstick",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0996405-dior-forever-liquid-matte-lipstick",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Dior Skin Correct Concealer",
+          "collectionImage": "image",
+          "collectionPrice": "36",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0996260-dior-skin-correct-concealer",
+          "collectionReview": [
+            { "comment": "great coverage", "commentrId": "" }
+          ]
+        },
+        {
+          "collectionName": "Dior Forever Foundation",
+          "collectionImage": "image",
+          "collectionPrice": "54",
+          "collectionLink": "https://www.dior.com/en_us/products/beauty-Y0996087-dior-forever-foundation-24h-wear-radiant-matte",
+          "collectionReview": [
+            { "comment": "long-lasting finish", "commentrId": "" }
+          ]
         }
       ]
     },
+
     {
       "id": "7",
       "banner": "image",
@@ -304,9 +943,143 @@
       "name": "Prada",
       "collections": [
         {
-          "collectionName": "name",
+          "collectionName": "Prada Candy Eau de Parfum",
           "collectionImage": "image",
-          "collectionPrice": "1234",
+          "collectionPrice": "80",
+          "collectionLink": "https://www.prada.com/us/en/women/fragrance/prada-candy-eau-de-parfum.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada La Femme Eau de Parfum",
+          "collectionImage": "image",
+          "collectionPrice": "100",
+          "collectionLink": "https://www.prada.com/us/en/women/fragrance/prada-la-femme-eau-de-parfum.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Infusion d'Iris Eau de Parfum",
+          "collectionImage": "image",
+          "collectionPrice": "120",
+          "collectionLink": "https://www.prada.com/us/en/women/fragrance/prada-infusion-diris-eau-de-parfum.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Candy Kiss Eau de Parfum",
+          "collectionImage": "image",
+          "collectionPrice": "90",
+          "collectionLink": "https://www.prada.com/us/en/women/fragrance/prada-candy-kiss-eau-de-parfum.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Luna Rossa Sport Eau de Toilette",
+          "collectionImage": "image",
+          "collectionPrice": "80",
+          "collectionLink": "https://www.prada.com/us/en/men/fragrance/luna-rossa-sport-eau-de-toilette.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Dual-Use Makeup Stick",
+          "collectionImage": "image",
+          "collectionPrice": "48",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/dual-use-makeup-stick.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Eye Shadow Palette",
+          "collectionImage": "image",
+          "collectionPrice": "68",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/eye-shadow-palette.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Lip Gloss",
+          "collectionImage": "image",
+          "collectionPrice": "34",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/lip-gloss.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Liquid Eyeliner",
+          "collectionImage": "image",
+          "collectionPrice": "30",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/liquid-eyeliner.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Foundation",
+          "collectionImage": "image",
+          "collectionPrice": "55",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/foundation.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Blush",
+          "collectionImage": "image",
+          "collectionPrice": "40",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/blush.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Highlighter",
+          "collectionImage": "image",
+          "collectionPrice": "38",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/highlighter.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Setting Spray",
+          "collectionImage": "image",
+          "collectionPrice": "42",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/setting-spray.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Lip Balm",
+          "collectionImage": "image",
+          "collectionPrice": "28",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/lip-balm.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Brow Gel",
+          "collectionImage": "image",
+          "collectionPrice": "25",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/brow-gel.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Mascara",
+          "collectionImage": "image",
+          "collectionPrice": "35",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/mascara.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Perfumed Hand Cream",
+          "collectionImage": "image",
+          "collectionPrice": "60",
+          "collectionLink": "https://www.prada.com/us/en/beauty/body/perfumed-hand-cream.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Fragrance Sample Set",
+          "collectionImage": "image",
+          "collectionPrice": "45",
+          "collectionLink": "https://www.prada.com/us/en/beauty/fragrance/sample-set.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Face Cream",
+          "collectionImage": "image",
+          "collectionPrice": "75",
+          "collectionLink": "https://www.prada.com/us/en/beauty/skincare/face-cream.html",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Prada Beauty Lip Scrub",
+          "collectionImage": "image",
+          "collectionPrice": "32",
+          "collectionLink": "https://www.prada.com/us/en/beauty/makeup/lip-scrub.html",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
         }
       ]
@@ -314,16 +1087,423 @@
     {
       "id": "8",
       "banner": "image",
-      "image": "https://i.pinimg.com/736x/e3/a4/ae/e3a4ae26b6e81ec271ca2e7c6134f65a.jpg",
-      "name": "Victoria's Secret",
+      "image": "https://i.pinimg.com/564x/9d/74/28/9d7428c68c353a4754df7c69a823e3d7.jpg",
+      "name": "L'Oréal",
       "collections": [
         {
-          "collectionName": "name",
+          "collectionName": "L'Oréal Paris Infallible Pro-Matte Liquid Lipstick",
           "collectionImage": "image",
-          "collectionPrice": "1234",
+          "collectionPrice": "10.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/lips/lipstick/infallible-pro-matte-liquid-lipstick",
           "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Voluminous Lash Paradise Mascara",
+          "collectionImage": "image",
+          "collectionPrice": "10.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/eyes/mascara/voluminous-lash-paradise-mascara",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris True Match Super Blendable Makeup",
+          "collectionImage": "image",
+          "collectionPrice": "12.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/face/foundation/true-match-super-blendable-foundation",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Infallible 24HR Fresh Wear Foundation",
+          "collectionImage": "image",
+          "collectionPrice": "14.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/face/foundation/infallible-24hr-fresh-wear-foundation",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris True Match Super Blendable Blush",
+          "collectionImage": "image",
+          "collectionPrice": "10.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/face/blush/true-match-super-blendable-blush",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Infallible Pro-Glow Foundation",
+          "collectionImage": "image",
+          "collectionPrice": "12.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/face/foundation/infallible-pro-glow-foundation",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Brow Stylist Boost & Set Brow Mascara",
+          "collectionImage": "image",
+          "collectionPrice": "9.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/eyes/brows/brow-stylist-boost-and-set-brow-mascara",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Paradise Enchanted Scented Eyeshadow Palette",
+          "collectionImage": "image",
+          "collectionPrice": "15.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/eyes/eyeshadow/paradise-enchanted-scented-eyeshadow-palette",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Age Perfect Radiant Serum Foundation",
+          "collectionImage": "image",
+          "collectionPrice": "15.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/face/foundation/age-perfect-radiant-serum-foundation",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Colour Riche Matte Lipstick",
+          "collectionImage": "image",
+          "collectionPrice": "9.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/lips/lipstick/colour-riche-matte-lipstick",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Micellar Cleansing Water",
+          "collectionImage": "image",
+          "collectionPrice": "9.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/skincare/cleansers/micellar-cleansing-water",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Revitalift Derm Intensives 10% Pure Vitamin C Serum",
+          "collectionImage": "image",
+          "collectionPrice": "23.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/skincare/serums/revitalift-derm-intensives-10-pure-vitamin-c-serum",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Revitalift Hyaluronic Acid Serum",
+          "collectionImage": "image",
+          "collectionPrice": "23.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/skincare/serums/revitalift-hyaluronic-acid-serum",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Age Perfect Night Cream",
+          "collectionImage": "image",
+          "collectionPrice": "19.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/skincare/moisturizers/age-perfect-night-cream",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Age Perfect Eye Renewal Eye Cream",
+          "collectionImage": "image",
+          "collectionPrice": "24.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/skincare/eye-care/age-perfect-eye-renewal-eye-cream",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Hydra Genius Daily Liquid Care",
+          "collectionImage": "image",
+          "collectionPrice": "15.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/skincare/moisturizers/hydra-genius-daily-liquid-care",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Skin Paradise Water-Infused Tinted Moisturizer",
+          "collectionImage": "image",
+          "collectionPrice": "14.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/face/tinted-moisturizer/skin-paradise-water-infused-tinted-moisturizer",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Voluminous Original Mascara",
+          "collectionImage": "image",
+          "collectionPrice": "10.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/eyes/mascara/voluminous-original-mascara",
+          "collectionReview": [{ "comment": "nice product", "commentrId": "" }]
+        },
+        {
+          "collectionName": "L'Oréal Paris Infallible Fresh Wear Foundation in a Powder",
+          "collectionImage": "image",
+          "collectionPrice": "14.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/face/foundation/infallible-fresh-wear-foundation-in-a-powder",
+          "collectionReview": [
+            { "comment": "lightweight and long-lasting", "commentrId": "" }
+          ]
+        },
+        {
+          "collectionName": "L'Oréal Paris Glow Paradise Balm-in-Lipstick",
+          "collectionImage": "image",
+          "collectionPrice": "12.99",
+          "collectionLink": "https://www.lorealparisusa.com/products/makeup/lips/lipstick/glow-paradise-balm-in-lipstick",
+          "collectionReview": [
+            { "comment": "hydrating and beautiful colors", "commentrId": "" }
+          ]
+        }
+      ]
+    },{
+      "id": "9",
+      "banner": "image",
+      "image": "https://i.pinimg.com/564x/a2/ae/ef/a2aeeff4b9bbf49bfb8a83eafc44ab7a.jpg",
+      "name": "Balenciaga",
+      "collections": [
+        {
+          "collectionName": "Balenciaga Hourglass Bag",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/38/61/19013861_22891920_1000.jpg",
+          "collectionPrice": "2,150.00",
+          "collectionLink": "https://www.balenciaga.com/us/horizon-bag_cod46025862ue.html",
+          "collectionReview": [{ "comment": "Absolutely love this bag!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Triple S Sneakers",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/18/80/70/44/18807044_22341013_1000.jpg",
+          "collectionPrice": "1,150.00",
+          "collectionLink": "https://www.balenciaga.com/us/triple-s-sneakers_cod46023616uo.html",
+          "collectionReview": [{ "comment": "Very comfortable and stylish!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Speed Sneakers",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/22/43/19012243_22840879_1000.jpg",
+          "collectionPrice": "950.00",
+          "collectionLink": "https://www.balenciaga.com/us/speed-sneakers_cod46025013md.html",
+          "collectionReview": [{ "comment": "Love the futuristic design!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga City Bag",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/38/58/19013858_22891918_1000.jpg",
+          "collectionPrice": "1,800.00",
+          "collectionLink": "https://www.balenciaga.com/us/city-bag_cod46025845ym.html",
+          "collectionReview": [{ "comment": "Perfect size for everyday use!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Arena Sneakers",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/02/25/09/19022509_22910316_1000.jpg",
+          "collectionPrice": "850.00",
+          "collectionLink": "https://www.balenciaga.com/us/arena-sneakers_cod46027010uv.html",
+          "collectionReview": [{ "comment": "Super stylish and comfortable!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Neo Classic City Bag",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/38/62/19013862_22891923_1000.jpg",
+          "collectionPrice": "2,200.00",
+          "collectionLink": "https://www.balenciaga.com/us/neo-classic-city-bag_cod46025864xd.html",
+          "collectionReview": [{ "comment": "A timeless classic!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Logo Hoodie",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/45/78/19014578_22896417_1000.jpg",
+          "collectionPrice": "750.00",
+          "collectionLink": "https://www.balenciaga.com/us/logo-hoodie_cod46025234nw.html",
+          "collectionReview": [{ "comment": "Very comfortable and stylish!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Crocs",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/02/09/63/19020963_22901951_1000.jpg",
+          "collectionPrice": "850.00",
+          "collectionLink": "https://www.balenciaga.com/us/crocs_cod46026003jx.html",
+          "collectionReview": [{ "comment": "So unique and comfortable!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Track Sneakers",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/46/04/19014604_22896554_1000.jpg",
+          "collectionPrice": "1,150.00",
+          "collectionLink": "https://www.balenciaga.com/us/track-sneakers_cod46026248ee.html",
+          "collectionReview": [{ "comment": "Perfect for casual wear!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga BB Shoulder Bag",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/37/82/19013782_22888854_1000.jpg",
+          "collectionPrice": "1,900.00",
+          "collectionLink": "https://www.balenciaga.com/us/bb-shoulder-bag_cod46025729hh.html",
+          "collectionReview": [{ "comment": "Chic and elegant!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Cap",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/46/09/19014609_22896570_1000.jpg",
+          "collectionPrice": "350.00",
+          "collectionLink": "https://www.balenciaga.com/us/cap_cod46026230pm.html",
+          "collectionReview": [{ "comment": "Great addition to any outfit!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga BB Classic City Bag",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/38/59/19013859_22891922_1000.jpg",
+          "collectionPrice": "2,300.00",
+          "collectionLink": "https://www.balenciaga.com/us/bb-classic-city-bag_cod46025850hu.html",
+          "collectionReview": [{ "comment": "Stylish and practical!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Plaid Shirt",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/45/88/19014588_22896563_1000.jpg",
+          "collectionPrice": "850.00",
+          "collectionLink": "https://www.balenciaga.com/us/plaid-shirt_cod46025238gb.html",
+          "collectionReview": [{ "comment": "Very trendy!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Canvas Backpack",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/44/63/19014463_22889519_1000.jpg",
+          "collectionPrice": "1,050.00",
+          "collectionLink": "https://www.balenciaga.com/us/canvas-backpack_cod46025710nd.html",
+          "collectionReview": [{ "comment": "Perfect for daily use!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Logo T-Shirt",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/45/74/19014574_22896408_1000.jpg",
+          "collectionPrice": "450.00",
+          "collectionLink": "https://www.balenciaga.com/us/logo-t-shirt_cod46025234lw.html",
+          "collectionReview": [{ "comment": "So comfortable!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Classic Backpack",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/44/62/19014462_22889517_1000.jpg",
+          "collectionPrice": "950.00",
+          "collectionLink": "https://www.balenciaga.com/us/classic-backpack_cod46025705km.html",
+          "collectionReview": [{ "comment": "Very stylish!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Track Pants",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/46/05/19014605_22896553_1000.jpg",
+          "collectionPrice": "550.00",
+          "collectionLink": "https://www.balenciaga.com/us/track-pants_cod46026248kv.html",
+          "collectionReview": [{ "comment": "Very comfortable for lounging!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Bumbag",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/02/25/15/19022515_22910321_1000.jpg",
+          "collectionPrice": "750.00",
+          "collectionLink": "https://www.balenciaga.com/us/bumbag_cod46027019mt.html",
+          "collectionReview": [{ "comment": "Perfect for hands-free convenience!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Ankle Boots",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/02/25/11/19022511_22910319_1000.jpg",
+          "collectionPrice": "1,200.00",
+          "collectionLink": "https://www.balenciaga.com/us/ankle-boots_cod46027015oy.html",
+          "collectionReview": [{ "comment": "Stylish and edgy!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Hourglass Mini Bag",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/38/60/19013860_22891921_1000.jpg",
+          "collectionPrice": "1,750.00",
+          "collectionLink": "https://www.balenciaga.com/us/hourglass-mini-bag_cod46025861bb.html",
+          "collectionReview": [{ "comment": "Perfect for a night out!", "commentrId": "" }]
+        },
+        {
+          "collectionName": "Balenciaga Puffer Jacket",
+          "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/45/93/19014593_22896568_1000.jpg",
+          "collectionPrice": "1,200.00",
+          "collectionLink": "https://www.balenciaga.com/us/puffer-jacket_cod46025238pq.html",
+          "collectionReview": [{ "comment": "Super warm and stylish!", "commentrId": "" }]
         }
       ]
     }
+,
+{
+  "id": "10",
+  "banner": "image",
+  "image": "https://i.pinimg.com/564x/c6/69/c6/c669c60ae1d6aa6a6eaa4aa994471c87.jpg",
+  "name": "Louis Vuitton",
+  "collections": [
+    {
+      "collectionName": "Louis Vuitton Neverfull Tote",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/02/19013002_22923301_1000.jpg",
+      "collectionPrice": "1,700.00",
+      "collectionLink": "https://www.louisvuitton.com/us/neverfull-tote_cod46029740ra.html",
+      "collectionReview": [{ "comment": "Perfect for everyday use!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Speedy 30",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/01/19013001_22923302_1000.jpg",
+      "collectionPrice": "1,300.00",
+      "collectionLink": "https://www.louisvuitton.com/us/speedy-30_cod46029739tv.html",
+      "collectionReview": [{ "comment": "Classic and elegant!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Keepall Bandoulière 55",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/03/19013003_22923304_1000.jpg",
+      "collectionPrice": "1,500.00",
+      "collectionLink": "https://www.louisvuitton.com/us/keepall-bandouliere-55_cod46029741wo.html",
+      "collectionReview": [{ "comment": "Great for travel!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Pochette Accessoires",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/04/19013004_22923305_1000.jpg",
+      "collectionPrice": "600.00",
+      "collectionLink": "https://www.louisvuitton.com/us/pochette-accessoires_cod46029742ug.html",
+      "collectionReview": [{ "comment": "Perfect little clutch!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Alma BB",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/05/19013005_22923306_1000.jpg",
+      "collectionPrice": "1,200.00",
+      "collectionLink": "https://www.louisvuitton.com/us/alma-bb_cod46029743hg.html",
+      "collectionReview": [{ "comment": "Stylish and compact!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Capucines MM",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/06/19013006_22923307_1000.jpg",
+      "collectionPrice": "4,500.00",
+      "collectionLink": "https://www.louisvuitton.com/us/capucines-mm_cod46029744kj.html",
+      "collectionReview": [{ "comment": "Luxury at its finest!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Neverfull MM",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/07/19013007_22923308_1000.jpg",
+      "collectionPrice": "1,700.00",
+      "collectionLink": "https://www.louisvuitton.com/us/neverfull-mm_cod46029745dt.html",
+      "collectionReview": [{ "comment": "The perfect tote!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Twist PM",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/08/19013008_22923309_1000.jpg",
+      "collectionPrice": "3,400.00",
+      "collectionLink": "https://www.louisvuitton.com/us/twist-pm_cod46029746vs.html",
+      "collectionReview": [{ "comment": "Chic and sophisticated!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Zippy Wallet",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/09/19013009_22923310_1000.jpg",
+      "collectionPrice": "750.00",
+      "collectionLink": "https://www.louisvuitton.com/us/zippy-wallet_cod46029747yw.html",
+      "collectionReview": [{ "comment": "Functional and stylish!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Multi Pochette Accessories",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/10/19013010_22923311_1000.jpg",
+      "collectionPrice": "1,800.00",
+      "collectionLink": "https://www.louisvuitton.com/us/multi-pochette-accessoires_cod46029748ge.html",
+      "collectionReview": [{ "comment": "Versatile and trendy!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Sling Bag",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/11/19013011_22923312_1000.jpg",
+      "collectionPrice": "1,100.00",
+      "collectionLink": "https://www.louisvuitton.com/us/sling-bag_cod46029749ir.html",
+      "collectionReview": [{ "comment": "Great for daily outings!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Backpack",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/12/19013012_22923313_1000.jpg",
+      "collectionPrice": "2,000.00",
+      "collectionLink": "https://www.louisvuitton.com/us/backpack_cod46029750fo.html",
+      "collectionReview": [{ "comment": "Stylish and practical!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Discovery Backpack",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/13/19013013_22923314_1000.jpg",
+      "collectionPrice": "2,300.00",
+      "collectionLink": "https://www.louisvuitton.com/us/discovery-backpack_cod46029751tx.html",
+      "collectionReview": [{ "comment": "Perfect for travel!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Keepall 50",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/14/19013014_22923315_1000.jpg",
+      "collectionPrice": "1,700.00",
+      "collectionLink": "https://www.louisvuitton.com/us/keepall-50_cod46029752oc.html",
+      "collectionReview": [{ "comment": "Great for weekend getaways!", "commentrId": "" }]
+    },
+    {
+      "collectionName": "Louis Vuitton Soft Trunk",
+      "collectionImage": "https://cdn-images.farfetch-contents.com/19/01/30/15/19013015_22923316_1000.jpg",
+      "collectionPrice": "3,500.00",
+      "collectionLink": "https://www.louisvuitton.com/us/soft-trunk_cod46029753ti.html",
+      "collectionReview": [{ "comment": "Trendy and unique!", "commentrId": "" }]
+    }
+  ]
+}
+
   ]
 }

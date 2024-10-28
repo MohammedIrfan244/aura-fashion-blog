@@ -50,7 +50,7 @@ function Navbar() {
           : "hidden"
       } transition-all`}
     >
-      <div className="flex cursor-pointer">
+      <div className="flex cursor-pointer" onClick={()=>navigate('/')}>
         <h1 className="text-3xl font-semibold font-agdasima">AURA</h1>
         <PiTrademarkRegisteredBold className="text-electricBlue" />
       </div>
