@@ -76,7 +76,7 @@ function Navbar() {
               "--tw-translate-y-70": "0px",
             }}
           >
-            BOUTIQUE
+            BOUTIQUES
           </li>
           <li
             className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"

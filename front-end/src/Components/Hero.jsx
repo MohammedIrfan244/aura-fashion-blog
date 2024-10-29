@@ -54,7 +54,6 @@ function Hero() {
             <p
               className="text-xl animate-widthGrow overflow-hidden h-5 transition-all"
               style={{
-                "--tw-width-70": "200px",
                 "--tw-width-100": "200px",
                 animationDuration: "500ms",
               }}

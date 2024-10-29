@@ -4,7 +4,7 @@ import Tilt from 'react-parallax-tilt';
 // eslint-disable-next-line react/prop-types
 function BoutiqueCollectionCard({boutique={},click}) {
     const { ref, inView } = useInView({
-      triggerOnce: true,
+      triggerOnce: false,
       threshold: 0.2,
     });
     return (
@@ -12,7 +12,7 @@ function BoutiqueCollectionCard({boutique={},click}) {
   <div
     onClick={click}
     ref={ref}
-    className={`h-[400px] w-80 overflow-hidden items-center justify-center relative text-richBlack font-semibold flex boutiques-center bg-[#000002] transition-all ease-out ${
+    className={`h-[350px] w-80 overflow-hidden text-richBlack font-semibold  bg-[#000002] transition-all ease-out ${
       inView ? "animate-slideY opacity-100" : "opacity-0"
     }`}
     style={{
@@ -24,11 +24,11 @@ function BoutiqueCollectionCard({boutique={},click}) {
     <img
       src={boutique?.collectionImage}
       alt={boutique?.collectionName}
-      className="w-full h-full object-cover hover:scale-[1.05] transition-all ease-out"
+      className="w-full h-full object-cover hover:scale-[1.02] transition-all ease-out"
     />
-    <p className="absolute left-5 top-3 text-xl font-agdasima">{boutique?.collectionName}</p>
-    <p className="absolute right-5 bottom-3 text-2xl font-agdasima">$ {boutique?.collectionPrice}</p>
   </div>
+    <p className="font-agdasima">{boutique?.collectionName}</p>
+    <p className="text-xl font-agdasima">$ {boutique?.collectionPrice}</p>
 </Tilt>
 
     )

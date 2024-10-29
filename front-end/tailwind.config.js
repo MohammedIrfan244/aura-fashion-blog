@@ -44,7 +44,6 @@ export default {
         },
         widthGrow:{
           '0%':{width:"0"},
-          '70%':{width:"var(--tw-width-70)"},
           '100%':{width:"var(--tw-width-100)"}
         },
         rotate:{
@@ -59,7 +58,7 @@ export default {
         slideX: 'slideX ease-out forwards',
         circGrow: 'circGrow ease-out forwards',
         heightGrow:'heightGrow ease-out forwards',
-        widthGrow:'widthGrow ease-out forwards'
+        widthGrow:'widthGrow forwards'
       },
     },
   },
