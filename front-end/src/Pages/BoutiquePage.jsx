@@ -63,7 +63,7 @@ function BoutiquePage() {
       <p className="text-2xl font-agdasima text-electricBlue">
         {currentBoutique?.name}
       </p>
-      <p className="text-xs font-thin w-80">*Products displayed here are for inspiration and exploration. <br />No purchases available. (purchase source available) <br />
+      <p className="text-[10px] font-thin w-80">*Products displayed here are for inspiration and exploration. <br />No purchases available. (purchase source available) <br />
       *We value your feedback! Please keep comments respectful and constructive to help others in our community.
       </p>
       </div>
