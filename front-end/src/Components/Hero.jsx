@@ -40,7 +40,7 @@ function Hero() {
               }}
             >
               <div className="h-36 w-[2px] bg-snowWhite"></div>
-              <div className="w-auto shadow-md h-auto relative hover:scale-[1.02] shadow-black hover:shadow-lg hover:shadow-black transition-all duration-300 ease-out border-2 border-snowWhite">
+              <div className="w-auto shadow-md h-auto relative hover:scale-[1.02] shadow-black hover:shadow-lg hover:shadow-black transition-all duration-300 ease-out">
                 <img
                   src="https://img.freepik.com/free-photo/applying-red-lipstick-lips-close-up-photo-black-background-beauty-make-up_482257-10395.jpg?t=st=1729090464~exp=1729094064~hmac=b4526445bd14feb4c294474c31c643366b38a574d034301cf0586a51c4956282&w=360"
                   alt="image"

@@ -2,13 +2,13 @@ import { useInView } from 'react-intersection-observer';
 import Tilt from 'react-parallax-tilt';
 
 // eslint-disable-next-line react/prop-types
-function BoutiqueCollectionCard({boutique={},click}) {
+function BoutiqueCollectionCard({boutique={},click,blur}) {
     const { ref, inView } = useInView({
       triggerOnce: false,
       threshold: 0.2,
     });
     return (
-      <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.5}>
+      <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.5} className={blur?"blur-sm":"blur-0"}>
   <div
     onClick={click}
     ref={ref}

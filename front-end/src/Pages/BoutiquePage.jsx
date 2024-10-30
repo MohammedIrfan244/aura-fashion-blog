@@ -41,7 +41,7 @@ function BoutiquePage() {
     <div>
     <div
       key={animateKey}
-      className={`pt-16 relative animate-slideX`}
+      className={`pt-16 animate-slideX ${selectedItem?"blur-sm ove":"blur-0"}`}
       style={{
         "--tw-translate-x": aniDirection ? "100px" : "-100px",
         "--tw-translate-x-70": aniDirection ? "-10px" : "10px",
@@ -67,22 +67,23 @@ function BoutiquePage() {
       *We value your feedback! Please keep comments respectful and constructive to help others in our community.
       </p>
       </div>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center gap-y-5">
         {currentBoutique?.collections?.map((item, index) => (
           <BoutiqueCollectionCard
             key={index}
             boutique={item}
             click={() => setSelectedItem(item)}
+            blur={selectedItem}
           />
         ))}
+      </div>
         {selectedItem && (
           <BoutiqueDetails
             boutiqueItem={selectedItem}
             close={setSelectedItem}
           />
         )}
-      </div>
-      </div>
       <GoTopPopUp />
     </div>
   );
