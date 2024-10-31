@@ -69,7 +69,7 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
         <div className="mt-5 h-auto px-1">
           <form className="relative" onSubmit={(e)=>handleSubmit(e)} >
           <textarea className="w-full bg-[#2E2E33] rounded-md focus:outline-none px-3 text-xs" value={message} placeholder="Message here...." onChange={(e)=>setMessage(e.target.value)}/>
-          <button type="submit" className="absolute bottom-3 right-1 text-snowWhite"><TbSend /></button>
+          <button type="submit" className="absolute bottom-3 right-2 text-snowWhite"><TbSend /></button>
           </form>
           <div className="-full bg-[#2E2E33] rounded-md p-3 text-xs mb-2">
           {
