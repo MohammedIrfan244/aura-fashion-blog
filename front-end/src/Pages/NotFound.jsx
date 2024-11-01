@@ -2,7 +2,7 @@
 
 function NotFound() {
   return (
-    <div>
+    <div className="pt-16">
       Sorry, Not found
     </div>
   )

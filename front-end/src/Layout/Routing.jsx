@@ -9,6 +9,7 @@ import { fetchUsers } from "../Redux/UserSlice"
 import StylePage from "../Pages/StylePage"
 import NotFound from "../Pages/NotFound"
 import Posts from "../Pages/Posts"
+import Contact from "../Pages/Contact"
 
 
 function Routing() {
@@ -29,6 +30,7 @@ function Routing() {
         <Route path="/boutiques" element={<BoutiquePage/>}/>
         <Route path="/styles" element={<StylePage/>}/>
         <Route path="/posts" element={<Posts/>}/>
+        <Route path="/contact" element={<Contact/>}/>
         <Route path="*" element={<NotFound/>}/>
     </Routes>
   )
