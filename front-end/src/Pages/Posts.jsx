@@ -1,11 +1,5 @@
-
-
 function Posts() {
-  return (
-    <div className="pt-16">
-      posts
-    </div>
-  )
+  return <div className="pt-16">posts</div>;
 }
 
-export default Posts
+export default Posts;

@@ -6,7 +6,7 @@
       "email": "irfan@gmail.com",
       "password": "irfanPassword",
       "profile": "",
-      "posts":[]
+      "posts": []
     }
   ],
   "styles": [
@@ -16,7 +16,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -39,7 +39,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -62,7 +62,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -85,7 +85,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -108,7 +108,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -131,7 +131,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -153,7 +153,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -177,7 +177,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [
@@ -200,7 +200,7 @@
       "stylePosts": [
         {
           "styleName": "firstStyle",
-          "likes":"1",
+          "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
           "styeleContent": [

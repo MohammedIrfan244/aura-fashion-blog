@@ -4,41 +4,46 @@ import GoTopPopUp from "../Shared/GoTopPopUp";
 import { useLocation } from "react-router-dom";
 
 function StylePage() {
-    const { styles } = useSelector((state) => state.styles);
-    const [showStyles, setShowStyles] = useState([]);
-    const location = useLocation();
-    const { stylesIndex } = location.state || {}; 
-    const [selectedIndex, setSelectedIndex] = useState(stylesIndex || stylesIndex==0 ? parseInt(stylesIndex) : null);
+  const { styles } = useSelector((state) => state.styles);
+  const [showStyles, setShowStyles] = useState([]);
+  const location = useLocation();
+  const { stylesIndex } = location.state || {};
+  const [selectedIndex, setSelectedIndex] = useState(
+    stylesIndex || stylesIndex == 0 ? parseInt(stylesIndex) : null
+  );
 
-    useEffect(() => {
-      if (selectedIndex === null) {
-        const allStylePosts = styles?.flatMap((item) => item.stylePosts || []);
-        setShowStyles(allStylePosts);
-      } else {
-        
-        const selectedStylePosts = styles[selectedIndex]?.stylePosts || [];
-        setShowStyles(selectedStylePosts);
-      }
-    }, [styles, selectedIndex]);
-  
-    const handleIndexChange = (e) => {
-      const value = e.target.value;
-      setSelectedIndex(value === "" ? null : parseInt(value))
-    };
+  useEffect(() => {
+    if (selectedIndex === null) {
+      const allStylePosts = styles?.flatMap((item) => item.stylePosts || []);
+      setShowStyles(allStylePosts);
+    } else {
+      const selectedStylePosts = styles[selectedIndex]?.stylePosts || [];
+      setShowStyles(selectedStylePosts);
+    }
+  }, [styles, selectedIndex]);
+
+  const handleIndexChange = (e) => {
+    const value = e.target.value;
+    setSelectedIndex(value === "" ? null : parseInt(value));
+  };
 
   return (
     <div className="pt-16">
       <h1>Styles</h1>
 
       <div>
-          <select className="bg-richBlack" onChange={handleIndexChange} value={selectedIndex ?? ""}>
-            <option value="">All Styles</option>
-            {styles?.map((style, index) => (
-              <option key={index} value={index}>
-                {style.name}
-              </option>
-            ))}
-          </select>
+        <select
+          className="bg-richBlack"
+          onChange={handleIndexChange}
+          value={selectedIndex ?? ""}
+        >
+          <option value="">All Styles</option>
+          {styles?.map((style, index) => (
+            <option key={index} value={index}>
+              {style.name}
+            </option>
+          ))}
+        </select>
       </div>
 
       <ul>
