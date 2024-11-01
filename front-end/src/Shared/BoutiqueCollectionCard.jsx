@@ -23,7 +23,7 @@ function BoutiqueCollectionCard({ boutique = {}, click, blur }) {
         }`}
         style={{
           animationDuration: `${500}ms`,
-          "--tw-translate-y": "0px",
+          "--tw-translate-y": "50px",
           "--tw-translate-y-70": "0px",
         }}
       >

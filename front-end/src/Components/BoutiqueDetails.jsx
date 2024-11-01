@@ -28,12 +28,19 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center ">
       <div
         className="absolute inset-0 bg-black bg-opacity-50"
         onClick={() => close(null)}
       ></div>
-      <div className="relative z-10 w-[90%] sm:w-[700px] h-[400px] text-snowWhite bg-richBlack overflow-y-auto">
+      <div
+        className="relative z-10 w-[90%] sm:w-[900px] h-[500px] text-snowWhite bg-richBlack overflow-y-auto animate-slideY"
+        style={{
+          animationDuration: "500ms",
+          "--tw-translate-y": "100px",
+          "--tw-translate-y-70": "0px",
+        }}
+      >
         <div className="flex flex-col sm:flex-row gap-1 h-[90vh] sm:h-[400px] overflow-hidden">
           <div className="hidden sm:flex flex-col h-full gap-1">
             {thumbnails.map((thumbnail, index) => (
@@ -56,7 +63,7 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
             />
           </div>
 
-          <div className="flex flex-col flex-grow items-end justify-between">
+          <div className="flex flex-col flex-grow items-end justify-between sm:ms-3">
             <button className="text-xl mt-1 me-1" onClick={() => close(null)}>
               <RiCloseCircleLine />
             </button>
@@ -75,7 +82,7 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
         <div className="mt-5 h-auto px-1">
           <form className="relative" onSubmit={(e) => handleSubmit(e)}>
             <textarea
-              className="w-full bg-[#2E2E33] rounded-md focus:outline-none px-3 text-xs"
+              className="w-full bg-[#2E2E33] rounded-md focus:outline-none px-3 py-1 text-xs"
               value={message}
               placeholder="Message here...."
               onChange={(e) => setMessage(e.target.value)}

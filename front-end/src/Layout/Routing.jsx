@@ -10,6 +10,7 @@ import StylePage from "../Pages/StylePage";
 import NotFound from "../Pages/NotFound";
 import Posts from "../Pages/Posts";
 import Contact from "../Pages/Contact";
+import StyleDetailPage from "../Pages/StyleDetailPage";
 
 function Routing() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function Routing() {
       <Route path="/" element={<Home />} />
       <Route path="/boutiques" element={<BoutiquePage />} />
       <Route path="/styles" element={<StylePage />} />
+      <Route path="/styles/:id" element={<StyleDetailPage />} />
       <Route path="/posts" element={<Posts />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />

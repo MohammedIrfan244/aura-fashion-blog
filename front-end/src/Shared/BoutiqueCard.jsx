@@ -27,7 +27,9 @@ function BoutiqueCard({ boutique = {}, boutiqueIndex }) {
           inView ? "animate-slideY opacity-100" : "opacity-0"
         }`}
         style={{
-          animationDuration: `${(boutiqueIndex + 1) * 200}ms`,
+          animationDuration: `${500}ms`,
+          "--tw-translate-y": "50px",
+          "--tw-translate-y-70": "0px",
         }}
         onClick={handleClck}
       >

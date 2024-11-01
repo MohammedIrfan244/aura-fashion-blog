@@ -36,7 +36,7 @@ function Navbar() {
         searchInput != "" &&
         searchInput != " "
       ) {
-        stylesArr.push(style.name);
+        stylesArr.push(style);
       }
     });
     boutiques?.forEach((boutique) => {
@@ -45,7 +45,7 @@ function Navbar() {
         searchInput != "" &&
         searchInput != " "
       ) {
-        boutiqueArr.push(boutique.name);
+        boutiqueArr.push(boutique);
       }
     });
     users?.forEach((user) => {
@@ -54,7 +54,7 @@ function Navbar() {
         searchInput != "" &&
         searchInput != " "
       ) {
-        usersArr.push(user.userName);
+        usersArr.push(user);
       }
     });
     setSearchResults({
@@ -101,6 +101,13 @@ function Navbar() {
     setMenuVisible(false);
   };
 
+  const handleNavigateBoutiques=(passLocatioin,boutiqueIndex)=>{
+    navigate(`${passLocatioin}`,{state:{boutiqueIndex}})
+    searchClick()
+  }
+  // const handleNavigateStyles=(passLocatioin,boutiqueIndex)=>navigate(`${passLocatioin}`,{state:{boutiqueIndex}})
+  // const handleNavigateUsers=(passLocatioin,boutiqueIndex)=>navigate(`${passLocatioin}`,{state:{boutiqueIndex}})
+
   return (
     <div
       className={`${
@@ -128,6 +135,7 @@ function Navbar() {
               <li
                 key={label}
                 onClick={() => {
+                  label=='HOME'?navigate('/'):
                   navigate(`/${label.toLowerCase()}`);
                   closeMenu();
                 }}
@@ -196,8 +204,8 @@ function Navbar() {
                 </p>
                 {searchResult.userSearch.map((u, i) => {
                   return (
-                    <li className="cursor-pointer" key={i}>
-                      {u}
+                    <li  className="cursor-pointer" key={i}>
+                      {u?.userName}
                     </li>
                   );
                 })}
@@ -208,8 +216,8 @@ function Navbar() {
                 </p>
                 {searchResult.boutiqueSearch.map((u, i) => {
                   return (
-                    <li className="cursor-pointer" key={i}>
-                      {u}
+                    <li onClick={()=>handleNavigateBoutiques("boutiques",boutiques.indexOf(u))} className="cursor-pointer" key={i}>
+                      {u?.name}
                     </li>
                   );
                 })}
@@ -221,7 +229,7 @@ function Navbar() {
                 {searchResult.styleSearch.map((u, i) => {
                   return (
                     <li className="cursor-pointer" key={i}>
-                      {u}
+                      {u?.name}
                     </li>
                   );
                 })}

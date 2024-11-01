@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import GoTopPopUp from "../Shared/GoTopPopUp";
 import { useLocation } from "react-router-dom";
+import StyleCollectionCard from "../Shared/StyleCollectionCard";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import { CiCircleChevLeft } from "react-icons/ci";
+import { CiCircleChevRight } from "react-icons/ci";
 
 function StylePage() {
   const { styles } = useSelector((state) => state.styles);
@@ -9,8 +14,10 @@ function StylePage() {
   const location = useLocation();
   const { stylesIndex } = location.state || {};
   const [selectedIndex, setSelectedIndex] = useState(
-    stylesIndex || stylesIndex == 0 ? parseInt(stylesIndex) : null
+    stylesIndex || stylesIndex === 0 ? parseInt(stylesIndex) : null
   );
+
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     if (selectedIndex === null) {
@@ -22,48 +29,67 @@ function StylePage() {
     }
   }, [styles, selectedIndex]);
 
-  const handleIndexChange = (e) => {
-    const value = e.target.value;
-    setSelectedIndex(value === "" ? null : parseInt(value));
+  const handleIndexChange = (index) => {
+    setSelectedIndex(index);
+  };
+
+  const handleNext = () => {
+    swiperRef.current.swiper.slideNext();
+  };
+
+  const handlePrev = () => {
+    swiperRef.current.swiper.slidePrev();
   };
 
   return (
     <div className="pt-16">
-      <h1>Styles</h1>
+      <div className="my-5 flex justify-center sm:justify-between px-5 w-full">
+        
+        <h2 className="hidden sm:block font-beban text-electricBlue">{!styles[selectedIndex]?"All":styles[selectedIndex].name}</h2>
+        <div className="flex items-center gap-2">
+        <button onClick={handlePrev} className="text-xl hover:text-electricBlue">
+          <CiCircleChevLeft />
+          </button>
+          <Swiper
+            ref={swiperRef}
+            className="w-[400px]"
+            slidesPerView={3}
+            centeredSlides={true}
+            loop={true}
+            spaceBetween={10}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {styles?.map((style, index) => (
+              <SwiperSlide key={index}>
+                <button
+                  onClick={() => handleIndexChange(index)}
+                  className={`bg-snowWhite w-32 px-1 py-2 text-xs ${index === selectedIndex ? "text-electricBlue" : "text-richBlack"}`}
+                >
+                  {style?.name}
+                </button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-      <div>
-        <select
-          className="bg-richBlack"
-          onChange={handleIndexChange}
-          value={selectedIndex ?? ""}
-        >
-          <option value="">All Styles</option>
-          {styles?.map((style, index) => (
-            <option key={index} value={index}>
-              {style.name}
-            </option>
-          ))}
-        </select>
+         
+          
+          <button onClick={handleNext} className="text-xl hover:text-electricBlue">
+          <CiCircleChevRight />
+          </button>
+        </div>
       </div>
-
-      <ul>
+      <div className="flex flex-col gap-10">
         {showStyles?.map((style, index) => (
-          <li key={index}>
-            <h2>{style.styleName}</h2>
-            <img src={style.styleImage} alt={style.styleName} />
-            <p>Author ID: {style.styleAuthorId}</p>
-            <p>likes:{style.likes}</p>
-            <div>
-              {style.styeleContent?.map((content, contentIndex) => (
-                <div key={contentIndex}>
-                  <h3>{content.styleContentTitle}</h3>
-                  <p>{content.styleContentDetails}</p>
-                </div>
-              ))}
-            </div>
-          </li>
+          <StyleCollectionCard key={index} style={style} index={index} />
         ))}
-      </ul>
+      </div>
       <GoTopPopUp />
     </div>
   );

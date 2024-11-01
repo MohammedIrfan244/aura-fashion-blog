@@ -62,7 +62,7 @@ function BoutiquePage() {
           />
         </div>
         <div className="flex items-center justify-between h-auto w-full p-3">
-          <p className="text-2xl font-agdasima text-electricBlue">
+          <p className="text-2xl font-beban text-electricBlue">
             {currentBoutique?.name}
           </p>
           <p className="text-[10px] font-thin w-80">
