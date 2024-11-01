@@ -6,6 +6,9 @@ import { useEffect } from "react"
 import { fetchBoutiques } from "../Redux/BoutiqueSlice"
 import { fetchStyles } from "../Redux/StyleSlice"
 import { fetchUsers } from "../Redux/UserSlice"
+import StylePage from "../Pages/StylePage"
+import NotFound from "../Pages/NotFound"
+import Posts from "../Pages/Posts"
 
 
 function Routing() {
@@ -24,6 +27,9 @@ function Routing() {
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/boutiques" element={<BoutiquePage/>}/>
+        <Route path="/styles" element={<StylePage/>}/>
+        <Route path="/posts" element={<Posts/>}/>
+        <Route path="*" element={<NotFound/>}/>
     </Routes>
   )
 }

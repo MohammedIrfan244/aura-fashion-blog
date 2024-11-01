@@ -1,104 +1,220 @@
 {
   "users": [
     {
-      "id":"1",
-      "userName":"Irfan",
-      "email":"irfan@gmail.com",
-      "password":"irfanPassword",
-      "profile":"",
-      "posts":[
-        [
-          {
-            "userStyleName":"firstStyle",
-            "userStyleImage":"https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-            "userStyelContent":[
-              {
-                "userStyleContentTitle":"morning",
-                "userStyleContentDetails":"wash your face",
-                "userStyleContentImage":"https://i.pinimg.com/736x/3f/9f/87/3f9f8767f2f134175bf6751010cd3119.jpg"
-              },
-              {
-                "userStyleContentTitle":"night",
-                "userStyleContentDetails":"wash your face again",
-                "userStyleContentImage":"https://i.pinimg.com/736x/3f/9f/87/3f9f8767f2f134175bf6751010cd3119.jpg"
-              }
-            ]    
-          }
-        ]
-      ]
+      "id": "1",
+      "userName": "Irfan",
+      "email": "irfan@gmail.com",
+      "password": "irfanPassword",
+      "profile": "",
+      "posts":[]
     }
   ],
   "styles": [
     {
       "name": "Everyday Makeup",
-      "id":"1",
-      "stylePosts":[
+      "id": "1",
+      "stylePosts": [
         {
-          "styleName":"firstStyle",
-          "styleImage":"https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId":"1",
-          "styelContent":[
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
             {
-              "styleContentTitle":"morning",
-              "styleContentDetails":"wash your face",
-              "styleContentImage":"https://i.pinimg.com/736x/3f/9f/87/3f9f8767f2f134175bf6751010cd3119.jpg"
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
             },
             {
-              "styleContentTitle":"night",
-              "styleContentDetails":"wash your face again",
-              "styleContentImage":"https://i.pinimg.com/736x/3f/9f/87/3f9f8767f2f134175bf6751010cd3119.jpg"
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
             }
-          ]    
+          ]
         }
       ],
       "image": "https://img.freepik.com/free-photo/portrait-confident-young-woman-smiling_23-2148452696.jpg?t=st=1729592606~exp=1729596206~hmac=317ab9e3b310f7e84377e872a7a1639cdf59521441c40e8131558f6b77d34f65&w=360"
     },
     {
       "name": "Glam Makeup Palette",
-      "id":"2",
-      "stylePosts":[],
+      "id": "2",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/free-photo/vintage-beautiful-girl-with-cigarette_144627-7956.jpg?t=st=1729684278~exp=1729687878~hmac=01e69d5ed48d519b6b8b2f99d0793c82d47d386bb54e70e8877cc43f5564934e&w=360"
     },
     {
       "name": "Skincare Essential",
-      "id":"3",
-      "stylePosts":[],
+      "id": "3",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/free-photo/different-foundation-arrangement_23-2148978148.jpg?t=st=1729663474~exp=1729667074~hmac=b613b1802928141459a74e3f0101fba1b6db04e9a8d490ee74e703787b78c1f3&w=360"
     },
     {
       "name": "Haircare Essentials",
-      "id":"4",
-      "stylePosts":[],
+      "id": "4",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/premium-photo/set-black-luxury-cosmetic-product-spray-oil-tube-cream-bottle-dispenser-lotion-shampoo-gel-showe_1358627-22656.jpg?w=360"
     },
     {
-      "name":"Nailcare Boutique",
-      "id":"5",
-      "stylePosts":[],
+      "name": "Nailcare Boutique",
+      "id": "5",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/premium-photo/close-up-persons-hand-with-black-nails-black-lace-design_1035785-12667.jpg?w=360"
     },
     {
       "name": "On Seasonal Trends",
-      "id":"6",
-      "stylePosts":[],
+      "id": "6",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/free-photo/medium-shot-cool-woman-posing_23-2149267439.jpg?t=st=1729664030~exp=1729667630~hmac=f85e167f38237fa0c98d1eebae0be7915f4f22036442953b9c667d7750434976&w=360"
     },
     {
-      "id":"7",
-      "stylePosts":[],
+      "id": "7",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/premium-photo/redhaired-gothic-girl-black-dress-gloomy-background-studio_81340-30613.jpg?w=360",
       "name": "Gothic Wardrobe"
     },
     {
       "name": "Fashion Accessories",
-      "id":"8",
-      "stylePosts":[],
+      "id": "8",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/premium-photo/flat-lay-top-view-bag-with-accessories-footwear-black_113876-1687.jpg?w=360"
     },
     {
       "name": "Athleisure Collective",
-      "id":"9",
-      "stylePosts":[],
+      "id": "9",
+      "stylePosts": [
+        {
+          "styleName": "firstStyle",
+          "likes":"1",
+          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
+          "styleAuthorId": "1",
+          "styeleContent": [
+            {
+              "styleContentTitle": "morning",
+              "styleContentDetails": "wash your face"
+            },
+            {
+              "styleContentTitle": "night",
+              "styleContentDetails": "wash your face again"
+            }
+          ]
+        }
+      ],
       "image": "https://img.freepik.com/premium-photo/portrait-young-woman-sitting-chair_1048944-5169204.jpg?w=360"
     }
   ],

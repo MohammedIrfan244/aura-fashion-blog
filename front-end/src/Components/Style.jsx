@@ -1,18 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import StyleCards from "../Shared/StyleCards";
-import { fetchStyles } from "../Redux/StyleSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 
 function Style() {
   const {styles}=useSelector(state=>state.styles)
-  const dispatch=useDispatch()
   
-useEffect(()=>{
-  dispatch(fetchStyles("http://localhost:3001/styles"))
-},[dispatch])
   return (
     <div className="mt-20">
       <Swiper
@@ -41,7 +35,7 @@ useEffect(()=>{
       >
         {styles.map((style, index) => (
           <SwiperSlide key={index}>
-            <StyleCards image={style.image} name={style.name} index={index}/>
+            <StyleCards image={style.image} name={style.name} stylesIndex={index}/>
           </SwiperSlide>
         ))}
       </Swiper>
