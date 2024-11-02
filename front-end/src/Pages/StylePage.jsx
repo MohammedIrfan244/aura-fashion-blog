@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import GoTopPopUp from "../Shared/GoTopPopUp";
 import { useLocation } from "react-router-dom";
 import StyleCollectionCard from "../Shared/StyleCollectionCard";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 import { CiCircleChevLeft } from "react-icons/ci";
 import { CiCircleChevRight } from "react-icons/ci";
 
@@ -42,13 +42,17 @@ function StylePage() {
   };
 
   return (
-    <div className="pt-16">
-      <div className="my-5 flex justify-center sm:justify-between px-5 w-full">
-        
-        <h2 className="hidden sm:block font-beban text-electricBlue">{!styles[selectedIndex]?"All":styles[selectedIndex].name}</h2>
+    <div className="pt-16 px-5">
+      <div className="my-5 flex justify-center sm:justify-between w-full">
+        <h2 className="hidden sm:block font-beban text-electricBlue">
+          {!styles[selectedIndex] ? "All" : styles[selectedIndex].name}
+        </h2>
         <div className="flex items-center gap-2">
-        <button onClick={handlePrev} className="text-xl hover:text-electricBlue">
-          <CiCircleChevLeft />
+          <button
+            onClick={handlePrev}
+            className="text-xl hover:text-electricBlue hidden sm:block"
+          >
+            <CiCircleChevLeft />
           </button>
           <Swiper
             ref={swiperRef}
@@ -70,7 +74,11 @@ function StylePage() {
               <SwiperSlide key={index}>
                 <button
                   onClick={() => handleIndexChange(index)}
-                  className={`bg-snowWhite w-32 px-1 py-2 text-xs ${index === selectedIndex ? "text-electricBlue" : "text-richBlack"}`}
+                  className={`bg-snowWhite w-32 px-1 py-2 text-xs ${
+                    index === selectedIndex
+                      ? "text-electricBlue"
+                      : "text-richBlack"
+                  }`}
                 >
                   {style?.name}
                 </button>
@@ -78,10 +86,11 @@ function StylePage() {
             ))}
           </Swiper>
 
-         
-          
-          <button onClick={handleNext} className="text-xl hover:text-electricBlue">
-          <CiCircleChevRight />
+          <button
+            onClick={handleNext}
+            className="text-xl hover:text-electricBlue hidden sm:block"
+          >
+            <CiCircleChevRight />
           </button>
         </div>
       </div>

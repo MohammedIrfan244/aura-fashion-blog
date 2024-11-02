@@ -1,11 +1,18 @@
 import { CiHeart } from "react-icons/ci";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 function StyleCollectionCard({ style = {} ,index}) {
+  const {users}=useSelector(state=>state.users)
     const navigate=useNavigate()
+    const getUserNameById = () => {
+      const user = users.find(user => user.id == style?.styleAuthorId);
+      return user ? user.userName.toUpperCase() : null;
+    };
+    const author=getUserNameById()
   return (
-    <div className="sm:px-5 flex flex-col sm:flex-row relative w-auto h-auto animate-slideX"
+    <div className="flex flex-col sm:flex-row relative w-auto h-auto animate-slideX"
     style={{
         animationDuration: `500ms`,
         "--tw-translate-x": "-50px",
@@ -26,8 +33,9 @@ function StyleCollectionCard({ style = {} ,index}) {
         <div className="sm:bg-[#242427] sm:absolute sm:top-[10%] sm:left-[45%] h-auto sm:py-5 w-auto sm:px-20 flex items-center">
           <h2 className="text-2xl sm:text-4xl mt-5 sm:mt-0 font-agdasima">{style?.styleName}</h2>
         </div>
-        <p className="text-sm mt-5 sm:mt-40">{style?.styleDescription}</p>
-        <button onClick={()=>navigate(`/styles/${index}`,{state:{style}})} className="text-sm bg-snowWhite text-richBlack px-5 py-1 mt-5 sm:mt-10">Read Post</button>
+        <p className="text-snowWhite mt-5 sm:mt-40 font-extralight text-sm">By {author}</p>
+        <p className="text-sm mt-5">{style?.styleDescription}</p>
+        <button onClick={()=>navigate(`/styles/${index}`,{state:{style,author}})} className="text-sm bg-snowWhite text-richBlack px-5 py-1 mt-5">Read The Post</button>
       </div>
     </div>
   );
