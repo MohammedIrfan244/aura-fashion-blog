@@ -1,5 +1,9 @@
+import { useDispatch } from "react-redux";
+import { hideSearchBar } from "../Redux/CommonSlice";
+
 function Posts() {
-  return <div className="pt-16">posts</div>;
+  const dispatch=useDispatch()
+  return <div className="pt-16" onClick={()=>dispatch(hideSearchBar())}>posts</div>;
 }
 
 export default Posts;

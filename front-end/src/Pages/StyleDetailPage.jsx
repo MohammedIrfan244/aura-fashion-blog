@@ -5,15 +5,18 @@ import { LuUser } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import { LuDot } from "react-icons/lu";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { hideSearchBar } from "../Redux/CommonSlice";
 
 function StyleDetailPage() {
+  const dispatch=useDispatch()
   const location = useLocation();
   const { style, author } = location.state;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="pt-16 px-5">
+    <div className="pt-16 px-5" onClick={()=>dispatch(hideSearchBar)}>
       <div className="flex bg-[#242427] h-14 sm:h-20 items-center gap-5 justify-center text-sm animate-slideY"
         style={{
           animationDuration: "300ms",
@@ -46,9 +49,9 @@ function StyleDetailPage() {
         </div>
         <p className="text-2xl sm:text-3xl font-agdasima">{style?.styleName}</p>
         <div className="w-full sm:w-2/3 flex flex-col gap-5 sm:gap-10 ">
-        {style?.styeleContent.map((u, i) => {
+        {style?.styleContent.map((u, i) => {
           return (
-            <div key={i}>
+            <div className="flex flex-col gap-3" key={i}>
               <h2 className="font-beban tracking-widest text-xl">{u?.styleContentTitle}</h2>
               <p className="text-sm sm:text-base">{u?.styleContentDetails}</p>
             </div>

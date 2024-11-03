@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import GoTopPopUp from "../Shared/GoTopPopUp";
 import { useLocation } from "react-router-dom";
 import StyleCollectionCard from "../Shared/StyleCollectionCard";
@@ -7,8 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { CiCircleChevLeft } from "react-icons/ci";
 import { CiCircleChevRight } from "react-icons/ci";
+import { hideSearchBar } from "../Redux/CommonSlice";
 
 function StylePage() {
+  const dispatch=useDispatch()
   const { styles } = useSelector((state) => state.styles);
   const [showStyles, setShowStyles] = useState([]);
   const location = useLocation();
@@ -42,7 +44,7 @@ function StylePage() {
   };
 
   return (
-    <div className="pt-16 px-5">
+    <div className="pt-16 px-5" onClick={()=>dispatch(hideSearchBar)}>
       <div className="my-5 flex justify-center sm:justify-between w-full">
         <h2 className="hidden sm:block font-beban text-electricBlue">
           {!styles[selectedIndex] ? "All" : styles[selectedIndex].name}

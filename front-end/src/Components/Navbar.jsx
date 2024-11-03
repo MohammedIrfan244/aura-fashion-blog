@@ -5,7 +5,8 @@ import { AiOutlineProduct } from "react-icons/ai";
 import { SiStylelint } from "react-icons/si";
 import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleSearchBar } from "../Redux/CommonSlice";
 
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
@@ -18,13 +19,14 @@ function Navbar() {
   const { styles } = useSelector((state) => state.styles);
   const { boutiques } = useSelector((state) => state.boutiques);
   const { users } = useSelector((state) => state.users);
+  const { searchBar } = useSelector((state) => state.common);
 
   const [scrollVisible, setScrollVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
-  const [searchVisible, setSearchVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const inputRef = useRef();
   const navigate = useNavigate();
+  const dispatch=useDispatch()
 
   useEffect(() => {
     let usersArr = [];
@@ -67,7 +69,7 @@ function Navbar() {
 
   const searchClick = () => {
     setSearchInput("");
-    setSearchVisible(!searchVisible);
+    dispatch(toggleSearchBar())
   };
 
   const handleScroll = () => {
@@ -92,10 +94,10 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (searchVisible) {
+    if (searchBar) {
       inputRef.current.focus();
     }
-  }, [searchVisible]);
+  }, [searchBar]);
 
   const closeMenu = () => {
     setMenuVisible(false);
@@ -183,7 +185,7 @@ function Navbar() {
         >
           <div
             className={`overflow-hidden transition-all flex duration-500 ease-out ${
-              searchVisible ? "w-40" : "w-0"
+              searchBar ? "w-40" : "w-0"
             }`}
           >
             <input
@@ -196,7 +198,7 @@ function Navbar() {
             />
             <div
               className={
-                searchVisible
+                searchBar
                   ? "w-72 justify-between bg-richBlack px-2 py-1 anim text-snowWhite absolute h-auto top-10 gap-5 text-xs flex"
                   : "w-0 h-0"
               }
@@ -240,7 +242,7 @@ function Navbar() {
             </div>
           </div>
           <LuSearch
-            onClick={() => searchClick()}
+            onClick={searchClick}
             className="hover:scale-110 cursor-pointer hover:text-electricBlue"
           />
           <LuContact

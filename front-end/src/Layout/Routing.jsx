@@ -7,10 +7,10 @@ import { fetchBoutiques } from "../Redux/BoutiqueSlice";
 import { fetchStyles } from "../Redux/StyleSlice";
 import { fetchUsers } from "../Redux/UserSlice";
 import StylePage from "../Pages/StylePage";
-import NotFound from "../Pages/NotFound";
 import Posts from "../Pages/Posts";
 import Contact from "../Pages/Contact";
 import StyleDetailPage from "../Pages/StyleDetailPage";
+import NotFuond from '../Pages/NotFound'
 
 function Routing() {
   const dispatch = useDispatch();
@@ -32,7 +32,8 @@ function Routing() {
       <Route path="/styles/:id" element={<StyleDetailPage />} />
       <Route path="/posts" element={<Posts />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/posts" element={<Posts/>}/>
+      <Route path="*" element={<NotFuond/>}/>
     </Routes>
   );
 }

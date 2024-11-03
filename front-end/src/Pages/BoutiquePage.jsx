@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import BoutiqueDetails from "../Components/BoutiqueDetails";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   BiSolidChevronLeftCircle,
   BiSolidChevronRightCircle,
 } from "react-icons/bi";
 import BoutiqueCollectionCard from "../Shared/BoutiqueCollectionCard";
 import GoTopPopUp from "../Shared/GoTopPopUp";
+import { hideSearchBar } from "../Redux/CommonSlice";
 
 function BoutiquePage() {
   const [aniDirection, setAniDirection] = useState(false);
@@ -18,6 +19,7 @@ function BoutiquePage() {
   const { boutiqueIndex } = location.state || {};
   const [currentIndex, setCurrentIndex] = useState(boutiqueIndex || 0);
   const currentBoutique = boutiques.find((_, index) => index === currentIndex);
+  const dispatch=useDispatch()
 
   const handleInc = () => {
     setAniDirection(true);
@@ -38,7 +40,7 @@ function BoutiquePage() {
   }, [currentIndex]);
 
   return (
-    <div>
+    <div onClick={()=>dispatch(hideSearchBar())}>
       <div
         key={animateKey}
         className={`pt-16 animate-slideX ${

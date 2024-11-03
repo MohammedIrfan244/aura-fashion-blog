@@ -10,10 +10,10 @@
     },
     {
       "id": "2",
-      "userName": "Irfan",
-      "email": "irfan@gmail.com",
-      "password": "irfanPassword",
-      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04aKwRPpTYZNk1KLojzVy7hnb0BJDKeakwQ&s",
+      "userName": "Jane Sherin",
+      "email": "janesherin@gmail.com",
+      "password": "janePassword",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33ixSWOxYrpRTCGpcDMTufDrcCpN9B_oRXw&s",
       "posts": []
     }
   ],
@@ -23,19 +23,68 @@
       "id": "1",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout All The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Effortless Glow: Everyday Makeup Tips for a Fresh Look",
+          "styleDescription": "Achieve a radiant, natural look that feels light and effortless. This guide provides simple makeup techniques that enhance your features without overdoing it, perfect for daily wear.",
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Skin Prep: The Key to Long-Lasting Makeup",
+              "styleContentDetails": "Great makeup starts with well-prepped skin. Cleanse your face, apply a lightweight moisturizer, and finish with a hydrating primer. This base keeps makeup looking fresh throughout the day while enhancing your skin’s natural glow."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Tinted Moisturizer or BB Cream: Light Coverage with a Natural Finish",
+              "styleContentDetails": "For an everyday look, skip the heavy foundation and use a tinted moisturizer or BB cream instead. It provides light coverage, evens out your skin tone, and lets your natural skin texture show through. Ideal for a fresh, dewy finish."
+            },
+            {
+              "styleContentTitle": "Brighten with Concealer: Hide Dark Circles and Blemishes",
+              "styleContentDetails": "A bit of concealer under the eyes and on blemishes goes a long way. Choose a lightweight formula, dab lightly with your fingers, and blend seamlessly for a bright, refreshed appearance. This step adds polish without needing heavy coverage."
+            },
+            {
+              "styleContentTitle": "Cream Blush: A Pop of Color for a Natural Flush",
+              "styleContentDetails": "Use a cream blush in a shade close to your natural flush color for a subtle, healthy glow. Cream formulas blend easily and give a more skin-like finish, enhancing your complexion without overpowering it."
+            },
+            {
+              "styleContentTitle": "Enhance Eyes Naturally: Skip Eyeshadow, Focus on Lashes",
+              "styleContentDetails": "For a simple look, skip eyeshadow and focus on your lashes. Curl your lashes and apply a coat or two of mascara to open up your eyes. This minimal approach keeps your eyes looking bright and awake without needing much else."
+            },
+            {
+              "styleContentTitle": "Tinted Lip Balm: Moisture with a Hint of Color",
+              "styleContentDetails": "A tinted lip balm adds a touch of color and keeps your lips hydrated. Choose a shade that enhances your natural lip color for a polished yet low-maintenance finish. It’s easy to reapply throughout the day and gives a fresh, youthful appearance."
+            }
+          ]
+        },
+        {
+          "styleName": "Everyday Elegance with Jane Sherin",
+          "styleDescription": "Discover the secrets to looking polished and stylish every day with Me. From color-matching to accessorizing, I shares easy-to-follow tips that elevate your daily look with minimal effort. This guide is crafted for anyone wanting to add a touch of elegance to their everyday style.",
+          "likes": "2",
+          "styleImage": "https://i.pinimg.com/736x/79/44/0f/79440fd07bebb3d329c1a2f5a1c8d129.jpg",
+          "styleAuthorId": "2",
+          "styleContent": [
+            {
+              "styleContentTitle": "Find Your Colors: Enhancing Your Natural Tones",
+              "styleContentDetails": "Choosing the right colors can make all the difference in highlighting your best features. Start by determining your undertone—whether it's warm, cool, or neutral. For example, warmer tones often look best in earthy colors, while cooler tones might find jewel tones more flattering. Trying different shades near your face can help identify colors that brighten your complexion and add warmth to your look."
+            },
+            {
+              "styleContentTitle": "Outfit Coordination: Piecing Together Perfect Looks",
+              "styleContentDetails": "Building a cohesive outfit is all about balancing colors, patterns, and styles. Begin with versatile basics as your foundation, like a neutral top or classic jeans, and add one standout piece, such as a colorful blazer or patterned skirt, to keep things interesting. Pay attention to proportion—pairing a loose top with fitted bottoms (or vice versa) can create a balanced and effortlessly stylish look."
+            },
+            {
+              "styleContentTitle": "Accessory Magic: The Art of Highlighting",
+              "styleContentDetails": "Accessories can be the star of an outfit or a subtle enhancement. Think of accessories as accents that add depth—layering delicate necklaces or adding a bold statement earring can elevate even a simple outfit. Consider using a mix of textures and colors that complement, rather than compete with, your outfit. For instance, pairing metallics with solid colors can add just the right touch of sparkle."
+            },
+            {
+              "styleContentTitle": "Choosing Footwear: Elevate Your Look with Style",
+              "styleContentDetails": "From heels to elegant flats, footwear plays a crucial role in shaping the final look. Heels or stylish shoes add an element of sophistication and elevate the appearance more than casual chappals can. Opting for heels or structured shoes, even a low heel, can elongate the legs and create a more polished effect. For versatility, neutral-colored shoes, like beige or black, pair well with almost any outfit, while a pop of color can add personality. Always aim for a balance of comfort and style by choosing well-constructed options that look chic without sacrificing wearability."
+            },
+            {
+              "styleContentTitle": "Grooming Basics: The Power of Clean Lines",
+              "styleContentDetails": " A fresh look starts with the essentials: clean eyebrows and healthy, styled hair. Regular brow grooming—whether by tweezing, threading, or shaping—frames the face and highlights your natural features. Keeping hair trimmed and nourished with moisturizing products ensures it looks shiny and healthy. A subtle hair touch-up, such as soft waves or a sleek ponytail, can add a polished feel to your look effortlessly."
+            },
+            {
+              "styleContentTitle": "Makeup Mastery: The Finishing Touch",
+              "styleContentDetails": "No outfit is complete without makeup that complements natural features and outfit style. Opt for foundation or tinted moisturizer that matches your undertone, blending it well for a seamless look. Adding a pop of blush and a hint of highlighter can give your skin a natural glow, while subtle lip and eye colors can enhance your overall appearance without overpowering. Finish with mascara to make your eyes pop, creating a fresh, refined look."
             }
           ]
         }
@@ -52,7 +101,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -76,7 +125,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -100,7 +149,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -124,7 +173,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -148,7 +197,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -171,7 +220,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -196,7 +245,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -220,7 +269,7 @@
           "likes": "1",
           "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
           "styleAuthorId": "1",
-          "styeleContent": [
+          "styleContent": [
             {
               "styleContentTitle": "morning",
               "styleContentDetails": "wash your face"
@@ -253,6 +302,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/pro-filtr-soft-matte-longwear-foundation-420?variant=35178864508973"
@@ -268,6 +321,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/portable-contour-concealer-brush-150"
@@ -283,6 +340,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/gloss-bomb-universal-lip-luminizer-fenty-glow"
@@ -298,6 +359,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/match-stix-contour-skinstick-amber?variant=41471068799021"
@@ -313,6 +378,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/eaze-drop-blurring-skin-tint-20?variant=39355630845997"
@@ -328,6 +397,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/fenty-icon-velvet-liquid-lipstick-the-mvp?variant=41396089192493"
@@ -343,6 +416,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/hella-thicc-volumizing-mascara-cuz-im-black?variant=41531397472301"
@@ -358,6 +435,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/fat-water-niacinamide-pore-refining-toner-serum-with-barbados-cherry?variant=39329802518573"
@@ -373,6 +454,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/flypencil-longwear-pencil-eyeliner-cuz-im-black?variant=35110460522541"
@@ -388,6 +473,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/snap-shadows-mix-match-eyeshadow-palette-true-neutrals?variant=35110462455853"
@@ -403,6 +492,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/invisimatte-blotting-paper-refill?variant=35110480085037"
@@ -418,6 +511,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/butta-drop-whipped-oil-body-cream-with-tropical-oils-shea-butter-fenty-fresh?variant=41669436702765"
@@ -433,6 +530,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/hydra-vizor-invisible-moisturizer-broad-spectrum-spf-30-sunscreen-with-niacinamide-kalahari-melon-us?variant=35110454722605"
@@ -448,6 +549,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/cookies-n-clean-whipped-clay-pore-detox-face-mask-with-salicylic-acid-charcoal?variant=40240683024429"
@@ -463,6 +568,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/pro-filtr-instant-retouch-primer-soft-matte"
@@ -478,6 +587,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/stunna-lip-paint-longwear-fluid-lip-color-uncensored?variant=35110479790125"
@@ -493,6 +606,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/killawatt-freestyle-highlighter-lightning-dustfire-crystal?variant=35110478938157"
@@ -508,6 +625,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/sun-stalkr-instant-warmth-bronzer-caramel-cutie?variant=35110467305517"
@@ -523,6 +644,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://fentybeauty.com/en-in/products/cheeks-out-freestyle-cream-blush-petal-poppin"
@@ -562,6 +687,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -577,6 +706,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -592,6 +725,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -607,6 +744,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -622,6 +763,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -637,6 +782,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -652,6 +801,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -667,6 +820,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -682,6 +839,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -697,6 +858,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -712,6 +877,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -727,6 +896,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -742,6 +915,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -757,6 +934,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -772,6 +953,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -787,6 +972,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -802,6 +991,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -817,6 +1010,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -832,6 +1029,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         }
@@ -854,6 +1055,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/face-makeup/foundation/fit-me-matte-poreless-foundation"
@@ -869,6 +1074,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/face-makeup/concealer/instant-age-rewind-eraser-dark-circles-concealer-treatment?variant=122"
@@ -884,6 +1093,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/eye-makeup/mascara/lash-sensational-sky-high-waterproof-mascara-makeup?variant=Very+Black"
@@ -899,6 +1112,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/lips/lipstick/superstay-teddy-tint?variant=baby-tee&utm_source=google&utm_medium=search_text_ads&utm_campaign=mny_goog_ao_makl_ssmi_bran_search_text_aw_en_na_na_exact&utm_term=super+matte+liquid+lipstick&gad_source=1&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2pIKKKv31T57H8sfwGWgiv1CjfLZnj21-ZBMaZF_dqoBAPuG0oIacgaAgqAEALw_wcB"
@@ -914,6 +1131,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/search-page?q=Fit%20Me%20Loose%20Finishing%20Powder"
@@ -929,6 +1150,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/eye-makeup/eyeliner/eyestudio-master-precise-all-day-liquid-eyeliner-makeup?variant=Satin+Black"
@@ -944,6 +1169,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/lip-makeup/lip-gloss/lifter-gloss-lip-gloss-makeup-with-hyaluronic-acid?variant=Bubblegum"
@@ -959,6 +1188,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/face/foundation/fit-me-foundation?variant=natural-buff&utm_source=google&utm_medium=cpc&utm_campaign=&utm_content=&utm_term=best+foundation+for+all+skin&gad_source=1&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2qRbJnfjbOcwwG6K4yU0Pngvqr_cofv6HlFjVnx01cHTMGbUsgDqWkaAv-KEALw_wcB"
@@ -974,6 +1207,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/lip-makeup/lip-liner/color-sensational-shaping-lip-liner?variant=Totally+Toffee"
@@ -989,6 +1226,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/eye-makeup/eyebrow-makeup/brow-ultra-slim-defining-eyebrow-pencil?variant=Light+Blonde"
@@ -1004,6 +1245,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/face-makeup/bb-cream/dream-fresh-bb-cream?variant=Light+Medium"
@@ -1019,6 +1264,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/eyes/eyeliner/colossal-bold-liner?variant=black&utm_source=google&utm_medium=cpc&utm_campaign=&utm_content=&utm_term=best+eyeliner&gad_source=1&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2rQL62XFw4BQFHVAA2n1shTsHzI3rDCpo5v9DzTvX9D-msIlhaoAqQaAiP3EALw_wcB"
@@ -1034,6 +1283,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/lips/lipstick/superstay-ink-crayon?variant=enjoy-the-view&utm_source=google&utm_medium=cpc&utm_campaign=&utm_content=&utm_term=superstay+ink+crayon+lipstick&gad_source=1&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2rA9rV--qqHEQBG1YL6RKM6rF4zzaFCvLIof-_OQ2YBq38ismaRwnwaAky9EALw_wcB"
@@ -1049,6 +1302,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/face-makeup/primer/facestudio-master-prime-primer?variant=Hydrate+++Smooth"
@@ -1064,6 +1321,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/eyes/mascara/the-colossal-washable-mascara?variant=washable"
@@ -1079,6 +1340,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/eye-makeup/eyeshadow/color-tattoo-24hr-all-in-one-eye-stix-eye-makeup?variant=I+am+Extravagant"
@@ -1094,6 +1359,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/face/highlighter/face-studio-master-chrome-highlighter?variant=molten-gold"
@@ -1109,6 +1378,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.com/face-makeup/blush-and-bronzer/fit-me-blush?variant=Peach"
@@ -1124,6 +1397,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/eyes/eyebrow/tattoo-brow-36h-eyebrow-pencil?variant=natural-brown"
@@ -1139,6 +1416,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ],
           "collectionLink": "https://www.maybelline.co.in/all-products/eyes/eyeliner/drama-gel-liner?variant=black"
@@ -1396,6 +1677,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1411,6 +1696,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1426,6 +1715,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1441,6 +1734,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1456,6 +1753,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1471,6 +1772,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1486,6 +1791,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1501,6 +1810,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1516,6 +1829,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1531,6 +1848,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1546,6 +1867,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1561,6 +1886,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1576,6 +1905,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1591,6 +1924,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1606,6 +1943,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1621,6 +1962,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1636,6 +1981,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1651,6 +2000,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1704,6 +2057,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1719,6 +2076,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1734,6 +2095,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1749,6 +2114,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1764,6 +2133,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1779,6 +2152,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1794,6 +2171,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1809,6 +2190,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1824,6 +2209,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1839,6 +2228,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1854,6 +2247,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1869,6 +2266,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1884,6 +2285,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1899,6 +2304,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1914,6 +2323,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         },
@@ -1929,6 +2342,10 @@
             {
               "comment": "nice product",
               "commentorId": "1"
+            },
+            {
+              "comment": "nice product",
+              "commentorId": "2"
             }
           ]
         }

@@ -3,14 +3,17 @@ import Boutique from "../Components/Boutique";
 import Hero from "../Components/Hero";
 import Style from "../Components/Style";
 import GoTopPopUp from "../Shared/GoTopPopUp";
+import { hideSearchBar } from "../Redux/CommonSlice";
+import { useDispatch } from "react-redux";
 
 function Home() {
+  const dispatch=useDispatch()
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.2,
   });
   return (
-    <div className="overflow-x-hidden max-w-full">
+    <div className="overflow-x-hidden max-w-full" onClick={()=>dispatch(hideSearchBar())}>
       <Hero />
       <GoTopPopUp />
       <Style />
