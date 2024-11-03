@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TbSend } from "react-icons/tb";
-import { IoMdArrowRoundDown } from "react-icons/io";
+import { FiExternalLink } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 // eslint-disable-next-line react/prop-types
 function BoutiqueDetails({ boutiqueItem = {}, close }) {
+  const { users } = useSelector((state) => state.users);
   const [message, setMessage] = useState("");
   const [mainImage, setMainImage] = useState(boutiqueItem?.collectionImage);
   const [thumbnails, setThumbnails] = useState([
@@ -25,6 +27,11 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
     e.preventDefault();
     console.log(message);
     setMessage("");
+  };
+
+  const commentor = (id) => {
+    let commentUser = users?.find(u => u.id == id);
+    return commentUser?commentUser:null;
   };
 
   return (
@@ -71,10 +78,13 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
               {boutiqueItem?.collectionName}
             </p>
             <div className="flex justify-between items-end w-full">
-              <p className="text-xs w-[60%]">
-                Used this product before? Feel free to share your experience{" "}
-                <IoMdArrowRoundDown />
-              </p>
+              <a
+                href={boutiqueItem?.collectionLink}
+                target="blank"
+                className="flex items-center text-sm gap-3 hover:text-electricBlue transition-colors"
+              >
+                Checkout <FiExternalLink />
+              </a>
               <p className="text-lg font-bold me-1">{`$${boutiqueItem?.collectionPrice}`}</p>
             </div>
           </div>
@@ -84,7 +94,7 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
             <textarea
               className="w-full bg-[#2E2E33] rounded-md focus:outline-none px-3 py-1 text-xs"
               value={message}
-              placeholder="Message here...."
+              placeholder="Comment here...."
               onChange={(e) => setMessage(e.target.value)}
             />
             <button
@@ -99,8 +109,10 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
               return (
                 <div className="mb-2" key={index}>
                   <div className="flex items-center gap-1">
-                    <div className="w-5 h-5 rounded-full bg-slate-500"></div>
-                    User
+                    <div className="w-5 h-5 rounded-full overflow-hidden">
+                      <img src={commentor(item.commentorId)?.profile} className="w-full h-full object-cover" alt={commentor(item.commentorId)?.userName} />
+                    </div>
+                    <p>{commentor(item.commentorId)?.userName}</p>
                   </div>
                   <p className="ps-6">{item.comment}</p>
                 </div>

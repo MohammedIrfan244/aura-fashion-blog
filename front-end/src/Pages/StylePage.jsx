@@ -47,7 +47,14 @@ function StylePage() {
         <h2 className="hidden sm:block font-beban text-electricBlue">
           {!styles[selectedIndex] ? "All" : styles[selectedIndex].name}
         </h2>
-        <div className="flex items-center gap-2">
+        <div
+          className="flex items-center gap-2 animate-slideY transition-all"
+          style={{
+            animationDuration: "500ms",
+            "--tw-translate-y": "-60px",
+            "--tw-translate-y-70": "0px",
+          }}
+        >
           <button
             onClick={handlePrev}
             className="text-xl hover:text-electricBlue hidden sm:block"
