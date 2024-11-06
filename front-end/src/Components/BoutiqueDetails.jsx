@@ -71,7 +71,7 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
           </div>
 
           <div className="flex flex-col flex-grow items-end justify-between sm:ms-3">
-            <button className="text-xl mt-1 me-1" onClick={() => close(null)}>
+            <button className="text-xl mt-1 me-1 opacity-0 sm:opacity100" onClick={() => close(null)}>
               <RiCloseCircleLine />
             </button>
             <p className="text-xl font-bold me-1 self-start">
