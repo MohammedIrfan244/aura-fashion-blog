@@ -9,8 +9,12 @@ const INITIAL_STATE = {
 export const fetchStyles = createAsyncThunk(
   "styles/fetchStyles",
   async (url) => {
-    const response = await axios.get(url);
-    return response.data;
+    try {
+      const response = await axios.get(url);
+      return response.data;
+    } catch (err) {
+      console.log("Error while fetching styles ", err);
+    }
   }
 );
 

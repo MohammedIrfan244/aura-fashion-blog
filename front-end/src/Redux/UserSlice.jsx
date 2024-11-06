@@ -8,8 +8,12 @@ const INITIAL_STATE = {
 };
 
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async (url) => {
-  const response = await axios.get(url);
-  return response.data;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (err) {
+    console.log("Error while fetching users ", err);
+  }
 });
 
 const userSlice = createSlice({

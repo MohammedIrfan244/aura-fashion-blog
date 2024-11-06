@@ -16,7 +16,7 @@ function StyleDetailPage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="pt-16 px-5" onClick={()=>dispatch(hideSearchBar)}>
+    <div className="pt-16 px-5" onClick={()=>dispatch(hideSearchBar())}>
       <div className="flex bg-[#242427] h-14 sm:h-20 items-center gap-5 justify-center text-sm animate-slideY"
         style={{
           animationDuration: "300ms",

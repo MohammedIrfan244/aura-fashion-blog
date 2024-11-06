@@ -44,7 +44,7 @@ function StylePage() {
   };
 
   return (
-    <div className="pt-16 px-5" onClick={()=>dispatch(hideSearchBar)}>
+    <div className="pt-16 px-5" onClick={()=>dispatch(hideSearchBar())}>
       <div className="my-5 flex justify-center sm:justify-between w-full">
         <h2 className="hidden sm:block font-beban text-electricBlue">
           {!styles[selectedIndex] ? "All" : styles[selectedIndex].name}

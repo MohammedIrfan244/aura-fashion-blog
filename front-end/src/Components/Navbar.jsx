@@ -6,7 +6,7 @@ import { SiStylelint } from "react-icons/si";
 import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleSearchBar } from "../Redux/CommonSlice";
+import { hideSearchBar, toggleSearchBar } from "../Redux/CommonSlice";
 
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
@@ -136,7 +136,7 @@ function Navbar() {
           }}
         >
           <ul className="flex flex-col gap-4 text-sm font-medium">
-            {["HOME", "BOUTIQUES", "STYLES", "POSTS"].map((label) => (
+            {["HOME", "BOUTIQUES", "STYLES"].map((label) => (
               <li
                 key={label}
                 onClick={() => {
@@ -154,8 +154,8 @@ function Navbar() {
       )}
 
       {navListVisible && (
-        <ul className="hidden sm:flex gap-2 sm:gap-20 text-sm font-medium">
-          {["HOME", "BOUTIQUES", "STYLES", "POSTS"].map((label, index) => (
+        <ul className="hidden sm:flex gap-2 sm:gap-20 text-sm font-medium" onClick={()=>dispatch(hideSearchBar())}>
+          {["HOME", "BOUTIQUES", "STYLES"].map((label, index) => (
             <li
               key={label}
               onClick={() =>
@@ -249,7 +249,7 @@ function Navbar() {
             className="hover:scale-110 cursor-pointer hover:text-electricBlue"
             onClick={() => navigate("/contact")}
           />
-          <LuUser className="hover:scale-110 cursor-pointer hover:text-electricBlue" />
+          <LuUser className="hover:scale-110 cursor-pointer hover:text-electricBlue" onClick={()=>navigate('/user')} />
           <button
             className="text-lg sm:hidden"
             onClick={() => setMenuVisible(!menuVisible)}

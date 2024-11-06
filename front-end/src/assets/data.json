@@ -5,16 +5,14 @@
       "userName": "Irfan",
       "email": "irfan@gmail.com",
       "password": "irfanPassword",
-      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04aKwRPpTYZNk1KLojzVy7hnb0BJDKeakwQ&s",
-      "posts": []
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04aKwRPpTYZNk1KLojzVy7hnb0BJDKeakwQ&s"
     },
     {
       "id": "2",
       "userName": "Jane Sherin",
       "email": "janesherin@gmail.com",
       "password": "janePassword",
-      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33ixSWOxYrpRTCGpcDMTufDrcCpN9B_oRXw&s",
-      "posts": []
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33ixSWOxYrpRTCGpcDMTufDrcCpN9B_oRXw&s"
     }
   ],
   "styles": [
@@ -96,22 +94,50 @@
       "id": "2",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Allure of Glam with Jane Sherin",
+          "styleDescription": "Unlock the secrets to a mesmerizing, glamorous look with Jane Sherin’s expert makeup tips. From prepping your skin to adding finishing touches, Jane’s guide helps you create an effortlessly stunning makeup look that lasts all day.",
           "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleImage": "https://i.pinimg.com/564x/c5/14/eb/c514eb159cc9139c13c0a98195e5d706.jpg",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Start with a Hydrating Base",
+              "styleContentDetails": "Begin your makeup routine by applying a base of rose water or toner, followed by a good moisturizer. This ensures that your skin stays hydrated, creating a smooth canvas for the makeup to adhere to and last longer."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Protect Your Skin with Sunscreen",
+              "styleContentDetails": "Always apply sunscreen before any makeup. It protects your skin from harmful UV rays and prevents premature aging. Choose a sunscreen with broad-spectrum protection and SPF 30 or higher."
+            },
+            {
+              "styleContentTitle": "Foundation, Primer, and Blush",
+              "styleContentDetails": "Apply foundation and primer to create an even, smooth complexion. Then, add a touch of blush on your cheeks and nose. You can experiment with blush placement depending on your face shape."
+            },
+            {
+              "styleContentTitle": "Choose Makeup Based on Your Skin Tone",
+              "styleContentDetails": "It’s important to select foundation, blush, and other makeup products that complement your skin tone. Test shades to ensure they match your complexion—this makes all the difference in achieving a flawless look."
+            },
+            {
+              "styleContentTitle": "Groom Your Eyebrows",
+              "styleContentDetails": "Comb through your eyebrows and fill them in with black or brown pencil or powder, if necessary. Well-groomed brows frame your face and make your makeup look more polished and defined."
+            },
+            {
+              "styleContentTitle": "Define Your Eyes with Eyeliner and Mascara",
+              "styleContentDetails": "Choose eyeliner that matches your eye shape and apply it carefully. Finish off by applying mascara to your lashes to add volume and length, creating a dramatic effect."
+            },
+            {
+              "styleContentTitle": "Keep Lips Moisturized and Well-Matched",
+              "styleContentDetails": "Apply lip balm to keep your lips hydrated and soft. Choose a lip color that complements your outfit and matches your skin tone for a cohesive and flattering look."
+            },
+            {
+              "styleContentTitle": "Set Your Makeup with Setting Spray",
+              "styleContentDetails": "Lock in your makeup with a setting spray. This helps your makeup last longer and keeps it fresh throughout the day or night."
+            },
+            {
+              "styleContentTitle": "Add False Lashes for Extra Glam",
+              "styleContentDetails": "If you feel your lashes aren't full enough, apply false lashes for added volume and drama. They can make your eyes appear bigger and more captivating."
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/free-photo/vintage-beautiful-girl-with-cigarette_144627-7956.jpg?t=st=1729684278~exp=1729687878~hmac=01e69d5ed48d519b6b8b2f99d0793c82d47d386bb54e70e8877cc43f5564934e&w=360"
     },
@@ -120,22 +146,38 @@
       "id": "3",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Radiant Glow Skincare Essentials with Jane Sherin",
+          "styleDescription": "Achieve flawless and radiant skin with Jane Sherin’s essential skincare routine. From identifying your skin type to nourishing your face, Jane’s expert tips will help you maintain healthy, glowing skin. Whether it's your morning ritual or night-time rejuvenation, this guide covers everything you need for a flawless skincare regimen.",
           "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleImage": "https://i.pinimg.com/736x/45/a5/b7/45a5b7e6971a54a402bafa24e90b77aa.jpg",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Identify Your Skin Type",
+              "styleContentDetails": "The first step in any skincare routine is to understand your skin type. It can be oily, dry, or combination skin. Identifying this will help you choose the right products tailored to your specific needs."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Choose Products According to Your Skin Type",
+              "styleContentDetails": "Once you know your skin type, choose products specifically designed for it. Whether it’s a gentle cleanser for sensitive skin or an oil-free moisturizer for oily skin, using the right products is key to achieving healthy skin."
+            },
+            {
+              "styleContentTitle": "Morning Skincare Routine",
+              "styleContentDetails": "Start your day with a face wash. Afterward, apply toner, moisturizer, and sunscreen. Don’t forget to apply powder over the sunscreen to avoid looking oily. Finish with SPF lip balm to protect your lips."
+            },
+            {
+              "styleContentTitle": "Night-Time Skin Care Routine",
+              "styleContentDetails": "At night, make sure to remove all makeup and impurities. Wash your face thoroughly, then apply a nourishing moisturizer. Take a few minutes to massage your face to improve blood circulation and relaxation."
+            },
+            {
+              "styleContentTitle": "Get Quality Sleep and Control Your Diet",
+              "styleContentDetails": "Ensure you’re getting enough sleep as it’s crucial for skin regeneration. Additionally, control your diet by eating skin-friendly foods like fruits, vegetables, and healthy fats, and avoid excessive sugar or junk food."
+            },
+            {
+              "styleContentTitle": "Hydrate Your Skin",
+              "styleContentDetails": "Drinking plenty of water throughout the day is essential for maintaining skin hydration. Aim for at least 8 glasses of water daily to keep your skin healthy, glowing, and refreshed."
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/free-photo/different-foundation-arrangement_23-2148978148.jpg?t=st=1729663474~exp=1729667074~hmac=b613b1802928141459a74e3f0101fba1b6db04e9a8d490ee74e703787b78c1f3&w=360"
     },
@@ -144,22 +186,38 @@
       "id": "4",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Hair Care Essentials with Jane Sherin",
+          "styleDescription": "Achieve healthy, beautiful hair with Jane Sherin’s guide to hair care. From choosing the right products to incorporating simple routines, Jane provides essential tips for maintaining strong, nourished hair. Perfect for those seeking practical advice on how to keep their hair looking its best without overdoing it.",
           "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleImage": "https://i.pinimg.com/564x/f7/f1/94/f7f1941b613a355d3523d71630f1a61e.jpg",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Less Is More: Limit Hair Washing",
+              "styleContentDetails": "Scientists suggest that washing hair too often can strip it of natural oils, leading to dryness. Aim to wash your hair only 3 to 4 times a week to maintain a natural balance. This approach helps keep hair healthier and shinier without over-drying."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Choose the Right Products for Your Hair Type",
+              "styleContentDetails": "Selecting the right shampoo and conditioner based on your hair type can make a world of difference. Identify whether you have an oily, dry, or normal scalp, and pick products that cater specifically to these needs. Tailored hair care products can nourish and improve your hair's texture and health."
+            },
+            {
+              "styleContentTitle": "Oil and Massage Regularly for Blood Circulation",
+              "styleContentDetails": "Applying oil and massaging your scalp not only strengthens hair but also boosts blood circulation, promoting growth. Regularly massaging with natural oils can add shine, improve texture, and reduce stress, leaving your hair healthy and refreshed."
+            },
+            {
+              "styleContentTitle": "Tackle Dandruff with a Specialized Comb",
+              "styleContentDetails": "Dandruff can be managed effectively with the right tools. Using a fine-toothed, specialized comb helps remove dandruff gently and efficiently. Regular combing can keep your scalp clear and reduce flakiness, making hair look fresh and healthy."
+            },
+            {
+              "styleContentTitle": "Use Hair Packs Twice a Month",
+              "styleContentDetails": "Applying hair packs twice a month can restore moisture and nutrients to your hair. Choose a hair pack based on your hair type—whether it's a nourishing mask for dry hair, a balancing pack for oily hair, or a gentle treatment for normal hair. These packs help rejuvenate hair and maintain softness."
+            },
+            {
+              "styleContentTitle": "Minimize Heat and Chemical Treatments",
+              "styleContentDetails": "Excessive heat styling, curling, or coloring can weaken hair over time. Although coloring that doesn’t touch the scalp is less damaging, it's best to limit exposure to these processes as much as possible. Keeping your hair natural and free from chemicals helps maintain its strength and shine."
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/premium-photo/set-black-luxury-cosmetic-product-spray-oil-tube-cream-bottle-dispenser-lotion-shampoo-gel-showe_1358627-22656.jpg?w=360"
     },
@@ -168,22 +226,26 @@
       "id": "5",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Nail Care Essentials with Jane Sherin",
+          "styleDescription": "Embrace beautiful nails with Jane Sherin’s simple nail care guide. From maintaining clean, healthy nails to selecting eye-catching polish colors, Jane shares her top tips for nails that look effortlessly polished and stylish. Ideal for anyone wanting to add an elegant touch to their nail routine.",
           "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleImage": "https://i.pinimg.com/736x/a3/59/fb/a359fbc6aae5773b9a170c44e2733eb3.jpg",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Maintain Clean and Trimmed Nails",
+              "styleContentDetails": "Keeping nails clean and neatly trimmed is essential for a healthy, polished look. Regularly clean under your nails and trim them to avoid breakage. If a nail breaks, trim it to keep your hands looking neat and well-groomed."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Choose Polishes That Make an Impact",
+              "styleContentDetails": "Bold nail colors like black, white, dark red, dark green, and navy blue can enhance the beauty of your hands and make a statement. These shades are timeless, versatile, and give your nails an attractive, eye-catching appeal."
+            },
+            {
+              "styleContentTitle": "Add Aesthetic Details for Extra Charm",
+              "styleContentDetails": "To take your manicure to the next level, consider adding small stars or other aesthetic decorations on top of your polish. Applying them at the tip or center of your nails adds a touch of charm and elegance, giving your nails a stylish, personalized look."
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/premium-photo/close-up-persons-hand-with-black-nails-black-lace-design_1035785-12667.jpg?w=360"
     },
@@ -192,22 +254,30 @@
       "id": "6",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
-          "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleName": "Seasonal Fashion and Accessories Guide",
+          "styleImage":"https://i.pinimg.com/564x/b3/fe/05/b3fe05d767f4afb8c51020a9f4aa6295.jpg",
+          "styleDescription": "Discover how to dress appropriately for each season with stylish and functional clothing and accessories. Whether it's the chill of winter, the warmth of summer, or the rainy season, learn how to layer, accessorize, and choose fabrics that suit the climate. This guide helps you stay fashionable throughout the year, with tips on what to wear and what to avoid.",
+          "likes": "0",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Winter Fashion",
+              "styleContentDetails": "In winter, layer up with woollen pullovers, jackets, long pants, and stockings to keep warm. Pair them with boots or sneakers for footwear protection. Watches are a great accessory to add a touch of elegance. Avoid leather shoes, chappals, or heels, as they are impractical for cold or wet conditions."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Summer Fashion",
+              "styleContentDetails": "In the summer, opt for cotton shirts and light, breathable fabrics that keep you cool. Accessories like watches, bracelets, and necklaces complement the relaxed vibe of summer. Be sure to avoid heavy clothing and accessories that can trap heat."
+            },
+            {
+              "styleContentTitle": "Rainy Season Fashion",
+              "styleContentDetails": "During the rainy season, stay dry with a good raincoat and quick-drying fabrics. Shoes should be waterproof, like sneakers, and avoid leather or delicate materials. Skip open-toed sandals or heels, as they can become uncomfortable when wet."
+            },
+            {
+              "styleContentTitle": "Clothing & Accessories Recommendations",
+              "styleContentDetails": "Here are some seasonally versatile items: Popover shirts for casual wear, cropped button-up denim shirts, cable knit sweaters for winter, and patch-pocket wide-leg jeans for comfort. Twill shirt jackets, oversized cotton sweaters, chunky dome cuff bracelets, and scoopneck vests are perfect for layering. For winter, a cashmere patch-pocket cardigan is a cozy option, while a white cropped T-shirt is ideal for summer. Don't forget the curve shoulder bag to complete any look!"
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/free-photo/medium-shot-cool-woman-posing_23-2149267439.jpg?t=st=1729664030~exp=1729667630~hmac=f85e167f38237fa0c98d1eebae0be7915f4f22036442953b9c667d7750434976&w=360"
     },
@@ -215,22 +285,42 @@
       "id": "7",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Gothic Elegance with Jane Sherin",
+          "styleDescription": "Embrace the mysterious and bold world of gothic fashion with Jane Sherin. From choosing the right dark hues to bold makeup and accessories, this guide will help you craft a look full of intensity and elegance. Whether you’re looking for a striking, dark, or romantic vibe, Jane’s tips ensure you exude gothic allure with every step.",
           "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleImage": "https://i.pinimg.com/564x/bc/40/42/bc40421d95fdc44e00609ad8092cd7aa.jpg",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Choose Dark Hues for Your Outfit",
+              "styleContentDetails": "Opt for colors like red, black, or white, which are staples in gothic fashion. These colors enhance the dark and intense aesthetic, with black and red being particularly striking choices."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Bold Gothic Makeup",
+              "styleContentDetails": "Go for dark makeup like black or dark red lipstick, combined with dark eyeliner. The dramatic contrast enhances the gothic vibe, making your eyes and lips stand out, creating a powerful statement."
+            },
+            {
+              "styleContentTitle": "Accessorize with Dark-Colored Ornaments",
+              "styleContentDetails": "When it comes to jewelry and ornaments, black and red are your go-to colors. Look for bold pieces, such as chokers, rings, and bracelets, that complement your gothic outfit."
+            },
+            {
+              "styleContentTitle": "Add a Rose to Your Hair",
+              "styleContentDetails": "Adding a rose to your hair creates an alluring and dramatic effect. It’s a simple yet captivating touch that enhances the gothic aesthetic and adds an extra layer of mystery."
+            },
+            {
+              "styleContentTitle": "Heels to Complete the Look",
+              "styleContentDetails": "Dark red or black heels are essential to gothic fashion. These colors work well with the rest of your outfit, adding height and sophistication while maintaining the boldness of the style."
+            },
+            {
+              "styleContentTitle": "Gothic Gloves for Elegance",
+              "styleContentDetails": "Complete your gothic ensemble with a pair of gloves. Whether they’re lace or leather, gloves add a sense of mystery and grace, making your outfit look even more refined and striking."
+            },
+            {
+              "styleContentTitle": "Gowns and Layering for Women",
+              "styleContentDetails": "For a true gothic look, opt for a gown. Layering is key—consider styles reminiscent of old princess looks, with intricate designs and flowing fabrics that create an air of elegance and drama."
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/premium-photo/redhaired-gothic-girl-black-dress-gloomy-background-studio_81340-30613.jpg?w=360",
       "name": "Gothic Wardrobe"
@@ -240,22 +330,70 @@
       "id": "8",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Accessorize with Style by Jane Sherin",
+          "styleDescription": "Enhance your fashion statement with Jane Sherin’s essential accessory guide. From belts to perfume, discover how the right accessories elevate your outfit and add personality. This guide will help you master the art of accessorizing, making sure every detail complements your style and makes a bold impression.",
           "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleImage": "https://i.pinimg.com/736x/07/98/b0/0798b050e56db7719f080a4ab437ac41.jpg",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Variety of Belts",
+              "styleContentDetails": "Belts are essential accessories that can transform any outfit. Opt for different types, such as wide belts, slim belts, or statement pieces that complement your waistline and overall look."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Bags for Every Occasion",
+              "styleContentDetails": "Bags are not only functional but also a key style element. From crossbody bags to clutches and totes, choose the right bag based on the occasion and your outfit."
+            },
+            {
+              "styleContentTitle": "Watches: Timeless Elegance",
+              "styleContentDetails": "A good watch can add a touch of sophistication to your outfit. Choose from sleek leather straps to bold metal bands, ensuring it aligns with your overall aesthetic."
+            },
+            {
+              "styleContentTitle": "Bangles or Chains",
+              "styleContentDetails": "Bangles and chains can add an elegant touch to your wrist. Stack bangles for a boho-chic look or go for chains for a minimalist statement."
+            },
+            {
+              "styleContentTitle": "Necklaces to Enhance Your Look",
+              "styleContentDetails": "Necklaces are a great way to draw attention to your neckline. Whether you prefer layered chains, chokers, or bold statement pieces, find a style that suits your outfit."
+            },
+            {
+              "styleContentTitle": "Rings: Add a Personal Touch",
+              "styleContentDetails": "Rings are subtle yet powerful accessories. Stack rings for a trendy vibe or wear a statement ring to create a bold impact."
+            },
+            {
+              "styleContentTitle": "Hair Buns or Clips",
+              "styleContentDetails": "Add flair to your hair with buns or clips. A sleek bun can elevate your look, while decorative clips add fun and personality to any hairstyle."
+            },
+            {
+              "styleContentTitle": "Piercings for Edge",
+              "styleContentDetails": "Piercings can be a bold expression of style. Consider adding earrings, nose rings, or even more adventurous body piercings to complete your edgy or chic look."
+            },
+            {
+              "styleContentTitle": "Shoes and Boots",
+              "styleContentDetails": "The right footwear ties the entire outfit together. Whether it’s stylish boots, chic heels, or trendy sneakers, choose shoes that reflect your personal style and provide comfort."
+            },
+            {
+              "styleContentTitle": "Small Items on Bags",
+              "styleContentDetails": "Add personality to your bag with small items like keychains, charms, or tassels. Attach them to the zipper for a playful and customized touch."
+            },
+            {
+              "styleContentTitle": "Ties: Bold and Classy",
+              "styleContentDetails": "Ties can be a statement accessory, adding a touch of class to a formal outfit or a pop of color to a casual one. Experiment with different knots and fabrics for a unique look."
+            },
+            {
+              "styleContentTitle": "Sunglasses for Style and Protection",
+              "styleContentDetails": "Sunglasses are both stylish and practical. From classic aviators to trendy oversized frames, choose a pair that complements your face shape and enhances your look."
+            },
+            {
+              "styleContentTitle": "Silver or Golden Chains",
+              "styleContentDetails": "Silver and golden chains are timeless accessories. Choose from delicate chains for a minimalist look or chunky ones for a bold statement, depending on your style."
+            },
+            {
+              "styleContentTitle": "Perfume: The Finishing Touch",
+              "styleContentDetails": "Choose a perfume that complements your gender and personality. For women, apply it to the sides of your neck, wrists, and chest. For men, try the neck, wrists, or even the back of the knees for a subtle, long-lasting scent."
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/premium-photo/flat-lay-top-view-bag-with-accessories-footwear-black_113876-1687.jpg?w=360"
     },
@@ -264,22 +402,42 @@
       "id": "9",
       "stylePosts": [
         {
-          "styleName": "Lit Up Face Throughout The Day",
-          "styleDescription": "A simple, everyday makeup look with a natural base, subtle eyes, and a touch of lip color. This look is perfect for work or a casual day out. With a focus on enhancing natural features.",
+          "styleName": "Sporty Chic with Jane Sherin",
+          "styleDescription": "Step into the world of athletic elegance with Sporty Chic with Jane Sherin. This guide offers a fresh take on sports fashion, blending comfort with style for those who want to look effortlessly put-together on and off the field. From selecting vibrant colors to adding sleek accessories, Jane shares her top tips for achieving a sporty look that’s both functional and fashionable. Perfect for anyone looking to add a touch of sophistication to their athletic wardrobe.",
           "likes": "1",
-          "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
-          "styleAuthorId": "1",
+          "styleImage": "https://i.pinimg.com/564x/c2/89/c8/c289c8861d3ec038ed36fa8767caa84f.jpg",
+          "styleAuthorId": "2",
           "styleContent": [
             {
-              "styleContentTitle": "morning",
-              "styleContentDetails": "wash your face"
+              "styleContentTitle": "Classic Bottoms: Track Pants and Sporty Skirts",
+              "styleContentDetails": "For men, track pants are the ultimate choice for an athletic, relaxed look that still appears stylish. Women can mix it up with track pants or a sporty skirt, adding a playful edge to their outfit. Pairing these bottoms with half-sleeve t-shirts keeps things simple, comfortable, and ready for any activity."
             },
             {
-              "styleContentTitle": "night",
-              "styleContentDetails": "wash your face again"
+              "styleContentTitle": "Bold Colors That Pop",
+              "styleContentDetails": "Choosing the right colors can elevate your sportswear instantly. Opt for bold, vibrant colors for your shirts, such as blue, green, red, yellow, or black. These shades add energy to your look, while keeping bottoms classic with neutral colors like white or black ensures a balanced, chic outfit."
+            },
+            {
+              "styleContentTitle": "Stylish Sneakers: Keep It Light",
+              "styleContentDetails": "White sneakers, or those with subtle white accents, are the perfect footwear for sporty looks. They’re versatile, stylish, and easy to match with most outfits. White sneakers give a clean, polished look that stands out without being too bold, making them ideal for any athletic ensemble."
+            },
+            {
+              "styleContentTitle": "Men’s Sleeveless Style",
+              "styleContentDetails": "For men, a sleeveless top paired with comfortable trousers creates a confident, athletic vibe. Sleeveless shirts provide extra freedom of movement and add a touch of style. This look is perfect for workouts, sports activities, or casual outings, blending comfort with a bit of edge."
+            },
+            {
+              "styleContentTitle": "Accessorize with a Cap and Sunglasses",
+              "styleContentDetails": "A simple black sports cap and a pair of sleek sunglasses are all you need to elevate your sports outfit. Not only are they practical, offering sun protection, but they also add an effortlessly cool vibe to your look, making it feel complete with minimal effort."
+            },
+            {
+              "styleContentTitle": "Keep It Minimal with Accessories",
+              "styleContentDetails": "Simple accessories like a watch or fitness band add sophistication to your athletic style without overpowering it. A clean, minimal approach to accessories keeps things functional and stylish. Choose pieces that complement your look and add that final polished touch."
+            },
+            {
+              "styleContentTitle": "Small Details for Maximum Impact",
+              "styleContentDetails": "Sometimes, it’s the little things that count. Well-groomed hair, a quick face refresh, or subtle touches like coordinating socks can enhance your overall look. These simple details bring a sense of refinement to your sports style, showing that every element has been considered."
             }
           ]
-        }
+        }        
       ],
       "image": "https://img.freepik.com/premium-photo/portrait-young-woman-sitting-chair_1048944-5169204.jpg?w=360"
     }

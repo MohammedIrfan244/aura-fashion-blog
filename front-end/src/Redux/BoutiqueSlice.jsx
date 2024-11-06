@@ -10,15 +10,21 @@ const INITIAL_STATE = {
 export const fetchBoutiques = createAsyncThunk(
   "boutiques/fetchBoutiques",
   async (url) => {
-    const response = await axios.get(url);
-    return response.data;
+    try {
+      const response = await axios.get(url);
+      return response.data;
+    } catch (err) {
+      console.log("Error while fetching boutiques ", err);
+    }
   }
 );
 
 const boutiqueSlice = createSlice({
   name: "boutiques",
   initialState: INITIAL_STATE,
-  reducers: {},
+  reducers: {
+    
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchBoutiques.pending, (state) => {
