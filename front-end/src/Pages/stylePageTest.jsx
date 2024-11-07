@@ -10,54 +10,29 @@ import { CiCircleChevRight } from "react-icons/ci";
 import { hideSearchBar } from "../Redux/CommonSlice";
 
 function StylePage() {
-  const dispatch = useDispatch();
-  const stylesMap = [
-    {
-      name: "Everyday Makeup",
-    },
-    {
-      name: "Glam Makeup Palette",
-    },
-    {
-      name: "Skincare Essential",
-    },
-    {
-      name: "Haircare Essentials",
-    },
-    {
-      name: "Nailcare Boutique",
-    },
-    {
-      name: "On Seasonal Trends",
-    },
-    {
-      name: "Gothic Wardrobe",
-    },
-    {
-      name: "Fashion Accessories",
-    },
-    {
-      name: "Athleisure Collective",
-    },
-  ];
+  const dispatch=useDispatch()
   const { styles } = useSelector((state) => state.styles);
   const [showStyles, setShowStyles] = useState([]);
   const location = useLocation();
-  const { category } = location.state || {};
-  const [selectedCategory, setSelectedCategory] = useState(
-    category ? category : null
+  const { stylesIndex } = location.state || {};
+  const [selectedIndex, setSelectedIndex] = useState(
+    stylesIndex || stylesIndex === 0 ? parseInt(stylesIndex) : null
   );
-
-  useEffect(() => {
-    selectedCategory == null
-      ? setShowStyles([...styles])
-      : [...styles].filter((item) => item.category == category);
-  }, [category, selectedCategory, styles]);
 
   const swiperRef = useRef(null);
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
+  useEffect(() => {
+    if (selectedIndex === null) {
+      const allStylePosts = styles?.flatMap((item) => item.stylePosts || []);
+      setShowStyles(allStylePosts);
+    } else {
+      const selectedStylePosts = styles[selectedIndex]?.stylePosts || [];
+      setShowStyles(selectedStylePosts);
+    }
+  }, [styles, selectedIndex]);
+
+  const handleIndexChange = (index) => {
+    setSelectedIndex(index);
   };
 
   const handleNext = () => {
@@ -69,10 +44,10 @@ function StylePage() {
   };
 
   return (
-    <div className="pt-16 px-5" onClick={() => dispatch(hideSearchBar())}>
+    <div className="pt-16 px-5" onClick={()=>dispatch(hideSearchBar())}>
       <div className="my-5 flex justify-center sm:justify-between w-full">
         <h2 className="hidden sm:block font-beban text-electricBlue">
-          {selectedCategory == null ? "All" : category}
+          {!styles[selectedIndex] ? "All" : styles[selectedIndex].name}
         </h2>
         <div
           className="flex items-center gap-2 animate-slideY transition-all"
@@ -104,12 +79,12 @@ function StylePage() {
               },
             }}
           >
-            {stylesMap.map((style, index) => (
+            {styles?.map((style, index) => (
               <SwiperSlide key={index}>
                 <button
-                  onClick={() => handleCategoryChange(style.name)}
+                  onClick={() => handleIndexChange(index)}
                   className={`bg-snowWhite w-32 px-1 py-2 text-xs ${
-                    style.name === selectedCategory
+                    index === selectedIndex
                       ? "text-electricBlue"
                       : "text-richBlack"
                   }`}
