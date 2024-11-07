@@ -31,7 +31,7 @@ function StyleDetailPage() {
           <LuDot className="text-lg" />
           {author} <LuUser />
         </p>
-        <p className="flex items-center gap-2">
+        <p className="flex items-center gap-2 cursor-pointer">
           <LuDot className="text-lg" />
           {style?.likes}
           <FaRegHeart />{" "}
