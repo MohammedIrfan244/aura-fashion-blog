@@ -203,23 +203,23 @@ function Navbar() {
             <div
               className={
                 searchBar
-                  ? "w-72 justify-between bg-richBlack px-2 py-1 anim text-snowWhite absolute h-auto top-10 gap-5 text-xs flex"
+                  ? "w-72 justify-between bg-richBlack px-2 py-1 text-snowWhite absolute top-10 gap-5 text-xs flex"
                   : "w-0 h-0"
               }
             >
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <p className="text-sm mb-2">
                   <LuUser />
                 </p>
                 {searchResult.userSearch.map((u, i) => {
                   return (
-                    <li className="cursor-pointer" key={i}>
+                    <li className="cursor-pointer whitespace-nowrap" key={i}>
                       {u?.userName}
                     </li>
                   );
                 })}
               </ul>
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <p className="text-sm mb-2">
                   <AiOutlineProduct />
                 </p>
@@ -237,7 +237,7 @@ function Navbar() {
                   );
                 })}
               </ul>
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <p className="text-sm mb-2">
                   <SiStylelint />
                 </p>
