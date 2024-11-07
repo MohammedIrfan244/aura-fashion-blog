@@ -22,9 +22,7 @@ export const fetchBoutiques = createAsyncThunk(
 const boutiqueSlice = createSlice({
   name: "boutiques",
   initialState: INITIAL_STATE,
-  reducers: {
-    
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchBoutiques.pending, (state) => {

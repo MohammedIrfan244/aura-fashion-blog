@@ -6,13 +6,14 @@ const INITIAL_STATE = {
   likedStyles: JSON.parse(localStorage.getItem("currentUser"))?.liked || {},
 };
 
-
-export const patchUser = createAsyncThunk("currentUser/patchUser", async (url) => {
-  const response = await axios.patch(url, {
-    liked: INITIAL_STATE.likedStyles,
-  });
-  return response.data; 
-});
+export const patchUser = createAsyncThunk(
+  "currentUser/patchUser",
+  async (url, { getState }) => {
+    const { likedStyles } = getState().currentUser;
+    const response = await axios.patch(url, { liked: likedStyles });
+    return response.data;
+  }
+);
 
 const authSlice = createSlice({
   name: "currentUser",
@@ -24,6 +25,7 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       state.currentUser = null;
+      state.likedStyles={}
       localStorage.removeItem("currentUser");
     },
     addToLike: (state, action) => {
