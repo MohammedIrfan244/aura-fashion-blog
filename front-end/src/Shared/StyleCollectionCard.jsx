@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-function StyleCollectionCard({ style = {} ,index}) {
+function StyleCollectionCard({ style = {} ,id}) {
   const {users}=useSelector(state=>state.users)
     const navigate=useNavigate()
     const getUserNameById = () => {
@@ -35,7 +35,7 @@ function StyleCollectionCard({ style = {} ,index}) {
         </div>
         <p className="text-snowWhite mt-5 sm:mt-40 font-extralight text-sm">By {author}</p>
         <p className="text-sm mt-5">{style?.styleDescription}</p>
-        <button onClick={()=>navigate(`/styles/${index}`,{state:{style,author}})} className="text-sm bg-snowWhite animate-circGrow transition-all text-richBlack px-5 py-1 mt-5" style={{animationDuration:'600ms'}}>Read The Post</button>
+        <button onClick={()=>navigate(`/styles/${id}`,{state:{style,author}})} className="text-sm bg-snowWhite animate-circGrow transition-all text-richBlack px-5 py-1 mt-5" style={{animationDuration:'600ms'}}>Read The Post</button>
       </div>
     </div>
   );

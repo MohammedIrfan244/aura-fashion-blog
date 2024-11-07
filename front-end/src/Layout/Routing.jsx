@@ -11,6 +11,7 @@ import Contact from "../Pages/Contact";
 import StyleDetailPage from "../Pages/StyleDetailPage";
 import NotFuond from '../Pages/NotFound'
 import User from "../Pages/User";
+import Login_SignUp from "../Pages/Login_SignUp";
 
 function Routing() {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function Routing() {
       <Route path="/styles/:id" element={<StyleDetailPage />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/user" element={<User />} />
+      <Route path="/login_Signup" element={<Login_SignUp />} />
       <Route path="*" element={<NotFuond/>}/>
     </Routes>
   );

@@ -19,6 +19,7 @@ function Navbar() {
   const { styles } = useSelector((state) => state.styles);
   const { boutiques } = useSelector((state) => state.boutiques);
   const { users } = useSelector((state) => state.users);
+  const { currentUser } = useSelector((state) => state.currentUser);
   const { searchBar } = useSelector((state) => state.common);
 
   const [scrollVisible, setScrollVisible] = useState(true);
@@ -26,50 +27,50 @@ function Navbar() {
   const [menuVisible, setMenuVisible] = useState(false);
   const inputRef = useRef();
   const navigate = useNavigate();
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let usersArr = [];
     let stylesArr = [];
     let boutiqueArr = [];
-    styles?.forEach((style) => {
-      if (
-        style?.name.toLowerCase().includes(searchInput.toLowerCase()) &&
-        searchInput != "" &&
-        searchInput != " "
-      ) {
-        stylesArr.push(style);
-      }
-    });
-    boutiques?.forEach((boutique) => {
-      if (
-        boutique?.name.toLowerCase().includes(searchInput.toLowerCase()) &&
-        searchInput != "" &&
-        searchInput != " "
-      ) {
-        boutiqueArr.push(boutique);
-      }
-    });
-    users?.forEach((user) => {
-      if (
-        user?.userName.toLowerCase().includes(searchInput.toLowerCase()) &&
-        searchInput != "" &&
-        searchInput != " "
-      ) {
-        usersArr.push(user);
-      }
-    });
+    
+    const lowercasedInput = searchInput.trim().toLowerCase();
+
+    if (lowercasedInput) {
+        styles?.forEach((style) => {
+            if (
+                style?.styleName.toLowerCase().includes(lowercasedInput)||style?.category.toLowerCase().includes(lowercasedInput)
+            ) {
+                stylesArr.push(style);
+            }
+        });
+
+        boutiques?.forEach((boutique) => {
+            if (boutique?.name.toLowerCase().includes(lowercasedInput)) {
+                boutiqueArr.push(boutique);
+            }
+        });
+
+        users?.forEach((user) => {
+            if (user?.userName.toLowerCase().includes(lowercasedInput)) {
+                usersArr.push(user);
+            }
+        });
+    }
+
     setSearchResults({
-      userSearch: usersArr,
-      boutiqueSearch: boutiqueArr,
-      styleSearch: stylesArr,
+        userSearch: usersArr,
+        boutiqueSearch: boutiqueArr,
+        styleSearch: stylesArr,
     });
+    
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchInput]);
+}, [searchInput]);
+
 
   const searchClick = () => {
     setSearchInput("");
-    dispatch(toggleSearchBar())
+    dispatch(toggleSearchBar());
   };
 
   const handleScroll = () => {
@@ -103,15 +104,14 @@ function Navbar() {
     setMenuVisible(false);
   };
 
-  const handleNavigateBoutiques=(boutiqueIndex)=>{
-    navigate('/boutiques',{state:{boutiqueIndex}})
-    searchClick()
-  }
-  const handleNavigateStyls=(stylesIndex)=>{
-    navigate('/styles',{state:{stylesIndex}})
-    searchClick()
-  }
-  
+  const handleNavigateBoutiques = (boutiqueIndex) => {
+    navigate("/boutiques", { state: { boutiqueIndex } });
+    searchClick();
+  };
+  const handleNavigateStyls = (stylesIndex) => {
+    navigate("/styles", { state: { stylesIndex } });
+    searchClick();
+  };
 
   return (
     <div
@@ -140,8 +140,9 @@ function Navbar() {
               <li
                 key={label}
                 onClick={() => {
-                  label=='HOME'?navigate('/'):
-                  navigate(`/${label.toLowerCase()}`);
+                  label == "HOME"
+                    ? navigate("/")
+                    : navigate(`/${label.toLowerCase()}`);
                   closeMenu();
                 }}
                 className="cursor-pointer hover:text-electricBlue transition-all"
@@ -154,7 +155,10 @@ function Navbar() {
       )}
 
       {navListVisible && (
-        <ul className="hidden sm:flex gap-2 sm:gap-20 text-sm font-medium" onClick={()=>dispatch(hideSearchBar())}>
+        <ul
+          className="hidden sm:flex gap-2 sm:gap-20 text-sm font-medium"
+          onClick={() => dispatch(hideSearchBar())}
+        >
           {["HOME", "BOUTIQUES", "STYLES"].map((label, index) => (
             <li
               key={label}
@@ -209,7 +213,7 @@ function Navbar() {
                 </p>
                 {searchResult.userSearch.map((u, i) => {
                   return (
-                    <li  className="cursor-pointer" key={i}>
+                    <li className="cursor-pointer" key={i}>
                       {u?.userName}
                     </li>
                   );
@@ -221,7 +225,13 @@ function Navbar() {
                 </p>
                 {searchResult.boutiqueSearch.map((u, i) => {
                   return (
-                    <li onClick={()=>handleNavigateBoutiques(boutiques.indexOf(u))} className="cursor-pointer" key={i}>
+                    <li
+                      onClick={() =>
+                        handleNavigateBoutiques(boutiques.indexOf(u))
+                      }
+                      className="cursor-pointer"
+                      key={i}
+                    >
                       {u?.name}
                     </li>
                   );
@@ -233,8 +243,12 @@ function Navbar() {
                 </p>
                 {searchResult.styleSearch.map((u, i) => {
                   return (
-                    <li onClick={()=>handleNavigateStyls(styles.indexOf(u))} className="cursor-pointer" key={i}>
-                      {u?.name}
+                    <li
+                      onClick={() => handleNavigateStyls(styles.indexOf(u))}
+                      className="cursor-pointer"
+                      key={i}
+                    >
+                      {u?.styleName}
                     </li>
                   );
                 })}
@@ -249,7 +263,10 @@ function Navbar() {
             className="hover:scale-110 cursor-pointer hover:text-electricBlue"
             onClick={() => navigate("/contact")}
           />
-          <LuUser className="hover:scale-110 cursor-pointer hover:text-electricBlue" onClick={()=>navigate('/user')} />
+          <LuUser
+            className="hover:scale-110 cursor-pointer hover:text-electricBlue"
+            onClick={() => navigate(currentUser ? "/user" : "/login_signup")}
+          />
           <button
             className="text-lg sm:hidden"
             onClick={() => setMenuVisible(!menuVisible)}
