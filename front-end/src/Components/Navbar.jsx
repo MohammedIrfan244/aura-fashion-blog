@@ -108,8 +108,8 @@ function Navbar() {
     navigate("/boutiques", { state: { boutiqueIndex } });
     searchClick();
   };
-  const handleNavigateStyls = (stylesIndex) => {
-    navigate("/styles", { state: { stylesIndex } });
+  const handleNavigateStyls = (styleId,style) => {
+    navigate(`/styles/${styleId}`,{state:{style}});
     searchClick();
   };
 
@@ -241,14 +241,14 @@ function Navbar() {
                 <p className="text-sm mb-2">
                   <SiStylelint />
                 </p>
-                {searchResult.styleSearch.map((u, i) => {
+                {searchResult.styleSearch.map((style, i) => {
                   return (
                     <li
-                      onClick={() => handleNavigateStyls(styles.indexOf(u))}
+                      onClick={() => handleNavigateStyls(style?.id,style)}
                       className="cursor-pointer"
                       key={i}
                     >
-                      {u?.styleName}
+                      {style?.styleName}
                     </li>
                   );
                 })}

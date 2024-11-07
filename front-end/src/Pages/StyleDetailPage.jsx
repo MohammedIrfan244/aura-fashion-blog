@@ -24,15 +24,15 @@ function StyleDetailPage() {
           "--tw-translate-y-70": "0px",
         }}>
         <p className="flex items-center gap-2">
-          <LuDot className="text-lg" />
+          <LuDot />
           FASHION <SiStylelint />
         </p>
         <p className="flex items-center gap-2">
-          <LuDot className="text-lg" />
+          <LuDot />
           {author} <LuUser />
         </p>
         <p className="flex items-center gap-2 cursor-pointer">
-          <LuDot className="text-lg" />
+          <LuDot />
           {style?.likes}
           <FaRegHeart />{" "}
         </p>
