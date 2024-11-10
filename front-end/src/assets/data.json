@@ -5,10 +5,7 @@
       "userName": "Irfan",
       "email": "irfan@gmail.com",
       "password": "irfanPassword",
-      "liked": {
-        "2": 1,
-        "4": 1
-      },
+      "liked": {},
       "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04aKwRPpTYZNk1KLojzVy7hnb0BJDKeakwQ&s"
     },
     {
@@ -26,7 +23,7 @@
       "styleName": "Effortless Glow: Everyday Makeup Tips for a Fresh Look",
       "category": "Everyday Makeup",
       "styleDescription": "Achieve a radiant, natural look that feels light and effortless. This guide provides simple makeup techniques that enhance your features without overdoing it, perfect for daily wear.",
-      "likes": "0",
+      "likes": 0,
       "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
       "styleAuthorId": "1",
       "styleContent": [
