@@ -30,7 +30,7 @@ const authSlice = createSlice({
     },
     addToLike: (state, action) => {
       if (state.currentUser) {
-        state.likedStyles[action.payload] = 1;
+        state.likedStyles[action.payload] = true;
         state.currentUser.liked = { ...state.likedStyles };
         localStorage.setItem("currentUser", JSON.stringify(state.currentUser));
       }

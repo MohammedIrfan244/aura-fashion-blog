@@ -21,14 +21,7 @@ export const fetchStyles = createAsyncThunk(
 const styleSlice = createSlice({
   name: "styles",
   initialState: INITIAL_STATE,
-  reducers: {
-    liking:(state,action)=>{
-      state.styles[action.payload]['likes']+=1
-    },
-    disLiking:(state,action)=>{
-      state.styles[action.payload]['likes']-=1
-    }
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchStyles.pending, (state) => {
@@ -46,5 +39,4 @@ const styleSlice = createSlice({
   },
 });
 
-export const{liking,disLiking}=styleSlice.actions
 export default styleSlice.reducer;

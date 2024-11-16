@@ -3,45 +3,20 @@ import GoTopPopUp from "../Shared/GoTopPopUp";
 import { SiStylelint } from "react-icons/si";
 import { LuUser, LuDot } from "react-icons/lu";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { hideSearchBar } from "../Redux/CommonSlice";
-import { addToLike, removeLike, patchUser } from "../Redux/Auth";
-import { liking,disLiking } from "../Redux/StyleSlice";
-import axios from "axios";
 
 function StyleDetailPage() {
   const dispatch = useDispatch();
   const navigate=useNavigate()
   const location = useLocation();
   const { style, author } = location.state;
-  const [currentStyle,setCurrnetStyle]=useState({})
-  useEffect(()=>{
-    setCurrnetStyle(style)
-  },[style])
 
   const { likedStyles, currentUser } = useSelector((state) => state.currentUser);
-  const isLiked = likedStyles[style?.id];
+  const isLiked = likedStyles[style?.id]?true:false
 
-  const handleLikeToggle = () => {
-    if (isLiked) {
-      dispatch(removeLike(style?.id));
-      currentStyle['likes']=0
-      dispatch(disLiking(currentStyle?.id))
-    } else {
-      dispatch(addToLike(style?.id));
-      currentStyle['likes']=1
-      dispatch(liking(currentStyle?.id))
-    }
 
-    const stylePatching=()=>axios.put('http://localhost:3001/styles/1',currentStyle)
-
-    if (currentUser) {
-      dispatch(patchUser(`http://localhost:3001/users/${currentUser.id}`));
-      stylePatching()
-    }
-    
-  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -64,7 +39,7 @@ function StyleDetailPage() {
           <LuDot />
           {author} <LuUser />
         </p>
-        <p className="flex items-center gap-2 cursor-pointer" onClick={currentUser?handleLikeToggle:()=>navigate('/login_Signup')}>
+        <p className="flex items-center gap-2 cursor-pointer" onClick={currentUser?null:()=>navigate('/login_Signup')}>
           <LuDot />
           {Math.max(style?.likes,0)}
           {isLiked ? <FaHeart className="text-red-500" /> : <FaRegHeart />}

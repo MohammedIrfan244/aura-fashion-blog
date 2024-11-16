@@ -16,15 +16,15 @@ import Login_SignUp from "../Pages/Login_SignUp";
 function Routing() {
   const {styles}=useSelector((state)=>state.styles)
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchBoutiques("http://localhost:3001/buotiques"));
-  }, [dispatch]);
-  useEffect(() => {
-    dispatch(fetchStyles("http://localhost:3001/styles"));
-  }, [dispatch,styles]);
-  useEffect(() => {
-    dispatch(fetchUsers("http://localhost:3001/users"));
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchBoutiques("http://localhost:3001/buotiques"));
+  // }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchStyles("http://localhost:3001/styles"));
+  // }, [dispatch,styles]);
+  // useEffect(() => {
+  //   dispatch(fetchUsers("http://localhost:3001/users"));
+  // }, [dispatch]);
 
   return (
     <Routes>
