@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { hideSearchBar } from "../Redux/CommonSlice";
 import { addToLike, removeLike, patchUser } from "../Redux/Auth";
+import { likeDecrement, likeIncrement, patchStyle } from "../Redux/StyleSlice";
 
 function StyleDetailPage() {
   const dispatch = useDispatch();
@@ -14,18 +15,29 @@ function StyleDetailPage() {
   const location = useLocation();
   const { style, author } = location.state;
 
-  const { likedStyles, currentUser } = useSelector(
+  const { currentUser,likedStyles } = useSelector(
     (state) => state.currentUser
   );
-  const isLiked = likedStyles[style?.id] ? true : false;
-
-  const toggleLike = () => {
-    !isLiked ? dispatch(addToLike(style?.id)) : dispatch(removeLike(style?.id));
-    dispatch(patchUser(`http://localhost:3001/users/${currentUser.id}`))
-  };
   useEffect(()=>{
 console.log(likedStyles)
   },[likedStyles])
+  const isLiked = currentUser?.liked?.[style?.id]||false
+  useEffect(()=>{
+console.log(isLiked)
+  },[isLiked])
+
+  const toggleLike = () => {
+    if(!isLiked){
+      dispatch(addToLike(style?.id))
+      dispatch(likeIncrement(style?.id))
+    }else{
+      dispatch(removeLike(style?.id))
+      dispatch(likeDecrement(style?.id))
+    }
+    dispatch(patchUser(`http://localhost:3001/users/${currentUser.id}`))
+    dispatch(patchStyle({url:`http://localhost:3001/styles/${style?.id}`,id:style?.id}))
+  };
+
 
   useEffect(() => {
     window.scrollTo(0, 0);

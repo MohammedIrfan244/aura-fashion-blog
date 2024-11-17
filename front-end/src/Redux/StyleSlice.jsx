@@ -18,10 +18,40 @@ export const fetchStyles = createAsyncThunk(
   }
 );
 
+export const patchStyle = createAsyncThunk(
+  "styles/patchStyles",
+  async ({ url, id }, { getState }) => {
+    try {
+      const currStyle = getState().styles?.styles?.find(
+        (style) => style.id === id
+      );
+      const response = await axios.patch(url, { likes: currStyle?.likes });
+      return response.data;
+    } catch (err) {
+      console.log("Error while patching styles ", err);
+    }
+  }
+);
+
 const styleSlice = createSlice({
   name: "styles",
   initialState: INITIAL_STATE,
-  reducers: {},
+  reducers: {
+    likeIncrement: (state, action) => {
+      const id = action.payload;
+      const style = state.styles.find((style) => style.id === id);
+      if (style) {
+        style.likes += 1;
+      }
+    },
+    likeDecrement: (state, action) => {
+      const id = action.payload;
+      const style = state.styles.find((style) => style.id === id);
+      if (style) {
+        style.likes -= 1;
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchStyles.pending, (state) => {
@@ -39,4 +69,5 @@ const styleSlice = createSlice({
   },
 });
 
+export const { likeIncrement, likeDecrement } = styleSlice.actions;
 export default styleSlice.reducer;
