@@ -25,7 +25,6 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       state.currentUser = null;
-      state.likedStyles={}
       localStorage.removeItem("currentUser");
     },
     addToLike: (state, action) => {
