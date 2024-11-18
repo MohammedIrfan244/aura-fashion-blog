@@ -19,10 +19,31 @@ export const fetchBoutiques = createAsyncThunk(
   }
 );
 
+export const patchBoutiques = createAsyncThunk(
+  "boutiques/patchBoutiques",
+  async ({ url, id }, { getState }) => {
+    try {
+      const currBoutique = getState().boutiques?.boutiques?.find(
+        (item) => item?.id === id
+      );
+      const response = await axios.patch(url, {collectionReview:currBoutique?.collectionReview});
+      return response.data;
+    } catch (err) {
+      console.log("Error while fetching boutiques ", err);
+    }
+  }
+);
+
 const boutiqueSlice = createSlice({
   name: "boutiques",
   initialState: INITIAL_STATE,
-  reducers: {},
+  reducers: {
+    addComment:(state,action)=>{
+      const {comment,boutiqueId}=action.payload
+      const index=state.boutiques?.findIndex(item=>item?.id==boutiqueId)
+      state.boutiques[index]?.collectionReview?.push(comment)
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchBoutiques.pending, (state) => {
@@ -39,4 +60,5 @@ const boutiqueSlice = createSlice({
   },
 });
 
+export const {addComment}=boutiqueSlice.actions
 export default boutiqueSlice.reducer;

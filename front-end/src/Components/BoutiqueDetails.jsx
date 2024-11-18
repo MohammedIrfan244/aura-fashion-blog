@@ -1,13 +1,19 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TbSend } from "react-icons/tb";
 import { FiExternalLink } from "react-icons/fi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addComment, patchBoutiques } from "../Redux/BoutiqueSlice";
 
 // eslint-disable-next-line react/prop-types
-function BoutiqueDetails({ boutiqueItem = {}, close }) {
+function BoutiqueDetails({ boutiqueItemProp, close }) {
+  const {currentUser}=useSelector((state)=>state.currentUser)
+  const [boutiqueItem,setBoutiqueItem]=useState(boutiqueItemProp)
   const { users } = useSelector((state) => state.users);
   const [message, setMessage] = useState("");
+  const navigate=useNavigate()
+  const dispatch=useDispatch()
   const [mainImage, setMainImage] = useState(boutiqueItem?.collectionImage);
   const [thumbnails, setThumbnails] = useState([
     boutiqueItem?.collectionSecondaryImage,
@@ -25,7 +31,16 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(message);
+    if(message?.trim()!==""){
+      setBoutiqueItem((prev) => ({
+        ...prev,
+        collectionReview : [...prev.collectionReview, {comment:message,commentorId:currentUser?.id}],
+      }))
+      dispatch(addComment({comment:{comment:message,commentorId:currentUser?.id},boutiqueId:boutiqueItem?.id}))
+      dispatch(patchBoutiques({url:`http://localhost:3001/buotiques/${boutiqueItem?.id}`,id:boutiqueItem?.id}))
+    }else{
+      alert('please text')
+    }
     setMessage("");
   };
 
@@ -90,7 +105,7 @@ function BoutiqueDetails({ boutiqueItem = {}, close }) {
           </div>
         </div>
         <div className="mt-5 h-auto px-1">
-          <form className="relative" onSubmit={(e) => handleSubmit(e)}>
+          <form className="relative" onSubmit={currentUser?(e) => handleSubmit(e):()=>navigate('/login_Signup')}>
             <textarea
               className="w-full bg-[#2E2E33] rounded-md focus:outline-none px-3 py-1 text-xs"
               value={message}

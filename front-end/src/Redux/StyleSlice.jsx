@@ -38,7 +38,6 @@ const styleSlice = createSlice({
   initialState: INITIAL_STATE,
   reducers: {
     likeIncrement: (state, action) => {
-      console.log(action.payload)
       const {styleId,userId} = action.payload;
       const style = state.styles.find((style) => style.id === styleId);
       if (style) {
@@ -47,7 +46,6 @@ const styleSlice = createSlice({
       }
     },
     likeDecrement: (state, action) => {
-      console.log(action.payload)
       const {styleId,userId} = action.payload;
       const style = state.styles.find((style) => style.id === styleId);
       if (style) {

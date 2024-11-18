@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-function BoutiqueCard({ boutique = {}, boutiqueIndex }) {
+function BoutiqueCard({ image, name }) {
   const navigate = useNavigate();
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -11,7 +11,7 @@ function BoutiqueCard({ boutique = {}, boutiqueIndex }) {
   });
 
   const handleClck = () => {
-    navigate(`/boutiques`, { state: { boutiqueIndex } });
+    navigate(`/boutiques`, { state: { name } });
   };
 
   return (
@@ -34,14 +34,10 @@ function BoutiqueCard({ boutique = {}, boutiqueIndex }) {
         onClick={handleClck}
       >
         <div className="w-full h-full flex justify-center items-center">
-          <img
-            src={boutique?.image}
-            alt={boutique?.name}
-            className="w-full object-cover"
-          />
+          <img src={image} alt={name} className="w-full object-cover" />
         </div>
         <p className="absolute left-5 top-3 font-extralight font-agdasima text-lg">
-          {boutique?.name}
+          {name}
         </p>
       </div>
     </Tilt>
