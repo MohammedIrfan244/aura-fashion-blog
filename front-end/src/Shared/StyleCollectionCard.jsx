@@ -26,9 +26,9 @@ function StyleCollectionCard({ style = {} ,id}) {
         />
       </div>
       <div className="pt-10 ps-3 w-full sm:w-1/2">
-        <p className="flex items-center text-xs font-thin">
+        <p className="flex items-center font-thin">
           FASHION <FaRegHeart  className="text-base font-semibold ms-5 me-1" />{" "}
-          {style?.likes}
+          {style?.likes.length}
         </p>
         <div className="sm:bg-[#242427] sm:absolute sm:top-[10%] sm:left-[45%] h-auto sm:py-5 w-auto sm:px-20 flex items-center">
           <h2 className="text-2xl sm:text-4xl mt-5 sm:mt-0 font-agdasima">{style?.styleName}</h2>

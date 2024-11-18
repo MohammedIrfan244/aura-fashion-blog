@@ -5,7 +5,6 @@
       "userName": "Irfan",
       "email": "irfan@gmail.com",
       "password": "irfanPassword",
-      "liked": {},
       "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04aKwRPpTYZNk1KLojzVy7hnb0BJDKeakwQ&s"
     },
     {
@@ -13,7 +12,6 @@
       "userName": "Jane Sherin",
       "email": "janesherin@gmail.com",
       "password": "janePassword",
-      "liked": {},
       "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33ixSWOxYrpRTCGpcDMTufDrcCpN9B_oRXw&s"
     }
   ],
@@ -23,7 +21,9 @@
       "styleName": "Effortless Glow: Everyday Makeup Tips for a Fresh Look",
       "category": "Everyday Makeup",
       "styleDescription": "Achieve a radiant, natural look that feels light and effortless. This guide provides simple makeup techniques that enhance your features without overdoing it, perfect for daily wear.",
-      "likes": 0,
+      "likes": [
+        "1"
+      ],
       "styleImage": "https://i.pinimg.com/564x/aa/7a/fa/aa7afa64956ffe1d19a9a4b670bbc0a5.jpg",
       "styleAuthorId": "1",
       "styleContent": [
@@ -58,7 +58,10 @@
       "styleName": "Everyday Elegance with Jane Sherin",
       "category": "Everyday Makeup",
       "styleDescription": "Discover the secrets to looking polished and stylish every day with Me. From color-matching to accessorizing, I shares easy-to-follow tips that elevate your daily look with minimal effort. This guide is crafted for anyone wanting to add a touch of elegance to their everyday style.",
-      "likes": 0,
+      "likes": [
+        "1",
+        "2"
+      ],
       "styleImage": "https://i.pinimg.com/736x/79/44/0f/79440fd07bebb3d329c1a2f5a1c8d129.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -93,7 +96,9 @@
       "styleName": "Allure of Glam with Jane Sherin",
       "category": "Glam Makeup Palette",
       "styleDescription": "Unlock the secrets to a mesmerizing, glamorous look with Jane Sherin’s expert makeup tips. From prepping your skin to adding finishing touches, Jane’s guide helps you create an effortlessly stunning makeup look that lasts all day.",
-      "likes": 0,
+      "likes": [
+        "2"
+      ],
       "styleImage": "https://i.pinimg.com/564x/83/fb/65/83fb65531d12b6dac156baf906ec5cdc.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -140,7 +145,7 @@
       "styleName": "Radiant Glow Skincare Essentials with Jane Sherin",
       "category": "Skincare Essential",
       "styleDescription": "Achieve flawless and radiant skin with Jane Sherin’s essential skincare routine. From identifying your skin type to nourishing your face, Jane’s expert tips will help you maintain healthy, glowing skin. Whether it's your morning ritual or night-time rejuvenation, this guide covers everything you need for a flawless skincare regimen.",
-      "likes": 0,
+      "likes": [],
       "styleImage": "https://i.pinimg.com/736x/45/a5/b7/45a5b7e6971a54a402bafa24e90b77aa.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -175,7 +180,7 @@
       "styleName": "Hair Care Essentials with Jane Sherin",
       "category": "Haircare Essentials",
       "styleDescription": "Achieve healthy, beautiful hair with Jane Sherin’s guide to hair care. From choosing the right products to incorporating simple routines, Jane provides essential tips for maintaining strong, nourished hair. Perfect for those seeking practical advice on how to keep their hair looking its best without overdoing it.",
-      "likes": 0,
+      "likes": [],
       "styleImage": "https://i.pinimg.com/564x/f7/f1/94/f7f1941b613a355d3523d71630f1a61e.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -210,7 +215,7 @@
       "styleName": "Nail Care Essentials with Jane Sherin",
       "category": "Nailcare Boutique",
       "styleDescription": "Embrace beautiful nails with Jane Sherin’s simple nail care guide. From maintaining clean, healthy nails to selecting eye-catching polish colors, Jane shares her top tips for nails that look effortlessly polished and stylish. Ideal for anyone wanting to add an elegant touch to their nail routine.",
-      "likes": 0,
+      "likes": [],
       "styleImage": "https://i.pinimg.com/736x/a3/59/fb/a359fbc6aae5773b9a170c44e2733eb3.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -234,7 +239,7 @@
       "category": "On Seasonal Trends",
       "styleImage": "https://i.pinimg.com/564x/b3/fe/05/b3fe05d767f4afb8c51020a9f4aa6295.jpg",
       "styleDescription": "Discover how to dress appropriately for each season with stylish and functional clothing and accessories. Whether it's the chill of winter, the warmth of summer, or the rainy season, learn how to layer, accessorize, and choose fabrics that suit the climate. This guide helps you stay fashionable throughout the year, with tips on what to wear and what to avoid.",
-      "likes": 0,
+      "likes": [],
       "styleAuthorId": "2",
       "styleContent": [
         {
@@ -260,7 +265,7 @@
       "styleName": "Gothic Elegance with Jane Sherin",
       "category": "Gothic Wardrobe",
       "styleDescription": "Embrace the mysterious and bold world of gothic fashion with Jane Sherin. From choosing the right dark hues to bold makeup and accessories, this guide will help you craft a look full of intensity and elegance. Whether you’re looking for a striking, dark, or romantic vibe, Jane’s tips ensure you exude gothic allure with every step.",
-      "likes": 0,
+      "likes": [],
       "styleImage": "https://i.pinimg.com/564x/bc/40/42/bc40421d95fdc44e00609ad8092cd7aa.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -299,7 +304,7 @@
       "styleName": "Accessorize with Style by Jane Sherin",
       "category": "Fashion Accessories",
       "styleDescription": "Enhance your fashion statement with Jane Sherin’s essential accessory guide. From belts to perfume, discover how the right accessories elevate your outfit and add personality. This guide will help you master the art of accessorizing, making sure every detail complements your style and makes a bold impression.",
-      "likes": 0,
+      "likes": [],
       "styleImage": "https://i.pinimg.com/736x/07/98/b0/0798b050e56db7719f080a4ab437ac41.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -366,7 +371,7 @@
       "styleName": "Sporty Chic with Jane Sherin",
       "category": "Athleisure Collective",
       "styleDescription": "Step into the world of athletic elegance with Sporty Chic with Jane Sherin. This guide offers a fresh take on sports fashion, blending comfort with style for those who want to look effortlessly put-together on and off the field. From selecting vibrant colors to adding sleek accessories, Jane shares her top tips for achieving a sporty look that’s both functional and fashionable. Perfect for anyone looking to add a touch of sophistication to their athletic wardrobe.",
-      "likes": 0,
+      "likes": [],
       "styleImage": "https://i.pinimg.com/564x/c2/89/c8/c289c8861d3ec038ed36fa8767caa84f.jpg",
       "styleAuthorId": "2",
       "styleContent": [

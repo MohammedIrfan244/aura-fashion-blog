@@ -1,43 +1,46 @@
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import GoTopPopUp from "../Shared/GoTopPopUp";
 import { SiStylelint } from "react-icons/si";
 import { LuUser, LuDot } from "react-icons/lu";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { hideSearchBar } from "../Redux/CommonSlice";
-import { addToLike, removeLike, patchUser } from "../Redux/Auth";
 import { likeDecrement, likeIncrement, patchStyle } from "../Redux/StyleSlice";
 
 function StyleDetailPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const { style, author } = location.state;
+  const { style: initialStyle, author } = location.state;
 
-  const { currentUser,likedStyles } = useSelector(
-    (state) => state.currentUser
-  );
-  useEffect(()=>{
-console.log(likedStyles)
-  },[likedStyles])
-  const isLiked = currentUser?.liked?.[style?.id]||false
-  useEffect(()=>{
-console.log(isLiked)
-  },[isLiked])
+  const [style, setStyle] = useState(initialStyle);
+  const { currentUser } = useSelector((state) => state.currentUser);
+
+  const isLiked = style?.likes?.includes(currentUser?.id);
 
   const toggleLike = () => {
-    if(!isLiked){
-      dispatch(addToLike(style?.id))
-      dispatch(likeIncrement(style?.id))
-    }else{
-      dispatch(removeLike(style?.id))
-      dispatch(likeDecrement(style?.id))
+    if (!isLiked) {
+      dispatch(likeIncrement({ styleId: style?.id, userId: currentUser?.id }));
+      setStyle((prev) => ({
+        ...prev,
+        likes: [...prev.likes, currentUser?.id],
+      }));
+    } else {
+      dispatch(likeDecrement({ styleId: style?.id, userId: currentUser?.id }));
+      setStyle((prev) => ({
+        ...prev,
+        likes: prev.likes.filter((id) => id !== currentUser?.id),
+      }));
     }
-    dispatch(patchUser(`http://localhost:3001/users/${currentUser.id}`))
-    dispatch(patchStyle({url:`http://localhost:3001/styles/${style?.id}`,id:style?.id}))
-  };
 
+    dispatch(
+      patchStyle({
+        url: `http://localhost:3001/styles/${style?.id}`,
+        id: style?.id,
+      })
+    );
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,7 +69,7 @@ console.log(isLiked)
           onClick={currentUser ? toggleLike : () => navigate("/login_Signup")}
         >
           <LuDot />
-          {Math.max(style?.likes, 0)}
+          {Math.max(style?.likes?.length, 0)}
           {isLiked ? <FaHeart className="text-red-500" /> : <FaRegHeart />}
         </p>
       </div>

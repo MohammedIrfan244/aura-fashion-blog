@@ -38,17 +38,24 @@ const styleSlice = createSlice({
   initialState: INITIAL_STATE,
   reducers: {
     likeIncrement: (state, action) => {
-      const id = action.payload;
-      const style = state.styles.find((style) => style.id === id);
+      console.log(action.payload)
+      const {styleId,userId} = action.payload;
+      const style = state.styles.find((style) => style.id === styleId);
       if (style) {
-        style.likes += 1;
+        const index=state.styles.findIndex((style)=>style.id===styleId);
+        state.styles[index].likes?.push(userId);
       }
     },
     likeDecrement: (state, action) => {
-      const id = action.payload;
-      const style = state.styles.find((style) => style.id === id);
+      console.log(action.payload)
+      const {styleId,userId} = action.payload;
+      const style = state.styles.find((style) => style.id === styleId);
       if (style) {
-        style.likes -= 1;
+        const index=state.styles.findIndex((style)=>style.id===styleId);
+        const likeIndex = style.likes?.indexOf(userId);
+        if (likeIndex !== -1) {
+          state.styles[index].likes?.splice(likeIndex, 1);
+        }
       }
     },
   },
