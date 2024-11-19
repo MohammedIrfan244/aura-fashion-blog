@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../Redux/Auth";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Login() {
   const [passwordToggle, setPasswordToggle] = useState(false);
@@ -30,13 +31,13 @@ function Login() {
     if (inputUser) {
       if (inputUser.password === password) {
         dispatch(login(inputUser));
-        alert("Logged in successfully");
+        toast.success("Logged in successfully");
         navigate("/");
       } else {
-        alert("Incorrect password");
+        toast.error("Incorrect password");
       }
     } else {
-      alert("New here? Please create an account.");
+      toast.error("New here? Please create an account.");
     }
 
     setEmail("");

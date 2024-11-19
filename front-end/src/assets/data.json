@@ -419,14 +419,18 @@
       "collectionReview": [
         {
           "comment": "nice product",
-          "commentorId": "1"
-        },
-        {
-          "comment": "nice product",
           "commentorId": "2"
         },
         {
-          "comment": "test comment by user id 1",
+          "comment": "third test",
+          "commentorId": "1"
+        },
+        {
+          "comment": "4th",
+          "commentorId": "1"
+        },
+        {
+          "comment": "yo",
           "commentorId": "1"
         }
       ],
@@ -444,11 +448,11 @@
       "collectionReview": [
         {
           "comment": "nice product",
-          "commentorId": "1"
+          "commentorId": "2"
         },
         {
-          "comment": "nice product",
-          "commentorId": "2"
+          "comment": "hello thi is a test comment",
+          "commentorId": "1"
         }
       ],
       "collectionLink": "https://fentybeauty.com/en-in/products/portable-contour-concealer-brush-150"

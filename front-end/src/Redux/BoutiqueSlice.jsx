@@ -58,8 +58,8 @@ const boutiqueSlice = createSlice({
           item.comment == comment?.comment &&
           item.commentorId == comment?.commentorId
       );
-      state.boutiques[boutiqueIndex]?.collectionReview.splice(commentIndex,1)
-    },
+      state.boutiques[boutiqueIndex]?.collectionReview.splice(commentIndex, 1);
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -77,5 +77,6 @@ const boutiqueSlice = createSlice({
   },
 });
 
-export const { addComment, removeComment } = boutiqueSlice.actions;
+export const { addComment, removeComment, editComment } = boutiqueSlice.actions;
 export default boutiqueSlice.reducer;
+

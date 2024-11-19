@@ -4,18 +4,22 @@ import { TbSend } from "react-icons/tb";
 import { FiExternalLink } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addComment, patchBoutiques } from "../Redux/BoutiqueSlice";
-import { CiCircleInfo } from "react-icons/ci";
+import {
+  addComment,
+  patchBoutiques,
+  removeComment
+} from "../Redux/BoutiqueSlice";
+import { AiOutlineDelete } from "react-icons/ai";
+import PopUpMessage from "../Shared/PopUpMessage";
 
 // eslint-disable-next-line react/prop-types
 function BoutiqueDetails({ boutiqueItemProp, close }) {
   const { currentUser } = useSelector((state) => state.currentUser);
-  const [boutiqueItem, setBoutiqueItem] = useState(boutiqueItemProp);
-  const reversedComment = JSON.parse(
-    JSON.stringify(boutiqueItem?.collectionReview)
-  );
   const { users } = useSelector((state) => state.users);
+  const [boutiqueItem, setBoutiqueItem] = useState(boutiqueItemProp);
   const [message, setMessage] = useState("");
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [commentToDelete, setCommentToDelete] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [mainImage, setMainImage] = useState(boutiqueItem?.collectionImage);
@@ -35,55 +39,66 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (message?.trim() !== "") {
+    if (message.trim()) {
+      const newComment = {
+        comment: message,
+        commentorId: currentUser?.id,
+      };
       setBoutiqueItem((prev) => ({
         ...prev,
-        collectionReview: [
-          ...prev.collectionReview,
-          { comment: message, commentorId: currentUser?.id },
-        ],
+        collectionReview: [...prev.collectionReview, newComment],
       }));
       dispatch(
-        addComment({
-          comment: { comment: message, commentorId: currentUser?.id },
-          boutiqueId: boutiqueItem?.id,
-        })
+        addComment({ comment: newComment, boutiqueId: boutiqueItem?.id })
       );
-      dispatch(
-        patchBoutiques({
-          url: `http://localhost:3001/buotiques/${boutiqueItem?.id}`,
-          id: boutiqueItem?.id,
-        })
-      );
+      dispatch(patchBoutiques({ boutiqueId: boutiqueItem?.id }));
     } else {
-      alert("please text");
+      alert("Please enter a comment.");
     }
     setMessage("");
   };
 
-  const commentor = (id) => {
-    let commentUser = users?.find((u) => u.id == id);
-    return commentUser ? commentUser : null;
+  const handleDeleteComment = () => {
+    if (commentToDelete) {
+      setBoutiqueItem((prev) => ({
+        ...prev,
+        collectionReview: prev.collectionReview.filter(
+          (c) =>
+            c.comment !== commentToDelete.comment ||
+            c.commentorId !== commentToDelete.commentorId
+        ),
+      }));
+      dispatch(
+        removeComment({
+          comment: commentToDelete,
+          boutiqueId: boutiqueItem?.id,
+        })
+      );
+      dispatch(patchBoutiques({ boutiqueId: boutiqueItem?.id }));
+      setShowPopUp(false);
+      setCommentToDelete(null);
+    }
   };
 
+ 
+
+  const commentor = (id) =>
+    users?.find((user) => user.id === id) || {
+      userName: "Unknown",
+      profile: "",
+    };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center ">
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div
         className="absolute inset-0 bg-black bg-opacity-50"
         onClick={() => close(null)}
       ></div>
-      <div
-        className="relative z-10 w-[90%] sm:w-[900px] h-[500px] text-snowWhite bg-richBlack overflow-y-auto animate-slideY"
-        style={{
-          animationDuration: "500ms",
-          "--tw-translate-y": "100px",
-          "--tw-translate-y-70": "0px",
-        }}
-      >
-        <div className="flex flex-col sm:flex-row gap-1 h-[90vh] sm:h-[400px] overflow-hidden">
+      <div className="relative z-10 w-[90%] sm:w-[900px] h-[500px] bg-richBlack text-snowWhite overflow-y-auto">
+        <div className="flex flex-col sm:flex-row gap-1 h-[90vh] sm:h-[400px]">
           <div className="hidden sm:flex flex-col h-full gap-1">
             {thumbnails.map((thumbnail, index) => (
-              <div key={index} className="h-1/3 w-28 overflow-hidden">
+              <div key={index} className="h-1/3 w-28">
                 <img
                   onClick={() => handleImageClick(index)}
                   src={thumbnail}
@@ -93,7 +108,6 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
               </div>
             ))}
           </div>
-
           <div className="w-[350px] h-[400px] overflow-hidden">
             <img
               src={mainImage}
@@ -101,78 +115,92 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
               className="w-full h-full object-cover"
             />
           </div>
-
-          <div className="flex flex-col flex-grow items-end justify-between sm:ms-3">
-            <button
-              className="text-xl mt-1 me-1 opacity-0 sm:opacity-100"
-              onClick={() => close(null)}
-            >
+          <div className="flex-grow flex flex-col justify-between sm:ms-3">
+            <button className="text-xl mt-1 me-1" onClick={() => close(null)}>
               <RiCloseCircleLine />
             </button>
-            <p className="text-xl font-bold me-1 self-start">
-              {boutiqueItem?.collectionName}
-            </p>
-            <div className="flex justify-between items-end w-full">
+            <p className="text-xl font-bold">{boutiqueItem?.collectionName}</p>
+            <div className="flex justify-between items-center">
               <a
                 href={boutiqueItem?.collectionLink}
-                target="blank"
-                className="flex items-center text-sm gap-3 hover:text-electricBlue transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-sm gap-3 hover:text-electricBlue"
               >
                 Checkout <FiExternalLink />
               </a>
-              <p className="text-lg font-bold me-1">{`$${boutiqueItem?.collectionPrice}`}</p>
+              <p className="text-lg font-bold">{`$${boutiqueItem?.collectionPrice}`}</p>
             </div>
           </div>
         </div>
-        <div className="mt-5 h-auto px-1">
+
+        <div className="mt-5 px-1">
           <form
-            className="relative"
             onSubmit={
-              currentUser
-                ? (e) => handleSubmit(e)
-                : () => navigate("/login_Signup")
+              currentUser ? handleSubmit : () => navigate("/login_Signup")
             }
+            className="relative"
           >
             <textarea
-              className="w-full bg-[#2E2E33] rounded-md focus:outline-none px-3 py-1 text-xs"
+              className="w-full bg-[#2E2E33] rounded-md px-3 py-1 outline-none text-xs"
               value={message}
-              placeholder="Comment here...."
+              placeholder="Comment here..."
               onChange={(e) => setMessage(e.target.value)}
             />
-            <button
-              type="submit"
-              className="absolute bottom-3 right-2 text-snowWhite"
-            >
+            <button type="submit" className="absolute bottom-3 right-2">
               <TbSend />
             </button>
           </form>
-          <div className="-full bg-[#2E2E33] rounded-md text-xs mb-1">
-            {reversedComment.reverse().map((item, index) => {
-              return (
-                <div className="mb-1 hover:bg-richBlack w-full p-1" key={index}>
-                  <div className="flex items-center justify-between">
+
+          <div className="bg-[#2E2E33] rounded-md text-xs mb-1">
+            {boutiqueItem?.collectionReview
+              ?.slice()
+              .reverse()
+              .map((item, index) => (
+                <div
+                  className="group mb-1 hover:bg-richBlack w-full p-1 relative"
+                  key={index}
+                >
+                  <div className="flex items-center justify-between gap-2">
                     <div className="flex gap-1">
                       <div className="w-5 h-5 rounded-full overflow-hidden">
                         <img
                           src={commentor(item.commentorId)?.profile}
-                          className="w-full h-full object-cover"
                           alt={commentor(item.commentorId)?.userName}
+                          className="w-full h-full object-cover"
                         />
                       </div>
                       <p className="font-semibold">
                         {commentor(item.commentorId)?.userName}
                       </p>
                     </div>
-                    {commentor(item.commentorId)?.id === currentUser?.id && (
-                      <CiCircleInfo className="text-sm cursor-pointer" />
+
+                    {item.commentorId === currentUser?.id && (
+                      <div className="hidden group-hover:block">
+                        <AiOutlineDelete
+                          onClick={() => {
+                            setCommentToDelete(item);
+                            setShowPopUp(true);
+                          }}
+                          className="text-sm cursor-pointer"
+                        />
+                      </div>
                     )}
                   </div>
                   <p className="ps-6">{item.comment}</p>
                 </div>
-              );
-            })}
+              ))}
           </div>
         </div>
+
+
+        {showPopUp && (
+          <PopUpMessage
+            onCancel={() => setShowPopUp(false)}
+            onConfirm={handleDeleteComment}
+            message="Are you sure you want to delete this comment?"
+          />
+        )}
       </div>
     </div>
   );
