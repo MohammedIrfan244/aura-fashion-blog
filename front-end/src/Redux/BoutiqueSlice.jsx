@@ -26,7 +26,9 @@ export const patchBoutiques = createAsyncThunk(
       const currBoutique = getState().boutiques?.boutiques?.find(
         (item) => item?.id === id
       );
-      const response = await axios.patch(url, {collectionReview:currBoutique?.collectionReview});
+      const response = await axios.patch(url, {
+        collectionReview: currBoutique?.collectionReview,
+      });
       return response.data;
     } catch (err) {
       console.log("Error while fetching boutiques ", err);
@@ -38,11 +40,26 @@ const boutiqueSlice = createSlice({
   name: "boutiques",
   initialState: INITIAL_STATE,
   reducers: {
-    addComment:(state,action)=>{
-      const {comment,boutiqueId}=action.payload
-      const index=state.boutiques?.findIndex(item=>item?.id==boutiqueId)
-      state.boutiques[index]?.collectionReview?.push(comment)
-    }
+    addComment: (state, action) => {
+      const { comment, boutiqueId } = action.payload;
+      const index = state.boutiques?.findIndex(
+        (item) => item?.id == boutiqueId
+      );
+      state.boutiques[index]?.collectionReview?.push(comment);
+    },
+    removeComment: (state, action) => {
+      const { comment, boutiqueId } = action.payload;
+      const boutique = state.boutiques?.find((item) => item.id == boutiqueId);
+      const boutiqueIndex = state.boutiques?.findIndex(
+        (item) => item?.id == boutiqueId
+      );
+      const commentIndex = boutique?.collectionReview?.findIndex(
+        (item) =>
+          item.comment == comment?.comment &&
+          item.commentorId == comment?.commentorId
+      );
+      state.boutiques[boutiqueIndex]?.collectionReview.splice(commentIndex,1)
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -60,5 +77,5 @@ const boutiqueSlice = createSlice({
   },
 });
 
-export const {addComment}=boutiqueSlice.actions
+export const { addComment, removeComment } = boutiqueSlice.actions;
 export default boutiqueSlice.reducer;
