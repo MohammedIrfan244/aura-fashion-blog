@@ -23,7 +23,7 @@ function BoutiqueCard({ image, name }) {
     >
       <div
         ref={ref}
-        className={`h-[400px] w-80 overflow-hidden relative hover:text-electricBlue card_hover bg-[#000002] hover:scale-[1.01] transition-all ease-out ${
+        className={`h-[400px] w-80 overflow-hidden relative hover:text-electricBlue card_hover shadow-md shadow-black bg-[#000002] hover:scale-[1.01] transition-all ease-out ${
           inView ? "animate-slideY opacity-100" : "opacity-0"
         }`}
         style={{

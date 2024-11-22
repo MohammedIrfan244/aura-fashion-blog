@@ -131,7 +131,7 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
               >
                 Checkout <FiExternalLink />
               </a>
-              <p className="text-lg font-bold">{`$${boutiqueItem?.collectionPrice}`}</p>
+              <p className="text-lg font-bold pe-2">{`$${boutiqueItem?.collectionPrice}`}</p>
             </div>
           </div>
         </div>

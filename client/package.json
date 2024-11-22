@@ -11,6 +11,7 @@
     "serve-json": "json-server --watch src/assets/data.json --port 3001"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.5",
     "@reduxjs/toolkit": "^2.3.0",
     "@use-gesture/react": "^10.3.1",
     "axios": "^1.7.7",

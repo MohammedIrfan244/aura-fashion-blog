@@ -56,7 +56,7 @@ const boutiqueSlice = createSlice({
       const commentIndex = boutique?.collectionReview?.findIndex(
         (item) =>
           item.comment == comment?.comment &&
-          item.commentorId == comment?.commentorId
+          item.commenterId == comment?.commenterId
       );
       state.boutiques[boutiqueIndex]?.collectionReview.splice(commentIndex, 1);
     }

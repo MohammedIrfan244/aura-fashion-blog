@@ -48,7 +48,7 @@ function BoutiquePage() {
   const [aniDirection, setAniDirection] = useState(false);
   const [animateKey, setAnimateKey] = useState(0);
   const location = useLocation();
-  const {name,selected}=location.state || {name:"Fenty Beauty",selected:{}}
+  const {name,selected}=location.state || {name:"Fenty Beauty"}
   const [selectedItem, setSelectedItem] = useState(selected);
   const { boutiques } = useSelector((state) => state.boutiques);
   const [currentIndex,setCurrentIndex]=useState(boutiqueMap.findIndex((item)=>item.name===name))

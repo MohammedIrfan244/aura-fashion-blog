@@ -13,12 +13,12 @@ function BoutiqueCollectionCard({ boutique = {}, click, blur }) {
       tiltMaxAngleY={5}
       glareEnable={true}
       glareMaxOpacity={0.5}
-      className={blur ? "blur-sm" : "blur-0"}
+      className={blur ? "blur-sm" : "blur-0 shadow-md shadow-black"}
     >
       <div
         onClick={click}
         ref={ref}
-        className={`h-[350px] w-80 overflow-hidden text-richBlack font-semibold  bg-[#000002] transition-all ease-out ${
+        className={`h-[350px] w-80 overflow-hidden text-richBlack font-semibold bg-[#000002] transition-all ease-out ${
           inView ? "animate-slideY opacity-100" : "opacity-0"
         }`}
         style={{
