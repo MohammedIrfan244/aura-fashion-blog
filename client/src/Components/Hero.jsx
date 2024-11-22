@@ -10,7 +10,7 @@ function Hero() {
             style={{
               writingMode: "vertical-rl",
               "--tw-height-70": "400px",
-              "--tw-hieght-100": "400px",
+              "--tw-height-100": "400px",
               animationDuration: "700ms",
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
             }}

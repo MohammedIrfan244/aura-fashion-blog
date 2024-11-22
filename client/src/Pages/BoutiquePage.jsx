@@ -47,10 +47,10 @@ function BoutiquePage() {
   ]
   const [aniDirection, setAniDirection] = useState(false);
   const [animateKey, setAnimateKey] = useState(0);
-  const [selectedItem, setSelectedItem] = useState(null);
-  const { boutiques } = useSelector((state) => state.boutiques);
   const location = useLocation();
-  const {name}=location.state || {name:"Fenty Beauty"}
+  const {name,selected}=location.state || {name:"Fenty Beauty",selected:{}}
+  const [selectedItem, setSelectedItem] = useState(selected);
+  const { boutiques } = useSelector((state) => state.boutiques);
   const [currentIndex,setCurrentIndex]=useState(boutiqueMap.findIndex((item)=>item.name===name))
   const currentBoutique=boutiques?.filter((item)=>item.collectionCategory===boutiqueMap[currentIndex]?.name)
   const dispatch=useDispatch()
@@ -116,7 +116,7 @@ function BoutiquePage() {
             boutique={item}
             click={() => setSelectedItem(item)}
             blur={selectedItem}
-          />
+        z  />
         ))}
       </div>
       {selectedItem && (

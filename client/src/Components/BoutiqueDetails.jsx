@@ -9,7 +9,7 @@ import {
   patchBoutiques,
   removeComment
 } from "../Redux/BoutiqueSlice";
-import { AiOutlineDelete } from "react-icons/ai";
+import { LuTrash } from "react-icons/lu";
 import PopUpMessage from "../Shared/PopUpMessage";
 
 // eslint-disable-next-line react/prop-types
@@ -42,7 +42,7 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
     if (message.trim()) {
       const newComment = {
         comment: message,
-        commentorId: currentUser?.id,
+        commenterId: currentUser?.id,
       };
       setBoutiqueItem((prev) => ({
         ...prev,
@@ -65,7 +65,7 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
         collectionReview: prev.collectionReview.filter(
           (c) =>
             c.comment !== commentToDelete.comment ||
-            c.commentorId !== commentToDelete.commentorId
+            c.commenterId !== commentToDelete.commenterId
         ),
       }));
       dispatch(
@@ -82,7 +82,7 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
 
  
 
-  const commentor = (id) =>
+  const commenter = (id) =>
     users?.find((user) => user.id === id) || {
       userName: "Unknown",
       profile: "",
@@ -116,9 +116,11 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
             />
           </div>
           <div className="flex-grow flex flex-col justify-between sm:ms-3">
+            <div className="flex justify-end">
             <button className="text-xl mt-1 me-1" onClick={() => close(null)}>
               <RiCloseCircleLine />
             </button>
+            </div>
             <p className="text-xl font-bold">{boutiqueItem?.collectionName}</p>
             <div className="flex justify-between items-center">
               <a
@@ -165,19 +167,19 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
                     <div className="flex gap-1">
                       <div className="w-5 h-5 rounded-full overflow-hidden">
                         <img
-                          src={commentor(item.commentorId)?.profile}
-                          alt={commentor(item.commentorId)?.userName}
+                          src={commenter(item.commenterId)?.profile}
+                          alt={commenter(item.commenterId)?.userName}
                           className="w-full h-full object-cover"
                         />
                       </div>
                       <p className="font-semibold">
-                        {commentor(item.commentorId)?.userName}
+                        {commenter(item.commenterId)?.userName}
                       </p>
                     </div>
 
-                    {item.commentorId === currentUser?.id && (
-                      <div className="hidden group-hover:block">
-                        <AiOutlineDelete
+                    {item.commenterId === currentUser?.id && (
+                      <div className="hidden text-red-700 group-hover:block">
+                        <LuTrash
                           onClick={() => {
                             setCommentToDelete(item);
                             setShowPopUp(true);

@@ -10,7 +10,7 @@ function BoutiqueCard({ image, name }) {
     threshold: 0.2,
   });
 
-  const handleClck = () => {
+  const handleClick = () => {
     navigate(`/boutiques`, { state: { name } });
   };
 
@@ -31,7 +31,7 @@ function BoutiqueCard({ image, name }) {
           "--tw-translate-y": "50px",
           "--tw-translate-y-70": "0px",
         }}
-        onClick={handleClck}
+        onClick={handleClick}
       >
         <div className="w-full h-full flex justify-center items-center">
           <img src={image} alt={name} className="w-full object-cover" />

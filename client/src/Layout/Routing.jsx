@@ -9,14 +9,14 @@ import { fetchUsers } from "../Redux/UserSlice";
 import StylePage from "../Pages/StylePage";
 import Contact from "../Pages/Contact";
 import StyleDetailPage from "../Pages/StyleDetailPage";
-import NotFuond from '../Pages/NotFound'
+import NotFound from '../Pages/NotFound'
 import User from "../Pages/User";
 import Login_SignUp from "../Pages/Login_SignUp";
 
 function Routing() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchBoutiques("http://localhost:3001/buotiques"));
+    dispatch(fetchBoutiques("http://localhost:3001/boutiques"));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
@@ -37,7 +37,7 @@ function Routing() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/user" element={<User />} />
       <Route path="/login_Signup" element={<Login_SignUp />} />
-      <Route path="*" element={<NotFuond/>}/>
+      <Route path="*" element={<NotFound/>}/>
     </Routes>
   );
 }

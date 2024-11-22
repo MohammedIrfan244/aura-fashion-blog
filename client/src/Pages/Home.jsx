@@ -28,7 +28,7 @@ function Home() {
         }}
       >
         <p>
-          Checkout Your Faviorate Brands{" "}
+          Checkout Your Favorite Brands{" "}
           <span className="text-electricBlue">.</span>
         </p>
       </div>

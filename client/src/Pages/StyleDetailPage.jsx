@@ -12,7 +12,7 @@ function StyleDetailPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const { style: initialStyle, author } = location.state;
+  const { style: initialStyle, author } = location.state||{}
 
   const [style, setStyle] = useState(initialStyle);
   const { currentUser } = useSelector((state) => state.currentUser);

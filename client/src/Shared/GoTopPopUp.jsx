@@ -5,15 +5,15 @@ function GoTopPopUp() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisiblity = () => {
+    const toggleVisibility = () => {
       if (window.scrollY > window.innerHeight) {
         setVisible(true);
       } else {
         setVisible(false);
       }
     };
-    window.addEventListener("scroll", toggleVisiblity);
-    return () => window.removeEventListener("scroll", toggleVisiblity);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollTop = () => {
