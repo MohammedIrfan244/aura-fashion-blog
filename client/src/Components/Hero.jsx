@@ -69,7 +69,7 @@ function Hero() {
       <div className="w-full sm:w-1/2 h-screen relative">
         <img
           className="object-cover w-full h-full"
-          src="https://img.freepik.com/free-photo/abstract-portrait-with-light-effects_23-2151118176.jpg?t=st=1729092629~exp=1729096229~hmac=c6abe23876e7f599811d420891b6e17c91eb0aa5d0754a7b23702b0e38a1c684&w=740"
+          src="https://i.pinimg.com/736x/b5/7c/dc/b57cdc4e77c3c5ea5ac18233463d7bd7.jpg"
           alt="cover image"
         />
 

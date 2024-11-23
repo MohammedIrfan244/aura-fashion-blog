@@ -6,7 +6,8 @@ import { toast } from "react-toastify";
 import { VscEye } from "react-icons/vsc";
 import { VscEyeClosed } from "react-icons/vsc";
 
-function Login() {
+// eslint-disable-next-line react/prop-types
+function Login({registerFunc}) {
   const [passwordToggle, setPasswordToggle] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -98,14 +99,14 @@ function Login() {
       </div>
     </form>
 
-    <p className="text-sm text-center text-gray-600 mt-4">
+    <p className="text-sm text-center text-snowWhite mt-4">
       New here?{" "}
-      <a
-        href="/register"
+      <button
+      onClick={registerFunc}
         className="text-electricBlue hover:underline focus:outline-none"
       >
         Create an account
-      </a>
+      </button>
     </p>
   </div>
 </div>
