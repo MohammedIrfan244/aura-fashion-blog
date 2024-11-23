@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TbSend } from "react-icons/tb";
 import { FiExternalLink } from "react-icons/fi";
@@ -7,15 +7,17 @@ import { useNavigate } from "react-router-dom";
 import {
   addComment,
   patchBoutiques,
-  removeComment
+  removeComment,
 } from "../Redux/BoutiqueSlice";
 import { LuTrash } from "react-icons/lu";
 import PopUpMessage from "../Shared/PopUpMessage";
+import axios from "axios";
 
 // eslint-disable-next-line react/prop-types
 function BoutiqueDetails({ boutiqueItemProp, close }) {
   const { currentUser } = useSelector((state) => state.currentUser);
-  const { users } = useSelector((state) => state.users);
+  // const { users } = useSelector((state) => state.users);
+  const [users, setUsers] = useState([]);
   const [boutiqueItem, setBoutiqueItem] = useState(boutiqueItemProp);
   const [message, setMessage] = useState("");
   const [showPopUp, setShowPopUp] = useState(false);
@@ -28,6 +30,20 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
     boutiqueItem?.collectionThirdImage,
     boutiqueItem?.collectionFourthImage,
   ]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/users");
+        return response.data;
+      } catch (err) {
+        console.log("Error while fetching users ", err);
+      }
+    };
+    fetchUsers().then((data) => {
+      setUsers(data);
+    });
+  }, []);
 
   const handleImageClick = (index) => {
     const updatedThumbnails = [...thumbnails];
@@ -51,7 +67,12 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
       dispatch(
         addComment({ comment: newComment, boutiqueId: boutiqueItem?.id })
       );
-      dispatch(patchBoutiques({ boutiqueId: boutiqueItem?.id }));
+      dispatch(
+        patchBoutiques({
+          url: `http://localhost:3001/boutiques/${boutiqueItem?.id}`,
+          id: boutiqueItem?.id,
+        })
+      );
     } else {
       alert("Please enter a comment.");
     }
@@ -79,8 +100,6 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
       setCommentToDelete(null);
     }
   };
-
- 
 
   const commenter = (id) =>
     users?.find((user) => user.id === id) || {
@@ -117,9 +136,9 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
           </div>
           <div className="flex-grow flex flex-col justify-between sm:ms-3">
             <div className="flex justify-end">
-            <button className="text-xl mt-1 me-1" onClick={() => close(null)}>
-              <RiCloseCircleLine />
-            </button>
+              <button className="text-xl mt-1 me-1" onClick={() => close(null)}>
+                <RiCloseCircleLine />
+              </button>
             </div>
             <p className="text-xl font-bold">{boutiqueItem?.collectionName}</p>
             <div className="flex justify-between items-center">
@@ -194,7 +213,6 @@ function BoutiqueDetails({ boutiqueItemProp, close }) {
               ))}
           </div>
         </div>
-
 
         {showPopUp && (
           <PopUpMessage

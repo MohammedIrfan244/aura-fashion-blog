@@ -1,11 +1,23 @@
+import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 function StyleCollectionCard({ style = {}, id }) {
-  const { users } = useSelector((state) => state.users);
+  const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+  useEffect(()=>{
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/users");
+        const data = await response.json();
+        setUsers(data);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+    fetchUsers();
+  },[])
   const getUserNameById = () => {
     const user = users.find((user) => user.id == style?.styleAuthorId);
     return user ? user.userName.toUpperCase() : null;

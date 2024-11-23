@@ -11,14 +11,13 @@ import { hideSearchBar, toggleSearchBar } from "../Redux/CommonSlice";
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
   const [searchResult, setSearchResults] = useState({
-    userSearch: [],
     boutiqueSearch: [],
     styleSearch: [],
   });
   const [searchInput, setSearchInput] = useState("");
   const { styles } = useSelector((state) => state.styles);
   const { boutiques } = useSelector((state) => state.boutiques);
-  const { users } = useSelector((state) => state.users);
+  const [users, setUsers] = useState([]);
   const { currentUser } = useSelector((state) => state.currentUser);
   const { searchBar } = useSelector((state) => state.common);
 
@@ -28,41 +27,45 @@ function Navbar() {
   const inputRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   useEffect(() => {
-    let usersArr = [];
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/users");
+        const data = await response.json();
+        setUsers(data);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+    fetchUsers();
+  }, []);
+  useEffect(() => {
     let stylesArr = [];
     let boutiqueArr = [];
 
     const lowercasedInput = searchInput.trim().toLowerCase();
 
     if (lowercasedInput) {
-      users.forEach((i) => {
-        if (i.userName?.toLowerCase().includes(lowercasedInput)) {
-          usersArr.push({ userName: i.userName, userId: i.id });
+      styles.forEach((i) => {
+        const author = users.find((u) => u.id == i.styleAuthorId)?.userName;
+        if (
+          i.styleName?.toLowerCase().includes(lowercasedInput) ||
+          i.category?.toLowerCase().includes(lowercasedInput)
+        ) {
+          stylesArr.push({ style: i, author: author });
         }
-        styles.forEach((i) => {
-          const author = users.find((u) => u.id == i.styleAuthorId)?.userName;
-          if (
-            i.styleName?.toLowerCase().includes(lowercasedInput) ||
-            i.category?.toLowerCase().includes(lowercasedInput)
-          ) {
-            stylesArr.push({ style: i, author: author });
-          }
-        });
-        boutiques.forEach((i) => {
-          if (
-            i.collectionName.toLowerCase().includes(lowercasedInput) ||
-            i.collectionCategory.toLowerCase().includes(lowercasedInput)
-          ) {
-            boutiqueArr.push(i);
-          }
-        });
+      });
+      boutiques.forEach((i) => {
+        if (
+          i.collectionName.toLowerCase().includes(lowercasedInput) ||
+          i.collectionCategory.toLowerCase().includes(lowercasedInput)
+        ) {
+          boutiqueArr.push(i);
+        }
       });
     }
 
     setSearchResults({
-      userSearch: usersArr,
       boutiqueSearch: boutiqueArr,
       styleSearch: stylesArr,
     });
@@ -211,18 +214,6 @@ function Navbar() {
                   : "w-0 h-0"
               }
             >
-              <ul className="flex flex-col gap-2">
-                <p className="text-sm mb-2">
-                  <LuUser />
-                </p>
-                {searchResult.userSearch.map((u, i) => {
-                  return (
-                    <li className="cursor-pointer whitespace-nowrap" key={i}>
-                      {u?.userName}
-                    </li>
-                  );
-                })}
-              </ul>
               <ul className="flex flex-col gap-2">
                 <p className="text-sm mb-2">
                   <AiOutlineProduct />

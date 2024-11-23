@@ -1,10 +1,11 @@
 import { useState } from "react";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { useDispatch } from "react-redux";
-import { registerNewUser } from "../Redux/Auth";
-import { registerUser } from "../Redux/UserSlice";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { login } from "../Redux/Auth";
+import { useNavigate } from "react-router-dom";
 
 // Form fields configuration
 const formFields = [
@@ -24,11 +25,12 @@ const initialValues = {
 
 // eslint-disable-next-line react/prop-types
 function SignUp({ loginFunc }) {
-  const dispatch = useDispatch();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [passwordToggle, setPasswordToggle] = useState(false);
   const [confirmPasswordToggle, setConfirmPasswordToggle] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // Validation schema
   const validationSchema = yup.object({
@@ -46,11 +48,27 @@ function SignUp({ loginFunc }) {
   const formik = useFormik({
     initialValues,
     validationSchema,
-    onSubmit: () => {
+    onSubmit: async () => {
       setError("");
-      setLoading(true);
-      dispatch(registerNewUser("http://localhost:3001/users", formik.values));
-      dispatch(registerUser(formik.values));
+      const users = await axios.get("http://localhost:3001/users");
+      const existingUser = users?.data.find(
+        (user) => user.email === formik.values.email
+      );
+
+      if (existingUser) {
+        setError("Email already exists");
+      } else {
+        try {
+          setLoading(true);
+          await axios.post("http://localhost:3001/users", formik.values);
+          dispatch(login(formik.values));
+          navigate("/");
+        } catch (error) {
+          setError(error.message);
+        } finally {
+          setLoading(false);
+        }
+      }
     },
   });
 
@@ -63,12 +81,11 @@ function SignUp({ loginFunc }) {
         <form onSubmit={formik.handleSubmit} className="space-y-5">
           {formFields.map((field, index) => (
             <div key={index} className="space-y-1">
-             
               <input
                 type={field.type}
                 id={field.name}
                 name={field.name}
-                className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm rounded-md"
+                className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values[field.name]}
@@ -83,13 +100,12 @@ function SignUp({ loginFunc }) {
           ))}
 
           <div className="space-y-1">
-            
             <div className="relative">
               <input
                 type={passwordToggle ? "text" : "password"}
                 id="password"
                 name="password"
-                className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm rounded-md"
+                className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
                 placeholder="Enter your password"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -109,13 +125,12 @@ function SignUp({ loginFunc }) {
           </div>
 
           <div className="space-y-1">
-           
             <div className="relative">
               <input
                 type={confirmPasswordToggle ? "text" : "password"}
                 id="conformPassword"
                 name="conformPassword"
-                className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm rounded-md"
+                className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
                 placeholder="Confirm your password"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -141,13 +156,13 @@ function SignUp({ loginFunc }) {
 
           <button
             type="submit"
-            className="w-full bg-[#2E2E33] text-snowWhite font-medium py-2 px-4 rounded-md hover:bg-electricBlue focus:outline-none focus:ring-1 focus:ring-[#2E2E33] focus:ring-offset-1"
+            className="w-full bg-snowWhite text-[#2E2E33] font-medium py-1 px-2 hover:bg-electricBlue focus:outline-none focus:ring-1 focus:ring-[#2E2E33] focus:ring-offset-1"
             disabled={loading}
           >
             {loading ? "Loading..." : "Sign Up"}
           </button>
         </form>
-        <p className="text-sm text-center text-gray-600 mt-4">
+        <p className="text-sm text-center text-snowWhite mt-4">
           Already have an account?{" "}
           <button
             onClick={loginFunc}

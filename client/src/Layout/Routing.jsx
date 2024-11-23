@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchBoutiques } from "../Redux/BoutiqueSlice";
 import { fetchStyles } from "../Redux/StyleSlice";
-import { fetchUsers } from "../Redux/UserSlice";
 import StylePage from "../Pages/StylePage";
 import Contact from "../Pages/Contact";
 import StyleDetailPage from "../Pages/StyleDetailPage";
@@ -21,10 +20,6 @@ function Routing() {
   }, []);
   useEffect(() => {
     dispatch(fetchStyles("http://localhost:3001/styles"));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  useEffect(() => {
-    dispatch(fetchUsers("http://localhost:3001/users"));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

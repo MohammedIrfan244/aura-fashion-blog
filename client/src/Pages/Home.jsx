@@ -19,7 +19,7 @@ function Home() {
       <Style />
       <div
         ref={ref}
-        className={`mt-20 ps-5 text-5xl font-agdasima tracking-wider transition-all w-auto h-12 overflow-hidden ${
+        className={`mt-20 ps-5 text-3xl sm:text-4xl md:text-5xl font-agdasima transition-all w-auto overflow-hidden h-12 ${
           inView ? "animate-widthGrow opacity-100" : "opacity-0"
         }`}
         style={{
@@ -27,7 +27,7 @@ function Home() {
           animationDuration: "700ms",
         }}
       >
-        <p>
+        <p className="text-snowWhite break-words">
           Checkout Your Favorite Brands{" "}
           <span className="text-electricBlue">.</span>
         </p>

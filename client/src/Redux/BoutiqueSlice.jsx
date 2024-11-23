@@ -24,14 +24,14 @@ export const patchBoutiques = createAsyncThunk(
   async ({ url, id }, { getState }) => {
     try {
       const currBoutique = getState().boutiques?.boutiques?.find(
-        (item) => item?.id === id
+        (item) => item?.id == id
       );
       const response = await axios.patch(url, {
         collectionReview: currBoutique?.collectionReview,
       });
       return response.data;
     } catch (err) {
-      console.log("Error while fetching boutiques ", err);
+      console.log("Error while patching boutiques ", err);
     }
   }
 );
