@@ -1,75 +1,34 @@
-import { AiFillTag } from "react-icons/ai";
-import { LuArrowBigDownDash } from "react-icons/lu";
+import { useState } from 'react';
+import auraHero from '../assets/auraHero.png'
+import invertedAuraHero from '../assets/invertedAuraHero.png'
 
 function Hero() {
+  const [hover,setHover]=useState(false)
+  const text = " Aura -Bold-Limitless-Empowered-";
+  const innerText = text.split("").map((char, i) => (
+    <span style={{ transform: `rotate(${i * 11}deg)` }} key={i}>
+      {char}
+    </span>
+  ));
   return (
     <div className="w-screen flex flex-col sm:flex-row">
-      <div className="w-full sm:w-1/2 h-screen flex">
-        <div className="w-1/2 h-[99vh] justify-end items-center flex flex-col">
-          <p
-            style={{
-              writingMode: "vertical-rl",
-              "--tw-height-70": "400px",
-              "--tw-height-100": "400px",
-              animationDuration: "700ms",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
-            }}
-            className="text-9xl z-10 transform rotate-180 flex items-baseline font-beban tracking-widest overflow-hidden -mb-20 animate-heightGrow"
-          >
-            <span className="text-electricBlue text-[150px]">V</span>IBINGS
-          </p>
-          <div
-            className="w-56 h-56 rounded-full mb-5 animate-circGrow overflow-hidden shadow-lg shadow-black"
-            style={{ animationDuration: "500ms" }}
-          >
-            <img
-              src="https://img.freepik.com/premium-photo/closeup-round-compact-blush-black-casing-showcasing-its-pink-shade-against-grey-gradient-background_574957-8935.jpg?w=826"
-              className="object-cover scale-150 w-full h-full"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="flex flex-col justify-between pb-16">
-          <div className="flex flex-col">
-            <div
-              className="flex flex-col w-48 items-center animate-slideY"
-              style={{
-                "--tw-translate-y": "-100px",
-                "--tw-translate-y-70": "20px",
-                animationDuration: "700ms",
-              }}
-            >
-              <div className="h-36 w-[2px] bg-snowWhite"></div>
-              <div className="w-auto shadow-md h-auto relative hover:scale-[1.02] shadow-black hover:shadow-lg hover:shadow-black transition-all duration-300 ease-out">
-                <img
-                  src="https://img.freepik.com/free-photo/applying-red-lipstick-lips-close-up-photo-black-background-beauty-make-up_482257-10395.jpg?t=st=1729090464~exp=1729094064~hmac=b4526445bd14feb4c294474c31c643366b38a574d034301cf0586a51c4956282&w=360"
-                  alt="image"
-                  className="border-none"
-                />
-                <AiFillTag className="absolute top-0 right-[93px]" />
-              </div>
+      <div className="w-full sm:w-1/2 h-[100vh] sm:h-screen flex justify-center items-center">
+        <div className="circle" onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
+          <div className="logo">
+            <div className='w-full h-full overflow-hidden rounded-full absolute'>
+            {! hover&&<img src={auraHero} className="w-full h-full object-cover animate-circGrow" style={{animationDuration:"500ms"}} />}
+            {hover &&<img src={invertedAuraHero} className="w-full h-full object-cover animate-circGrow" style={{animationDuration:"500ms"}} /> }
             </div>
-          </div>
-          <div className="font-beban tracking-widest">
-            <p
-              className="text-xl animate-widthGrow overflow-hidden h-5 transition-all"
-              style={{
-                "--tw-width-100": "200px",
-                animationDuration: "500ms",
-              }}
-            >
-              Craft Your Aesthetic
-            </p>
-            <p className="text-3xl flex items-center">
-              Here <LuArrowBigDownDash className="text-electricBlue" />
-            </p>
+            <div className="text">
+              <p className="font-beban">{innerText}</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="w-full sm:w-1/2 h-screen relative">
+      <div className="hidden sm:w-1/2 sm:h-screen sm:block sm:relative">
         <img
           className="object-cover w-full h-full"
-          src="https://i.pinimg.com/736x/b5/7c/dc/b57cdc4e77c3c5ea5ac18233463d7bd7.jpg"
+          src="https://i.pinimg.com/control2/736x/fa/9d/98/fa9d9861ade98ed07508e4b01ade8d93.jpg"
           alt="cover image"
         />
 

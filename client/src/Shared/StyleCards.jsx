@@ -17,7 +17,7 @@ function StyleCards({ image, category }) {
     <div
     onClick={() => handleNavigate(category)}
     ref={ref}
-    className={`h-[400px] w-80 overflow-hidden card_hover shadow-md shadow-black relative hover:text-electricBlue cursor-pointer transition-all ease-in-out duration-75 ${
+    className={`h-[400px] w-80 overflow-hidden card_hover shadow-md shadow-black relative hover:text-electricBlue transition-all ease-in-out duration-75 ${
       inView ? "animate-slideY opacity-100" : "opacity-0"
     }`}
     style={{

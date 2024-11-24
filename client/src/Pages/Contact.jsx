@@ -1,8 +1,14 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { hideSearchBar } from "../Redux/CommonSlice";
 
 function Contact() {
+  const dispatch=useDispatch()
+  const navigate=useNavigate()
+  const {currentUser}=useSelector((state)=>state.currentUser)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,12 +42,12 @@ function Contact() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-richBlack">
+    <div className="flex items-center justify-center h-screen bg-richBlack"  onClick={()=>dispatch(hideSearchBar())}>
       <div className="bg-richBlack shadow-lg shadow-black p-10 max-w-md w-full">
         <h2 className="text-2xl font-beban text-snowWhite text-center mb-6">
           Contact Us
         </h2>
-        <form onSubmit={sendMail} className="space-y-5">
+        <form onSubmit={currentUser?sendMail:()=>navigate("/login_Signup")} className="space-y-5">
           <div>
             <input
               name="name"
