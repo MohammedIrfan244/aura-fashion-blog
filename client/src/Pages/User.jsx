@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout, updateUser } from "../Redux/Auth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import PopUpMessage from "../Shared/PopUpMessage";
+import PopUpMessage from "../Utilities/PopUpMessage";
 import { toast } from "react-toastify";
 import axios from "axios";
 

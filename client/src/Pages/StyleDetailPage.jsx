@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import GoTopPopUp from "../Shared/GoTopPopUp";
+import GoTopPopUp from "../Utilities/GoTopPopUp";
 import { SiStylelint } from "react-icons/si";
 import { LuUser, LuDot } from "react-icons/lu";
 import { FaRegHeart, FaHeart } from "react-icons/fa";

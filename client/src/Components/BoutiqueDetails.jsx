@@ -10,7 +10,7 @@ import {
   removeComment,
 } from "../Redux/BoutiqueSlice";
 import { LuTrash } from "react-icons/lu";
-import PopUpMessage from "../Shared/PopUpMessage";
+import PopUpMessage from "../Utilities/PopUpMessage";
 import axios from "axios";
 
 // eslint-disable-next-line react/prop-types

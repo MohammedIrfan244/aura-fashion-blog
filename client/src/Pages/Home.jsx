@@ -2,7 +2,7 @@ import { useInView } from "react-intersection-observer";
 import Boutique from "../Components/Boutique";
 import Hero from "../Components/Hero";
 import Style from "../Components/Style";
-import GoTopPopUp from "../Shared/GoTopPopUp";
+import GoTopPopUp from "../Utilities/GoTopPopUp";
 import { hideSearchBar } from "../Redux/CommonSlice";
 import { useDispatch } from "react-redux";
 

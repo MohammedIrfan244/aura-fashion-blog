@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import GoTopPopUp from "../Shared/GoTopPopUp";
+import GoTopPopUp from "../Utilities/GoTopPopUp";
 import { useLocation } from "react-router-dom";
 import StyleCollectionCard from "../Shared/StyleCollectionCard";
 import { Swiper, SwiperSlide } from "swiper/react";

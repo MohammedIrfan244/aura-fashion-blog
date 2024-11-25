@@ -205,7 +205,7 @@ function Navbar() {
               onChange={(e) => setSearchInput(e.target.value)}
               type="text"
               placeholder="Search here ..."
-              className="w-full placeholder:text-xs text-xs bg-transparent border-2 border-electricBlue pt-[3px] focus:outline-none rounded-3xl ps-3"
+              className="w-full text-electricBlue placeholder:text-xs text-xs bg-transparent border-2 border-electricBlue pt-[3px] focus:outline-none rounded-3xl ps-3"
             />
             <div
               className={
@@ -222,7 +222,7 @@ function Navbar() {
                   return (
                     <li
                       onClick={() => handleNavigateBoutiques(u)}
-                      className="cursor-pointer"
+                      className="cursor-pointer hover:text-electricBlue"
                       key={i}
                     >
                       {u?.collectionName}
@@ -244,7 +244,7 @@ function Navbar() {
                           style.author
                         )
                       }
-                      className="cursor-pointer"
+                      className="cursor-pointer hover:text-electricBlue"
                       key={i}
                     >
                       {style?.style.styleName}

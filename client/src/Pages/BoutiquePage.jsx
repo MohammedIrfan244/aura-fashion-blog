@@ -7,7 +7,7 @@ import {
   BiSolidChevronRightCircle,
 } from "react-icons/bi";
 import BoutiqueCollectionCard from "../Shared/BoutiqueCollectionCard";
-import GoTopPopUp from "../Shared/GoTopPopUp";
+import GoTopPopUp from "../Utilities/GoTopPopUp";
 import { hideSearchBar } from "../Redux/CommonSlice";
 
 function BoutiquePage() {
