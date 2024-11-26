@@ -12,6 +12,7 @@ import NotFound from "../Pages/NotFound";
 import User from "../Pages/User";
 import Login_SignUp from "../Pages/Login_SignUp";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 function Routing() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function Routing() {
         <Route path="/login_Signup" element={<Login_SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

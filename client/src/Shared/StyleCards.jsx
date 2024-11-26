@@ -51,7 +51,7 @@ function StyleCards({ image, category }) {
       >
         {category}
       </p>
-      {hover&&<p className="absolute bottom-2 right-[35%] text-electricBlue animate-pulse font-agdasima z-20">Click to explore</p>}
+      {hover&&<p className="absolute bottom-2 right-[37%] text-electricBlue animate-pulse font-agdasima z-20">Click to explore</p>}
     </div>
   );
 }
