@@ -10,7 +10,7 @@ function Hero() {
 
   return (
     <div className="w-screen flex flex-col sm:flex-row">
-      <div className="w-full sm:w-1/2 h-[90vh] sm:h-screen relative">
+      <div className="w-full sm:w-1/2 h-[100vh] sm:h-screen relative">
         <div className="circle">
           <div className="logo">
             <div className="w-full h-full overflow-hidden rounded-full absolute backdrop-blur-sm ">
@@ -25,7 +25,7 @@ function Hero() {
             </div>
           </div>
         </div>
-        <p className="text-center text-electricBlue font-agdasima absolute bottom-5 left-[45%] animate-pulse">Swipe Up</p>
+        <p className="text-center text-electricBlue text-xl font-agdasima absolute bottom-5 left-[46%] animate-pulse">Swipe Up</p>
       </div>
 
       <div className="hidden sm:w-1/2 sm:h-screen sm:block sm:relative">
