@@ -3,6 +3,7 @@
     {
       "id": "1",
       "userName": "Irfan",
+      "isCreator":false,
       "email": "irfan@gmail.com",
       "password": "irfanPassword",
       "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04aKwRPpTYZNk1KLojzVy7hnb0BJDKeakwQ&s"
@@ -10,6 +11,7 @@
     {
       "id": "2",
       "userName": "Jane Sherin",
+      "isCreator":true,
       "email": "janesherin@gmail.com",
       "password": "janePassword",
       "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33ixSWOxYrpRTCGpcDMTufDrcCpN9B_oRXw&s"
@@ -17,6 +19,7 @@
     {
       "id": "0eef",
       "userName": "tester3",
+      "isCreator":false,
       "email": "tester2@gmail.com",
       "password": "123456789",
       "conformPassword": "123456789",

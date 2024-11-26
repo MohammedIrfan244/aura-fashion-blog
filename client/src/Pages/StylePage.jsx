@@ -111,7 +111,7 @@ function StylePage() {
         {showStyles.map((style, index) => (
           <StyleCollectionCard key={index} style={style} id={style?.id} />
         ))}
-      </div>z
+      </div>
       <GoTopPopUp />
     </div>
   );
