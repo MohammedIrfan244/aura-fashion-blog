@@ -42,7 +42,7 @@ function Contact() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-richBlack"  onClick={()=>dispatch(hideSearchBar())}>
+    <div className="flex items-center justify-center h-screen bg-richBlack min-h-screen"  onClick={()=>dispatch(hideSearchBar())}>
       <div className="bg-richBlack shadow-lg shadow-black p-10 max-w-md w-full">
         <h2 className="text-2xl font-beban text-snowWhite text-center mb-6">
           Contact Us

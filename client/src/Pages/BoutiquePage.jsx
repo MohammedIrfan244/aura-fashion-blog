@@ -7,7 +7,7 @@ import {
   BiSolidChevronRightCircle,
 } from "react-icons/bi";
 import BoutiqueCollectionCard from "../Shared/BoutiqueCollectionCard";
-import GoTopPopUp from "../Utilities/GoTopPopUp";
+import GoTopPopUp from "../Utilities/GoTop";
 import { hideSearchBar } from "../Redux/CommonSlice";
 
 function BoutiquePage() {
@@ -74,7 +74,7 @@ function BoutiquePage() {
   }, [currentIndex]);
 
   return (
-    <div onClick={()=>dispatch(hideSearchBar())}>
+    <div onClick={()=>dispatch(hideSearchBar())} className="min-h-screen">
       <div
         key={animateKey}
         className={`pt-16 animate-slideX ${

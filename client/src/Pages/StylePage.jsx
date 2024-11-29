@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import GoTopPopUp from "../Utilities/GoTopPopUp";
+import GoTopPopUp from "../Utilities/GoTop";
 import { useLocation } from "react-router-dom";
 import StyleCollectionCard from "../Shared/StyleCollectionCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,7 +53,7 @@ function StylePage() {
   };
 
   return (
-    <div className="pt-16 px-5" onClick={() => dispatch(hideSearchBar())}>
+    <div className="pt-16 px-5 min-h-screen" onClick={() => dispatch(hideSearchBar())}>
       <div className="my-5 flex justify-center sm:justify-between w-full">
         <h2 className="hidden sm:block font-beban text-electricBlue">
           {selectedCategory || "All"}

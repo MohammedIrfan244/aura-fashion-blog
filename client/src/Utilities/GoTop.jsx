@@ -3,6 +3,7 @@ import { MdArrowUpward } from "react-icons/md";
 
 function GoTopPopUp() {
   const [visible, setVisible] = useState(false);
+  let timeout;
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -12,8 +13,26 @@ function GoTopPopUp() {
         setVisible(false);
       }
     };
+
+    const handleMouseOrScroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        setVisible(true);
+        clearTimeout(timeout); 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        timeout = setTimeout(() => {
+          setVisible(false);
+        }, 1000); 
+      }
+    };
+
     window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("mousemove", handleMouseOrScroll);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("mousemove", handleMouseOrScroll);
+      clearTimeout(timeout); // Clean up timeout on unmount
+    };
   }, []);
 
   const scrollTop = () => {

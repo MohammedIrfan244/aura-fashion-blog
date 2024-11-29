@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home";
 import BoutiquePage from "../Pages/BoutiquePage";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchBoutiques } from "../Redux/BoutiqueSlice";
 import { fetchStyles } from "../Redux/StyleSlice";
@@ -13,10 +13,11 @@ import User from "../Pages/User";
 import Login_SignUp from "../Pages/Login_SignUp";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import Subscription from "../Pages/Subscription";
 
 function Routing() {
   const dispatch = useDispatch();
-
+  const {currentUser}=useSelector((state) => state.currentUser);
   useEffect(() => {
     dispatch(fetchBoutiques("http://localhost:3001/boutiques"));
   }, [dispatch]);
@@ -32,10 +33,11 @@ function Routing() {
         <Route path="/" element={<Home />} />
         <Route path="/boutiques" element={<BoutiquePage />} />
         <Route path="/styles" element={<StylePage />} />
-        <Route path="/styles/:id" element={<StyleDetailPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/login_Signup" element={<Login_SignUp />} />
+        <Route path="/styles/:id" element={currentUser?<StyleDetailPage />:<Login_SignUp/>} />
+        <Route path="/contact" element={currentUser?<Contact />:<Login_SignUp/>} />
+        <Route path="/user" element={currentUser?<User />:<Login_SignUp/>} />
+        <Route path="/login_Signup" element={currentUser?<Login_SignUp />:<User/>} />
+        <Route path="/subscription" element={<Subscription />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>

@@ -124,7 +124,7 @@ function Navbar() {
     <div
       className={`${
         scrollVisible
-          ? "animate-bouncing px-5 backdrop-blur-md z-50 fixed w-screen flex justify-between items-end pb-3"
+          ? "animate-bouncing px-5 backdrop-blur-md z-50 fixed w-screen flex justify-between items-end py-3"
           : "hidden"
       } transition-all`}
     >

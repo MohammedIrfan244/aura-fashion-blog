@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 body {
   background-color: #1a1a1d;

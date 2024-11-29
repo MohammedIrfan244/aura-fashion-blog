@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import GoTopPopUp from "../Utilities/GoTopPopUp";
+import GoTopPopUp from "../Utilities/GoTop";
 import { SiStylelint } from "react-icons/si";
 import { LuUser, LuDot } from "react-icons/lu";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
@@ -47,7 +47,7 @@ function StyleDetailPage() {
   }, []);
 
   return (
-    <div className="pt-16 px-5" onClick={() => dispatch(hideSearchBar())}>
+    <div className="pt-16 px-5 min-h-screen" onClick={() => dispatch(hideSearchBar())}>
       <div
         className="flex bg-[#242427] h-14 sm:h-20 items-center gap-5 justify-center text-sm animate-slideY"
         style={{
