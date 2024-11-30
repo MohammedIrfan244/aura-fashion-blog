@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bebas+Neue&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 body {
   background-color: #1a1a1d;
@@ -66,14 +65,15 @@ body {
   transform-origin: 0px 140px;
   color: #00bfae;
 }
-.styleCardText{
+.styleCardText {
   animation: slideUp ease-in 200ms forwards;
 }
-@keyframes slideUp{
-  0%{
+@keyframes slideUp {
+  0% {
     transform: translateY(0);
   }
-  100%{
+  100% {
     transform: translateY(-100px);
   }
 }
+

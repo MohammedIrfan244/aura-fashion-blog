@@ -52,8 +52,8 @@ function Style() {
   ];
 
   return (
-    <div className="mt-20">
       <Swiper
+      className="py-1 mt-20"
         slidesPerView={4}
         spaceBetween={20}
         loop={true}
@@ -83,7 +83,6 @@ function Style() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
   );
 }
 
