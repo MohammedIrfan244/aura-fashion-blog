@@ -53,7 +53,8 @@ function StylePage() {
   };
 
   return (
-    <div className="pt-16 px-5 min-h-screen" onClick={() => dispatch(hideSearchBar())}>
+    styles?.length > 0 ? (
+      <div className="pt-16 px-5 min-h-screen" onClick={() => dispatch(hideSearchBar())}>
       <div className="my-5 flex justify-center sm:justify-between w-full">
         <h2 className="hidden sm:block font-beban text-electricBlue">
           {selectedCategory || "All"}
@@ -67,18 +68,18 @@ function StylePage() {
           }}
         >
           <button
-            onClick={handlePrev}
-            className="text-xl hover:text-electricBlue hidden sm:block"
+          onClick={handlePrev}
+          className="text-xl hover:text-electricBlue hidden sm:block"
           >
-            <CiCircleChevLeft />
+          <CiCircleChevLeft />
           </button>
           <Swiper
-            ref={swiperRef}
-            className="w-[400px]"
-            slidesPerView={3}
-            centeredSlides
-            loop
-            spaceBetween={10}
+          ref={swiperRef}
+          className="w-[400px]"
+          slidesPerView={3}
+          centeredSlides
+          loop
+          spaceBetween={10}
             breakpoints={{
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
@@ -114,7 +115,14 @@ function StylePage() {
       </div>
       <GoTopPopUp />
     </div>
+  )
+  : (
+    <h1 className="pt-20">Loading</h1>)
   );
 }
+  
+  
+
+
 
 export default StylePage;

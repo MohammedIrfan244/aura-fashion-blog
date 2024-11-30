@@ -16,7 +16,7 @@ const brands = [
 
 function BoutiqueBanner() {
   return (
-    <div className="flex justify-center mt-20 h-20 bg-white overflow-hidden">
+    <div className="flex justify-center mb-20 h-20 bg-white overflow-hidden">
     <Swiper
       modules={[Autoplay]}
       spaceBetween={10}

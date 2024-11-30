@@ -52,8 +52,10 @@ function Style() {
   ];
 
   return (
+    <div>
+      <h1 className="my-5 sm:my-10 text-2xl font-windSong text-center font-bold">Chose Your Style</h1>
       <Swiper
-      className="py-1 mt-20"
+      className="py-1"
         slidesPerView={4}
         spaceBetween={20}
         loop={true}
@@ -83,6 +85,7 @@ function Style() {
           </SwiperSlide>
         ))}
       </Swiper>
+      </div>
   );
 }
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MdArrowUpward } from "react-icons/md";
+import topUpImage from '../images/scrollTop.jpg'
 
 function GoTopPopUp() {
   const [visible, setVisible] = useState(false);
@@ -31,7 +32,7 @@ function GoTopPopUp() {
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
       window.removeEventListener("mousemove", handleMouseOrScroll);
-      clearTimeout(timeout); // Clean up timeout on unmount
+      clearTimeout(timeout); 
     };
   }, []);
 
@@ -44,17 +45,19 @@ function GoTopPopUp() {
 
   return (
     <div
-      className={`${
-        visible
-          ? "z-40 flex fixed bottom-5 right-[48.5%] cursor-pointer text-electricBlue font-bold border-2 border-electricBlue w-10 items-center justify-center transition-all ease-in-out animate-circGrow"
-          : "hidden"
-      }`}
-      style={{
-        animationDuration: "500ms"
-      }}
-    >
-      <MdArrowUpward onClick={scrollTop} />
-    </div>
+    className={`${
+      visible
+        ? `z-40 flex fixed bottom-5 right-[47.5%] rounded-2xl cursor-pointer text-snowWhite font-bold border-2 border-snowWhite w-16 h-5 items-center justify-center transition-all ease-in-out animate-circGrow object-cover overflow-hidden`
+        : "hidden"
+    }`}
+    style={{
+      backgroundImage: `url(${topUpImage})`,
+      animationDuration: "500ms",
+    }}
+  >
+    <MdArrowUpward onClick={scrollTop} />
+  </div>
+  
   );
 }
 

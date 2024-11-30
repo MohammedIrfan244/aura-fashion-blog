@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import auraHero from '../assets/auraHeroSmall.png'
+import auraHero from '../images/auraHeroSmall.png'
 import { HiArrowLongRight } from "react-icons/hi2";
 function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="h-80 md:h-96 mt-10">
+    <div className="h-80 md:h-96 mt-20">
       <div className="bg-snowWhite flex h-1/2 items-center justify-between px-5">
       <div className="flex items-center space-x-5 sm:space-x-10 md:space-x-20 lg:space-x-24">
         <img src={auraHero} className='w-[70px] sm:w-[100px]' alt="Aura logo" />

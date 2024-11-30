@@ -6,7 +6,7 @@ import GoTopPopUp from "../Utilities/GoTop";
 import { hideSearchBar } from "../Redux/CommonSlice";
 import { useDispatch } from "react-redux";
 import StylingMatter from "../Components/StylingMatter";
-import BoutiqueBanner from "../Components/BoutiqueBanner";
+import AboutUs from "../Components/AboutUs";
 
 function Home() {
   const dispatch=useDispatch()
@@ -16,8 +16,8 @@ function Home() {
       <GoTopPopUp />
       <StylingMatter/>
       <Style />
-      <BoutiqueBanner/>
       <Boutique />
+      <AboutUs/>
     </div>
   );
 }

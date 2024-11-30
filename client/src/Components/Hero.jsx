@@ -1,4 +1,4 @@
-import auraHero from "../assets/auraHeroSmall.png"
+import auraHero from "../images/auraHeroSmall.png"
 
 function Hero() {
   const text = " Aura -Bold-Limitless-Empowered-";
