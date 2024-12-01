@@ -1,3 +1,5 @@
+import aboutVideo from '../images/3255323-uhd_3840_2160_25fps.mp4'
+
 function AboutUs() {
   return (
     <div>
@@ -16,7 +18,14 @@ function AboutUs() {
         </p>
       </div>
         <div className="h-full overflow-hidden hidden sm:block w-1/2">
-            <img className="object-cover" src="https://i.pinimg.com/736x/57/66/35/576635789a9881f83d7e633a72785503.jpg" alt="" />
+        <video
+    autoPlay
+    loop
+    muted
+    className="object-cover w-full h-full opacity-50 hover:opacity-80"
+    src={aboutVideo}
+  ></video>
+            {/* <img className="object-cover" src="https://i.pinimg.com/736x/57/66/35/576635789a9881f83d7e633a72785503.jpg" alt="" /> */}
         </div>
         </div>
     </div>

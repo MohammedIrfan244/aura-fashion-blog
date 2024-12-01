@@ -36,8 +36,8 @@ function Routing() {
         <Route path="/styles/:id" element={currentUser?<StyleDetailPage />:<Login_SignUp/>} />
         <Route path="/contact" element={currentUser?<Contact />:<Login_SignUp/>} />
         <Route path="/user" element={currentUser?<User />:<Login_SignUp/>} />
-        <Route path="/login_Signup" element={currentUser?<Login_SignUp />:<User/>} />
-        <Route path="/subscription" element={<Subscription />  } />
+        <Route path="/login_Signup" element={currentUser?<User/>:<Login_SignUp />} />
+        <Route path="/subscription" element={currentUser?<Subscription/>:<Login_SignUp/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
