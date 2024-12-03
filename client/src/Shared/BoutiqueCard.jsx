@@ -1,5 +1,6 @@
 import Tilt from "react-parallax-tilt";
 import { useNavigate } from "react-router-dom";
+import {motion} from 'framer-motion'
 
 // eslint-disable-next-line react/prop-types
 function BoutiqueCard({ image, name }) {
@@ -10,6 +11,11 @@ function BoutiqueCard({ image, name }) {
   };
 
   return (
+    <motion.div
+    initial={{ rotateX:70,y:100, opacity: 0 }}
+    whileInView={{ rotateX:0,y:0, opacity: 1 }}
+    transition={{ duration: 0.5, repeat: 0 }}
+    >
     <Tilt
       tiltMaxAngleX={5}
       tiltMaxAngleY={5}
@@ -28,6 +34,7 @@ function BoutiqueCard({ image, name }) {
         </p>
       </div>
     </Tilt>
+    </motion.div>
   );
 }
 

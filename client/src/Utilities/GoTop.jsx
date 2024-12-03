@@ -47,7 +47,7 @@ function GoTopPopUp() {
     <div
     className={`${
       visible
-        ? `z-40 flex fixed bottom-5 right-[47.5%] rounded-2xl cursor-pointer text-snowWhite font-bold border-2 border-snowWhite w-16 h-5 items-center justify-center transition-all ease-in-out animate-circGrow object-cover overflow-hidden`
+        ? `z-40 flex fixed bottom-5 right-5 rounded-2xl cursor-pointer text-snowWhite font-bold border-2 border-snowWhite w-16 h-5 items-center justify-center transition-all ease-in-out animate-circGrow object-cover overflow-hidden`
         : "hidden"
     }`}
     style={{

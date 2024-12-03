@@ -14,6 +14,7 @@ import Login_SignUp from "../Pages/Login_SignUp";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Subscription from "../Pages/Subscription";
+import TestPage from "../Pages/TestPage";
 
 function Routing() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ function Routing() {
         <Route path="/user" element={currentUser?<User />:<Login_SignUp/>} />
         <Route path="/login_Signup" element={currentUser?<User/>:<Login_SignUp />} />
         <Route path="/subscription" element={currentUser?<Subscription/>:<Login_SignUp/>} />
+        <Route path="/test" element={<TestPage/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>

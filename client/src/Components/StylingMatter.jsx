@@ -1,16 +1,33 @@
+import {motion} from 'framer-motion'
+
+
 function StylingMatter() {
   return (
     <div className="mt-14 sm:mt-20 flex-col sm:flex-row flex justify-between items-center bg-[#242427]">
-      <div className="w-[95%] h-[500px] sm:w-[30%] overflow-hidden">
+      <motion.div 
+       whileInView={{ x: 0, opacity: 1 }}
+       initial={{ x: -100, opacity: 0 }}
+       transition={{
+         duration: 0.5,
+         repeat: 0, 
+       }}
+       className="w-[95%] h-[500px] sm:w-[30%] overflow-hidden">
         <img
           className="w-full h-full object-cover"
           src="https://i.pinimg.com/736x/0f/65/e3/0f65e3cd143997a2ce832e361d5fceb3.jpg"
           alt=""
         />
-      </div>
+      </motion.div>
       <div className="w-[95%] mt-5 sm:mt-0 sm:w-[50%] ">
         <p className="text-2xl font-agdasima ">Styling vs Wearing</p>
-        <p className="text-sm mt-10">
+        <motion.p
+         whileInView={{ height:"auto", opacity: 1 }}
+         initial={{ height:0, opacity: 0 }}
+         transition={{
+           duration: 0.5,
+           repeat: 0, 
+         }}
+         className="text-sm mt-10">
           Styling and wearing are two intertwined yet distinct aspects of
           fashion. Wearing simply involves putting on clothing and accessories,
           focusing on practicality, comfort, or fulfilling a basic need, such as
@@ -26,7 +43,7 @@ function StylingMatter() {
           While wearing is functional, styling adds meaning, personality, and
           individuality, making fashion a medium of communication and
           creativity.
-        </p>
+        </motion.p>
         <ul className="mt-5 text-sm hidden sm:block space-y-5">
           <li>
             <span className="font-semibold">Understand Your Fit</span> : Choose

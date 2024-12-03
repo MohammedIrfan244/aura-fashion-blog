@@ -3,7 +3,7 @@
     {
       "id": "1",
       "userName": "Irfan",
-      "isCreator":true,
+      "isCreator": true,
       "email": "irfan@gmail.com",
       "password": "irfanPassword",
       "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS04aKwRPpTYZNk1KLojzVy7hnb0BJDKeakwQ&s"
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "userName": "Jane Sherin",
-      "isCreator":true,
+      "isCreator": true,
       "email": "janesherin@gmail.com",
       "password": "janePassword",
       "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33ixSWOxYrpRTCGpcDMTufDrcCpN9B_oRXw&s"
@@ -19,7 +19,7 @@
     {
       "id": "0eef",
       "userName": "tester3",
-      "isCreator":false,
+      "isCreator": false,
       "email": "tester2@gmail.com",
       "password": "123456789",
       "conformPassword": "123456789",
@@ -192,7 +192,9 @@
       "styleName": "Hair Care Essentials with Jane Sherin",
       "category": "Haircare Essentials",
       "styleDescription": "Achieve healthy, beautiful hair with Jane Sherin’s guide to hair care. From choosing the right products to incorporating simple routines, Jane provides essential tips for maintaining strong, nourished hair. Perfect for those seeking practical advice on how to keep their hair looking its best without overdoing it.",
-      "likes": [],
+      "likes": [
+        "1"
+      ],
       "styleImage": "https://i.pinimg.com/564x/f7/f1/94/f7f1941b613a355d3523d71630f1a61e.jpg",
       "styleAuthorId": "2",
       "styleContent": [
@@ -1397,6 +1399,10 @@
         {
           "comment": "nice product",
           "commenterId": "2"
+        },
+        {
+          "comment": "k\n",
+          "commenterId": "1"
         }
       ],
       "collectionLink": "https://www.maybelline.com/lip-makeup/lip-gloss/lifter-gloss-lip-gloss-makeup-with-hyaluronic-acid?variant=Bubblegum"

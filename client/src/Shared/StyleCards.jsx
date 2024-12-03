@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {motion} from 'framer-motion'
 
 // eslint-disable-next-line react/prop-types
 function StyleCards({ image, category }) {
@@ -11,11 +12,17 @@ function StyleCards({ image, category }) {
   };
 
   return (
-    <div
+    <motion.div
+    whileInView={{  opacity: 1 }}
+    initial={{  opacity: 0 }}
+    transition={{
+      duration: 1,
+      repeat: 0, 
+    }}
       onClick={() => handleNavigate(category)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="h-[400px] w-80 overflow-hidden card_hover shadow-md shadow-black relative transition-all ease-in-out "
+      className="h-[400px] w-80 overflow-hidden shadow-md shadow-black relative transition-all"
     >
       <div
         className={`absolute inset-0 bg-gradient-to-t w-full h-full from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 z-10 ${
@@ -42,7 +49,7 @@ function StyleCards({ image, category }) {
           Click to explore
         </p>
       )}
-    </div>
+    </motion.div>
   );
 }
 
