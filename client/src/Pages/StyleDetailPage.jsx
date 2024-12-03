@@ -51,7 +51,7 @@ function StyleDetailPage() {
       <div
         className="flex bg-[#242427] h-14 sm:h-20 items-center gap-5 justify-center text-sm animate-slideY"
         style={{
-          animationDuration: "300ms",
+          animationDuration: "500ms",
           "--tw-translate-y": "-20px",
           "--tw-translate-y-70": "0px",
         }}

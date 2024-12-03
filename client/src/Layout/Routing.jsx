@@ -15,6 +15,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Subscription from "../Pages/Subscription";
 import TestPage from "../Pages/TestPage";
+import ScrollTop from "../Utilities/ScrollTop";
 
 function Routing() {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function Routing() {
   return (
     <>
       <Navbar />
+      <ScrollTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/boutiques" element={<BoutiquePage />} />

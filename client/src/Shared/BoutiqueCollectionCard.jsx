@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 // eslint-disable-next-line react/prop-types
 function BoutiqueCollectionCard({ boutique = {}, click, blur }) {
   return (
+    <motion.div
+    initial={{ y:100, opacity: 0 }}
+    whileInView={{y:0, opacity: 1 }}
+    transition={{ duration: 0.5, repeat: 0 }}
+    >
     <Tilt
       tiltMaxAngleX={5}
       tiltMaxAngleY={5}
@@ -23,6 +29,7 @@ function BoutiqueCollectionCard({ boutique = {}, click, blur }) {
       <p className="font-agdasima">{boutique?.collectionName}</p>
       <p className="text-xl font-agdasima">$ {boutique?.collectionPrice}</p>
     </Tilt>
+    </motion.div>
   );
 }
 
