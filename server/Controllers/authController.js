@@ -1,7 +1,7 @@
 import User from "../models/usersModal.js";
 import { joiUserSchema } from "../models/joiVerifyModel.js";
 import Otp from "../models/otpModel.js";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import generateOTP from "../utilities/otpGenerator.js";
 import CustomError from "../utilities/CustomError.js";

@@ -1,4 +1,4 @@
-import CustomError from "../utilities/CustomError";
+import CustomError from "../utilities/CustomError.js";
 
 const errorManager = (err, req, res, next) => {
   try {
