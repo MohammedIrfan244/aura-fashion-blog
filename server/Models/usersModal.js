@@ -5,6 +5,11 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    isCreator: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     email: {
         type: String,
         required: true,

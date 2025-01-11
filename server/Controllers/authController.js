@@ -47,6 +47,7 @@ const verifyOtpAndRegister = async (req, res, next) => {
   const { email, otp, username, password } = req.body;
   const otpEntry = await Otp.findOne({ email, otp });
   if (!otpEntry) {
+    Otp.deleteMany({ email });
     return next(new CustomError("Invalid OTP", 400));
   }
   Otp.deleteMany({ email });
@@ -82,7 +83,27 @@ const loginUser = async (req, res, next) => {
     secure: true,
     sameSite: "none",
   });
-  res.status(200).json({message:"User logged in successfully",accessToken})
+  res.status(200).json({ message: "User logged in successfully", accessToken });
 };
 
-export{sendOtp,verifyOtpAndRegister,loginUser}
+const refreshToken = async (req, res, next) => {
+  if(!req.cookies) return next(new CustomError("Refresh token not found", 401));
+  const refreshToken = req.cookies.refreshToken;
+  if (!refreshToken) {
+    return next(new CustomError("Refresh token not found", 401));
+  }
+  const decoded = jwt.verify(refreshToken, process.env.JWT_SECRET_REFRESH);
+  const user = await User.findById(decoded.id);
+  if (!user || user.refreshToken !== refreshToken) {
+    return next(new CustomError("User not found", 401));
+  }
+  const accessToken = createToken(user.id);
+  res.status(200).json({ accessToken , message: "Token refreshed successfully" });
+};
+
+const logoutUser = (req, res, next) => {
+  res.clearCookie("refreshToken");
+  res.status(200).json({ message: "User logged out successfully" });
+};
+
+export { sendOtp, verifyOtpAndRegister, loginUser , refreshToken, logoutUser };

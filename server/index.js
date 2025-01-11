@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import errorManager from "./middlewares/manageError.js";
 import connectDB from "./Configs/mongoDb.js";
 import authRoute from "./routes/authRoute.js"
+import dbRoute from "./routes/dbRoutes.js"
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 app.use("/api/auth", authRoute)
+app.use('/api/db',dbRoute)
 
 const port = process.env.PORT || 3000;
 
