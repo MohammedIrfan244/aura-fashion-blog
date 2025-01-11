@@ -6,6 +6,8 @@ import errorManager from "./middlewares/manageError.js";
 import connectDB from "./Configs/mongoDb.js";
 import authRoute from "./routes/authRoute.js"
 import dbRoute from "./routes/dbRoutes.js"
+import publicRoute from "./routes/publicRoute.js"
+import userStyleRoute from "./routes/userRoutes/styleRoutes.js"
 
 const app = express();
 
@@ -18,7 +20,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
     origin: process.env.CLIENT_URL,
-    credentials: true
+    credentials: true,
+    secure: true,
+    sameSite: "none"
 }));
 
 // routes
@@ -27,6 +31,13 @@ app.get("/", (req, res) => {
 });
 app.use("/api/auth", authRoute)
 app.use('/api/db',dbRoute)
+app.use('/api/public',publicRoute)
+app.use('/api/style',userStyleRoute)
+
+app.use("*", (req, res) => {
+    console.log("from not fouond")
+    res.status(404).json({ message: "Route not found" });
+});
 
 const port = process.env.PORT || 3000;
 

@@ -9,7 +9,7 @@ import {motion} from 'framer-motion'
 function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="h-80 md:h-96 lg:h-[450px] mt-20">
+    <div className="h-80 md:h-96 w-screen lg:h-[450px] mt-20">
       <motion.div
        initial={{ x:500, opacity: 0 }}
        whileInView={{ x:0, opacity: 1 }}

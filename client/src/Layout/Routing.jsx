@@ -34,8 +34,8 @@ function Routing() {
       <ScrollTop/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/boutiques" element={<BoutiquePage />} />
-        <Route path="/styles" element={<StylePage />} />
+        <Route path="/boutiques" element={currentUser?<BoutiquePage />:<Login_SignUp/>} />
+        <Route path="/styles" element={currentUser?<StylePage />:<Login_SignUp/>} />
         <Route path="/styles/:id" element={currentUser?<StyleDetailPage />:<Login_SignUp/>} />
         <Route path="/contact" element={currentUser?<Contact />:<Login_SignUp/>} />
         <Route path="/user" element={currentUser?<User />:<Login_SignUp/>} />

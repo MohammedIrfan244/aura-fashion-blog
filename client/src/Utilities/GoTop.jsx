@@ -45,9 +45,10 @@ function GoTopPopUp() {
 
   return (
     <div
+    onClick={scrollTop}
     className={`${
       visible
-        ? `z-40 flex fixed bottom-5 right-5 rounded-2xl cursor-pointer text-snowWhite font-bold border-2 border-snowWhite w-16 h-5 items-center justify-center transition-all ease-in-out animate-circGrow object-cover overflow-hidden`
+        ? `z-40 fixed bottom-5 right-5 rounded-2xl cursor-pointer text-snowWhite font-bold border-2 border-snowWhite w-16 h-5 items-center justify-center transition-all ease-in-out animate-circGrow object-cover overflow-hidden`
         : "hidden"
     }`}
     style={{
@@ -55,7 +56,7 @@ function GoTopPopUp() {
       animationDuration: "500ms",
     }}
   >
-    <MdArrowUpward onClick={scrollTop} />
+    <MdArrowUpward />
   </div>
   
   );
