@@ -1,38 +1,33 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { login } from "../Redux/Auth";
 import { useNavigate } from "react-router-dom";
+import axiosErrorManager from "../Utilities/axiosErrorManager";
+import axiosInstance from "../Utilities/axiosInstance";
 
-// Form fields configuration
 const formFields = [
   { label: "User Name", type: "text", name: "userName" },
   { label: "Email", type: "email", name: "email" },
-  { label: "Profile", type: "text", name: "profile" },
 ];
 
-// Initial form values
 const initialValues = {
   userName: "",
   email: "",
   password: "",
   conformPassword: "",
-  profile: "",
+  otp: "",
 };
 
-// eslint-disable-next-line react/prop-types
-function SignUp({ loginFunc }) {
+function SignUp({loginFunc}) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [otpSent, setOtpSent] = useState(false); // Tracks if OTP has been sent
   const [passwordToggle, setPasswordToggle] = useState(false);
   const [confirmPasswordToggle, setConfirmPasswordToggle] = useState(false);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Validation schema
   const validationSchema = yup.object({
     userName: yup.string().required("User Name is required"),
     email: yup.string().email("Invalid email").required("Email is required"),
@@ -41,30 +36,48 @@ function SignUp({ loginFunc }) {
       .string()
       .required("Confirm Password is required")
       .oneOf([yup.ref("password"), null], "Passwords must match"),
-    profile: yup.string(),
   });
 
-  // Formik setup
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit: async () => {
       setError("");
-      const users = await axios.get("http://localhost:3001/users");
-      const existingUser = users?.data.find(
-        (user) => user.email === formik.values.email
-      );
-
-      if (existingUser) {
-        setError("Email already exists");
-      } else {
+      if (!otpSent) {
+        // If OTP hasn't been sent yet
         try {
           setLoading(true);
-          await axios.post("http://localhost:3001/users", formik.values);
-          dispatch(login(formik.values));
+          const response = await axiosInstance.post("/auth/send-otp-mail", {
+            email: formik.values.email,
+            username: formik.values.userName,
+          })
+          setOtpSent(true); // Set OTP sent status to true
+          console.log(response.data);
+        } catch (err) {
+          console.log(axiosErrorManager(err));
+          setError("Failed to send OTP. Please try again.");
+        } finally {
+          setLoading(false);
+        }
+      } else {
+        // If OTP is sent, verify and register
+        try {
+          setLoading(true);
+          const response = await axiosInstance.post("/auth/verify-otp-and-register", {
+            email: formik.values.email,
+            otp: formik.values.otp,
+            username: formik.values.userName,
+            password: formik.values.password
+          })
+          console.log(response.data);
+          const response2 = await axiosInstance.post("/auth/login", {
+            identity: formik.values.email,
+            password: formik.values.password
+          })
+          console.log(response2.data);
           navigate("/");
-        } catch (error) {
-          setError(error.message);
+        } catch (err) {
+          setError(err.response?.data?.message || "Verification failed.");
         } finally {
           setLoading(false);
         }
@@ -90,6 +103,7 @@ function SignUp({ loginFunc }) {
                 onBlur={formik.handleBlur}
                 value={formik.values[field.name]}
                 placeholder={`Enter your ${field.label.toLowerCase()}`}
+                disabled={otpSent} // Disable input fields if OTP is sent
               />
               {formik.touched[field.name] && formik.errors[field.name] && (
                 <p className="text-red-600 text-sm">
@@ -99,67 +113,94 @@ function SignUp({ loginFunc }) {
             </div>
           ))}
 
-          <div className="space-y-1">
-            <div className="relative">
-              <input
-                type={passwordToggle ? "text" : "password"}
-                id="password"
-                name="password"
-                className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
-                placeholder="Enter your password"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.password}
-              />
-              <button
-                type="button"
-                onClick={() => setPasswordToggle(!passwordToggle)}
-                className="absolute inset-y-0 right-3 flex items-center text-snowWhite focus:outline-none"
-              >
-                {passwordToggle ? <VscEyeClosed /> : <VscEye />}
-              </button>
-            </div>
-            {formik.touched.password && formik.errors.password && (
-              <p className="text-red-600 text-sm">{formik.errors.password}</p>
-            )}
-          </div>
+          {!otpSent && (
+            <>
+              {/* Password Fields */}
+              <div className="space-y-1">
+                <div className="relative">
+                  <input
+                    type={passwordToggle ? "text" : "password"}
+                    id="password"
+                    name="password"
+                    className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
+                    placeholder="Enter your password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setPasswordToggle(!passwordToggle)}
+                    className="absolute inset-y-0 right-3 flex items-center text-snowWhite focus:outline-none"
+                  >
+                    {passwordToggle ? <VscEyeClosed /> : <VscEye />}
+                  </button>
+                </div>
+                {formik.touched.password && formik.errors.password && (
+                  <p className="text-red-600 text-sm">
+                    {formik.errors.password}
+                  </p>
+                )}
+              </div>
+              <div className="space-y-1">
+                <div className="relative">
+                  <input
+                    type={confirmPasswordToggle ? "text" : "password"}
+                    id="conformPassword"
+                    name="conformPassword"
+                    className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
+                    placeholder="Confirm your password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.conformPassword}
+                  />
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setConfirmPasswordToggle(!confirmPasswordToggle)
+                    }
+                    className="absolute inset-y-0 right-3 flex items-center text-snowWhite focus:outline-none"
+                  >
+                    {confirmPasswordToggle ? <VscEyeClosed /> : <VscEye />}
+                  </button>
+                </div>
+                {formik.touched.conformPassword &&
+                  formik.errors.conformPassword && (
+                    <p className="text-red-600 text-sm">
+                      {formik.errors.conformPassword}
+                    </p>
+                  )}
+              </div>
+            </>
+          )}
 
-          <div className="space-y-1">
-            <div className="relative">
+          {otpSent && (
+            <div className="space-y-1">
               <input
-                type={confirmPasswordToggle ? "text" : "password"}
-                id="conformPassword"
-                name="conformPassword"
+                type="text"
+                id="otp"
+                name="otp"
                 className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
-                placeholder="Confirm your password"
+                placeholder="Enter the OTP"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                value={formik.values.conformPassword}
+                value={formik.values.otp}
               />
-              <button
-                type="button"
-                onClick={() => setConfirmPasswordToggle(!confirmPasswordToggle)}
-                className="absolute inset-y-0 right-3 flex items-center text-snowWhite focus:outline-none"
-              >
-                {confirmPasswordToggle ? <VscEyeClosed /> : <VscEye />}
-              </button>
             </div>
-            {formik.touched.conformPassword &&
-              formik.errors.conformPassword && (
-                <p className="text-red-600 text-sm">
-                  {formik.errors.conformPassword}
-                </p>
-              )}
-          </div>
+          )}
 
           {error && <p className="text-red-600 text-sm">{error}</p>}
 
           <button
             type="submit"
-            className="w-full bg-snowWhite text-[#2E2E33] font-medium py-1 px-2 hover:bg-electricBlue focus:outline-none focus:ring-1 focus:ring-[#2E2E33] focus:ring-offset-1"
+            className="w-full bg-snowWhite text-[#2E2E33] font-bold py-1 px-2 hover:bg-electricBlue focus:outline-none focus:ring-1 focus:ring-[#2E2E33] focus:ring-offset-1"
             disabled={loading}
           >
-            {loading ? "Loading..." : "Sign Up"}
+            {loading
+              ? "Loading..."
+              : otpSent
+              ? "Verify & Register"
+              : "Get OTP"}
           </button>
         </form>
         <p className="text-sm text-center text-snowWhite mt-4">

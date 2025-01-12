@@ -15,11 +15,7 @@ const createRefreshToken = (id) => {
 };
 
 const sendOtp = async (req, res, next) => {
-  const { error, value } = joiUserSchema.validate(req.body);
-  if (error) {
-    return next(new CustomError(error.message, 400));
-  }
-  const { email, username } = value;
+  const { email, username } = req.body;
   const existingEmail = await User.findOne({ email });
   const existingUsername = await User.findOne({ username });
   if (existingEmail || existingUsername) {
@@ -44,7 +40,11 @@ const sendOtp = async (req, res, next) => {
 };
 
 const verifyOtpAndRegister = async (req, res, next) => {
-  const { email, otp, username, password } = req.body;
+  const {value,error} = joiUserSchema.validate(req.body);
+  if (error) {
+    return next(new CustomError(error.details[0].message, 400));
+  }
+  const { email, otp, username, password } = value;
   const otpEntry = await Otp.findOne({ email, otp });
   if (!otpEntry) {
     Otp.deleteMany({ email });
