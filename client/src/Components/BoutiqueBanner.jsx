@@ -23,7 +23,6 @@ function BoutiqueBanner() {
     try {
       const response = await axios.get(import.meta.env.VITE_API_URL + "/public/all-boutique-banners");
       setCategories(response.data.categories);
-      console.log(response.data.categories);
     } catch (err) {
       console.log(axiosErrorManager(err));
     }
