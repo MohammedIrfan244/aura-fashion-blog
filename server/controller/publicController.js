@@ -1,5 +1,5 @@
-import BoutiqueCategory from "../models/boutiqueCategoryModel.js";
-import StyleCategory from "../models/styleCategoryModel.js";
+import BoutiqueCategory from "../model/boutiqueCategoryModel.js";
+import StyleCategory from "../model/styleCategoryModel.js";
 import CustomError from "../utilities/CustomError.js";
 
 const getAllBoutiqueCategories = async(req,res,next)=>{

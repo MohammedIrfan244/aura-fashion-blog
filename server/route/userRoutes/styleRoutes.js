@@ -1,7 +1,7 @@
 import express from 'express'
 import tryCatch from '../../utilities/tryCatch.js'
 import { verifyToken } from '../../middlewares/verfiyToken.js'
-import { getOneStyle, getStyleByCategory } from '../../controllers/userControllers/styleController.js'
+import { getOneStyle, getStyleByCategory } from '../../controller/userControllers/styleController.js'
 import idValidation from '../../middlewares/idValidation.js'
 
 const route=express.Router()

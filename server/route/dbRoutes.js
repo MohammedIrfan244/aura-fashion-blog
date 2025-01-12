@@ -1,7 +1,7 @@
 import express from "express";
 import tryCatch from "../utilities/tryCatch.js";
 import idValidation from "../middlewares/idValidation.js";
-import { addNewStyleCategory,removeStyleCategory } from "../controllers/dbController/styleCategoryHandler.js";
+import { addNewStyleCategory,removeStyleCategory } from "../controller/dbController/styleCategoryHandler.js";
 
 
 const router = express.Router();

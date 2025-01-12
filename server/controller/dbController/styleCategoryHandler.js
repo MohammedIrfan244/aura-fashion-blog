@@ -1,5 +1,5 @@
-import StyleCategory from "../../models/styleCategoryModel.js";
-import Style from "../../models/styleModel.js";
+import StyleCategory from "../../model/styleCategoryModel.js";
+import Style from "../../model/styleModel.js";
 import CustomError from "../../utilities/CustomError.js";
 
 const addNewStyleCategory = async (req, res,next) => {

@@ -1,6 +1,6 @@
 import  express from "express";
 import tryCatch from "../utilities/tryCatch.js";
-import { getAllBoutiqueCategories,getAllStyleCategories ,getAllBoutiqueBanners} from "../controllers/publicController.js";
+import { getAllBoutiqueCategories,getAllStyleCategories ,getAllBoutiqueBanners} from "../controller/publicController.js";
 
 const router = express.Router();
 

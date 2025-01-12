@@ -1,11 +1,11 @@
-import User from "../models/usersModal.js";
-import { joiUserSchema } from "../models/joiVerifyModel.js";
-import Otp from "../models/otpModel.js";
+import User from "../model/usersModal.js";
+import { joiUserSchema } from "../model/joiVerifyModel.js";
+import Otp from "../model/otpModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import generateOTP from "../utilities/otpGenerator.js";
 import CustomError from "../utilities/CustomError.js";
-import transporter from "../configs/nodemailer.js";
+import transporter from "../config/nodemailer.js";
 
 const createToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });

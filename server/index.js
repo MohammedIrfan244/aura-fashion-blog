@@ -3,11 +3,11 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import errorManager from "./middlewares/manageError.js";
-import connectDB from "./Configs/mongoDb.js";
-import authRoute from "./routes/authRoute.js"
-import dbRoute from "./routes/dbRoutes.js"
-import publicRoute from "./routes/publicRoute.js"
-import userStyleRoute from "./routes/userRoutes/styleRoutes.js"
+import connectDB from "./config/mongoDb.js";
+import authRoute from "./route/authRoute.js"
+import dbRoute from "./route/dbRoutes.js"
+import publicRoute from "./route/publicRoute.js"
+import userStyleRoute from "./route/userRoutes/styleRoutes.js"
 
 const app = express();
 

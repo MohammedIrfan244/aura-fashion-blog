@@ -1,6 +1,6 @@
 import express from "express";
 import tryCatch from "../utilities/tryCatch.js";
-import { loginUser, logoutUser, refreshToken, sendOtp, verifyOtpAndRegister } from "../controllers/authController.js";
+import { loginUser, logoutUser, refreshToken, sendOtp, verifyOtpAndRegister } from "../controller/authController.js";
 
 
 const router = express.Router();

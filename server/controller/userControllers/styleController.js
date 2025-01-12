@@ -1,4 +1,4 @@
-import Style from "../../models/styleModel.js";
+import Style from "../../model/styleModel.js";
 import CustomError from "../../utilities/CustomError.js";
 
 const getStyleByCategory = async (req, res, next) => {
