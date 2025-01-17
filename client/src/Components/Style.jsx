@@ -78,7 +78,7 @@ function Style() {
             spaceBetween: 10,
           },
           480: {
-            slidesPerView: 2.25,
+            slidesPerView: 1.5,
             spaceBetween: 15,
           },
           768: {
