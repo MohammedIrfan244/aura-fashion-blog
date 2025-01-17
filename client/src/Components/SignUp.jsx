@@ -44,14 +44,13 @@ function SignUp({loginFunc}) {
     onSubmit: async () => {
       setError("");
       if (!otpSent) {
-        // If OTP hasn't been sent yet
         try {
           setLoading(true);
           const response = await axiosInstance.post("/auth/send-otp-mail", {
             email: formik.values.email,
             username: formik.values.userName,
           })
-          setOtpSent(true); // Set OTP sent status to true
+          setOtpSent(true);
           console.log(response.data);
         } catch (err) {
           console.log(axiosErrorManager(err));
@@ -60,7 +59,6 @@ function SignUp({loginFunc}) {
           setLoading(false);
         }
       } else {
-        // If OTP is sent, verify and register
         try {
           setLoading(true);
           const response = await axiosInstance.post("/auth/verify-otp-and-register", {

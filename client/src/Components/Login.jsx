@@ -22,6 +22,8 @@ function Login({ registerFunc }) {
         password,
       });
       console.log(response.data)
+      localStorage.setItem("accessToken", response.data.accessToken);
+      localStorage.setItem("user", JSON.stringify(response.data.userCredentials));
       toast.success(response.data.message);
       setError("");
       setPassword("");

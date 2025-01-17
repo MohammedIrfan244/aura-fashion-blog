@@ -1,10 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home";
 import BoutiquePage from "../Pages/BoutiquePage";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchBoutiques } from "../Redux/BoutiqueSlice";
-import { fetchStyles } from "../Redux/StyleSlice";
+import { useSelector } from "react-redux";
 import StylePage from "../Pages/StylePage";
 import Contact from "../Pages/Contact";
 import StyleDetailPage from "../Pages/StyleDetailPage";
@@ -18,15 +15,7 @@ import TestPage from "../Pages/TestPage";
 import ScrollTop from "../Utilities/ScrollTop";
 
 function Routing() {
-  const dispatch = useDispatch();
   const {currentUser}=useSelector((state) => state.currentUser);
-  useEffect(() => {
-    dispatch(fetchBoutiques("http://localhost:3001/boutiques"));
-  }, [dispatch]);
-
-  useEffect(() => {
-    dispatch(fetchStyles("http://localhost:3001/styles"));
-  }, [dispatch]);
 
   return (
     <>
