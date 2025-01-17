@@ -1,4 +1,4 @@
-import User from "../model/usersModal.js";
+import User from "../model/usersModel.js";
 import { joiUserSchema } from "../model/joiVerifyModel.js";
 import Otp from "../model/otpModel.js";
 import bcrypt from "bcrypt";
