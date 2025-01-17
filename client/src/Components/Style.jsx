@@ -70,13 +70,11 @@ function Style() {
       <h1 className="my-5 sm:my-10 text-2xl font-windSong text-center font-bold">Chose Your Style</h1>
       <Swiper
       className="py-1"
-        slidesPerView={4}
-        spaceBetween={20}
         loop={true}
         centeredSlides={true}
         breakpoints={{
           320: {
-            slidesPerView: 1.25,
+            slidesPerView: 1.1,
             spaceBetween: 10,
           },
           480: {

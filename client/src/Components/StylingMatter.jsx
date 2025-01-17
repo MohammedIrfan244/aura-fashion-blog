@@ -8,7 +8,7 @@ function StylingMatter() {
        whileInView={{ x: 0, opacity: 1 }}
        initial={{ x: -100, opacity: 0 }}
        transition={{
-         duration: 0.5,
+         duration: 0.3,
          repeat: 0, 
        }}
        className="w-[95%] h-[500px] sm:w-[30%] overflow-hidden">
