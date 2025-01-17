@@ -1,65 +1,36 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { login } from "../Redux/Auth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { VscEye } from "react-icons/vsc";
 import { VscEyeClosed } from "react-icons/vsc";
 import axios from "axios";
+import axiosErrorManager from "../Utilities/axiosErrorManager";
+import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 function Login({ registerFunc }) {
   const [passwordToggle, setPasswordToggle] = useState(false);
-  const [email, setEmail] = useState("");
+  const [identity, setidentity] = useState("");
   const [password, setPassword] = useState("");
-  const [passError, setPassError] = useState(false);
-  const [users, setUsers] = useState([]);
-  const dispatch = useDispatch();
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get("http://localhost:3001/users");
-        return response.data;
-      } catch (err) {
-        console.log("Error while fetching users ", err);
-      }
-    };
-    fetchUsers().then((data) => {
-      setUsers(data);
-    });
-  }, []);
-
-  const isFormValid = () => email.trim() !== "" && password.trim() !== "";
-
-  const findUserByEmail = () => users?.find((user) => user?.email === email);
-
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-
-    if (!isFormValid()) {
-      setPassError(true);
-      return;
+    try {
+      const response = await axios.post(import.meta.env.VITE_API_URL + "/auth/login", {
+        identity,
+        password,
+      });
+      console.log(response.data)
+      toast.success(response.data.message);
+      setError("");
+      setPassword("");
+      setidentity("");
+      navigate('/')
+    } catch (err) {
+      console.log(axiosErrorManager(err));
+      setError(axiosErrorManager(err));
     }
-
-    const inputUser = findUserByEmail();
-
-    if (inputUser) {
-      if (inputUser.password === password) {
-        dispatch(login(inputUser));
-        toast.success("Logged in successfully");
-        navigate("/");
-      } else {
-        setPassError(true);
-      }
-    } else {
-      toast.error("New here? Please create an account.");
-    }
-
-    setEmail("");
-    setPassword("");
-    setPasswordToggle(false);
   };
 
   return (
@@ -71,13 +42,13 @@ function Login({ registerFunc }) {
         <form onSubmit={handleFormSubmit} className="space-y-5">
           <div>
             <input
-              type="email"
-              id="email"
+              type="identity"
+              id="identity"
               required
-              value={email}
+              value={identity}
               className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
-              placeholder="Enter your email"
-              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your identity"
+              onChange={(e) => setidentity(e.target.value)}
             />
           </div>
 
@@ -100,7 +71,7 @@ function Login({ registerFunc }) {
                 {passwordToggle ? <VscEyeClosed /> : <VscEye />}
               </button>
             </div>
-            {passError && (
+            {error && (
               <p className="text-red-600 text-sm mt-1">Password is incorrect</p>
             )}
           </div>
