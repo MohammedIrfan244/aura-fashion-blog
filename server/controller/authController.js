@@ -94,11 +94,15 @@ const refreshToken = async (req, res, next) => {
   }
   const decoded = jwt.verify(refreshToken, process.env.JWT_SECRET_REFRESH);
   const user = await User.findById(decoded.id);
-  if (!user || user.refreshToken !== refreshToken) {
+  if (!user) {
     return next(new CustomError("User not found", 401));
   }
   const accessToken = createToken(user.id);
-  res.status(200).json({ accessToken , message: "Token refreshed successfully" });
+  const userCredentials = {
+    username: user.username,
+    profile:user.profile
+  }
+  res.status(200).json({ accessToken , message: "Token refreshed successfully",user:userCredentials });
 };
 
 const logoutUser = (req, res, next) => {

@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 import errorManager from "./middlewares/manageError.js";
 import connectDB from "./config/mongoDb.js";
 import authRoute from "./route/authRoute.js"
-import dbRoute from "./route/dbRoutes.js"
 import publicRoute from "./route/publicRoute.js"
 import userStyleRoute from "./route/userRoutes/styleRoutes.js"
 
@@ -30,7 +29,6 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 app.use("/api/auth", authRoute)
-app.use('/api/db',dbRoute)
 app.use('/api/public',publicRoute)
 app.use('/api/style',userStyleRoute)
 
