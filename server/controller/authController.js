@@ -77,13 +77,14 @@ const loginUser = async (req, res, next) => {
   }
   const accessToken = createToken(user.id);
   const refreshToken = createRefreshToken(user.id);
+  const userCredentials = { username: user.username, profile: user.profile };
 
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: true,
     sameSite: "none",
   });
-  res.status(200).json({ message: "User logged in successfully", accessToken });
+  res.status(200).json({ message: "User logged in successfully", accessToken, userCredentials });
 };
 
 const refreshToken = async (req, res, next) => {
@@ -98,11 +99,7 @@ const refreshToken = async (req, res, next) => {
     return next(new CustomError("User not found", 401));
   }
   const accessToken = createToken(user.id);
-  const userCredentials = {
-    username: user.username,
-    profile:user.profile
-  }
-  res.status(200).json({ accessToken , message: "Token refreshed successfully",user:userCredentials });
+  res.status(200).json({ accessToken , message: "Token refreshed successfully" });
 };
 
 const logoutUser = (req, res, next) => {
