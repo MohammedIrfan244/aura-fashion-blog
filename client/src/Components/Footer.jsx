@@ -11,8 +11,8 @@ function Footer() {
   return (
     <div className="h-80 md:h-96 w-screen lg:h-[450px] mt-20">
       <motion.div
-       initial={{ x:500, opacity: 0 }}
-       whileInView={{ x:0, opacity: 1 }}
+       initial={{ x:500, opacity: 0 ,width:0 }}
+       whileInView={{ x:0, opacity: 1 ,width:'100%' }}
        transition={{ duration: 0.3, repeat: 0 }}
        className="bg-white flex h-1/2 items-center justify-between px-5">
       <div className="flex items-center space-x-5 sm:space-x-10 md:space-x-20 lg:space-x-24">

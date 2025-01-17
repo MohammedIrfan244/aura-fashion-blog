@@ -71,8 +71,8 @@ function Login({ registerFunc }) {
                 {passwordToggle ? <VscEyeClosed /> : <VscEye />}
               </button>
             </div>
-            {error && (
-              <p className="text-red-600 text-sm mt-1">Password is incorrect</p>
+            {error.length > 0 && (
+              <p className="text-red-600 text-sm mt-1">{error}</p>
             )}
           </div>
 
