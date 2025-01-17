@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { VscEye } from "react-icons/vsc";
 import { VscEyeClosed } from "react-icons/vsc";
 import axios from "axios";
 import axiosErrorManager from "../Utilities/axiosErrorManager";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../Redux/Auth";
 
 // eslint-disable-next-line react/prop-types
 function Login({ registerFunc }) {
@@ -13,18 +14,18 @@ function Login({ registerFunc }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(import.meta.env.VITE_API_URL + "/auth/login", {
-        identity,
+        identity: identity.trim(),
         password,
       });
       console.log(response.data)
       localStorage.setItem("accessToken", response.data.accessToken);
-      localStorage.setItem("user", JSON.stringify(response.data.userCredentials));
-      toast.success(response.data.message);
+      dispatch(login(response.data.userCredentials));
       setError("");
       setPassword("");
       setidentity("");
@@ -49,7 +50,7 @@ function Login({ registerFunc }) {
               required
               value={identity}
               className="mt-1 block w-full focus:outline-dotted bg-[#2E2E33] hover:shadow hover:shadow-electricBlue text-snowWhite py-1 px-3 placeholder:text-snowWhite placeholder:text-sm"
-              placeholder="Enter your identity"
+              placeholder="Enter your username or email"
               onChange={(e) => setidentity(e.target.value)}
             />
           </div>

@@ -40,7 +40,7 @@ axiosInstance.interceptors.response.use(
           }
         );
         const newAccessToken = response.data.accessToken;
-
+        console.log(newAccessToken);
        localStorage.setItem("token", newAccessToken);
         axiosInstance.defaults.headers.common[
           "Authorization"
