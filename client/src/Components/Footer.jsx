@@ -11,9 +11,9 @@ function Footer() {
   return (
     <div className="h-80 md:h-96 w-screen lg:h-[450px] mt-20">
       <motion.div
-       initial={{ x:500, opacity: 0 ,width:0 }}
-       whileInView={{ x:0, opacity: 1 ,width:'100%' }}
-       transition={{ duration: 0.3, repeat: 0 }}
+      initial={{ x:-200, opacity: 0 }}
+      whileInView={{ x:0, opacity: 1 }}
+      transition={{ duration: 0.3, repeat: 0 }}
        className="bg-white flex h-1/2 items-center justify-between px-5">
       <div className="flex items-center space-x-5 sm:space-x-10 md:space-x-20 lg:space-x-24">
         <img src={auraHero} className='w-[70px] sm:w-[100px]' alt="Aura logo" />
@@ -24,9 +24,9 @@ function Footer() {
       </div>
       </motion.div>
       <motion.div 
-       initial={{ x:-500, opacity: 0 }}
+       initial={{ x:-300, opacity: 0 }}
        whileInView={{ x:0, opacity: 1 }}
-       transition={{ duration: 0.3, repeat: 0 }}
+       transition={{ duration: 0.5, repeat: 0 }}
        className="bg-black p-10 h-1/2 flex items-start justify-between">
       <p className='hidden sm:block sm:text-2xl md:text-3xl lg:text-4xl w-60'>Elevate Your Fashion with Aura</p>
       <div className='space-y-1'>

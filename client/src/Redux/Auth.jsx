@@ -1,5 +1,6 @@
 import {  createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import axiosErrorManager from "../Utilities/axiosErrorManager";
 
 const INITIAL_STATE = {
   currentUser: JSON.parse(localStorage.getItem("currentUser")) || null,
@@ -12,7 +13,7 @@ export const registerNewUser = createAsyncThunk(
       const response = await axios.post(url, data);
       return response.data;
     } catch (err) {
-      console.log("Error while registering new user ", err);
+      console.log(axiosErrorManager(err));
     }
   }
 );
