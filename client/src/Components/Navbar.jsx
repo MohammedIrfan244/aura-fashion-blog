@@ -175,7 +175,7 @@ function Navbar() {
                 label == "HOME"
                 ? navigate("/")
                 : label == "BOUTIQUES"
-                ? navigate("boutiques?brand=Fenty Beauty")  
+                ? navigate("boutiques?brand=fentybeauty")  
                 : navigate("/styles?category=Everyday Makeup")
               }
               className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"

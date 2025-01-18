@@ -21,7 +21,7 @@ function BoutiqueBanner() {
   const [categories, setCategories] = useState([]);
   const fetchCategories = async () => {
     try {
-      const response = await axios.get(import.meta.env.VITE_API_URL + "/public/all-boutique-banners");
+      const response = await axios.get(import.meta.env.VITE_API_URL + "/public/all-boutique-badges");
       setCategories(response.data.categories);
     } catch (err) {
       console.log(axiosErrorManager(err));
@@ -59,7 +59,7 @@ function BoutiqueBanner() {
     >
       {categories?.map((brand, index) => (
         <SwiperSlide key={index} >
-          <img src={brand?.banner} className="h-full w-full object-cover" alt="brand" />
+          <img src={brand?.badge} className="h-full w-full object-cover" alt="brand" />
         </SwiperSlide>
       ))}
     </Swiper>

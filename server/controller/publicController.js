@@ -10,8 +10,8 @@ const getAllBoutiqueCategories = async(req,res,next)=>{
     res.status(200).json({categories,message:"Categories fetched successfully"});
 }
 
-const getAllBoutiqueBanners = async(req,res,next)=>{
-    const categories= await BoutiqueCategory.find({},{banner:1})
+const getAllBoutiqueBadges = async(req,res,next)=>{
+    const categories= await BoutiqueCategory.find({},{badge:1})
     if(!categories) {
         return next(new CustomError("Boutique categories not found", 404));
     }
@@ -26,4 +26,4 @@ const getAllStyleCategories = async(req,res,next)=>{
     res.status(200).json({categories,message:"Categories fetched successfully"});
 }
 
-export {getAllBoutiqueCategories,getAllStyleCategories,getAllBoutiqueBanners}
+export {getAllBoutiqueCategories,getAllStyleCategories,getAllBoutiqueBadges}

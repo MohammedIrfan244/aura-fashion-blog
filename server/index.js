@@ -7,6 +7,7 @@ import connectDB from "./config/mongoDb.js";
 import authRoute from "./route/authRoute.js"
 import publicRoute from "./route/publicRoute.js"
 import userStyleRoute from "./route/userRoutes/styleRoutes.js"
+import userBoutiqueRoute from "./route/userRoutes/boutiqueRoutes.js"
 import userUpdateRoute from "./route/userRoutes/userUpdateRoute.js"
 
 const app = express();
@@ -32,6 +33,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoute)
 app.use('/api/public',publicRoute)
 app.use('/api/style',userStyleRoute)
+app.use('/api/boutique',userBoutiqueRoute)
 app.use('/api/update',userUpdateRoute)
 
 app.use("*", (req, res) => {
