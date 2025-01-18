@@ -40,7 +40,7 @@ const sendOtp = async (req, res, next) => {
 };
 
 const verifyOtpAndRegister = async (req, res, next) => {
-  const {value,error} = joiUserSchema.validate(req.body);
+  const { value, error } = joiUserSchema.validate(req.body);
   if (error) {
     return next(new CustomError(error.details[0].message, 400));
   }
@@ -78,17 +78,23 @@ const loginUser = async (req, res, next) => {
   const accessToken = createToken(user.id);
   const refreshToken = createRefreshToken(user.id);
   const userCredentials = { username: user.username, profile: user.profile };
-
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: true,
     sameSite: "none",
   });
-  res.status(200).json({ message: "User logged in successfully", accessToken, userCredentials });
+  res
+    .status(200)
+    .json({
+      message: "User logged in successfully",
+      accessToken,
+      userCredentials,
+    });
 };
 
 const refreshToken = async (req, res, next) => {
-  if(!req.cookies) return next(new CustomError("Refresh token not found", 401));
+  if (!req.cookies)
+    return next(new CustomError("Refresh token not found", 401));
   const refreshToken = req.cookies.refreshToken;
   if (!refreshToken) {
     return next(new CustomError("Refresh token not found", 401));
@@ -99,7 +105,9 @@ const refreshToken = async (req, res, next) => {
     return next(new CustomError("User not found", 401));
   }
   const accessToken = createToken(user.id);
-  res.status(200).json({ accessToken , message: "Token refreshed successfully" });
+  res
+    .status(200)
+    .json({ accessToken, message: "Token refreshed successfully" });
 };
 
 const logoutUser = (req, res, next) => {
@@ -107,4 +115,4 @@ const logoutUser = (req, res, next) => {
   res.status(200).json({ message: "User logged out successfully" });
 };
 
-export { sendOtp, verifyOtpAndRegister, loginUser , refreshToken, logoutUser };
+export { sendOtp, verifyOtpAndRegister, loginUser, refreshToken, logoutUser };

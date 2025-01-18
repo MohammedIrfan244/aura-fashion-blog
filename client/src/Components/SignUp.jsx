@@ -6,6 +6,8 @@ import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { useNavigate } from "react-router-dom";
 import axiosErrorManager from "../Utilities/axiosErrorManager";
 import axiosInstance from "../Utilities/axiosInstance";
+import { useDispatch } from "react-redux";
+import { login } from "../Redux/Auth";
 
 const formFields = [
   { label: "User Name", type: "text", name: "userName" },
@@ -23,15 +25,31 @@ const initialValues = {
 function SignUp({loginFunc}) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [otpSent, setOtpSent] = useState(false); // Tracks if OTP has been sent
+  const [otpSent, setOtpSent] = useState(false);
   const [passwordToggle, setPasswordToggle] = useState(false);
   const [confirmPasswordToggle, setConfirmPasswordToggle] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const validationSchema = yup.object({
-    userName: yup.string().required("User Name is required"),
-    email: yup.string().email("Invalid email").required("Email is required"),
-    password: yup.string().required("Password is required"),
+    userName: yup
+      .string()
+      .required("User Name is required")
+      .min(3, "Username must be at least 3 characters")
+      .max(10, "Username cannot exceed 10 characters")
+      .matches(
+        /^[a-z_]+$/,
+        "Username can only contain lowercase letters and underscores"
+      ),
+    email: yup
+      .string()
+      .email("Invalid email")
+      .required("Email is required"),
+    password: yup
+      .string()
+      .required("Password is required")
+      .min(6, "Password must be at least 6 characters")
+      .max(15, "Password cannot exceed 15 characters"),
     conformPassword: yup
       .string()
       .required("Confirm Password is required")
@@ -61,18 +79,18 @@ function SignUp({loginFunc}) {
       } else {
         try {
           setLoading(true);
-          const response = await axiosInstance.post("/auth/verify-otp-and-register", {
+           await axiosInstance.post("/auth/verify-otp-and-register", {
             email: formik.values.email,
             otp: formik.values.otp,
             username: formik.values.userName,
             password: formik.values.password
           })
-          console.log(response.data);
-          const response2 = await axiosInstance.post("/auth/login", {
+          const response = await axiosInstance.post("/auth/login", {
             identity: formik.values.email,
             password: formik.values.password
           })
-          console.log(response2.data);
+          localStorage.setItem("accessToken", response.data.accessToken);
+                dispatch(login(response.data.userCredentials));
           navigate("/");
         } catch (err) {
           setError(err.response?.data?.message || "Verification failed.");
@@ -101,7 +119,7 @@ function SignUp({loginFunc}) {
                 onBlur={formik.handleBlur}
                 value={formik.values[field.name]}
                 placeholder={`Enter your ${field.label.toLowerCase()}`}
-                disabled={otpSent} // Disable input fields if OTP is sent
+                disabled={otpSent}
               />
               {formik.touched[field.name] && formik.errors[field.name] && (
                 <p className="text-red-600 text-sm">
@@ -113,7 +131,6 @@ function SignUp({loginFunc}) {
 
           {!otpSent && (
             <>
-              {/* Password Fields */}
               <div className="space-y-1">
                 <div className="relative">
                   <input

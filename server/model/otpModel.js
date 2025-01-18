@@ -11,11 +11,9 @@ const otpSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now(),
-        expires: 300
+        default: () => Date.now(),
+        expires: 300 
     }
-}, {
-    timestamps: true,
 })
 
 const Otp = mongoose.model('Otp', otpSchema)

@@ -23,7 +23,6 @@ function Login({ registerFunc }) {
         identity: identity.trim(),
         password,
       });
-      console.log(response.data)
       localStorage.setItem("accessToken", response.data.accessToken);
       dispatch(login(response.data.userCredentials));
       setError("");

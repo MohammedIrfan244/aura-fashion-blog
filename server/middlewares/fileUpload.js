@@ -13,7 +13,7 @@ const uploadToCloudinary = async (req,res,next) => {
             },
             (error, result) => {
                 if (error) {
-                    console.log(error);
+                    console.log("from file upload middleware",error);
                     return next(new CustomError("Error uploading file to cloudinary", 400));
                 }
                 req.uploadedFile = result;

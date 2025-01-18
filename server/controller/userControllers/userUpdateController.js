@@ -3,32 +3,47 @@ import Otp from "../../model/otpModel.js";
 import bcrypt from "bcrypt";
 import CustomError from "../../utilities/CustomError.js";
 import transporter from "../../config/nodemailer.js";
+import generateOTP from "../../utilities/otpGenerator.js";
 
 const updateUser = async (req, res, next) => {
- if(req.file){
-     const user = await User.findById(req.user.id);
-     console.log("from update",req.file)
- }
- if(req.body.username){
-     const usernameExists = await User.findOne({username: req.body.username});
-     if(usernameExists){
-        console.log("Username already exists")
-         return next(new CustomError("Username already exists", 400));
-     }
-     const user = await User.findById(req.user.id);
-     console.log("from update",req.body.username)
- }
+  const user = await User.findById(req.user.id);
+  if (!user) {
+    return next(new CustomError("User not found", 404));
+  }
+  if (
+    req.body.username &&
+    req.username !== ""
+  ) {
+    const existingUser = await User.findOne({ username: req.body.username });
+    if (existingUser) {
+      return next(new CustomError("Username already exists", 400));
+    }
+    user.username = req.body.username;
+  }
+  if (req.uploadedFile) {
+    user.profile = req.uploadedFile.secure_url;
+  }
+  const userCredentials = {
+    username: req.body.username && req.body.username!=="" ? req.body.username : user.username,
+    profile: req.uploadedFile ? req.uploadedFile.secure_url : user.profile,
+  };
+  await user.save();
+  res
+    .status(200)
+    .json({ message: "User updated successfully", userCredentials });
 };
 
-
 const sendPasswordResetOTP = async (req, res, next) => {
-  try {
-    const { email } = req.body;
-    const user = await User.findOne({ email });
-
+  const {currentPassword}=req.body
+    const user = await User.findById(req.user.id);
     if (!user) {
       return next(new CustomError("User not found", 404));
     }
+    const isMatch = await bcrypt.compare(currentPassword, user.password);
+    if (!isMatch) {
+      return next(new CustomError("Invalid current password", 400));
+    }
+    const email = user.email;
 
     const otp = generateOTP();
     const otpEntry = new Otp({
@@ -46,38 +61,34 @@ const sendPasswordResetOTP = async (req, res, next) => {
     await transporter.sendMail(mailOptions);
 
     res.status(200).json({ message: "Password reset OTP sent successfully" });
-  } catch (error) {
-    next(error);
-  }
 };
 
 const verifyOTPAndResetPassword = async (req, res, next) => {
-  try {
-    const { email, otp, newPassword } = req.body;
 
-    const otpRecord = await Otp.findOne({
-      email,
-      otp,
-      expiresAt: { $gt: new Date() },
-    });
+      const { otp, newPassword } = req.body;
 
-    if (!otpRecord) {
-      return next(new CustomError("Invalid or expired OTP", 400));
-    }
+      const user = await User.findById(req.user.id);
+      if (!user) {
+          return next(new CustomError("User not found", 404));
+      }
+      const email = user.email;
 
-    const hashedPassword = await bcrypt.hash(newPassword, 10);
-    await User.findOneAndUpdate({ email }, { password: hashedPassword });
+      const otpRecord = await Otp.findOne({
+          email,
+          otp
+      });
 
-    await Otp.deleteOne({ _id: otpRecord._id });
+      if (!otpRecord) {
+          return next(new CustomError("Invalid or expired OTP", 400));
+      }
 
-    res.status(200).json({ message: "Password updated successfully" });
-  } catch (error) {
-    next(error);
-  }
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      await User.findOneAndUpdate({ email }, { password: hashedPassword });
+
+
+      await Otp.deleteOne({ _id: otpRecord._id });
+
+      res.status(200).json({ message: "Password updated successfully" });
 };
 
-export {
-  updateUser,
-  sendPasswordResetOTP,
-  verifyOTPAndResetPassword,
-};
+export { updateUser, sendPasswordResetOTP, verifyOTPAndResetPassword };
