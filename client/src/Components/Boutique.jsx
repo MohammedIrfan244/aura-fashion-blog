@@ -68,7 +68,7 @@ function Boutique() {
       <BoutiqueBanner />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center py-1 gap-y-3">
         {boutiques?.map((item, index) => (
-          <BoutiqueCard key={index} name={item.name} image={item.image} />
+          <BoutiqueCard key={index} name={item.name} title={item.title} image={item.image} />
         ))}
       </div>
     </div>

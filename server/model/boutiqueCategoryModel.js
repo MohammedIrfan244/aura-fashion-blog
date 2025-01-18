@@ -13,7 +13,7 @@ const boutiqueCategorySchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    flag: {
+    badge: {
         type: String,
         required: true,
     },

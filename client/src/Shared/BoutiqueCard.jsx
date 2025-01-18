@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import {motion} from 'framer-motion'
 
 // eslint-disable-next-line react/prop-types
-function BoutiqueCard({ image, name }) {
+function BoutiqueCard({ image, name , title }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/boutiques`, { state: { name } });
+    navigate(`/boutiques?brand=${name}`, { state: { name } });
   };
 
   return (
@@ -30,7 +30,7 @@ function BoutiqueCard({ image, name }) {
           <img src={image} alt={name} className="w-full object-cover" />
         </div>
         <p className="absolute left-5 top-3 font-extralight font-agdasima text-lg">
-          {name}
+          {title}
         </p>
       </div>
     </Tilt>

@@ -381,24 +381,14 @@
   ],
   "boutiques": [
     {
-      "collectionName": "Pro Filt'r Soft Matte Longwear Foundation",
-      "collectionCategory": "Fenty Beauty",
-      "collectionImage": "https://i.pinimg.com/564x/48/cd/d3/48cdd3f716df344a4ac66ec6e464eb77.jpg",
-      "collectionSecondaryImage": "https://i.pinimg.com/736x/43/03/9d/43039db606e6f435f2a537def320dd78.jpg",
-      "collectionThirdImage": "https://i.pinimg.com/736x/2c/2a/a9/2c2aa98ea341202c10bda995a4d4ee92.jpg",
-      "collectionFourthImage": "https://i.pinimg.com/564x/e2/b3/07/e2b307da5e3b07f636f0d920eb8eeb4c.jpg",
-      "collectionPrice": "36.55",
-      "collectionReview": [
-        {
-          "comment": "nice product",
-          "commentorId": "1"
-        },
-        {
-          "comment": "nice product",
-          "commentorId": "2"
-        }
-      ],
-      "collectionLink": "https://fentybeauty.com/en-in/products/pro-filtr-soft-matte-longwear-foundation-420?variant=35178864508973"
+      "name": "Pro Filt'r Soft Matte Longwear Foundation",
+      "category": "fentybeauty",
+      "firstImage": "https://i.pinimg.com/564x/48/cd/d3/48cdd3f716df344a4ac66ec6e464eb77.jpg",
+      "secondImage": "https://i.pinimg.com/736x/43/03/9d/43039db606e6f435f2a537def320dd78.jpg",
+      "thirdImage": "https://i.pinimg.com/736x/2c/2a/a9/2c2aa98ea341202c10bda995a4d4ee92.jpg",
+      "fourthImage": "https://i.pinimg.com/564x/e2/b3/07/e2b307da5e3b07f636f0d920eb8eeb4c.jpg",
+      "price": "36.55",
+      "link": "https://fentybeauty.com/en-in/products/pro-filtr-soft-matte-longwear-foundation-420?variant=35178864508973"
     },
     {
       "collectionName": "Portable Touchup Brush 145",

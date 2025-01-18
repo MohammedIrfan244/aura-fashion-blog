@@ -3,7 +3,7 @@ import StyleCategory from "../model/styleCategoryModel.js";
 import CustomError from "../utilities/CustomError.js";
 
 const getAllBoutiqueCategories = async(req,res,next)=>{
-    const categories= await BoutiqueCategory.find({},{name:1,image:1})
+    const categories= await BoutiqueCategory.find({},{name:1,image:1,title:1})
     if(!categories) {
         return next(new CustomError("Boutique categories not found", 404));
     }

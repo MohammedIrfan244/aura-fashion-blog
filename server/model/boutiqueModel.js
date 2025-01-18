@@ -35,6 +35,6 @@ const boutiqueSchema = new mongoose.Schema({
     },
 })
 
-const Boutique = mongoose.model('Boutique',walesSchema)
+const Boutique = mongoose.model('Boutique', boutiqueSchema);
 
 export default Boutique
