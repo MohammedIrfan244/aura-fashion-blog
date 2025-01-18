@@ -10,41 +10,41 @@ import BoutiqueCollectionCard from "../Shared/BoutiqueCollectionCard";
 import GoTopPopUp from "../Utilities/GoTop";
 import { hideSearchBar } from "../Redux/CommonSlice";
 
+// const boutiqueMap=[
+//   {
+//     name:"Fenty Beauty",
+//     banner:"https://www.edgars.co.za/cdn/shop/files/07_FB_Gloss_Bomb_EDGARS_Brand_Page_Banner_Desktop_1700_w_x480_h_d187962c-0e49-48a7-938c-4541191cdeae.png?v=1725615104&width=1920"
+//   },
+//   {
+//     name:"Gucci",
+//     banner:"https://images.squarespace-cdn.com/content/v1/5ada10c6710699da7e536301/1533810240561-W8N4GF8Q6VMGVMP66RWR/Gucci+Header.jpg?format=2500w"
+//   },
+//   {
+//     name:"Maybelline",
+//     banner:"https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/americas/us/new-beauty-products-new-makeup/title-banner/maybelline-new-banner-1980x375.jpg?rev=fe515d525439440aa2152d346f9dcbf2&cx=0.28&cy=0.54&cw=1320&ch=250&hash=6970D3D8852F8974328D51DD497985EF"
+//   },
+//   {
+//     name:"Victoria's Secret",
+//     banner:"https://cashback.me/img/victorias-secret-store-banner.jpg"
+//   },
+//   {
+//     name:"Huda Beauty",
+//     banner:"https://www.spireclick.pk/cdn/shop/files/Huda_Beauty_6591ca72-4a34-4127-8842-1fef485befb6.png?v=1693934756"
+//   },
+//   {
+//     name:"Prada",
+//     banner:"https://www.pradagroup.com/content/dam/pradagroup/immagini/newsandmedia/2019-news/double-exposure-adv-campaign/immagini/Cover.jpg/_jcr_content/renditions/cq5dam.web.1920.1920.jpeg"
+//   },
+//   {
+//     name:"O P I",
+//     banner:"https://www.modernhairbeauty.com/wp-content/uploads/2023/05/OPI-Website-brand-banner-1920-600.jpg"
+//   },
+//   {
+//     name:"Balenciaga",
+//     banner:"https://wallpapercat.com/w/middle-retina/5/d/b/51591-3840x2160-desktop-4k-balenciaga-background-image.jpg"
+//   }
+// ]
 function BoutiquePage() {
-  const boutiqueMap=[
-    {
-      name:"Fenty Beauty",
-      banner:"https://www.edgars.co.za/cdn/shop/files/07_FB_Gloss_Bomb_EDGARS_Brand_Page_Banner_Desktop_1700_w_x480_h_d187962c-0e49-48a7-938c-4541191cdeae.png?v=1725615104&width=1920"
-    },
-    {
-      name:"Gucci",
-      banner:"https://images.squarespace-cdn.com/content/v1/5ada10c6710699da7e536301/1533810240561-W8N4GF8Q6VMGVMP66RWR/Gucci+Header.jpg?format=2500w"
-    },
-    {
-      name:"Maybelline",
-      banner:"https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/americas/us/new-beauty-products-new-makeup/title-banner/maybelline-new-banner-1980x375.jpg?rev=fe515d525439440aa2152d346f9dcbf2&cx=0.28&cy=0.54&cw=1320&ch=250&hash=6970D3D8852F8974328D51DD497985EF"
-    },
-    {
-      name:"Victoria's Secret",
-      banner:"https://cashback.me/img/victorias-secret-store-banner.jpg"
-    },
-    {
-      name:"Huda Beauty",
-      banner:"https://www.spireclick.pk/cdn/shop/files/Huda_Beauty_6591ca72-4a34-4127-8842-1fef485befb6.png?v=1693934756"
-    },
-    {
-      name:"Prada",
-      banner:"https://www.pradagroup.com/content/dam/pradagroup/immagini/newsandmedia/2019-news/double-exposure-adv-campaign/immagini/Cover.jpg/_jcr_content/renditions/cq5dam.web.1920.1920.jpeg"
-    },
-    {
-      name:"O P I",
-      banner:"https://www.modernhairbeauty.com/wp-content/uploads/2023/05/OPI-Website-brand-banner-1920-600.jpg"
-    },
-    {
-      name:"Balenciaga",
-      banner:"https://wallpapercat.com/w/middle-retina/5/d/b/51591-3840x2160-desktop-4k-balenciaga-background-image.jpg"
-    }
-  ]
   const [aniDirection, setAniDirection] = useState(false);
   const [animateKey, setAnimateKey] = useState(0);
   const location = useLocation();

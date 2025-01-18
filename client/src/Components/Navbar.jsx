@@ -149,7 +149,9 @@ function Navbar() {
                 onClick={() => {
                   label == "HOME"
                     ? navigate("/")
-                    : navigate(`/${label.toLowerCase()}`);
+                    : label == "BOUTIQUES"
+                    ? navigate("/boutiques?brand=Fenty Beauty")
+                    : navigate("/styles?category=Everyday Makeup");
                   closeMenu();
                 }}
                 className="cursor-pointer hover:text-electricBlue transition-all"
@@ -170,7 +172,11 @@ function Navbar() {
             <li
               key={label}
               onClick={() =>
-                navigate(label == "HOME" ? "/" : `/${label.toLowerCase()}`)
+                label == "HOME"
+                ? navigate("/")
+                : label == "BOUTIQUES"
+                ? navigate("boutiques?brand=Fenty Beauty")  
+                : navigate("/styles?category=Everyday Makeup")
               }
               className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
               style={{
