@@ -10,6 +10,13 @@ const getAllBoutiqueBanners = async (req, res, next) => {
     res.status(200).json({ banners, message: "Boutique bannners fetched successfully" });
 };
 
+const getBoutiqueByCategory = async (req, res, next) => {
+    const { category } = req.query;
+    if (!category) {
+        return next(new CustomError("Please provide category", 400));
+    }
+    const boutique = await BoutiqueCategory.findOne({ name: category });
+}
 
 
 export {getAllBoutiqueBanners};

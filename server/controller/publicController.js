@@ -1,4 +1,5 @@
 import BoutiqueCategory from "../model/boutiqueCategoryModel.js";
+import Boutique from "../model/boutiqueModel.js";
 import StyleCategory from "../model/styleCategoryModel.js";
 import CustomError from "../utilities/CustomError.js";
 
@@ -25,5 +26,6 @@ const getAllStyleCategories = async(req,res,next)=>{
     }
     res.status(200).json({categories,message:"Categories fetched successfully"});
 }
+
 
 export {getAllBoutiqueCategories,getAllStyleCategories,getAllBoutiqueBadges}

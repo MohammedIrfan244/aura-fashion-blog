@@ -165,7 +165,7 @@ function Navbar() {
 
       {navListVisible && (
         <ul
-          className="hidden sm:flex gap-2 sm:gap-20 text-sm font-medium"
+          className="hidden sm:flex gap-4 sm:gap-20 text-sm font-medium"
           onClick={() => dispatch(hideSearchBar())}
         >
           {["HOME", "BOUTIQUES", "STYLES"].map((label, index) => (
@@ -176,7 +176,7 @@ function Navbar() {
                 ? navigate("/")
                 : label == "BOUTIQUES"
                 ? navigate("boutiques?brand=fentybeauty")  
-                : navigate("/styles?category=Everyday Makeup")
+                : navigate("/styles?category=everydaymakeup")
               }
               className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
               style={{
