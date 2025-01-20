@@ -1,53 +1,50 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import GoTopPopUp from "../Utilities/GoTop";
 import { SiStylelint } from "react-icons/si";
 import { LuUser, LuDot } from "react-icons/lu";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { hideSearchBar } from "../Redux/CommonSlice";
-import { likeDecrement, likeIncrement, patchStyle } from "../Redux/StyleSlice";
+import axiosErrorManager from "../Utilities/axiosErrorManager";
+import axiosInstance from "../Utilities/axiosInstance";
 
 function StyleDetailPage() {
+  const [style,setStyle] = useState({});
+  const [isLiked,setIsLiked] = useState(false);
+  const [likeCount,setLikeCount] = useState(0);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { style: initialStyle, author } = location.state||{}
+    const {id}=useParams();
 
-  const [style, setStyle] = useState(initialStyle);
-  const { currentUser } = useSelector((state) => state.currentUser);
-
-  const isLiked = style?.likes?.includes(currentUser?.id);
-
-  const toggleLike = () => {
-    if (!isLiked) {
-      dispatch(likeIncrement({ styleId: style?.id, userId: currentUser?.id }));
-      setStyle((prev) => ({
-        ...prev,
-        likes: [...prev.likes, currentUser?.id],
-      }));
-    } else {
-      dispatch(likeDecrement({ styleId: style?.id, userId: currentUser?.id }));
-      setStyle((prev) => ({
-        ...prev,
-        likes: prev.likes.filter((id) => id !== currentUser?.id),
-      }));
+    useEffect(()=>{
+      const getStyle = async () => {
+        try {
+          const response = await axiosInstance.get(
+            import.meta.env.VITE_API_URL + `/style/style-by-id/${id}`
+          );
+          setStyle(response.data.style);
+          setIsLiked(response.data.style.isLiked);
+          setLikeCount(response.data.style.likeCount);
+        } catch (error) {
+          console.log(axiosErrorManager(error))
+        }
+      }
+      getStyle();
+    },[id])
+    const handleLike = async () => {
+      try {
+        await axiosInstance.post(`/style/style-like/${id}`);
+        setIsLiked(!isLiked);
+        setLikeCount(isLiked ? likeCount - 1 : likeCount + 1);
+      }catch(error){
+        console.log(axiosErrorManager(error))
+      }
     }
-
-    dispatch(
-      patchStyle({
-        url: `http://localhost:3001/styles/${style?.id}`,
-        id: style?.id,
-      })
-    );
-  };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="pt-16 px-5 min-h-screen" onClick={() => dispatch(hideSearchBar())}>
+    <div
+      className="pt-16 px-5 min-h-screen"
+      onClick={() => dispatch(hideSearchBar())}
+    >
       <div
         className="flex bg-[#242427] h-14 sm:h-20 items-center gap-5 justify-center text-sm animate-slideY"
         style={{
@@ -60,44 +57,44 @@ function StyleDetailPage() {
           <LuDot />
           FASHION <SiStylelint />
         </p>
-        <p className="flex items-center gap-2">
+        <p className="flex font-semibold items-center gap-2">
           <LuDot />
-          {author} <LuUser />
+          {style?.author?.toUpperCase()} <LuUser className="text-lg" />
         </p>
         <p
           className="flex items-center gap-2 cursor-pointer"
-          onClick={currentUser ? toggleLike : () => navigate("/login_Signup")}
+          onClick={handleLike}
         >
           <LuDot />
-          {Math.max(style?.likes?.length, 0)}
+          {likeCount}
           {isLiked ? <FaHeart className="text-red-500" /> : <FaRegHeart />}
         </p>
       </div>
       <div className="flex flex-col items-center mt-5 gap-5 sm:gap-10">
-        <p className="font-agdasima text-3xl sm:text-5xl">{style?.styleName}</p>
-        <p className="sm:w-2/3 text-sm">{style?.styleDescription}</p>
+        <p className="font-agdasima text-3xl sm:text-5xl">{style?.name}</p>
+        <p className="sm:w-2/3 text-sm">{style?.desciption}</p>
         <div
           className="sm:w-3/5 h-auto animate-circGrow transition-all"
           style={{ animationDuration: "500ms" }}
         >
           <img
-            src={style?.styleImage}
+            src={style?.image}
             className="object-cover h-full w-full"
-            alt={style?.styleName}
+            alt={style?.name}
           />
         </div>
-        <p className="text-2xl sm:text-3xl font-agdasima">{style?.styleName}</p>
+        <p className="text-2xl sm:text-3xl font-agdasima">{style?.name}</p>
         <div className="w-full sm:w-2/3 flex flex-col gap-5 sm:gap-10">
-          {style?.styleContent.map((u, i) => (
+          {style?.content?.map((u, i) => (
             <div className="flex flex-col gap-3" key={i}>
               <h2 className="font-beban tracking-widest text-xl">
-                {u?.styleContentTitle}
+                {u?.contentTitle}
               </h2>
-              <p className="text-sm sm:text-base">{u?.styleContentDetails}</p>
+              <p className="text-sm sm:text-base">{u?.contentDetails}</p>
             </div>
           ))}
-          <p className="text-xs text-right">
-            Thanks for checking out - {author}
+          <p className="text-xs text-right font-semibold">
+            Thanks for checking out &nbsp; -&nbsp; {style?.author?.toUpperCase()}
           </p>
         </div>
         <GoTopPopUp />

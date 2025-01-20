@@ -54,7 +54,6 @@ function StylePage() {
           import.meta.env.VITE_API_URL + "/public/all-style-categories"
         );
         setStyleCategories(response.data.categories);
-        console.log(response.data.categories);
       } catch (error) {
         console.log(axiosErrorManager(error));
       }
@@ -83,17 +82,15 @@ function StylePage() {
     const getStyles = async () => {
       try {
         const response = await axiosInstance.get(
-          import.meta.env.VITE_API_URL + `/styles/style-by-category?category=${selectedCategory}`
+          import.meta.env.VITE_API_URL + `/style/style-by-category?category=${selectedCategory}`
         );
         setStyles(response.data.styles)
-        console.log(response.data);
       } catch (error) {
         console.log(axiosErrorManager(error));
       }
     }
     getStyles()
   }, [selectedCategory]);
-
 
   return (
     <div
@@ -153,11 +150,11 @@ function StylePage() {
           </button>
         </div>
       </div>
-      {/* <div className="flex flex-col gap-10">
-        {showStyles.map((style, index) => (
-          <StyleCollectionCard key={index} style={style} id={style?.id} />
+      <div className="flex flex-col gap-10">
+        {styles.map((style, index) => (
+          <StyleCollectionCard key={style._id+String(index)} style={style} />
         ))}
-      </div> */}
+      </div>
       <GoTopPopUp />
     </div>
   );
