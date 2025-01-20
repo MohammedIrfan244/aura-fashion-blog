@@ -1,4 +1,5 @@
 import BoutiqueCategory from "../../model/boutiqueCategoryModel.js";
+import Boutique from "../../model/boutiqueModel.js";
 import CustomError from "../../utilities/CustomError.js";
 
 
@@ -15,8 +16,12 @@ const getBoutiqueByCategory = async (req, res, next) => {
     if (!category) {
         return next(new CustomError("Please provide category", 400));
     }
-    const boutique = await BoutiqueCategory.findOne({ name: category });
+    const boutique = await Boutique.find({ category: category });
+    if (!boutique) {
+        return next(new CustomError("Boutique not found", 404));
+    }
+    res.status(200).json({ boutique, message: "Boutique fetched successfully" });
 }
 
 
-export {getAllBoutiqueBanners};
+export {getAllBoutiqueBanners , getBoutiqueByCategory};
