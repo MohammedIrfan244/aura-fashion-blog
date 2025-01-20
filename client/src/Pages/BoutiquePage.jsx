@@ -14,7 +14,7 @@ function BoutiquePage() {
 
   // Find the index of the current brand in the banners array
   const getCurrentIndex = (banners, brandName) => {
-    const index = banners.findIndex(item => item.name=== brandName);
+    const index = banners.findIndex(item => item.name === brandName);
     return index >= 0 ? index : 0;
   };
 
@@ -25,10 +25,10 @@ function BoutiquePage() {
       ? (currentIndex + 1) % boutiqueBanners.length
       : (currentIndex - 1 + boutiqueBanners.length) % boutiqueBanners.length;
     
-    setSearchParams({ brand: boutiqueBanners[newIndex].name});
+    setSearchParams({ brand: boutiqueBanners[newIndex].name });
   };
 
-  // Fetch boutique banners on component mount
+  // Fetch boutique banners and handle invalid brand names
   useEffect(() => {
     const getBoutiqueBanners = async () => {
       try {
@@ -36,12 +36,21 @@ function BoutiquePage() {
           `${import.meta.env.VITE_API_URL}/boutique/all-boutique-banners`
         );
         setBoutiqueBanners(response.data.banners);
+        
+        // After getting banners, check if current brand is valid
+        const currentBrand = searchParams.get("brand");
+        const isValidBrand = response.data.banners.some(banner => banner.name === currentBrand);
+        
+        if (!isValidBrand && response.data.banners.length > 0) {
+          // If invalid brand, set URL to first boutique's name
+          setSearchParams({ brand: response.data.banners[0].name });
+        }
       } catch (err) {
         console.log(axiosErrorManager(err));
       }
     };
     getBoutiqueBanners();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Scroll to top on mount
   useEffect(() => {
