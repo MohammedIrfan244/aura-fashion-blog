@@ -1,49 +1,68 @@
 import { useEffect, useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import GoTopPopUp from "../Utilities/GoTop";
-import { useLocation } from "react-router-dom";
 import StyleCollectionCard from "../Shared/StyleCollectionCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import { hideSearchBar } from "../Redux/CommonSlice";
+import axiosErrorManager from "../Utilities/axiosErrorManager";
+import axiosInstance from "../Utilities/axiosInstance";
+import { useSearchParams } from "react-router-dom";
 
 function StylePage() {
   const dispatch = useDispatch();
-  const stylesMap = [
-    { name: "Everyday Makeup" },
-    { name: "Glam Makeup Palette" },
-    { name: "Skincare Essential" },
-    { name: "Haircare Essentials" },
-    { name: "Nailcare Boutique" },
-    { name: "On Seasonal Trends" },
-    { name: "Gothic Wardrobe" },
-    { name: "Fashion Accessories" },
-    { name: "Athleisure Collective" },
-  ];
+  // const stylesMap = [
+  //   { name: "Everyday Makeup" },
+  //   { name: "Glam Makeup Palette" },
+  //   { name: "Skincare Essential" },
+  //   { name: "Haircare Essentials" },
+  //   { name: "Nailcare Boutique" },
+  //   { name: "On Seasonal Trends" },
+  //   { name: "Gothic Wardrobe" },
+  //   { name: "Fashion Accessories" },
+  //   { name: "Athleisure Collective" },
+  // ];
 
-  const { styles } = useSelector((state) => state.styles);
-  const [showStyles, setShowStyles] = useState([]);
-  const location = useLocation();
-  const category = location.state?.category || null;
-  const [selectedCategory, setSelectedCategory] = useState(category);
+  // const { styles } = useSelector((state) => state.styles);
+  // const [showStyles, setShowStyles] = useState([]);
+  // const location = useLocation();
+  // const category = location.state?.category || null;
+  // const [selectedCategory, setSelectedCategory] = useState(category);
+
+  // useEffect(() => {
+  //   if (selectedCategory) {
+  //     setShowStyles(
+  //       styles.filter((item) => item.category === selectedCategory)
+  //     );
+  //   } else {
+  //     setShowStyles(styles);
+  //   }
+  // }, [selectedCategory, styles]);
+
+  // const handleCategoryChange = (newCategory) => {
+  //   setSelectedCategory(newCategory);
+  // };
 
   const swiperRef = useRef(null);
+  const [styleCategories, setStyleCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    if (selectedCategory) {
-      setShowStyles(
-        styles.filter((item) => item.category === selectedCategory)
-      );
-    } else {
-      setShowStyles(styles);
-    }
-  }, [selectedCategory, styles]);
-
-  const handleCategoryChange = (newCategory) => {
-    setSelectedCategory(newCategory);
-  };
-
+    const getStyleCategories = async () => {
+      try {
+        const response = await axiosInstance.get(
+          import.meta.env.VITE_API_URL + "/public/all-style-categories"
+        );
+        setStyleCategories(response.data.categories);
+        console.log(response.data.categories);
+      } catch (error) {
+        console.log(axiosErrorManager(error));
+      }
+    };
+    getStyleCategories();
+  }, []);
   const handleNext = () => {
     swiperRef.current.swiper.slideNext();
   };
@@ -52,12 +71,24 @@ function StylePage() {
     swiperRef.current.swiper.slidePrev();
   };
 
+  useEffect(() => {
+    const category = searchParams.get("category");
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
+  useEffect(()=>{
+console.log(selectedCategory);
+  },[selectedCategory])
+
   return (
-    styles?.length > 0 ? (
-      <div className="pt-16 px-5 min-h-screen" onClick={() => dispatch(hideSearchBar())}>
+    <div
+      className="pt-16 px-5 min-h-screen"
+      onClick={() => dispatch(hideSearchBar())}
+    >
       <div className="my-5 flex justify-center sm:justify-between w-full">
         <h2 className="hidden sm:block font-beban text-electricBlue">
-          {selectedCategory || "All"}
+          {"All"}
         </h2>
         <div
           className="flex items-center gap-2 animate-slideY transition-all"
@@ -68,34 +99,30 @@ function StylePage() {
           }}
         >
           <button
-          onClick={handlePrev}
-          className="text-xl hover:text-electricBlue hidden sm:block"
+            onClick={handlePrev}
+            className="text-xl hover:text-electricBlue hidden sm:block"
           >
-          <CiCircleChevLeft />
+            <CiCircleChevLeft />
           </button>
           <Swiper
-          ref={swiperRef}
-          className="w-[400px]"
-          slidesPerView={3}
-          centeredSlides
-          loop
-          spaceBetween={10}
+            ref={swiperRef}
+            className="w-[400px]"
+            slidesPerView={3}
+            centeredSlides
+            loop
+            spaceBetween={10}
             breakpoints={{
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
           >
-            {stylesMap.map((style, index) => (
+            {styleCategories.map((style, index) => (
               <SwiperSlide key={index}>
                 <button
-                  onClick={() => handleCategoryChange(style.name)}
-                  className={`bg-snowWhite w-32 px-1 py-2 text-xs ${
-                    style.name === selectedCategory
-                      ? "text-electricBlue"
-                      : "text-richBlack"
-                  }`}
+                  // onClick={() => handleCategoryChange(style.name)}
+                  className="bg-snowWhite w-32 px-1 py-2 text-xs text-richBlack"
                 >
-                  {style.name}
+                  {style.title}
                 </button>
               </SwiperSlide>
             ))}
@@ -108,21 +135,14 @@ function StylePage() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col gap-10">
+      {/* <div className="flex flex-col gap-10">
         {showStyles.map((style, index) => (
           <StyleCollectionCard key={index} style={style} id={style?.id} />
         ))}
-      </div>
+      </div> */}
       <GoTopPopUp />
     </div>
-  )
-  : (
-    <h1 className="pt-20">Loading</h1>)
   );
 }
-  
-  
-
-
 
 export default StylePage;

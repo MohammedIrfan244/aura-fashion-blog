@@ -1,40 +1,38 @@
 import Style from "../../model/styleModel.js";
+import StyleLike from "../../model/styleLikeModel.js";
 import CustomError from "../../utilities/CustomError.js";
 
 const getStyleByCategory = async (req, res, next) => {
   const { category } = req.query;
-  if (!category) {
-    return next(new CustomError("Please provide category", 400));
-  }
-  if (category === "all") {
-    const styles = await Style.find(
-      {},
-      {
-        styleName: 1,
-        category: 1,
-        styleImage: 1,
-        styleAuthor: 1,
-        styleDescription: 1,
-      }
-    );
-    if (!styles) {
-      return next(new CustomError("Styles not found", 404));
-    }
-    res.status(200).json({ styles, message: "Styles fetched successfully" });
-  }
-  const styles = await Style.find(
-    { category: category },
+
+  const styles = await Style.aggregate([
     {
-      styleName: 1,
-      category: 1,
-      styleImage: 1,
-      styleAuthor: 1,
-      styleDescription: 1,
-    }
-  );
-  if (!styles) {
+      $match: { category },
+    },
+    {
+      $lookup: {
+        from: "stylelikes",
+        localField: "_id",
+        foreignField: "style",
+        as: "likes",
+      },
+    },
+    {
+      $project: {
+        name: 1,
+        category: 1,
+        description: 1,
+        image: 1,
+        author: 1,
+        likeCount: { $size: "$likes" },
+      },
+    },
+  ]);
+
+  if (!styles || styles.length === 0) {
     return next(new CustomError("Styles not found", 404));
   }
+  console.log(styles);
   res.status(200).json({ styles, message: "Styles fetched successfully" });
 };
 
@@ -47,4 +45,4 @@ const getOneStyle = async (req, res, next) => {
   res.status(200).json({ style, message: "Style fetched successfully" });
 };
 
-export { getStyleByCategory , getOneStyle};
+export { getStyleByCategory, getOneStyle };

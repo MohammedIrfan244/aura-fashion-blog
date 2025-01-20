@@ -34,7 +34,7 @@ function User() {
     if (!/^[a-z_]+$/.test(username)) {
       return "Username can only contain lowercase letters and underscores";
     }
-    if(username === currentUser.username) {
+    if (username === currentUser.username) {
       return "Username cannot be the same as your current username";
     }
     return null;
@@ -69,15 +69,19 @@ function User() {
 
     try {
       const formData = new FormData();
-      if (username) formData.append('username', username);
-      if (profileFile) formData.append('file', profileFile);
+      if (username) formData.append("username", username);
+      if (profileFile) formData.append("file", profileFile);
 
-      const response = await axiosInstance.put("/update/update-user", formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
+      const response = await axiosInstance.put(
+        "/update/update-user",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         }
-      });
-      dispatch(login(response.data.userCredentials))
+      );
+      dispatch(login(response.data.userCredentials));
       setSuccess(response.data.message);
       setEditMode(false);
       setUsername("");
@@ -89,63 +93,69 @@ function User() {
     }
   };
 
-  const handleGetOTP = async (e) => {
-    e.preventDefault();
-    if (currentPassword === "") {
-      setError("Current password is required");
-      return;
-    }
-    
-    try {
-      const response = await axiosInstance.post("/update/send-password-reset-otp", {
-        currentPassword
-      });
-      setSuccess(response.data.message);
-      setOtpSent(true);
-      setTimeout(() => setSuccess(""), 3000);
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to send OTP");
-      setTimeout(() => setError(""), 3000);
-    }
-  };
+  // const handleGetOTP = async (e) => {
+  //   e.preventDefault();
+  //   if (currentPassword === "") {
+  //     setError("Current password is required");
+  //     return;
+  //   }
 
-  const handlePasswordUpdate = async (e) => {
-    e.preventDefault();
-    if (newPassword === "" || confirmPassword === "" || otp === "") {
-      setError("All fields are required");
-      return;
-    }
+  //   try {
+  //     const response = await axiosInstance.post(
+  //       "/update/send-password-reset-otp",
+  //       {
+  //         currentPassword,
+  //       }
+  //     );
+  //     setSuccess(response.data.message);
+  //     setOtpSent(true);
+  //     setTimeout(() => setSuccess(""), 3000);
+  //   } catch (err) {
+  //     setError(err.response?.data?.message || "Failed to send OTP");
+  //     setTimeout(() => setError(""), 3000);
+  //   }
+  // };
 
-    const passwordError = validatePassword(newPassword);
-    if (passwordError) {
-      setError(passwordError);
-      return;
-    }
+  // const handlePasswordUpdate = async (e) => {
+  //   e.preventDefault();
+  //   if (newPassword === "" || confirmPassword === "" || otp === "") {
+  //     setError("All fields are required");
+  //     return;
+  //   }
 
-    if (newPassword !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-    
-    try {
-      const response = await axiosInstance.post("/update/verify-otp-and-reset-password", {
-        email: currentUser.email,
-        otp,
-        newPassword
-      });
-      setSuccess(response.data.message);
-      setShowPasswordReset(false);
-      setCurrentPassword("");
-      setNewPassword("");
-      setConfirmPassword("");
-      setOtp("");
-      setOtpSent(false);
-      setTimeout(() => setSuccess(""), 3000);
-    } catch (err) {
-      setError(err.response?.data?.message || "Password update failed");
-      setTimeout(() => setError(""), 3000);
-    }
-  };
+  //   const passwordError = validatePassword(newPassword);
+  //   if (passwordError) {
+  //     setError(passwordError);
+  //     return;
+  //   }
+
+  //   if (newPassword !== confirmPassword) {
+  //     setError("Passwords do not match");
+  //     return;
+  //   }
+
+  //   try {
+  //     const response = await axiosInstance.post(
+  //       "/update/verify-otp-and-reset-password",
+  //       {
+  //         email: currentUser.email,
+  //         otp,
+  //         newPassword,
+  //       }
+  //     );
+  //     setSuccess(response.data.message);
+  //     setShowPasswordReset(false);
+  //     setCurrentPassword("");
+  //     setNewPassword("");
+  //     setConfirmPassword("");
+  //     setOtp("");
+  //     setOtpSent(false);
+  //     setTimeout(() => setSuccess(""), 3000);
+  //   } catch (err) {
+  //     setError(err.response?.data?.message || "Password update failed");
+  //     setTimeout(() => setError(""), 3000);
+  //   }
+  // };
 
   const handleCancel = () => {
     setUsername("");
@@ -166,7 +176,7 @@ function User() {
     try {
       await axiosInstance.post("/auth/logout");
       dispatch(logout());
-      navigate('/login_Signup');
+      navigate("/login_Signup");
     } catch (err) {
       setError(axiosErrorManager(err) || "Logout failed");
     }
@@ -214,7 +224,10 @@ function User() {
         <div className="space-y-5 text-center">
           <div className="flex flex-col items-center">
             <img
-              src={currentUser?.profile || "https://i.pinimg.com/736x/f2/ec/bc/f2ecbcde9918a1b5f0806fd001c6fd7a.jpg"}
+              src={
+                currentUser?.profile ||
+                "https://i.pinimg.com/736x/f2/ec/bc/f2ecbcde9918a1b5f0806fd001c6fd7a.jpg"
+              }
               alt="Profile"
               className="w-24 h-24 rounded-full object-cover border-2 border-electricBlue shadow-lg mb-4"
             />
@@ -235,7 +248,7 @@ function User() {
                 Edit Profile
               </button>
               <button
-                onClick={() => setShowPasswordReset(true)}
+                // onClick={() => setShowPasswordReset(true)}
                 className="w-full bg-snowWhite text-[#2E2E33] text-sm font-medium py-1 px-2 hover:bg-electricBlue focus:outline-none focus:ring-1 focus:ring-[#2E2E33] focus:ring-offset-1"
               >
                 Change Password
@@ -292,7 +305,10 @@ function User() {
               </div>
             </form>
           ) : (
-            <form onSubmit={!otpSent ? handleGetOTP : handlePasswordUpdate} className="space-y-4">
+            <form
+              // onSubmit={!otpSent ? handleGetOTP : handlePasswordUpdate}
+              className="space-y-4"
+            >
               {!otpSent ? (
                 <div>
                   <input
@@ -341,7 +357,7 @@ function User() {
               <div className="flex gap-4">
                 <button
                   type="button"
-                  onClick={handleCancel}
+                  // onClick={handleCancel}
                   className="w-full bg-snowWhite text-sm text-[#2E2E33] font-medium py-1 px-2 hover:bg-red-600 focus:outline-none focus:ring-1 focus:ring-[#2E2E33] focus:ring-offset-1"
                 >
                   Cancel
@@ -355,9 +371,11 @@ function User() {
               </div>
             </form>
           )}
-          
+
           {(error || success) && (
-            <p className={`text-sm ${error ? 'text-red-500' : 'text-green-500'}`}>
+            <p
+              className={`text-sm ${error ? "text-red-500" : "text-green-500"}`}
+            >
               {error || success}
             </p>
           )}

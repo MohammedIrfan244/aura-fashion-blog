@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { login } from "../Redux/Auth";
 
 const formFields = [
-  { label: "User Name", type: "text", name: "userName" },
+  { label: "Username", type: "text", name: "userName" },
   { label: "Email", type: "email", name: "email" },
 ];
 

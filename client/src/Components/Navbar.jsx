@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LuContact, LuSearch, LuUser } from "react-icons/lu";
 import { PiTrademarkRegisteredBold } from "react-icons/pi";
-import { AiOutlineProduct } from "react-icons/ai";
+// import { AiOutlineProduct } from "react-icons/ai";
 import { SiStylelint } from "react-icons/si";
 import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -10,14 +10,14 @@ import { hideSearchBar, toggleSearchBar } from "../Redux/CommonSlice";
 
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
-  const [searchResult, setSearchResults] = useState({
-    boutiqueSearch: [],
-    styleSearch: [],
-  });
+  // const [searchResult, setSearchResults] = useState({
+  //   boutiqueSearch: [],
+  //   styleSearch: [],
+  // });
   const [searchInput, setSearchInput] = useState("");
-  const { styles } = useSelector((state) => state.styles);
-  const { boutiques } = useSelector((state) => state.boutiques);
-  const [users, setUsers] = useState([]);
+  // const { styles } = useSelector((state) => state.styles);
+  // const { boutiques } = useSelector((state) => state.boutiques);
+  // const [users, setUsers] = useState([]);
   const { currentUser } = useSelector((state) => state.currentUser);
   const { searchBar } = useSelector((state) => state.common);
 
@@ -27,51 +27,51 @@ function Navbar() {
   const inputRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/users");
-        const data = await response.json();
-        setUsers(data);
-      } catch (error) {
-        console.error("Error fetching users:", error);
-      }
-    };
-    fetchUsers();
-  }, []);
-  useEffect(() => {
-    let stylesArr = [];
-    let boutiqueArr = [];
+  // useEffect(() => {
+  //   const fetchUsers = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:3001/users");
+  //       const data = await response.json();
+  //       setUsers(data);
+  //     } catch (error) {
+  //       console.error("Error fetching users:", error);
+  //     }
+  //   };
+  //   fetchUsers();
+  // }, []);
+  // useEffect(() => {
+  //   let stylesArr = [];
+  //   let boutiqueArr = [];
 
-    const lowercasedInput = searchInput.trim().toLowerCase();
+  //   const lowercasedInput = searchInput.trim().toLowerCase();
 
-    if (lowercasedInput) {
-      styles.forEach((i) => {
-        const author = users.find((u) => u.id == i.styleAuthorId)?.userName;
-        if (
-          i.styleName?.toLowerCase().includes(lowercasedInput) ||
-          i.category?.toLowerCase().includes(lowercasedInput)
-        ) {
-          stylesArr.push({ style: i, author: author });
-        }
-      });
-      boutiques.forEach((i) => {
-        if (
-          i.collectionName.toLowerCase().includes(lowercasedInput) ||
-          i.collectionCategory.toLowerCase().includes(lowercasedInput)
-        ) {
-          boutiqueArr.push(i);
-        }
-      });
-    }
+  //   if (lowercasedInput) {
+  //     styles.forEach((i) => {
+  //       const author = users.find((u) => u.id == i.styleAuthorId)?.userName;
+  //       if (
+  //         i.styleName?.toLowerCase().includes(lowercasedInput) ||
+  //         i.category?.toLowerCase().includes(lowercasedInput)
+  //       ) {
+  //         stylesArr.push({ style: i, author: author });
+  //       }
+  //     });
+  //     boutiques.forEach((i) => {
+  //       if (
+  //         i.collectionName.toLowerCase().includes(lowercasedInput) ||
+  //         i.collectionCategory.toLowerCase().includes(lowercasedInput)
+  //       ) {
+  //         boutiqueArr.push(i);
+  //       }
+  //     });
+  //   }
 
-    setSearchResults({
-      boutiqueSearch: boutiqueArr,
-      styleSearch: stylesArr,
-    });
+  //   setSearchResults({
+  //     boutiqueSearch: boutiqueArr,
+  //     styleSearch: stylesArr,
+  //   });
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchInput]);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [searchInput]);
 
   const searchClick = () => {
     setSearchInput("");
@@ -109,16 +109,16 @@ function Navbar() {
     setMenuVisible(false);
   };
 
-  const handleNavigateBoutiques = (boutique) => {
-    navigate("/boutiques", {
-      state: { name: boutique.collectionCategory, selected: boutique },
-    });
-    searchClick();
-  };
-  const handleNavigateStyles = (styleId, style, author) => {
-    navigate(`/styles/${styleId}`, { state: { style: style.style, author } });
-    searchClick();
-  };
+  // const handleNavigateBoutiques = (boutique) => {
+  //   navigate("/boutiques", {
+  //     state: { name: boutique.collectionCategory, selected: boutique },
+  //   });
+  //   searchClick();
+  // };
+  // const handleNavigateStyles = (styleId, style, author) => {
+  //   navigate(`/styles/${styleId}`, { state: { style: style.style, author } });
+  //   searchClick();
+  // };
 
   return (
     <div
@@ -220,7 +220,7 @@ function Navbar() {
                   : "w-0 h-0"
               }
             >
-              <ul className="flex flex-col gap-2">
+              {/* <ul className="flex flex-col gap-2">
                 <p className="text-sm mb-2">
                   <AiOutlineProduct />
                 </p>
@@ -235,12 +235,12 @@ function Navbar() {
                     </li>
                   );
                 })}
-              </ul>
+              </ul> */}
               <ul className="flex flex-col gap-2">
                 <p className="text-sm mb-2">
                   <SiStylelint />
                 </p>
-                {searchResult.styleSearch.map((style, i) => {
+                {/* {searchResult.styleSearch.map((style, i) => {
                   return (
                     <li
                       onClick={() =>
@@ -256,7 +256,7 @@ function Navbar() {
                       {style?.style.styleName}
                     </li>
                   );
-                })}
+                })} */}
               </ul>
             </div>
           </div>

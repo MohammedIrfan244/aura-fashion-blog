@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const styleModel = new mongoose.Schema(
   {
-    styleName: {
+    name: {
       type: String,
       required: true,
     },
@@ -10,25 +10,25 @@ const styleModel = new mongoose.Schema(
       type: String,
       required: true,
     },
-    styleDescription: {
+    description: {
       type: String,
       required: true,
     },
-    styleImage: {
+    image: {
       type: String,
       required: true,
     },
-    styleAuthor:{
+    author:{
       type: String,
       required: true
     },
-    styleContent: [
+    content: [
       {
-        styleContentTitle: {
+        contentTitle: {
           type: String,
           required: true,
         },
-        styleContentDetails: {
+        contentDetails: {
           type: String,
           required: true,
         },

@@ -4,26 +4,8 @@ import { useNavigate } from "react-router-dom";
 import {motion} from 'framer-motion'
 
 // eslint-disable-next-line react/prop-types
-function StyleCollectionCard({ style = {}, id }) {
-  const [users, setUsers] = useState([]);
+function StyleCollectionCard() {
   const navigate = useNavigate();
-  useEffect(()=>{
-    const fetchUsers = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/users");
-        const data = await response.json();
-        setUsers(data);
-      } catch (error) {
-        console.error("Error fetching users:", error);
-      }
-    };
-    fetchUsers();
-  },[])
-  const getUserNameById = () => {
-    const user = users.find((user) => user.id == style?.styleAuthorId);
-    return user ? user.userName.toUpperCase() : null;
-  };
-  const author = getUserNameById();
   return (
     <div
       className="flex flex-col sm:flex-row relative w-auto h-auto"

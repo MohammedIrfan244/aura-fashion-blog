@@ -24,6 +24,7 @@ const getAllStyleCategories = async(req,res,next)=>{
     if(!categories) {
         return next(new CustomError("Style categories not found", 404));
     }
+    console.log(categories)
     res.status(200).json({categories,message:"Categories fetched successfully"});
 }
 
