@@ -3,13 +3,10 @@ import { useNavigate } from "react-router-dom";
 import {motion} from 'framer-motion'
 
 // eslint-disable-next-line react/prop-types
-function StyleCards({ image, category }) {
+function StyleCards({ image, title , name }) {
   const navigate = useNavigate();
   const [hover, setHover] = useState(false);
 
-  const handleNavigate = (category) => {
-    navigate("/styles", { state: { category } });
-  };
 
   return (
     <motion.div
@@ -19,7 +16,7 @@ function StyleCards({ image, category }) {
       duration: 1,
       repeat: 0, 
     }}
-      onClick={() => handleNavigate(category)}
+      onClick={() => navigate(`/styles?category=${name}`)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className="h-[400px] w-80 overflow-hidden shadow-md shadow-black relative transition-all"
@@ -42,7 +39,7 @@ function StyleCards({ image, category }) {
           hover && "text-electricBlue styleCardText"
         }`}
       >
-        {category}
+        {title}
       </p>
       {hover && (
         <p className="absolute bottom-2 right-[37%] text-electricBlue animate-pulse font-agdasima z-20">

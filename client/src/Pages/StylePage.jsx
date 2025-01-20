@@ -40,15 +40,12 @@ function StylePage() {
   //   }
   // }, [selectedCategory, styles]);
 
-  // const handleCategoryChange = (newCategory) => {
-  //   setSelectedCategory(newCategory);
-  // };
-
+  
   const swiperRef = useRef(null);
   const [styleCategories, setStyleCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
-
+  
   useEffect(() => {
     const getStyleCategories = async () => {
       try {
@@ -66,20 +63,22 @@ function StylePage() {
   const handleNext = () => {
     swiperRef.current.swiper.slideNext();
   };
-
+  
   const handlePrev = () => {
     swiperRef.current.swiper.slidePrev();
   };
-
+  
+  const handleCategoryChange = (category) => {
+    setSearchParams({category})
+  };
   useEffect(() => {
     const category = searchParams.get("category");
     if (category) {
       setSelectedCategory(category);
     }
   }, [searchParams]);
-  useEffect(()=>{
-console.log(selectedCategory);
-  },[selectedCategory])
+
+
 
   return (
     <div
@@ -119,8 +118,12 @@ console.log(selectedCategory);
             {styleCategories.map((style, index) => (
               <SwiperSlide key={index}>
                 <button
-                  // onClick={() => handleCategoryChange(style.name)}
-                  className="bg-snowWhite w-32 px-1 py-2 text-xs text-richBlack"
+                  onClick={() => handleCategoryChange(style?.name)}
+                  className={`w-32 px-1 py-2 text-xs ${
+                    selectedCategory === style?.name
+                      ? "bg-electricBlue text-snowWhite"
+                      : "text-richBlack bg-snowWhite"
+                  }`}
                 >
                   {style.title}
                 </button>

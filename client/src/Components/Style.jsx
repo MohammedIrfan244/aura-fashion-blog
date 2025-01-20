@@ -93,7 +93,7 @@ function Style() {
       >
         {styles?.map((style, index) => (
           <SwiperSlide key={index+style._id}>
-            <StyleCards image={style?.image} category={style?.title} />
+            <StyleCards image={style?.image} name={style?.name} title={style?.title} />
           </SwiperSlide>
         ))}
       </Swiper>
