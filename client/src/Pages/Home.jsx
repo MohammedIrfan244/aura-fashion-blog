@@ -7,6 +7,7 @@ import { hideSearchBar } from "../Redux/CommonSlice";
 import { useDispatch } from "react-redux";
 import StylingMatter from "../Components/StylingMatter";
 import AboutUs from "../Components/AboutUs";
+import CardSkelton from "../Shared/CardSkelton";
 
 function Home() {
   const dispatch=useDispatch()
@@ -18,6 +19,7 @@ function Home() {
       <Style />
       <Boutique />
       <AboutUs/>
+      <CardSkelton/>
     </div>
   );
 }

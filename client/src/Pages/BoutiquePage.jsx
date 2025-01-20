@@ -144,13 +144,13 @@ function BoutiquePage() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center gap-y-5">
-        {currentBoutiqueItems?.map((item) => (
-          <BoutiqueCollectionCard key={item.id} click={()=>selectBoutiqueItem(item)} boutique={item} />
+        {currentBoutiqueItems?.map((item, index) => (
+          <BoutiqueCollectionCard key={item.id+String(index)} click={()=>selectBoutiqueItem(item)} boutique={item} />
         ))}
       </div>
       <GoTopPopUp />
       {modalVisible && (
-        <BoutiqueDetails close={closeModal} boutiqueItemProp={selectedBoutiqueItem}/>
+        <BoutiqueDetails close={closeModal} id={selectedBoutiqueItem._id}/>
       )}
     </div>
   );

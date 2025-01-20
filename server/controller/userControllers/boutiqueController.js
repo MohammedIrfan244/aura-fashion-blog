@@ -16,7 +16,16 @@ const getBoutiqueByCategory = async (req, res, next) => {
     if (!category) {
         return next(new CustomError("Please provide category", 400));
     }
-    const boutique = await Boutique.find({ category: category });
+    const boutique = await Boutique.find({ category: category },{name:1,category:1,firstImage:1,price:1});
+    if (!boutique) {
+        return next(new CustomError("Boutique not found", 404));
+    }
+    res.status(200).json({ boutique, message: "Boutique fetched successfully" });
+}
+
+const getBoutiqueById = async (req, res, next) => {
+    const { id } = req.params;
+    const boutique = await Boutique.findById(id);
     if (!boutique) {
         return next(new CustomError("Boutique not found", 404));
     }
@@ -24,4 +33,4 @@ const getBoutiqueByCategory = async (req, res, next) => {
 }
 
 
-export {getAllBoutiqueBanners , getBoutiqueByCategory};
+export {getAllBoutiqueBanners , getBoutiqueByCategory, getBoutiqueById};
