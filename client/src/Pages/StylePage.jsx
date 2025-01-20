@@ -45,6 +45,7 @@ function StylePage() {
   const [styleCategories, setStyleCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [styles,setStyles]=useState([])
   
   useEffect(() => {
     const getStyleCategories = async () => {
@@ -78,6 +79,20 @@ function StylePage() {
     }
   }, [searchParams]);
 
+  useEffect(() => {
+    const getStyles = async () => {
+      try {
+        const response = await axiosInstance.get(
+          import.meta.env.VITE_API_URL + `/styles/style-by-category?category=${selectedCategory}`
+        );
+        setStyles(response.data.styles)
+        console.log(response.data);
+      } catch (error) {
+        console.log(axiosErrorManager(error));
+      }
+    }
+    getStyles()
+  }, [selectedCategory]);
 
 
   return (
