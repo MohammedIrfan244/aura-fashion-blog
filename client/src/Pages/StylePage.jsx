@@ -100,7 +100,7 @@ console.log(selectedCategory);
         >
           <button
             onClick={handlePrev}
-            className="text-xl hover:text-electricBlue hidden sm:block"
+            className="text-xl hover:text-electricBlue"
           >
             <CiCircleChevLeft />
           </button>
@@ -129,7 +129,7 @@ console.log(selectedCategory);
           </Swiper>
           <button
             onClick={handleNext}
-            className="text-xl hover:text-electricBlue hidden sm:block"
+            className="text-xl hover:text-electricBlue"
           >
             <CiCircleChevRight />
           </button>
