@@ -11,6 +11,7 @@ import axiosInstance from "../Utilities/axiosInstance";
 import GoTopPopUp from "../Utilities/GoTop";
 import BoutiqueCollectionCard from "../Shared/BoutiqueCollectionCard";
 import BoutiqueDetails from "../Components/BoutiqueDetails";
+import BoutiqueCollectionCardSkeleton from "../skeltons/BoutiqueCollectionCardSkeleton";
 
 function BoutiquePage() {
   const [boutiqueBanners, setBoutiqueBanners] = useState([]);
@@ -18,15 +19,16 @@ function BoutiquePage() {
   const [currentBoutiqueItems, setCurrentBoutiqueItems] = useState(null);
   const [selectedBoutiqueItem, setSelectedBoutiqueItem] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
+  const [loading,setLoading]=useState(false)
   const dispatch = useDispatch();
 
-  // Find the index of the current brand in the banners array
+  
   const getCurrentIndex = (banners, brandName) => {
     const index = banners.findIndex((item) => item.name === brandName);
     return index >= 0 ? index : 0;
   };
 
-  // Update URL and handle carousel navigation
+  
   const handleCarouselNav = (direction) => {
     const currentIndex = getCurrentIndex(
       boutiqueBanners,
@@ -40,27 +42,30 @@ function BoutiquePage() {
     setSearchParams({ brand: boutiqueBanners[newIndex].name });
   };
 
-  // Fetch boutique banners and handle invalid brand names
+  
   useEffect(() => {
     const getBoutiqueBanners = async () => {
       try {
+        setLoading(true)
         const response = await axiosInstance.get(
           `${import.meta.env.VITE_API_URL}/boutique/all-boutique-banners`
         );
         setBoutiqueBanners(response.data.banners);
 
-        // After getting banners, check if current brand is valid
+  
         const currentBrand = searchParams.get("brand");
         const isValidBrand = response.data.banners.some(
           (banner) => banner.name === currentBrand
         );
 
         if (!isValidBrand && response.data.banners.length > 0) {
-          // If invalid brand, set URL to first boutique's name
+  
           setSearchParams({ brand: response.data.banners[0].name });
         }
       } catch (err) {
         console.log(axiosErrorManager(err));
+      }finally{
+        setLoading(false)
       }
     };
     getBoutiqueBanners();
@@ -74,6 +79,7 @@ function BoutiquePage() {
   useEffect(() => {
     const fetchBoutiqueItems = async () => {
       try {
+        setLoading(true)
         const response = await axiosInstance.get(
           `${
             import.meta.env.VITE_API_URL
@@ -82,6 +88,8 @@ function BoutiquePage() {
         setCurrentBoutiqueItems(response.data.boutique);
       } catch (err) {
         console.log(axiosErrorManager(err));
+      }finally{
+        setLoading(false)
       }
     };
     fetchBoutiqueItems();
@@ -144,7 +152,8 @@ function BoutiquePage() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center gap-y-5">
-        {currentBoutiqueItems?.map((item, index) => (
+       
+        {loading ? Array.from({length:4}).map((_,index) => <BoutiqueCollectionCardSkeleton key={index} />) : currentBoutiqueItems?.map((item, index) => (
           <BoutiqueCollectionCard key={item.id+String(index)} click={()=>selectBoutiqueItem(item)} boutique={item} />
         ))}
       </div>

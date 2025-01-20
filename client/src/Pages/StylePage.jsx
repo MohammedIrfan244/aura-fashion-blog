@@ -9,53 +9,29 @@ import { hideSearchBar } from "../Redux/CommonSlice";
 import axiosErrorManager from "../Utilities/axiosErrorManager";
 import axiosInstance from "../Utilities/axiosInstance";
 import { useSearchParams } from "react-router-dom";
+import StyleCollectionCardSkeleton from "../skeltons/StyleCollectionCardSkeleton";
 
 function StylePage() {
   const dispatch = useDispatch();
-  // const stylesMap = [
-  //   { name: "Everyday Makeup" },
-  //   { name: "Glam Makeup Palette" },
-  //   { name: "Skincare Essential" },
-  //   { name: "Haircare Essentials" },
-  //   { name: "Nailcare Boutique" },
-  //   { name: "On Seasonal Trends" },
-  //   { name: "Gothic Wardrobe" },
-  //   { name: "Fashion Accessories" },
-  //   { name: "Athleisure Collective" },
-  // ];
-
-  // const { styles } = useSelector((state) => state.styles);
-  // const [showStyles, setShowStyles] = useState([]);
-  // const location = useLocation();
-  // const category = location.state?.category || null;
-  // const [selectedCategory, setSelectedCategory] = useState(category);
-
-  // useEffect(() => {
-  //   if (selectedCategory) {
-  //     setShowStyles(
-  //       styles.filter((item) => item.category === selectedCategory)
-  //     );
-  //   } else {
-  //     setShowStyles(styles);
-  //   }
-  // }, [selectedCategory, styles]);
-
-  
   const swiperRef = useRef(null);
   const [styleCategories, setStyleCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const [styles,setStyles]=useState([])
+  const [loading,setLoading]=useState(false);
   
   useEffect(() => {
     const getStyleCategories = async () => {
       try {
+        setLoading(true)
         const response = await axiosInstance.get(
           import.meta.env.VITE_API_URL + "/public/all-style-categories"
         );
         setStyleCategories(response.data.categories);
       } catch (error) {
         console.log(axiosErrorManager(error));
+      }finally{
+        setLoading(false)
       }
     };
     getStyleCategories();
@@ -81,12 +57,15 @@ function StylePage() {
   useEffect(() => {
     const getStyles = async () => {
       try {
+        setLoading(true)
         const response = await axiosInstance.get(
           import.meta.env.VITE_API_URL + `/style/style-by-category?category=${selectedCategory}`
         );
         setStyles(response.data.styles)
       } catch (error) {
         console.log(axiosErrorManager(error));
+      }finally{
+        setLoading(false)
       }
     }
     getStyles()
@@ -151,9 +130,7 @@ function StylePage() {
         </div>
       </div>
       <div className="flex flex-col gap-10">
-        {styles.map((style, index) => (
-          <StyleCollectionCard key={style._id+String(index)} style={style} />
-        ))}
+        {loading ? Array.from({length:4}).map((_,index) => <StyleCollectionCardSkeleton key={index} />) : styles.map((style, index) => <StyleCollectionCard key={style._id+String(index)} style={style} />)}
       </div>
       <GoTopPopUp />
     </div>

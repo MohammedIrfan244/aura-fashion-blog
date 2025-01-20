@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { LuContact, LuSearch, LuUser } from "react-icons/lu";
 import { PiTrademarkRegisteredBold } from "react-icons/pi";
-// import { AiOutlineProduct } from "react-icons/ai";
 import { SiStylelint } from "react-icons/si";
 import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -10,14 +9,7 @@ import { hideSearchBar, toggleSearchBar } from "../Redux/CommonSlice";
 
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
-  // const [searchResult, setSearchResults] = useState({
-  //   boutiqueSearch: [],
-  //   styleSearch: [],
-  // });
   const [searchInput, setSearchInput] = useState("");
-  // const { styles } = useSelector((state) => state.styles);
-  // const { boutiques } = useSelector((state) => state.boutiques);
-  // const [users, setUsers] = useState([]);
   const { currentUser } = useSelector((state) => state.currentUser);
   const { searchBar } = useSelector((state) => state.common);
 
@@ -25,54 +17,10 @@ function Navbar() {
   const [lastScroll, setLastScroll] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
   const inputRef = useRef();
+  const menuRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   const fetchUsers = async () => {
-  //     try {
-  //       const response = await fetch("http://localhost:3001/users");
-  //       const data = await response.json();
-  //       setUsers(data);
-  //     } catch (error) {
-  //       console.error("Error fetching users:", error);
-  //     }
-  //   };
-  //   fetchUsers();
-  // }, []);
-  // useEffect(() => {
-  //   let stylesArr = [];
-  //   let boutiqueArr = [];
-
-  //   const lowercasedInput = searchInput.trim().toLowerCase();
-
-  //   if (lowercasedInput) {
-  //     styles.forEach((i) => {
-  //       const author = users.find((u) => u.id == i.styleAuthorId)?.userName;
-  //       if (
-  //         i.styleName?.toLowerCase().includes(lowercasedInput) ||
-  //         i.category?.toLowerCase().includes(lowercasedInput)
-  //       ) {
-  //         stylesArr.push({ style: i, author: author });
-  //       }
-  //     });
-  //     boutiques.forEach((i) => {
-  //       if (
-  //         i.collectionName.toLowerCase().includes(lowercasedInput) ||
-  //         i.collectionCategory.toLowerCase().includes(lowercasedInput)
-  //       ) {
-  //         boutiqueArr.push(i);
-  //       }
-  //     });
-  //   }
-
-  //   setSearchResults({
-  //     boutiqueSearch: boutiqueArr,
-  //     styleSearch: stylesArr,
-  //   });
-
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [searchInput]);
-
+  
   const searchClick = () => {
     setSearchInput("");
     dispatch(toggleSearchBar());
@@ -105,20 +53,23 @@ function Navbar() {
     }
   }, [searchBar]);
 
+  // Add click outside handler
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const closeMenu = () => {
     setMenuVisible(false);
   };
-
-  // const handleNavigateBoutiques = (boutique) => {
-  //   navigate("/boutiques", {
-  //     state: { name: boutique.collectionCategory, selected: boutique },
-  //   });
-  //   searchClick();
-  // };
-  // const handleNavigateStyles = (styleId, style, author) => {
-  //   navigate(`/styles/${styleId}`, { state: { style: style.style, author } });
-  //   searchClick();
-  // };
 
   return (
     <div
@@ -135,26 +86,29 @@ function Navbar() {
 
       {menuVisible && (
         <div
-          className="absolute top-3 py-8 gap-y-2 left-0 right-0 bg-richBlack text-snowWhite z-40 p-5 shadow-lg animate-slideY"
+          ref={menuRef}
+          className="absolute top-3 py-8 gap-y-2 left-0 mx-4 right-0 bg-richBlack text-snowWhite z-40 p-5 shadow-lg animate-slideY rounded-lg"
           style={{
             animationDuration: "300ms",
             "--tw-translate-y": "-15px",
             "--tw-translate-y-70": "0px",
+            maxWidth: "calc(100% - 2rem)", // Ensures there's margin on both sides
+            minHeight: "200px" // Makes the menu bigger vertically
           }}
         >
-          <ul className="flex flex-col gap-4 text-sm font-medium">
+          <ul className="flex flex-col gap-6 text-base font-medium">
             {["HOME", "BOUTIQUES", "STYLES"].map((label) => (
               <li
                 key={label}
                 onClick={() => {
-                  label == "HOME"
+                  label === "HOME"
                     ? navigate("/")
-                    : label == "BOUTIQUES"
+                    : label === "BOUTIQUES"
                     ? navigate("/boutiques?brand=Fenty Beauty")
                     : navigate("/styles?category=Everyday Makeup");
                   closeMenu();
                 }}
-                className="cursor-pointer hover:text-electricBlue transition-all"
+                className="cursor-pointer hover:text-electricBlue transition-all p-2 hover:bg-richBlack/10 rounded"
               >
                 {label}
               </li>
@@ -172,11 +126,11 @@ function Navbar() {
             <li
               key={label}
               onClick={() =>
-                label == "HOME"
-                ? navigate("/")
-                : label == "BOUTIQUES"
-                ? navigate("boutiques?brand=fentybeauty")  
-                : navigate("/styles?category=everydaymakeup")
+                label === "HOME"
+                  ? navigate("/")
+                  : label === "BOUTIQUES"
+                  ? navigate("boutiques?brand=fentybeauty")  
+                  : navigate("/styles?category=everydaymakeup")
               }
               className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
               style={{
@@ -193,7 +147,7 @@ function Navbar() {
 
       {navListVisible && (
         <div
-          className="relative flex items-end gap-2 sm:gap-7 text-lg animate-slideX"
+          className="relative flex items-end gap-5 sm:gap-7 text-lg animate-slideX"
           style={{
             animationDuration: "600ms",
             "--tw-translate-x": "15px",
@@ -220,43 +174,10 @@ function Navbar() {
                   : "w-0 h-0"
               }
             >
-              {/* <ul className="flex flex-col gap-2">
-                <p className="text-sm mb-2">
-                  <AiOutlineProduct />
-                </p>
-                {searchResult.boutiqueSearch.map((u, i) => {
-                  return (
-                    <li
-                      onClick={() => handleNavigateBoutiques(u)}
-                      className="cursor-pointer hover:text-electricBlue"
-                      key={i}
-                    >
-                      {u?.collectionName}
-                    </li>
-                  );
-                })}
-              </ul> */}
               <ul className="flex flex-col gap-2">
                 <p className="text-sm mb-2">
                   <SiStylelint />
                 </p>
-                {/* {searchResult.styleSearch.map((style, i) => {
-                  return (
-                    <li
-                      onClick={() =>
-                        handleNavigateStyles(
-                          style?.style.id,
-                          style,
-                          style.author
-                        )
-                      }
-                      className="cursor-pointer hover:text-electricBlue"
-                      key={i}
-                    >
-                      {style?.style.styleName}
-                    </li>
-                  );
-                })} */}
               </ul>
             </div>
           </div>

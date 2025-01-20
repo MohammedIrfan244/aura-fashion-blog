@@ -4,8 +4,8 @@ import StyleCards from "../Shared/StyleCards";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import axiosErrorManager from "../Utilities/axiosErrorManager";
+import StyleCardSkeleton from "../skeltons/StyleCardSkeleton";
 
-// const styles = [
 //   {
 //     name: "Everyday Makeup",
 //     image:
@@ -54,12 +54,16 @@ import axiosErrorManager from "../Utilities/axiosErrorManager";
 // ];
 function Style() {
   const [styles,setStyles]=useState([])
+  const [loading,setLoading]=useState(false)
   const fetchStyles=async()=>{
     try{
+      setLoading(true)
       const response=await axios.get(import.meta.env.VITE_API_URL+"/public/all-style-categories")
       setStyles(response.data.categories)
     }catch(err){
       console.log(axiosErrorManager(err))
+    }finally{
+      setLoading(false)
     }
   }
   useEffect(()=>{
@@ -91,7 +95,7 @@ function Style() {
           },
         }}
       >
-        {styles?.map((style, index) => (
+        {loading?Array.from({length:4}).map((_,index)=><StyleCardSkeleton key={index}/>):styles?.map((style, index) => (
           <SwiperSlide key={index+style._id}>
             <StyleCards image={style?.image} name={style?.name} title={style?.title} />
           </SwiperSlide>
