@@ -19,16 +19,22 @@ function StylingMatter() {
         />
       </motion.div>
       <div className="w-[95%] mt-5 sm:mt-0 sm:w-[50%] ">
-        <p className="text-2xl font-agdasima ">Styling vs Wearing</p>
         <motion.p
-          whileInView={{ height: "auto", opacity: 1 }}
-          initial={{ height: 0, opacity: 0 }}
+          whileInView={{  opacity: 1 }}
+          initial={{  opacity: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.3,
             repeat: 0,
           }}
-          className="text-sm mt-10"
-        >
+         className="text-2xl font-agdasima ">Styling vs Wearing</motion.p>
+        <motion.p
+          whileInView={{  opacity: 1 }}
+          initial={{  opacity: 0 }}
+          transition={{
+            duration: 0.6,
+            repeat: 0,
+          }}
+         className="text-sm mt-10 type pe-5">
           Styling and wearing are two intertwined yet distinct aspects of
           fashion. Wearing simply involves putting on clothing and accessories,
           focusing on practicality, comfort, or fulfilling a basic need, such as
@@ -46,21 +52,42 @@ function StylingMatter() {
           creativity.
         </motion.p>
         <ul className="mt-5 text-sm hidden sm:block space-y-5">
-          <li>
+          <motion.li
+            whileInView={{  opacity: 1 }}
+            initial={{  opacity: 0 }}
+            transition={{
+              duration: 0.9,
+              repeat: 0,
+            }}
+          >
             <span className="font-semibold">Understand Your Fit</span> : Choose
             clothes that complement your body shape. Properly fitted garments
             enhance your silhouette and provide a polished look.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileInView={{  opacity: 1 }}
+            initial={{  opacity: 0 }}
+            transition={{
+              duration: 0.6,
+              repeat: 0,
+            }}
+          >
             <span className="font-semibold">Consider Color Coordination</span> :
             Opt for colors that suit your skin tone and balance bold patterns
             with neutral pieces to avoid clashing.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileInView={{  opacity: 1 }}
+            initial={{  opacity: 0 }}
+            transition={{
+              duration: 0.3,
+              repeat: 0,
+            }}
+          >
             <span className="font-semibold">Avoid Too Many Trends at Once</span>{" "}
             : Following every trend can make your outfit look chaotic.
             Incorporate trends subtly while sticking to your personal style.
-          </li>
+          </motion.li>
         </ul>
       </div>
     </div>

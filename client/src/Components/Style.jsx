@@ -55,7 +55,9 @@ function Style() {
       >
         {loading
           ? Array.from({ length: 4 }).map((_, index) => (
+            <SwiperSlide key={styles + String(index)}>
               <StyleCardSkeleton key={index} />
+            </SwiperSlide>
             ))
           : styles?.map((style, index) => (
               <SwiperSlide key={index + style._id}>
