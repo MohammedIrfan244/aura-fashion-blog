@@ -79,10 +79,10 @@ function StylePage() {
     >
       <div className="my-5 flex justify-center sm:justify-between w-full">
         <h2 className="hidden sm:block font-beban text-electricBlue">
-          {"All"}
+          {selectedCategory}
         </h2>
         <div
-          className="flex items-center gap-2 animate-slideY transition-all"
+          className="flex items-center w-full sm:w-auto gap-2 animate-slideY transition-all"
           style={{
             animationDuration: "500ms",
             "--tw-translate-y": "-60px",
