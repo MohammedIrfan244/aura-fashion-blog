@@ -5,21 +5,22 @@ import axios from "axios";
 import axiosErrorManager from "../Utilities/axiosErrorManager";
 import BoutiqueCardSkeleton from "../skeltons/BoutiqueCardSkeleton";
 
-
 function Boutique() {
   const [boutiques, setBoutiques] = useState([]);
-  const [loading,setLoading]=useState(false);
+  const [loading, setLoading] = useState(false);
   const fetchBoutiques = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(import.meta.env.VITE_API_URL + "/public/all-boutique-categories");
+      const response = await axios.get(
+        import.meta.env.VITE_API_URL + "/public/all-boutique-categories"
+      );
       setBoutiques(response.data.categories);
     } catch (err) {
       console.log(axiosErrorManager(err));
-    }finally{
+    } finally {
       setLoading(false);
     }
-  }
+  };
 
   useEffect(() => {
     fetchBoutiques();
@@ -31,7 +32,18 @@ function Boutique() {
       </h1>
       <BoutiqueBanner />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center py-1 gap-y-3">
-        {loading ? Array.from({length:4}).map((_,index) => <BoutiqueCardSkeleton key={index} />) : boutiques.map((item, index) => <BoutiqueCard key={index} name={item.name} title={item.title} image={item.image} />)}
+        {loading
+          ? Array.from({ length: 4 }).map((_, index) => (
+              <BoutiqueCardSkeleton key={index} />
+            ))
+          : boutiques.map((item, index) => (
+              <BoutiqueCard
+                key={index}
+                name={item.name}
+                title={item.title}
+                image={item.image}
+              />
+            ))}
       </div>
     </div>
   );

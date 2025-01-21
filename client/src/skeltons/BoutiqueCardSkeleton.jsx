@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 function BoutiqueCardSkeleton() {
@@ -15,12 +15,10 @@ function BoutiqueCardSkeleton() {
         glareMaxOpacity={0.5}
       >
         <div className="h-[200px] sm:h-[400px] w-80 overflow-hidden relative shadow-md shadow-black bg-[#000002] transition-all ease-out">
-          {/* Skeleton for the image */}
           <div className="w-full h-full flex justify-center items-center">
             <div className="w-full h-full bg-gray-800 animate-pulse" />
           </div>
-          
-          {/* Skeleton for the title text */}
+
           <div className="absolute left-5 top-3">
             <div className="h-6 w-32 bg-gray-700 rounded animate-pulse" />
           </div>

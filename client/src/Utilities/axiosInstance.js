@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
-  withCredentials: true, 
+  withCredentials: true,
 });
 
 axiosInstance.interceptors.request.use(
@@ -30,7 +30,7 @@ axiosInstance.interceptors.response.use(
       error.response.status === 401 &&
       !originalRequest._retry
     ) {
-      originalRequest._retry = true; // mark request to avoid infinite loops
+      originalRequest._retry = true;
       try {
         const response = await axios.post(
           `${import.meta.env.VITE_API_URL}/auth/refresh-token`,
@@ -40,7 +40,7 @@ axiosInstance.interceptors.response.use(
           }
         );
         const newAccessToken = response.data.accessToken;
-       localStorage.setItem("token", newAccessToken);
+        localStorage.setItem("token", newAccessToken);
         axiosInstance.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${newAccessToken}`;

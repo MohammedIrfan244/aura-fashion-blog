@@ -22,7 +22,7 @@ const initialValues = {
   otp: "",
 };
 
-function SignUp({loginFunc}) {
+function SignUp({ loginFunc }) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
@@ -41,10 +41,7 @@ function SignUp({loginFunc}) {
         /^[a-z_]+$/,
         "Username can only contain lowercase letters and underscores"
       ),
-    email: yup
-      .string()
-      .email("Invalid email")
-      .required("Email is required"),
+    email: yup.string().email("Invalid email").required("Email is required"),
     password: yup
       .string()
       .required("Password is required")
@@ -67,7 +64,7 @@ function SignUp({loginFunc}) {
           const response = await axiosInstance.post("/auth/send-otp-mail", {
             email: formik.values.email,
             username: formik.values.userName,
-          })
+          });
           setOtpSent(true);
           console.log(response.data);
         } catch (err) {
@@ -79,18 +76,18 @@ function SignUp({loginFunc}) {
       } else {
         try {
           setLoading(true);
-           await axiosInstance.post("/auth/verify-otp-and-register", {
+          await axiosInstance.post("/auth/verify-otp-and-register", {
             email: formik.values.email,
             otp: formik.values.otp,
             username: formik.values.userName,
-            password: formik.values.password
-          })
+            password: formik.values.password,
+          });
           const response = await axiosInstance.post("/auth/login", {
             identity: formik.values.email,
-            password: formik.values.password
-          })
+            password: formik.values.password,
+          });
           localStorage.setItem("accessToken", response.data.accessToken);
-                dispatch(login(response.data.userCredentials));
+          dispatch(login(response.data.userCredentials));
           navigate("/");
         } catch (err) {
           setError(err.response?.data?.message || "Verification failed.");
@@ -211,11 +208,7 @@ function SignUp({loginFunc}) {
             className="w-full bg-snowWhite text-[#2E2E33] font-bold py-1 px-2 hover:bg-electricBlue focus:outline-none focus:ring-1 focus:ring-[#2E2E33] focus:ring-offset-1"
             disabled={loading}
           >
-            {loading
-              ? "Loading..."
-              : otpSent
-              ? "Verify & Register"
-              : "Get OTP"}
+            {loading ? "Loading..." : otpSent ? "Verify & Register" : "Get OTP"}
           </button>
         </form>
         <p className="text-sm text-center text-snowWhite mt-4">

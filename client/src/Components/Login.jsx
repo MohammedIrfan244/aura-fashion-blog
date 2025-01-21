@@ -14,21 +14,24 @@ function Login({ registerFunc }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(import.meta.env.VITE_API_URL + "/auth/login", {
-        identity: identity.trim(),
-        password,
-      });
+      const response = await axios.post(
+        import.meta.env.VITE_API_URL + "/auth/login",
+        {
+          identity: identity.trim(),
+          password,
+        }
+      );
       localStorage.setItem("accessToken", response.data.accessToken);
       dispatch(login(response.data.userCredentials));
       setError("");
       setPassword("");
       setidentity("");
-      navigate('/')
+      navigate("/");
     } catch (err) {
       console.log(axiosErrorManager(err));
       setError(axiosErrorManager(err));

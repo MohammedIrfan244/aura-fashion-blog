@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const INITIAL_STATE = {
   searchBar: false,
-  popUpShow:false
+  popUpShow: false,
 };
 
 const commonSlice = createSlice({
@@ -12,17 +12,18 @@ const commonSlice = createSlice({
     toggleSearchBar: (state) => {
       state.searchBar = !state.searchBar;
     },
-    hideSearchBar:(state)=>{
-        state.searchBar=false
+    hideSearchBar: (state) => {
+      state.searchBar = false;
     },
-    popUpVisible:(state)=>{
-      state.popUpShow=true
+    popUpVisible: (state) => {
+      state.popUpShow = true;
     },
-    popUpHide:(state)=>{
-      state.popUpShow=false
-    }
+    popUpHide: (state) => {
+      state.popUpShow = false;
+    },
   },
 });
 
-export const {toggleSearchBar,hideSearchBar,popUpVisible,popUpHide}=commonSlice.actions
+export const { toggleSearchBar, hideSearchBar, popUpVisible, popUpHide } =
+  commonSlice.actions;
 export default commonSlice.reducer;

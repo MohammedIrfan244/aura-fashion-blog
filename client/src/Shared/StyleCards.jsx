@@ -1,21 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 // eslint-disable-next-line react/prop-types
-function StyleCards({ image, title , name }) {
+function StyleCards({ image, title, name }) {
   const navigate = useNavigate();
   const [hover, setHover] = useState(false);
 
-
   return (
     <motion.div
-    whileInView={{  opacity: 1 }}
-    initial={{  opacity: 0 }}
-    transition={{
-      duration: 1,
-      repeat: 0, 
-    }}
+      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{
+        duration: 1,
+        repeat: 0,
+      }}
       onClick={() => navigate(`/styles?category=${name}`)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

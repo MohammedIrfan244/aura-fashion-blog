@@ -18,9 +18,9 @@ const styleModel = new mongoose.Schema(
       type: String,
       required: true,
     },
-    author:{
+    author: {
       type: String,
-      required: true
+      required: true,
     },
     content: [
       {

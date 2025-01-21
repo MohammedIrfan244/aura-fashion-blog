@@ -20,7 +20,7 @@ function Navbar() {
   const menuRef = useRef();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  
+
   const searchClick = () => {
     setSearchInput("");
     dispatch(toggleSearchBar());
@@ -53,7 +53,6 @@ function Navbar() {
     }
   }, [searchBar]);
 
-  // Add click outside handler
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -92,8 +91,8 @@ function Navbar() {
             animationDuration: "300ms",
             "--tw-translate-y": "-15px",
             "--tw-translate-y-70": "0px",
-            maxWidth: "calc(100% - 2rem)", // Ensures there's margin on both sides
-            minHeight: "200px" // Makes the menu bigger vertically
+            maxWidth: "calc(100% - 2rem)",
+            minHeight: "200px",
           }}
         >
           <ul className="flex flex-col gap-6 text-base font-medium">
@@ -129,7 +128,7 @@ function Navbar() {
                 label === "HOME"
                   ? navigate("/")
                   : label === "BOUTIQUES"
-                  ? navigate("boutiques?brand=fentybeauty")  
+                  ? navigate("boutiques?brand=fentybeauty")
                   : navigate("/styles?category=everydaymakeup")
               }
               className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"

@@ -96,16 +96,18 @@ const getOneStyle = async (req, res, next) => {
         likeCount: 1,
         isLiked: 1,
         content: 1,
-    }
-    }
+      },
+    },
   ]);
   if (!style) {
     return next(new CustomError("Style not found", 404));
   }
-  res.status(200).json({ style : style[0], message: "Style fetched successfully" });
+  res
+    .status(200)
+    .json({ style: style[0], message: "Style fetched successfully" });
 };
 
-const likeStyle= async (req, res, next) => {
+const likeStyle = async (req, res, next) => {
   const { id } = req.params;
   const userId = req.user.id;
   const style = await Style.findById(id);
@@ -115,12 +117,11 @@ const likeStyle= async (req, res, next) => {
   const styleLike = await StyleLike.findOne({ user: userId, style: id });
   if (styleLike) {
     await StyleLike.deleteOne({ user: userId, style: id });
-    
   } else {
     const newStyleLike = new StyleLike({ user: userId, style: id });
     await newStyleLike.save();
   }
   res.status(200).json({ message: "Style liked successfully" });
-  }
+};
 
-export { getStyleByCategory, getOneStyle , likeStyle};
+export { getStyleByCategory, getOneStyle, likeStyle };

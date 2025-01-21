@@ -19,16 +19,14 @@ function BoutiquePage() {
   const [currentBoutiqueItems, setCurrentBoutiqueItems] = useState(null);
   const [selectedBoutiqueItem, setSelectedBoutiqueItem] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
-  const [loading,setLoading]=useState(false)
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
-  
   const getCurrentIndex = (banners, brandName) => {
     const index = banners.findIndex((item) => item.name === brandName);
     return index >= 0 ? index : 0;
   };
 
-  
   const handleCarouselNav = (direction) => {
     const currentIndex = getCurrentIndex(
       boutiqueBanners,
@@ -42,44 +40,40 @@ function BoutiquePage() {
     setSearchParams({ brand: boutiqueBanners[newIndex].name });
   };
 
-  
   useEffect(() => {
     const getBoutiqueBanners = async () => {
       try {
-        setLoading(true)
+        setLoading(true);
         const response = await axiosInstance.get(
           `${import.meta.env.VITE_API_URL}/boutique/all-boutique-banners`
         );
         setBoutiqueBanners(response.data.banners);
 
-  
         const currentBrand = searchParams.get("brand");
         const isValidBrand = response.data.banners.some(
           (banner) => banner.name === currentBrand
         );
 
         if (!isValidBrand && response.data.banners.length > 0) {
-  
           setSearchParams({ brand: response.data.banners[0].name });
         }
       } catch (err) {
         console.log(axiosErrorManager(err));
-      }finally{
-        setLoading(false)
+      } finally {
+        setLoading(false);
       }
     };
     getBoutiqueBanners();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  
   const currentBrandName = searchParams.get("brand");
   const currentIndex = getCurrentIndex(boutiqueBanners, currentBrandName);
   const currentBoutique = boutiqueBanners[currentIndex];
-  
+
   useEffect(() => {
     const fetchBoutiqueItems = async () => {
       try {
-        setLoading(true)
+        setLoading(true);
         const response = await axiosInstance.get(
           `${
             import.meta.env.VITE_API_URL
@@ -88,8 +82,8 @@ function BoutiquePage() {
         setCurrentBoutiqueItems(response.data.boutique);
       } catch (err) {
         console.log(axiosErrorManager(err));
-      }finally{
-        setLoading(false)
+      } finally {
+        setLoading(false);
       }
     };
     fetchBoutiqueItems();
@@ -104,8 +98,7 @@ function BoutiquePage() {
     setModalVisible(false);
     setSelectedBoutiqueItem(null);
   };
-  
-  // Scroll to top on mount
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -152,14 +145,21 @@ function BoutiquePage() {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center gap-y-5">
-       
-        {loading ? Array.from({length:4}).map((_,index) => <BoutiqueCollectionCardSkeleton key={index} />) : currentBoutiqueItems?.map((item, index) => (
-          <BoutiqueCollectionCard key={item.id+String(index)} click={()=>selectBoutiqueItem(item)} boutique={item} />
-        ))}
+        {loading
+          ? Array.from({ length: 4 }).map((_, index) => (
+              <BoutiqueCollectionCardSkeleton key={index} />
+            ))
+          : currentBoutiqueItems?.map((item, index) => (
+              <BoutiqueCollectionCard
+                key={item.id + String(index)}
+                click={() => selectBoutiqueItem(item)}
+                boutique={item}
+              />
+            ))}
       </div>
       <GoTopPopUp />
       {modalVisible && (
-        <BoutiqueDetails close={closeModal} id={selectedBoutiqueItem._id}/>
+        <BoutiqueDetails close={closeModal} id={selectedBoutiqueItem._id} />
       )}
     </div>
   );

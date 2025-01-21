@@ -1,22 +1,25 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const styleCategorySchema = new mongoose.Schema({
+const styleCategorySchema = new mongoose.Schema(
+  {
     name: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     image: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     title: {
-        type: String,
-        required: true,
-    }
-}, {
+      type: String,
+      required: true,
+    },
+  },
+  {
     timestamps: true,
-});
+  }
+);
 
-const StyleCategory = mongoose.model('StyleCategory', styleCategorySchema);
+const StyleCategory = mongoose.model("StyleCategory", styleCategorySchema);
 
-export default StyleCategory
+export default StyleCategory;

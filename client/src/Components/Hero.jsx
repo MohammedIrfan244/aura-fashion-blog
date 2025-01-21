@@ -1,4 +1,4 @@
-import auraHero from "../images/auraHeroSmall.png"
+import auraHero from "../images/auraHeroSmall.png";
 
 function Hero() {
   const text = " Aura -Bold-Limitless-Empowered-";
@@ -25,7 +25,9 @@ function Hero() {
             </div>
           </div>
         </div>
-        <p className="text-center text-electricBlue text-xl font-agdasima absolute bottom-5 left-[46%] animate-pulse">Swipe Up</p>
+        <p className="text-center text-electricBlue text-xl font-agdasima absolute bottom-5 left-[46%] animate-pulse">
+          Swipe Up
+        </p>
       </div>
 
       <div className="hidden sm:w-1/2 sm:h-screen sm:block sm:relative">
@@ -40,7 +42,6 @@ function Hero() {
           <p className="font-beban">Get ready with us</p>
         </div>
       </div>
-              
     </div>
   );
 }

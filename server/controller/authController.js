@@ -83,13 +83,11 @@ const loginUser = async (req, res, next) => {
     secure: true,
     sameSite: "none",
   });
-  res
-    .status(200)
-    .json({
-      message: "User logged in successfully",
-      accessToken,
-      userCredentials,
-    });
+  res.status(200).json({
+    message: "User logged in successfully",
+    accessToken,
+    userCredentials,
+  });
 };
 
 const refreshToken = async (req, res, next) => {

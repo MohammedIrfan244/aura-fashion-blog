@@ -14,24 +14,45 @@ import Subscription from "../Pages/Subscription";
 import ScrollTop from "../Utilities/ScrollTop";
 
 function Routing() {
-  const {currentUser}=useSelector((state) => state.currentUser);
+  const { currentUser } = useSelector((state) => state.currentUser);
 
   return (
     <>
       <Navbar />
-      <ScrollTop/>
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/boutiques" element={currentUser?<BoutiquePage />:<Login_SignUp/>} />
-        <Route path="/styles" element={currentUser?<StylePage />:<Login_SignUp/>} />
-        <Route path="/style/:category/:id" element={currentUser?<StyleDetailPage />:<Login_SignUp/>} />
-        <Route path="/contact" element={currentUser?<Contact />:<Login_SignUp/>} />
-        <Route path="/user" element={currentUser?<User />:<Login_SignUp/>} />
-        <Route path="/login_Signup" element={currentUser?<User/>:<Login_SignUp />} />
-        <Route path="/subscription" element={currentUser?<Subscription/>:<Login_SignUp/>} />
+        <Route
+          path="/boutiques"
+          element={currentUser ? <BoutiquePage /> : <Login_SignUp />}
+        />
+        <Route
+          path="/styles"
+          element={currentUser ? <StylePage /> : <Login_SignUp />}
+        />
+        <Route
+          path="/style/:category/:id"
+          element={currentUser ? <StyleDetailPage /> : <Login_SignUp />}
+        />
+        <Route
+          path="/contact"
+          element={currentUser ? <Contact /> : <Login_SignUp />}
+        />
+        <Route
+          path="/user"
+          element={currentUser ? <User /> : <Login_SignUp />}
+        />
+        <Route
+          path="/login_Signup"
+          element={currentUser ? <User /> : <Login_SignUp />}
+        />
+        <Route
+          path="/subscription"
+          element={currentUser ? <Subscription /> : <Login_SignUp />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }
