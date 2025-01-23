@@ -12,12 +12,20 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Subscription from "../Pages/Subscription";
 import ScrollTop from "../Utilities/ScrollTop";
+import AnimatedCursor from "react-animated-cursor";
 
 function Routing() {
   const { currentUser } = useSelector((state) => state.currentUser);
 
   return (
     <>
+      <AnimatedCursor
+        color="255, 255, 255"
+        innerSize={10}
+        outerSize={20}
+        innerScale={2}
+        outerScale={1}
+      />
       <Navbar />
       <ScrollTop />
       <Routes>

@@ -73,7 +73,7 @@ const getOneStyle = async (req, res, next) => {
       $addFields: {
         isLiked: {
           $in: [
-            req.id,
+            new mongoose.Types.ObjectId(req.user.id), // Convert to ObjectId
             {
               $map: {
                 input: "$likes",
@@ -99,9 +99,11 @@ const getOneStyle = async (req, res, next) => {
       },
     },
   ]);
-  if (!style) {
+
+  if (!style || style.length === 0) {
     return next(new CustomError("Style not found", 404));
   }
+
   res
     .status(200)
     .json({ style: style[0], message: "Style fetched successfully" });

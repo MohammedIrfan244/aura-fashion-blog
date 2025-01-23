@@ -1,5 +1,6 @@
 import auraHero from "../images/auraHeroSmall.png";
 
+
 function Hero() {
   const text = " Aura -Bold-Limitless-Empowered-";
   const innerText = text.split("").map((char, i) => (
@@ -46,4 +47,5 @@ function Hero() {
   );
 }
 
-export default Hero;
+
+  export default Hero;

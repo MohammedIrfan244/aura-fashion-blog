@@ -28,6 +28,7 @@ function StyleDetailPage() {
         setStyle(response.data.style);
         setIsLiked(response.data.style.isLiked);
         setLikeCount(response.data.style.likeCount);
+        console.log(response.data);
       } catch (error) {
         console.log(axiosErrorManager(error));
       } finally {
