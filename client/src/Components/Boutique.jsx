@@ -31,7 +31,7 @@ function Boutique() {
         Checkout Your Brands
       </h1>
       <BoutiqueBanner />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-auto place-items-center py-1 gap-y-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 h-auto place-items-center py-1 gap-y-3">
         {loading
           ? Array.from({ length: 4 }).map((_, index) => (
               <BoutiqueCardSkeleton key={index} />
