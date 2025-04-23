@@ -36,8 +36,14 @@ const getAllStyleCategories = async (req, res, next) => {
     .json({ categories, message: "Categories fetched successfully" });
 };
 
+const searchByQuery = async(req,res,next)=>{
+  const {query}=req.query
+  res.json({query})
+}
+
 export {
   getAllBoutiqueCategories,
   getAllStyleCategories,
   getAllBoutiqueBadges,
+  searchByQuery
 };

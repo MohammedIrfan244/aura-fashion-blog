@@ -35,6 +35,7 @@ const sendOtp = async (req, res, next) => {
     text: `Your OTP is ${otp}`,
   };
   await transporter.sendMail(mailOptions);
+  // console.log("from here")
 
   res.status(200).json({ message: "OTP sent successfully to the email" });
 };

@@ -6,6 +6,8 @@ import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { hideSearchBar, toggleSearchBar } from "../Redux/CommonSlice";
+import axiosErrorManager from "../Utilities/axiosErrorManager";
+import axios from "axios";
 
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
@@ -69,6 +71,15 @@ function Navbar() {
   const closeMenu = () => {
     setMenuVisible(false);
   };
+
+  const handleSearch=async(query)=>{
+    try {
+      const response= await axios.get(import.meta.env.VITE_API_URL+"/public/search?query="+query)
+      console.log(response)
+    } catch (error) {
+      console.log(axiosErrorManager(error))
+    }
+  }
 
   return (
     <div
@@ -161,7 +172,7 @@ function Navbar() {
             <input
               ref={inputRef}
               value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
+              onChange={(e) => handleSearch(e.target.value)}
               type="text"
               placeholder="Search here ..."
               className="w-full text-electricBlue placeholder:text-xs text-xs bg-transparent border-2 border-electricBlue pt-[3px] focus:outline-none rounded-3xl ps-3"
@@ -169,15 +180,32 @@ function Navbar() {
             <div
               className={
                 searchBar
-                  ? "w-72 justify-between bg-richBlack px-2 py-1 text-snowWhite absolute top-10 gap-5 text-xs flex"
+                  ? "w-60 justify-between bg-richBlack px-2 py-1 text-snowWhite absolute top-10 gap-5 text-xs flex"
                   : "w-0 h-0"
               }
             >
-              <ul className="flex flex-col gap-2">
+              {/* the boutique lists */}
+              <div>
                 <p className="text-sm mb-2">
                   <SiStylelint />
                 </p>
+              <ul className="flex flex-col gap-2">
+                <p> first</p>
+                <p> first</p>
+                <p> first</p>
               </ul>
+              </div>
+              {/* the style lists */}
+              <div>
+                <p className="text-sm mb-2">
+                  <SiStylelint />
+                </p>
+              <ul className="flex flex-col gap-2">
+                <p> first</p>
+                <p> first</p>
+                <p> first</p>
+              </ul>
+              </div>
             </div>
           </div>
           <LuSearch

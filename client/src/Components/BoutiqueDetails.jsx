@@ -97,7 +97,7 @@ function BoutiqueDetails({ id, close }) {
                   </div>
                 ))}
               </div>
-              <div className="flex-grow flex flex-col sm:ms-3 mt-2 sm:mt-0">
+              <div className="flex-grow flex flex-col justify-between sm:ms-3 mt-2 sm:mt-0">
                 <div className="flex justify-end">
                   <button className="text-xl mt-1 me-1" onClick={close}>
                     <IoMdCloseCircleOutline />
