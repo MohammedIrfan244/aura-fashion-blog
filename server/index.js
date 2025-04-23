@@ -10,6 +10,8 @@ import userStyleRoute from "./route/userRoutes/styleRoutes.js";
 import userBoutiqueRoute from "./route/userRoutes/boutiqueRoutes.js";
 import userUpdateRoute from "./route/userRoutes/userUpdateRoute.js";
 
+
+
 const app = express();
 
 // configs
@@ -39,7 +41,7 @@ app.use("/api/boutique", userBoutiqueRoute);
 app.use("/api/update", userUpdateRoute);
 
 app.use("*", (req, res) => {
-  console.log("from not fouond");
+  console.log("from not found");
   res.status(404).json({ message: "Route not found" });
 });
 
