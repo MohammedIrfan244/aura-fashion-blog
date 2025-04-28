@@ -1,6 +1,7 @@
 import BoutiqueCategory from "../model/boutiqueCategoryModel.js";
 import Boutique from "../model/boutiqueModel.js";
 import StyleCategory from "../model/styleCategoryModel.js";
+import Style from "../model/styleModel.js";
 import CustomError from "../utilities/CustomError.js";
 
 const getAllBoutiqueCategories = async (req, res, next) => {
@@ -45,8 +46,8 @@ const searchByQuery = async(req,res,next)=>{
       type:"boutique",
 }}])
 
-const styles = await StyleCategory.aggregate([
-    {$match:{$or:[{name:regex},{category:regex}]}},
+const styles = await Style.aggregate([
+    {$match:{$or:[{name:regex},{category:regex},{author:regex}]}},
     {$project:{
       name:1,
       type:"style",

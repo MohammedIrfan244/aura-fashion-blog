@@ -82,6 +82,7 @@ function Navbar() {
         import.meta.env.VITE_API_URL + "/public/search?query=" + query
       );
       setSearchResults(response.data);
+      console.log(response.data.styles);
     } catch (error) {
       console.log(axiosErrorManager(error));
     } finally {
@@ -161,7 +162,7 @@ function Navbar() {
                 label === "HOME"
                   ? navigate("/")
                   : label === "BOUTIQUES"
-                  ? navigate("boutiques?brand=fentybeauty")
+                  ? navigate("/boutiques?brand=fentybeauty")
                   : navigate("/styles?category=everydaymakeup")
               }
               className="cursor-pointer animate-slideY hover:text-electricBlue transition-all"
