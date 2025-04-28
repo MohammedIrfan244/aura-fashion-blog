@@ -12,10 +12,13 @@ import axios from "axios";
 
 function Navbar() {
   const [navListVisible, setNavListVisible] = useState(false);
-  const [searchInput, setSearchInput] = useState("");
   const { currentUser } = useSelector((state) => state.currentUser);
   const { searchBar } = useSelector((state) => state.common);
-
+  const [searchResults, setSearchResults] = useState({
+    styles: [],
+    boutiques: [],
+  });
+  const [searchLoading, setSearchLoading] = useState(false);
   const [scrollVisible, setScrollVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
@@ -25,7 +28,6 @@ function Navbar() {
   const dispatch = useDispatch();
 
   const searchClick = () => {
-    setSearchInput("");
     dispatch(toggleSearchBar());
   };
 
@@ -73,14 +75,33 @@ function Navbar() {
     setMenuVisible(false);
   };
 
-  const handleSearch=async(query)=>{
+  const handleSearch = async (query) => {
     try {
-      const response= await axios.get(import.meta.env.VITE_API_URL+"/public/search?query="+query)
-      console.log(response)
+      setSearchLoading(true);
+      const response = await axios.get(
+        import.meta.env.VITE_API_URL + "/public/search?query=" + query
+      );
+      setSearchResults(response.data);
     } catch (error) {
-      console.log(axiosErrorManager(error))
+      console.log(axiosErrorManager(error));
+    } finally {
+      setSearchLoading(false);
     }
-  }
+  };
+
+  const debounce = (func, delay) => {
+    let timeoutId;
+    return (...args) => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        func(...args);
+      }, delay);
+    };
+  };
+
+  const debouncedSearch = debounce(handleSearch, 1000);
 
   return (
     <div
@@ -172,17 +193,21 @@ function Navbar() {
           >
             <input
               ref={inputRef}
-              value={searchInput}
-              onChange={(e) => handleSearch(e.target.value)}
+              onChange={(e) => {
+                debouncedSearch(e.target.value);
+              }}
               type="text"
               placeholder="Search here ..."
               className="w-full text-electricBlue placeholder:text-xs text-xs bg-transparent border-2 border-electricBlue pt-[3px] focus:outline-none rounded-3xl ps-3"
             />
             <div
               className={
-                searchBar
-                  ? "w-60 justify-between bg-richBlack px-2 py-1 text-snowWhite absolute top-10 gap-5 text-xs flex"
-                  : "w-0 h-0"
+                (searchResults.boutiques?.length > 0 ||
+                  searchResults.styles?.length > 0) &&
+                searchBar &&
+                inputRef.current.value.length > 0
+                  ? "w-60 max-h-72 justify-between bg-richBlack overflow-y-auto px-2 py-1 text-snowWhite absolute top-10 gap-5 text-xs flex"
+                  : "w-0 h-0 overflow-hidden"
               }
             >
               {/* the boutique lists */}
@@ -190,22 +215,54 @@ function Navbar() {
                 <p className="text-sm mb-2">
                   <SiStylelint />
                 </p>
-              <ul className="flex flex-col gap-2">
-                <p> first</p>
-                <p> first</p>
-                <p> first</p>
-              </ul>
+                {searchLoading ? (
+                  <ul className="flex flex-col gap-2 animate-pulse">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <li
+                        key={index}
+                        className="h-6 bg-richBlack/10 rounded p-2"
+                      />
+                    ))}
+                  </ul>
+                ) : (
+                  <ul className="flex flex-col gap-2">
+                    {searchResults.boutiques?.map((item, index) => (
+                      <li
+                        key={index}
+                        className="cursor-pointer hover:text-electricBlue transition-all p-2 hover:bg-richBlack/10 rounded"
+                      >
+                        {item.name}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
               {/* the style lists */}
               <div>
                 <p className="text-sm mb-2">
                   <GiNotebook />
                 </p>
-              <ul className="flex flex-col gap-2">
-                <p> first</p>
-                <p> first</p>
-                <p> first</p>
-              </ul>
+                {searchLoading ? (
+                  <ul className="flex flex-col gap-2 animate-pulse">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <li
+                        key={index}
+                        className="h-6 bg-richBlack/10 rounded p-2"
+                      />
+                    ))}
+                  </ul>
+                ) : (
+                  <ul className="flex flex-col gap-2">
+                    {searchResults.styles?.map((item, index) => (
+                      <li
+                        key={index}
+                        className="cursor-pointer hover:text-electricBlue transition-all p-2 hover:bg-richBlack/10 rounded"
+                      >
+                        {item.name}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           </div>

@@ -52,7 +52,7 @@ const styles = await StyleCategory.aggregate([
       type:"style",
     }}
   ])
-  res.json([...boutiques, ...styles])
+  res.json({styles,boutiques})
 }
 
 export {
