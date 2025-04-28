@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { LuContact, LuSearch, LuUser } from "react-icons/lu";
 import { PiTrademarkRegisteredBold } from "react-icons/pi";
 import { SiStylelint } from "react-icons/si";
+import { GiNotebook } from "react-icons/gi";
 import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -198,7 +199,7 @@ function Navbar() {
               {/* the style lists */}
               <div>
                 <p className="text-sm mb-2">
-                  <SiStylelint />
+                  <GiNotebook />
                 </p>
               <ul className="flex flex-col gap-2">
                 <p> first</p>
