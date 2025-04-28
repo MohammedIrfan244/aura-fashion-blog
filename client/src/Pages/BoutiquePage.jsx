@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
   BiSolidChevronLeftCircle,
@@ -17,6 +17,7 @@ function BoutiquePage() {
   const [boutiqueBanners, setBoutiqueBanners] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [currentBoutiqueItems, setCurrentBoutiqueItems] = useState(null);
+  const {state}=useLocation()
   const [selectedBoutiqueItem, setSelectedBoutiqueItem] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -40,6 +41,26 @@ function BoutiquePage() {
     setSearchParams({ brand: boutiqueBanners[newIndex].name });
   };
 
+  const fetchBoutiqueById = async (id) => {
+    try{
+      setLoading(true);
+      const response = await axiosInstance.get(
+        `${import.meta.env.VITE_API_URL}/boutique/get-boutique-by-id/${id}`
+      );
+      setSelectedBoutiqueItem(response.data.boutique);
+      setModalVisible(true);
+    }catch(err){
+      console.log(axiosErrorManager(err))
+    }finally{
+      setLoading(false)
+    }
+  }
+  useEffect(()=>{
+    // console.log(state,"state id")
+    if(state?.boutique){
+      fetchBoutiqueById(state.boutique)
+    }
+  },[state])
   useEffect(() => {
     const getBoutiqueBanners = async () => {
       try {

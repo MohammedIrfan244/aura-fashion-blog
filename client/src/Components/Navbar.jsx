@@ -78,6 +78,7 @@ function Navbar() {
   const handleSearch = async (query) => {
     try {
       setSearchLoading(true);
+      if (query.length < 1) return setSearchResults({ styles: [], boutiques: [] });
       const response = await axios.get(
         import.meta.env.VITE_API_URL + "/public/search?query=" + query
       );
@@ -138,7 +139,7 @@ function Navbar() {
                     ? navigate("/")
                     : label === "BOUTIQUES"
                     ? navigate("/boutiques?brand=Fenty Beauty")
-                    : navigate("/styles?category=Everyday Makeup");
+                    : navigate("/styles?category=everydaymakeup");
                   closeMenu();
                 }}
                 className="cursor-pointer hover:text-electricBlue transition-all p-2 hover:bg-richBlack/10 rounded"
@@ -229,6 +230,7 @@ function Navbar() {
                   <ul className="flex flex-col gap-2">
                     {searchResults.boutiques?.map((item, index) => (
                       <li
+                      onClick={()=>navigate(`/boutiques?brand=${item?.category}`,{state:{boutique:item._id}})}
                         key={index}
                         className="cursor-pointer hover:text-electricBlue transition-all p-2 hover:bg-richBlack/10 rounded"
                       >
@@ -256,6 +258,7 @@ function Navbar() {
                   <ul className="flex flex-col gap-2">
                     {searchResults.styles?.map((item, index) => (
                       <li
+                      onClick={()=>navigate(`/style/${item.category}/${item._id}`)}
                         key={index}
                         className="cursor-pointer hover:text-electricBlue transition-all p-2 hover:bg-richBlack/10 rounded"
                       >

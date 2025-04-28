@@ -43,6 +43,7 @@ const searchByQuery = async(req,res,next)=>{
     {$match:{$or:[{name:regex},{category:regex}]}},
     {$project:{
       name:1,
+      category:1,
       type:"boutique",
 }}])
 
@@ -50,6 +51,7 @@ const styles = await Style.aggregate([
     {$match:{$or:[{name:regex},{category:regex},{author:regex}]}},
     {$project:{
       name:1,
+      category:1,
       type:"style",
     }}
   ])
