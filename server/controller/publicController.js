@@ -37,8 +37,22 @@ const getAllStyleCategories = async (req, res, next) => {
 };
 
 const searchByQuery = async(req,res,next)=>{
-  const {query}=req.query
-  res.json({query})
+  const regex= new RegExp(req.query.query, "i")
+  const boutiques = await Boutique.aggregate([
+    {$match:{$or:[{name:regex},{category:regex}]}},
+    {$project:{
+      name:1,
+      type:"boutique",
+}}])
+
+const styles = await StyleCategory.aggregate([
+    {$match:{$or:[{name:regex},{category:regex}]}},
+    {$project:{
+      name:1,
+      type:"style",
+    }}
+  ])
+  res.json([...boutiques, ...styles])
 }
 
 export {
