@@ -39,4 +39,5 @@ const getBoutiqueById = async (req, res, next) => {
   res.status(200).json({ boutique, message: "Boutique fetched successfully" });
 };
 
+
 export { getAllBoutiqueBanners, getBoutiqueByCategory, getBoutiqueById };
