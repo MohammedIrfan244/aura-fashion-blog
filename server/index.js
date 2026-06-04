@@ -18,6 +18,8 @@ const app = express();
 dotenv.config();
 connectDB();
 
+console.log(process.env.CLIENT_URL);
+
 // middleWares
 app.use(cookieParser());
 app.use(express.json());
