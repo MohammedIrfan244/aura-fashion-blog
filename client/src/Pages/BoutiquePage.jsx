@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
   BiSolidChevronLeftCircle,
@@ -22,6 +22,7 @@ function BoutiquePage() {
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const getCurrentIndex = (banners, brandName) => {
     const index = banners.findIndex((item) => item.name === brandName);
@@ -153,10 +154,18 @@ function BoutiquePage() {
           />
         </div>
 
-        <div className="flex items-center justify-between h-auto w-full p-3">
-          <p className="text-2xl font-beban text-electricBlue">
-            {currentBoutique?.title}
-          </p>
+        <div className="flex flex-wrap items-center justify-between h-auto w-full p-3 gap-2">
+          <div className="flex items-center gap-4">
+            <p className="text-2xl font-beban text-electricBlue">
+              {currentBoutique?.title}
+            </p>
+            <button
+              onClick={() => navigate("/create-boutique")}
+              className="flex items-center gap-1.5 text-xs bg-white text-black font-semibold px-3 py-1.5 rounded hover:bg-electricBlue hover:text-white transition-colors"
+            >
+              + Add Product
+            </button>
+          </div>
           <p className="text-[10px] font-thin w-80">
             *Products displayed here are for inspiration and exploration. <br />
             No purchases available. (purchase source available) <br />

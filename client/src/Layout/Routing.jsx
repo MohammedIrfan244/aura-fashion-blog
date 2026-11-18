@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 import StylePage from "../Pages/StylePage";
 import Contact from "../Pages/Contact";
 import StyleDetailPage from "../Pages/StyleDetailPage";
+import CreateStyle from "../Pages/CreateStyle";
+import CreateBoutique from "../Pages/CreateBoutique";
 import NotFound from "../Pages/NotFound";
 import User from "../Pages/User";
 import Login_SignUp from "../Pages/Login_SignUp";
@@ -35,8 +37,16 @@ function Routing() {
           element={currentUser ? <BoutiquePage /> : <Login_SignUp />}
         />
         <Route
+          path="/create-boutique"
+          element={currentUser ? <CreateBoutique /> : <Login_SignUp />}
+        />
+        <Route
           path="/styles"
           element={currentUser ? <StylePage /> : <Login_SignUp />}
+        />
+        <Route
+          path="/create-style"
+          element={currentUser ? <CreateStyle /> : <Login_SignUp />}
         />
         <Route
           path="/style/:category/:id"

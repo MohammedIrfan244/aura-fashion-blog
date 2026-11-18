@@ -8,11 +8,12 @@ import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import { hideSearchBar } from "../Redux/CommonSlice";
 import axiosErrorManager from "../Utilities/axiosErrorManager";
 import axiosInstance from "../Utilities/axiosInstance";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import StyleCollectionCardSkeleton from "../skeltons/StyleCollectionCardSkeleton";
 
 function StylePage() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const swiperRef = useRef(null);
   const [styleCategories, setStyleCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -77,10 +78,18 @@ function StylePage() {
       className="pt-16 px-5 min-h-screen"
       onClick={() => dispatch(hideSearchBar())}
     >
-      <div className="my-5 flex justify-center sm:justify-between w-full">
-        <h2 className="hidden sm:block font-beban text-electricBlue">
-          {selectedCategory}
-        </h2>
+      <div className="my-5 flex flex-wrap items-center justify-between gap-4 w-full">
+        <div className="flex items-center gap-4">
+          <h2 className="hidden sm:block font-beban text-electricBlue text-2xl">
+            {selectedCategory}
+          </h2>
+          <button
+            onClick={() => navigate("/create-style")}
+            className="flex items-center gap-1.5 text-xs bg-white text-black font-semibold px-3 py-1.5 rounded hover:bg-electricBlue hover:text-white transition-colors"
+          >
+            + Write Blog
+          </button>
+        </div>
         <div
           className="flex items-center w-full sm:w-auto gap-2 animate-slideY transition-all"
           style={{

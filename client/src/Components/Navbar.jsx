@@ -147,6 +147,28 @@ function Navbar() {
                 {label}
               </li>
             ))}
+            {currentUser && (
+              <>
+                <li
+                  onClick={() => {
+                    navigate("/create-style");
+                    closeMenu();
+                  }}
+                  className="cursor-pointer text-electricBlue hover:underline p-2 rounded font-semibold"
+                >
+                  + WRITE BLOG
+                </li>
+                <li
+                  onClick={() => {
+                    navigate("/create-boutique");
+                    closeMenu();
+                  }}
+                  className="cursor-pointer text-electricBlue hover:underline p-2 rounded font-semibold"
+                >
+                  + ADD PRODUCT
+                </li>
+              </>
+            )}
           </ul>
         </div>
       )}
@@ -270,6 +292,24 @@ function Navbar() {
               </div>
             </div>
           </div>
+          {currentUser && (
+            <div className="hidden sm:flex items-center gap-2 me-1">
+              <button
+                onClick={() => navigate("/create-style")}
+                className="text-xs bg-white text-black font-semibold px-2.5 py-1 rounded hover:bg-electricBlue hover:text-white transition-colors"
+                title="Write a Blog Post"
+              >
+                + Blog
+              </button>
+              <button
+                onClick={() => navigate("/create-boutique")}
+                className="text-xs bg-[#24242A] text-white border border-[#3A3A42] font-semibold px-2.5 py-1 rounded hover:border-electricBlue hover:text-electricBlue transition-colors"
+                title="Add a Boutique Product"
+              >
+                + Product
+              </button>
+            </div>
+          )}
           <LuSearch
             onClick={searchClick}
             className="hover:scale-110 cursor-pointer hover:text-electricBlue"
