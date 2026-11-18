@@ -40,18 +40,22 @@ const sendOtp = async (req, res, next) => {
   res.status(200).json({ message: "OTP sent successfully to the email" });
 };
 
-const verifyOtpAndRegister = async (req, res, next) => {
+const registerUser = async (req, res, next) => {
   const { value, error } = joiUserSchema.validate(req.body);
   if (error) {
     return next(new CustomError(error.details[0].message, 400));
   }
-  const { email, otp, username, password } = value;
-  const otpEntry = await Otp.findOne({ email, otp });
-  if (!otpEntry) {
-    Otp.deleteMany({ email });
-    return next(new CustomError("Invalid OTP", 400));
+  const { email, username, password } = value;
+
+  const existingEmail = await User.findOne({ email });
+  if (existingEmail) {
+    return next(new CustomError("Email already in use", 400));
   }
-  Otp.deleteMany({ email });
+
+  const existingUsername = await User.findOne({ username });
+  if (existingUsername) {
+    return next(new CustomError("Username already in use", 400));
+  }
 
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = new User({
@@ -62,6 +66,8 @@ const verifyOtpAndRegister = async (req, res, next) => {
   await user.save();
   res.status(201).json({ message: "User registered successfully" });
 };
+
+const verifyOtpAndRegister = registerUser;
 
 const loginUser = async (req, res, next) => {
   const { identity, password } = req.body;
@@ -114,4 +120,4 @@ const logoutUser = (req, res, next) => {
   res.status(200).json({ message: "User logged out successfully" });
 };
 
-export { sendOtp, verifyOtpAndRegister, loginUser, refreshToken, logoutUser };
+export { sendOtp, registerUser, verifyOtpAndRegister, loginUser, refreshToken, logoutUser };

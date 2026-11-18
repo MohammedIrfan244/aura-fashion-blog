@@ -4,6 +4,7 @@ import {
   loginUser,
   logoutUser,
   refreshToken,
+  registerUser,
   sendOtp,
   verifyOtpAndRegister,
 } from "../controller/authController.js";
@@ -11,8 +12,9 @@ import {
 const router = express.Router();
 
 router
-  .post("/send-otp-mail", tryCatch(sendOtp))
+  .post("/register", tryCatch(registerUser))
   .post("/verify-otp-and-register", tryCatch(verifyOtpAndRegister))
+  .post("/send-otp-mail", tryCatch(sendOtp))
   .post("/refresh-token", tryCatch(refreshToken))
   .post("/logout", tryCatch(logoutUser))
   .post("/login", tryCatch(loginUser));
